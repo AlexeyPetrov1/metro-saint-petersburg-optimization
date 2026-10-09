@@ -1,0 +1,3 @@
+[25032:18336:1010/004235.136:ERROR:chrome\browser\task_manager\providers\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.
+[25032:22272:1010/004236.706:ERROR:chrome\browser\edge_windows_user_activity\windows_user_activity_register.cc:726] hr failed: Недопустимый дескриптор окна. (0x80070578)
+5828142 bytes written to file C:\Users\lesha\HackathonSPB\data\processed\metro52_full_day_20261009\review\report.pdf

@@ -1,0 +1,144 @@
+{"stage": "decision_started", "arm": "BALANCED", "second": 900, "at": "2026-09-30T06:15:00+03:00", "queued": 207, "onboard": 3139}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 1, "count": 71, "second": 900, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 26.156999999999243, "checkpoint": "controller/resume_00900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 1800, "at": "2026-09-30T06:30:00+03:00", "queued": 535, "onboard": 6859}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 2, "count": 71, "second": 1800, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 23.82800000000134, "checkpoint": "controller/resume_01800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 2700, "at": "2026-09-30T06:45:00+03:00", "queued": 507, "onboard": 9739}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 3, "count": 71, "second": 2700, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 25.84400000000096, "checkpoint": "controller/resume_02700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 3600, "at": "2026-09-30T07:00:00+03:00", "queued": 675, "onboard": 13413}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 4, "count": 71, "second": 3600, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 20.70300000000134, "checkpoint": "controller/resume_03600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 4500, "at": "2026-09-30T07:15:00+03:00", "queued": 609, "onboard": 17952}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 5, "count": 71, "second": 4500, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 27.937000000001717, "checkpoint": "controller/resume_04500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 5400, "at": "2026-09-30T07:30:00+03:00", "queued": 666, "onboard": 21130}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 6, "count": 71, "second": 5400, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 34.57800000000134, "checkpoint": "controller/resume_05400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 6300, "at": "2026-09-30T07:45:00+03:00", "queued": 787, "onboard": 25229}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 7, "count": 71, "second": 6300, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 27.73400000000038, "checkpoint": "controller/resume_06300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 7200, "at": "2026-09-30T08:00:00+03:00", "queued": 1068, "onboard": 30028}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 8, "count": 71, "second": 7200, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 28.65599999999904, "checkpoint": "controller/resume_07200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 8100, "at": "2026-09-30T08:15:00+03:00", "queued": 512, "onboard": 31554}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 9, "count": 71, "second": 8100, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 27.78099999999904, "checkpoint": "controller/resume_08100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 9000, "at": "2026-09-30T08:30:00+03:00", "queued": 651, "onboard": 31016}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 10, "count": 71, "second": 9000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 57.09399999999732, "checkpoint": "controller/resume_09000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 9900, "at": "2026-09-30T08:45:00+03:00", "queued": 593, "onboard": 27805}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 11, "count": 71, "second": 9900, "applied": "COST_SOLVER", "status": "conditional_resource_policy", "seconds": 52.53099999999904, "checkpoint": "controller/resume_09900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 10800, "at": "2026-09-30T09:00:00+03:00", "queued": 650, "onboard": 23153}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 12, "count": 71, "second": 10800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 43.04599999999846, "checkpoint": "controller/resume_10800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 11700, "at": "2026-09-30T09:15:00+03:00", "queued": 554, "onboard": 20791}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 13, "count": 71, "second": 11700, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 76.56299999999828, "checkpoint": "controller/resume_11700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 12600, "at": "2026-09-30T09:30:00+03:00", "queued": 456, "onboard": 19935}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 14, "count": 71, "second": 12600, "applied": "COST_SOLVER", "status": "conditional_resource_policy", "seconds": 65.26599999999962, "checkpoint": "controller/resume_12600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 13500, "at": "2026-09-30T09:45:00+03:00", "queued": 788, "onboard": 17827}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 15, "count": 71, "second": 13500, "applied": "COST_SOLVER", "status": "conditional_resource_policy", "seconds": 127.95300000000134, "checkpoint": "controller/resume_13500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 14400, "at": "2026-09-30T10:00:00+03:00", "queued": 536, "onboard": 15161}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 16, "count": 71, "second": 14400, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 78.625, "checkpoint": "controller/resume_14400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 15300, "at": "2026-09-30T10:15:00+03:00", "queued": 513, "onboard": 15977}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 17, "count": 71, "second": 15300, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 68.78099999999904, "checkpoint": "controller/resume_15300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 16200, "at": "2026-09-30T10:30:00+03:00", "queued": 724, "onboard": 16093}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 18, "count": 71, "second": 16200, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 70.54699999999866, "checkpoint": "controller/resume_16200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 17100, "at": "2026-09-30T10:45:00+03:00", "queued": 453, "onboard": 15003}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 19, "count": 71, "second": 17100, "applied": "COST_SOLVER", "status": "conditional_resource_policy", "seconds": 89.01499999999942, "checkpoint": "controller/resume_17100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 18000, "at": "2026-09-30T11:00:00+03:00", "queued": 787, "onboard": 13639}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 20, "count": 71, "second": 18000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 73.0, "checkpoint": "controller/resume_18000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 18900, "at": "2026-09-30T11:15:00+03:00", "queued": 440, "onboard": 13211}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 21, "count": 71, "second": 18900, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 97.48400000000038, "checkpoint": "controller/resume_18900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 19800, "at": "2026-09-30T11:30:00+03:00", "queued": 406, "onboard": 12716}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 22, "count": 71, "second": 19800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 72.42099999999846, "checkpoint": "controller/resume_19800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 20700, "at": "2026-09-30T11:45:00+03:00", "queued": 334, "onboard": 12809}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 23, "count": 71, "second": 20700, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 75.45300000000134, "checkpoint": "controller/resume_20700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 21600, "at": "2026-09-30T12:00:00+03:00", "queued": 248, "onboard": 12371}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 24, "count": 71, "second": 21600, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 68.54699999999866, "checkpoint": "controller/resume_21600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 22500, "at": "2026-09-30T12:15:00+03:00", "queued": 383, "onboard": 12385}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 25, "count": 71, "second": 22500, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 84.54699999999866, "checkpoint": "controller/resume_22500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 23400, "at": "2026-09-30T12:30:00+03:00", "queued": 277, "onboard": 12583}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 26, "count": 71, "second": 23400, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 119.93800000000192, "checkpoint": "controller/resume_23400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 24300, "at": "2026-09-30T12:45:00+03:00", "queued": 302, "onboard": 12417}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 27, "count": 71, "second": 24300, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 77.17099999999846, "checkpoint": "controller/resume_24300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 25200, "at": "2026-09-30T13:00:00+03:00", "queued": 246, "onboard": 12107}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 28, "count": 71, "second": 25200, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 119.92199999999866, "checkpoint": "controller/resume_25200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 26100, "at": "2026-09-30T13:15:00+03:00", "queued": 242, "onboard": 11899}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 29, "count": 71, "second": 26100, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 95.76600000000326, "checkpoint": "controller/resume_26100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 27000, "at": "2026-09-30T13:30:00+03:00", "queued": 241, "onboard": 11834}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 30, "count": 71, "second": 27000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 91.03099999999904, "checkpoint": "controller/resume_27000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 27900, "at": "2026-09-30T13:45:00+03:00", "queued": 250, "onboard": 11997}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 31, "count": 71, "second": 27900, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 85.56299999999828, "checkpoint": "controller/resume_27900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 28800, "at": "2026-09-30T14:00:00+03:00", "queued": 250, "onboard": 12135}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 32, "count": 71, "second": 28800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 85.60900000000038, "checkpoint": "controller/resume_28800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 29700, "at": "2026-09-30T14:15:00+03:00", "queued": 253, "onboard": 12339}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 33, "count": 71, "second": 29700, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 66.11000000000058, "checkpoint": "controller/resume_29700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 30600, "at": "2026-09-30T14:30:00+03:00", "queued": 270, "onboard": 13049}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 34, "count": 71, "second": 30600, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 116.0, "checkpoint": "controller/resume_30600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 31500, "at": "2026-09-30T14:45:00+03:00", "queued": 268, "onboard": 13339}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 35, "count": 71, "second": 31500, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 139.78099999999904, "checkpoint": "controller/resume_31500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 32400, "at": "2026-09-30T15:00:00+03:00", "queued": 281, "onboard": 13761}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 36, "count": 71, "second": 32400, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 86.59400000000096, "checkpoint": "controller/resume_32400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 33300, "at": "2026-09-30T15:15:00+03:00", "queued": 635, "onboard": 14586}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 37, "count": 71, "second": 33300, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 61.28100000000268, "checkpoint": "controller/resume_33300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 34200, "at": "2026-09-30T15:30:00+03:00", "queued": 600, "onboard": 14820}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 38, "count": 71, "second": 34200, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 82.5, "checkpoint": "controller/resume_34200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 35100, "at": "2026-09-30T15:45:00+03:00", "queued": 655, "onboard": 15547}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 39, "count": 71, "second": 35100, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 58.375, "checkpoint": "controller/resume_35100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 36000, "at": "2026-09-30T16:00:00+03:00", "queued": 684, "onboard": 16516}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 40, "count": 71, "second": 36000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 59.0, "checkpoint": "controller/resume_36000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 36900, "at": "2026-09-30T16:15:00+03:00", "queued": 663, "onboard": 17590}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 41, "count": 71, "second": 36900, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 61.60900000000038, "checkpoint": "controller/resume_36900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 37800, "at": "2026-09-30T16:30:00+03:00", "queued": 704, "onboard": 18500}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 42, "count": 71, "second": 37800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 65.96900000000096, "checkpoint": "controller/resume_37800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 38700, "at": "2026-09-30T16:45:00+03:00", "queued": 716, "onboard": 19314}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 43, "count": 71, "second": 38700, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 71.79599999999846, "checkpoint": "controller/resume_38700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 39600, "at": "2026-09-30T17:00:00+03:00", "queued": 781, "onboard": 20426}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 44, "count": 71, "second": 39600, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 82.60900000000038, "checkpoint": "controller/resume_39600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 40500, "at": "2026-09-30T17:15:00+03:00", "queued": 497, "onboard": 20549}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 45, "count": 71, "second": 40500, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 123.09400000000096, "checkpoint": "controller/resume_40500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 41400, "at": "2026-09-30T17:30:00+03:00", "queued": 746, "onboard": 21437}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 46, "count": 71, "second": 41400, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 122.5470000000023, "checkpoint": "controller/resume_41400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 42300, "at": "2026-09-30T17:45:00+03:00", "queued": 623, "onboard": 21531}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 47, "count": 71, "second": 42300, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 123.59300000000076, "checkpoint": "controller/resume_42300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 43200, "at": "2026-09-30T18:00:00+03:00", "queued": 582, "onboard": 20770}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 48, "count": 71, "second": 43200, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 126.71900000000096, "checkpoint": "controller/resume_43200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 44100, "at": "2026-09-30T18:15:00+03:00", "queued": 830, "onboard": 22419}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 49, "count": 71, "second": 44100, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 117.4529999999977, "checkpoint": "controller/resume_44100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 45000, "at": "2026-09-30T18:30:00+03:00", "queued": 790, "onboard": 23600}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 50, "count": 71, "second": 45000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 126.4529999999977, "checkpoint": "controller/resume_45000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 45900, "at": "2026-09-30T18:45:00+03:00", "queued": 518, "onboard": 20449}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 51, "count": 71, "second": 45900, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 127.21900000000096, "checkpoint": "controller/resume_45900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 46800, "at": "2026-09-30T19:00:00+03:00", "queued": 417, "onboard": 16420}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 52, "count": 71, "second": 46800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 129.2970000000023, "checkpoint": "controller/resume_46800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 47700, "at": "2026-09-30T19:15:00+03:00", "queued": 413, "onboard": 17318}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 53, "count": 71, "second": 47700, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 128.68799999999828, "checkpoint": "controller/resume_47700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 48600, "at": "2026-09-30T19:30:00+03:00", "queued": 380, "onboard": 17329}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 54, "count": 71, "second": 48600, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 127.42199999999866, "checkpoint": "controller/resume_48600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 49500, "at": "2026-09-30T19:45:00+03:00", "queued": 343, "onboard": 15934}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 55, "count": 71, "second": 49500, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 128.71900000000096, "checkpoint": "controller/resume_49500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 50400, "at": "2026-09-30T20:00:00+03:00", "queued": 286, "onboard": 13924}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 56, "count": 71, "second": 50400, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 130.61000000000058, "checkpoint": "controller/resume_50400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 51300, "at": "2026-09-30T20:15:00+03:00", "queued": 309, "onboard": 13423}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 57, "count": 71, "second": 51300, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 128.56199999999808, "checkpoint": "controller/resume_51300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 52200, "at": "2026-09-30T20:30:00+03:00", "queued": 275, "onboard": 12770}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 58, "count": 71, "second": 52200, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 172.75, "checkpoint": "controller/resume_52200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 53100, "at": "2026-09-30T20:45:00+03:00", "queued": 214, "onboard": 11009}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 59, "count": 71, "second": 53100, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 203.2029999999977, "checkpoint": "controller/resume_53100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 54000, "at": "2026-09-30T21:00:00+03:00", "queued": 204, "onboard": 9604}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 60, "count": 71, "second": 54000, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 210.60900000000038, "checkpoint": "controller/resume_54000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 54900, "at": "2026-09-30T21:15:00+03:00", "queued": 212, "onboard": 9073}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 61, "count": 71, "second": 54900, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 211.09299999999712, "checkpoint": "controller/resume_54900.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 55800, "at": "2026-09-30T21:30:00+03:00", "queued": 204, "onboard": 8818}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 62, "count": 71, "second": 55800, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 206.96900000000096, "checkpoint": "controller/resume_55800.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 56700, "at": "2026-09-30T21:45:00+03:00", "queued": 202, "onboard": 8554}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 63, "count": 71, "second": 56700, "applied": "COST_SOLVER", "status": "conditional_resource_policy", "seconds": 251.53099999999904, "checkpoint": "controller/resume_56700.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 57600, "at": "2026-09-30T22:00:00+03:00", "queued": 187, "onboard": 7443}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 64, "count": 71, "second": 57600, "applied": "KEEP", "status": "conditional_resource_policy", "seconds": 107.78099999999904, "checkpoint": "controller/resume_57600.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 58500, "at": "2026-09-30T22:15:00+03:00", "queued": 186, "onboard": 6771}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 65, "count": 71, "second": 58500, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 121.10900000000038, "checkpoint": "controller/resume_58500.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 59400, "at": "2026-09-30T22:30:00+03:00", "queued": 140, "onboard": 6231}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 66, "count": 71, "second": 59400, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 119.20300000000134, "checkpoint": "controller/resume_59400.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 60300, "at": "2026-09-30T22:45:00+03:00", "queued": 99, "onboard": 5171}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 67, "count": 71, "second": 60300, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 99.79699999999866, "checkpoint": "controller/resume_60300.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 61200, "at": "2026-09-30T23:00:00+03:00", "queued": 118, "onboard": 4387}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 68, "count": 71, "second": 61200, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 54.92099999999846, "checkpoint": "controller/resume_61200.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 62100, "at": "2026-09-30T23:15:00+03:00", "queued": 95, "onboard": 4297}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 69, "count": 71, "second": 62100, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 99.14099999999962, "checkpoint": "controller/resume_62100.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 63000, "at": "2026-09-30T23:30:00+03:00", "queued": 95, "onboard": 4126}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 70, "count": 71, "second": 63000, "applied": "KEEP", "status": "no_feasible_candidate", "seconds": 115.39099999999962, "checkpoint": "controller/resume_63000.json.gz"}
+{"stage": "decision_started", "arm": "BALANCED", "second": 63900, "at": "2026-09-30T23:45:00+03:00", "queued": 67, "onboard": 3231}
+{"stage": "evaluation_error", "second": 63900, "error_code": "input_contract_error"}
+{"stage": "decision_completed", "arm": "BALANCED", "index": 71, "count": 71, "second": 63900, "applied": "KEEP", "status": "evaluation_error", "seconds": 62.36000000000058, "checkpoint": "controller/resume_63900.json.gz"}
+{"stage": "completed", "arm": "BALANCED", "seconds": 8021.828000000001, "actual_service_admissible": false, "km": 27274.472}

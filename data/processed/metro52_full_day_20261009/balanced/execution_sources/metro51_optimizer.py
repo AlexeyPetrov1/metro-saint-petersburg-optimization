@@ -1,0 +1,390 @@
+"""Joint integer departure shifts and temporary withdrawals, independently replayed."""
+
+from collections import defaultdict
+from copy import deepcopy
+from datetime import datetime, timedelta
+from math import ceil, isfinite
+from time import monotonic
+
+from metro47_cost_policy import choose_by_cost
+
+
+def choose_balanced(rows, *, mean_allowance=10, p95_allowance=40, reference_trials=None, **kwargs):
+    rows = list(rows)
+    keep = next((r for r in rows if r['candidate_id'] == 'KEEP'), None)
+    baseline = reference_trials if reference_trials is not None else (keep or {}).get('trials', [])
+    budgets = {}
+    for trial in baseline:
+        cohort = trial.get('mature_cohort', {})
+        if cohort.get('complete') and cohort.get('arrived', 0):
+            budgets[trial['scenario']] = (cohort['mean_wait_seconds'] + mean_allowance,
+                                         cohort['p95_wait_seconds'] + p95_allowance)
+    eligible, failures = [], {}
+    for source in rows:
+        row = deepcopy(source)
+        reasons = []
+        for trial in row.get('trials', []):
+            local = trial.get('peak_boarding_service', {})
+            if local.get('passed') is not True:
+                reasons.append('local_boarding_service')
+            cohort = trial.get('mature_cohort', {})
+            budget = budgets.get(trial['scenario'])
+            if not cohort.get('complete'):
+                reasons.append('waiting_cohort_incomplete')
+            elif cohort.get('arrived', 0) and budget is None:
+                reasons.append('reference_wait_budget_unknown')
+            elif cohort.get('arrived', 0):
+                if cohort['mean_wait_seconds'] > budget[0] + 1e-9:
+                    reasons.append('mean_wait_budget')
+                if cohort['p95_wait_seconds'] > budget[1] + 1e-9:
+                    reasons.append('p95_wait_budget')
+        if reasons:
+            row['service_passed'] = False
+            failures[row['candidate_id']] = sorted(set(reasons))
+        eligible.append(row)
+    answer = choose_by_cost(eligible, **kwargs)
+    answer.update(waiting_budgets=dict(mean_seconds=max((v[0] for v in budgets.values()), default=None),
+                                     p95_seconds=max((v[1] for v in budgets.values()), default=None)),
+                  waiting_budget_scope=('same causal forecast immutable original reference' if reference_trials is not None
+                      else 'same causal forecast current KEEP; final fixed-reference audit required'),
+                  balanced_rejections=failures,
+                  fallback_service_verified=bool(keep and 'KEEP' not in failures
+                      and choose_by_cost([keep], **kwargs)['selected_candidate_id'] == 'KEEP'))
+    return answer
+
+
+def future_trip_controls(data, second, horizon, *, locks=()):
+    """Bound unstarted duties while allowing relative shifts of future chains."""
+    from goal43_policy import minimum_headway, parameter
+    origin = datetime.fromisoformat(data['period_start'])
+    tracks = {r['track_id']: r for r in data['tracks']}
+    stations = {r['station_id']: r for r in data['stations']}
+    timing, chain = defaultdict(list), defaultdict(list)
+    for row in data['leg_timing']:
+        timing[row['trip_id']].append(row)
+    for trip in data['plans'][0]['trips']:
+        chain[trip['train_id']].append(trip)
+    first = lambda trip: min(r['departure_second'] for r in timing[trip['trip_id']])
+    def ready(trip):
+        row = max(timing[trip['trip_id']], key=lambda r:r['leg_index'])
+        track = tracks[trip['route'][-1]]
+        station = stations[track['to_station']]
+        return (row['departure_second'] + track['travel_seconds']
+                + row.get('approach_holding_seconds',0)
+                + (station['turnaround_seconds'] or station['stop_seconds']))
+    blocked, entries = set(locks), {}
+    entry_count = 0
+    for owned in chain.values():
+        owned.sort(key=first)
+        for index, trip in enumerate(owned):
+            if not trip['route'][0].startswith('ENTRY_'):
+                continue
+            entry_count += 1
+            following = next((t for t in owned[index+1:] if t['passenger']), None)
+            if following is None:
+                blocked.add(trip['trip_id']);continue
+            depot = tracks[trip['route'][0]]['from_station']
+            release = (0 if stations[depot]['kind']=='siding' else
+                parameter(data['headway_policy'],'depot_release_s')['Avtovo' if 'AVTOVO' in depot else 'Northern'])
+            if first(trip)<second or first(following)-release<second:
+                blocked.update((trip['trip_id'],following['trip_id']));continue
+            lead = ready(trip)-first(trip)
+            entries[trip['trip_id']] = dict(kind='ENTRY',first_second=first(trip),
+                earliest_second=second+max(0,release-lead),release_seconds=release,
+                first_service_trip_id=following['trip_id'],first_service_earliest_second=second+release)
+    controls, bounds = {}, {}
+    for owned in chain.values():
+        for trip in owned:
+            identity, start = trip['trip_id'], first(trip)
+            if identity in blocked or not second<=start<horizon:
+                continue
+            if identity in entries:
+                controls[identity]=entries[identity]
+                bounds[identity]=(max(-600,entries[identity]['earliest_second']-start),600)
+            elif trip['passenger'] and start>=second+120:
+                controls[identity]=dict(kind='SERVICE',first_second=start,earliest_second=second)
+                bounds[identity]=(-120,120)
+    # Entry preparation and first passenger service share the command boundary.
+    for entry, control in entries.items():
+        identity = control['first_service_trip_id']
+        if identity in bounds:
+            lower,upper=bounds[identity]
+            bounds[identity]=(max(lower,control['first_service_earliest_second']-controls[identity]['first_second']),upper)
+    continuity=[]
+    for owned in chain.values():
+        for previous,following in zip(owned,owned[1:]):
+            p,f=previous['trip_id'],following['trip_id']
+            slack=first(following)-ready(previous)
+            if p in bounds or f in bounds:
+                if slack<0:raise ValueError('negative source train readiness slack')
+                continuity.append((p,f,slack))
+                if f in bounds and p not in bounds:
+                    lo,hi=bounds[f];bounds[f]=(max(lo,-slack),hi)
+                if p in bounds and f not in bounds:
+                    lo,hi=bounds[p];bounds[p]=(lo,min(hi,slack))
+    for identity,(lower,upper) in list(bounds.items()):
+        if controls[identity]['kind']=='SERVICE':
+            for row in timing[identity]:
+                clock=row['departure_second']
+                original=minimum_headway(origin+timedelta(seconds=clock),data['headway_policy'])
+                while lower<0 and minimum_headway(origin+timedelta(seconds=clock+lower),data['headway_policy'])!=original:lower+=1
+                while upper>0 and minimum_headway(origin+timedelta(seconds=clock+upper),data['headway_policy'])!=original:upper-=1
+        if not lower<=0<=upper:
+            raise ValueError('source duty violates release or readiness')
+        bounds[identity]=(lower,upper)
+    return dict(shift_bounds=bounds,trip_controls=controls,continuities=continuity,
+        entry_control_present=True,source_entry_count=entry_count,
+        eligible_entry_count=sum(v['kind']=='ENTRY' for v in controls.values()),
+        release_control_scope='retime existing future ENTRY only; no invented extra train duty')
+
+
+def solve_joint_clocks(options, departures, option_values, rate_slots, *, as_of, end_second,
+                       shift_bounds, capacity=1200, comfort_capacity=960,
+                       no_good_cuts=(), max_withdrawals=None, time_limit_seconds=20, deadline=None,
+                       continuities=(), trip_controls=None, mode='repair'):
+    """Search a soft capacity proxy; independent physical/passenger gates certify."""
+    from ortools.sat.python import cp_model
+    began=monotonic();stop=min(began+time_limit_seconds,deadline or float('inf'))
+    empty=dict(selected_train_ids=[],trip_shifts={},status='evaluation_timeout',search_complete=False,
+        estimated_maintenance_resource_saving_rub=0,fixed_headway_grid_used=False,
+        passenger_admissible=False,release_authorized=False,cash_saving_rub=None,
+        operational_global_optimum_proven=False,capacity_proxy_hard=False)
+    if stop<=began:return empty
+    if mode not in ('repair','economy') or not 0<=as_of<end_second or not 0<comfort_capacity<=capacity:
+        raise ValueError('invalid mode, horizon or capacity')
+    controls=trip_controls or {}
+    names=[r['train_id'] for r in options]
+    if len(names)!=len(set(names)) or set(names)!=set(option_values):raise ValueError('distinct option values required')
+    if any(not isfinite(float(v)) or v<0 for v in option_values.values()):raise ValueError('invalid maintenance value')
+    owner={}
+    for option in options:
+        for identity in option['cancel_service_ids']:
+            if identity in owner:raise ValueError('overlapping cancellation options')
+            owner[identity]=option['train_id']
+    for row in rate_slots:
+        if any(not isfinite(row[d+'_rate']) or row[d+'_rate']<0 for d in ('up','down')):
+            raise ValueError('invalid forecast crossing rate')
+        for d in ('up','down'):
+            if d+'_section_rates' in row and any(not isfinite(v) or v<0 for v in row[d+'_section_rates']):
+                raise ValueError('invalid forecast section rate')
+    for identity,(lower,upper) in shift_bounds.items():
+        rows=[r for r in departures if r['trip_id']==identity]
+        control=controls.get(identity,{});kind=control.get('kind','SERVICE')
+        first=control.get('first_second',min((r['second'] for r in rows),default=-1))
+        limit=600 if kind=='ENTRY' else 120
+        if first<as_of or (kind!='ENTRY' and not rows):raise ValueError('cannot shift committed duty')
+        if any(type(v) is not int for v in (lower,upper)) or not -limit<=lower<=0<=upper<=limit:
+            raise ValueError('bounded integer shifts required')
+        if first+lower<max(as_of,control.get('earliest_second',as_of)):
+            raise ValueError('shift precedes release lead or decision')
+    model=cp_model.CpModel();removed={n:model.new_bool_var('removed_'+n) for n in names}
+    if max_withdrawals is not None:model.add(sum(removed.values())<=max_withdrawals)
+    for cut in no_good_cuts:
+        if set(cut)-set(names):raise ValueError('unknown no-good train')
+        model.add(sum(removed[n].Not() for n in cut)+sum(removed[n] for n in names if n not in cut)>=1)
+    shifts={n:model.new_int_var(lo,hi,'shift_'+n) for n,(lo,hi) in shift_bounds.items()}
+    for identity,variable in shifts.items():
+        model.add_hint(variable,0)
+        if identity in owner:model.add(variable==0).only_enforce_if(removed[owner[identity]])
+    for value in removed.values():model.add_hint(value,0)
+    for previous,following,slack in continuities:
+        if slack<0:raise ValueError('negative source train readiness slack')
+        condition=[removed[owner[j]].Not() for j in (previous,following) if j in owner]
+        model.add(shifts.get(following,0)-shifts.get(previous,0)>=-slack).only_enforce_if(condition)
+    def keep(row):return removed[owner[row['trip_id']]].Not() if row['trip_id'] in owner else 1
+    def clock(row):return row['second']+shifts.get(row['trip_id'],0)
+    section_count=fallback_count=0
+    def section_rate(slot,row):
+        nonlocal section_count,fallback_count
+        values=slot.get(row['direction']+'_section_rates')
+        if values is None:
+            fallback_count+=1;return slot[row['direction']+'_rate']
+        index=row.get('section_index')
+        if type(index) is not int or not 0<=index<len(values):raise ValueError('invalid section index')
+        section_count+=1;return values[index]
+    by_track=defaultdict(list)
+    for row in departures:by_track[row['track_id']].append(row)
+    overloads,comforts,proxy_rows=[],[],[];arcs=tracks=0
+    for track,all_rows in by_track.items():
+        all_rows.sort(key=lambda r:r['second'])
+        history=[r for r in all_rows if r['second']<as_of]
+        rows=history[-1:]+[r for r in all_rows if as_of<=r['second']<=end_second]
+        if len(rows)<2 or not any(r['trip_id'] in shifts or r['trip_id'] in owner for r in rows):continue
+        tracks+=1
+        model.add(sum(keep(r) for r in rows if r['second']<=as_of+480)>=1)
+        model.add(sum(keep(r) for r in rows if r['second']>=end_second-480)>=1)
+        for i,left in enumerate(rows[:-1]):
+            possible=[]
+            for j in range(i+1,len(rows)):
+                right=rows[j]
+                if right['second']-left['second']>720:break
+                arc=model.new_bool_var(f'arc_{track}_{i}_{j}')
+                conditions=[keep(left),keep(right)]+[keep(r).Not() if not isinstance(keep(r),int) else 0 for r in rows[i+1:j]]
+                model.add_bool_and(conditions).only_enforce_if(arc)
+                model.add_bool_or([1-c if isinstance(c,int) else c.Not() for c in conditions]+[arc])
+                gap=model.new_int_var(0,720,f'gap_{track}_{i}_{j}')
+                model.add(gap==clock(right)-clock(left)).only_enforce_if(arc)
+                model.add(gap==0).only_enforce_if(arc.Not())
+                model.add(gap>=right.get('minimum_headway_seconds',150)).only_enforce_if(arc)
+                model.add(gap<=480).only_enforce_if(arc)
+                offset=left.get('terminal_offset_seconds',0)
+                a,b=left['second']-offset-120,right['second']-offset+120
+                intersect=[r for r in rate_slots if r['start_second']<b and r['end_second']>a]
+                before_section,before_fallback=section_count,fallback_count
+                rate=max((section_rate(r,left) for r in intersect),default=0)
+                # Counts describe modeled arcs, not the number of intersecting slots.
+                section_count=before_section+int(section_count>before_section)
+                fallback_count=before_fallback+int(fallback_count>before_fallback)
+                if rate:
+                    scaled=ceil(rate*1000)
+                    overload=model.new_int_var(0,scaled*720,f'overload_{track}_{i}_{j}')
+                    comfort=model.new_int_var(0,scaled*720,f'comfort_{track}_{i}_{j}')
+                    model.add_max_equality(overload,[0,scaled*gap-capacity*1000])
+                    model.add_max_equality(comfort,[0,scaled*gap-comfort_capacity*1000])
+                    overloads.append(overload);comforts.append(comfort)
+                    proxy_rows.append((arc,gap,scaled,track))
+                possible.append(arc);arcs+=1
+                if isinstance(keep(right),int):break
+            model.add(sum(possible)==keep(left))
+    absolute=[]
+    for identity,variable in shifts.items():
+        limit=max(abs(v) for v in shift_bounds[identity])
+        value=model.new_int_var(0,limit,'abs_'+identity);model.add_abs_equality(value,variable);absolute.append(value)
+    repair=sum(overloads)+sum(comforts)
+    saving=sum(round(option_values[n]*100)*removed[n] for n in names)
+    stages=[('proxy_repair',repair,False),('resource_saving',saving,True),('departure_stability',sum(absolute),False)]
+    if mode=='economy':stages[0],stages[1]=stages[1],stages[0]
+    solver=cp_model.CpSolver();solver.parameters.num_search_workers=1;solver.parameters.random_seed=7
+    incumbent=None;stage_results=[];complete=True;last_status=cp_model.UNKNOWN
+    for index,(name,objective,maximize) in enumerate(stages):
+        remaining=stop-monotonic()
+        if remaining<=.01:complete=False;break
+        model.maximize(objective) if maximize else model.minimize(objective)
+        solver.parameters.max_time_in_seconds=max(.001,remaining/(len(stages)-index))
+        status=solver.solve(model);last_status=status
+        if status not in (cp_model.OPTIMAL,cp_model.FEASIBLE):
+            complete=False
+            if incumbent is None:
+                return dict(empty,status='no_feasible_candidate' if status==cp_model.INFEASIBLE else 'evaluation_timeout',
+                    search_complete=status==cp_model.INFEASIBLE,solver_status=solver.status_name(status),
+                    elapsed_seconds=monotonic()-began,arc_count=arcs,shift_variable_count=len(shifts))
+            break
+        selected=[n for n in names if solver.value(removed[n])]
+        values={n:solver.value(v) for n,v in shifts.items()}
+        overload_count=sum(solver.value(arc) and scaled*solver.value(gap)>capacity*1000 for arc,gap,scaled,_ in proxy_rows)
+        comfort_count=sum(solver.value(arc) and scaled*solver.value(gap)>comfort_capacity*1000 for arc,gap,scaled,_ in proxy_rows)
+        incumbent=dict(selected_train_ids=sorted(selected),trip_shifts=values,
+            proxy_overload_arc_count=overload_count,proxy_comfort_arc_count=comfort_count,
+            proxy_objective_value=solver.value(repair),
+            proxy_overload_scaled_sum=sum(solver.value(v) for v in overloads))
+        value=round(solver.objective_value)
+        stage_results.append(dict(stage=name,status=solver.status_name(status),value=value,
+                                  best_bound=solver.best_objective_bound))
+        complete &= status==cp_model.OPTIMAL
+        model.add(objective==value)
+    return dict(empty,**incumbent,status='optimal' if complete and len(stage_results)==len(stages) else 'search_incomplete',
+        search_complete=complete and len(stage_results)==len(stages),solver_status=solver.status_name(last_status),
+        estimated_maintenance_resource_saving_rub=sum(option_values[n] for n in incumbent['selected_train_ids']),
+        elapsed_seconds=monotonic()-began,arc_count=arcs,shift_variable_count=len(shifts),impacted_tracks=tracks,
+        entry_shift_variable_count=sum(controls.get(n,{}).get('kind')=='ENTRY' for n in shifts),
+        section_rate_arc_count=section_count,aggregate_rate_fallback_arc_count=fallback_count,
+        proxy_objective_minimum_proven=bool(stage_results and stage_results[0]['stage']=='proxy_repair' and stage_results[0]['status']=='OPTIMAL'),
+        optimization_stages=stage_results,mode=mode,
+        objective='soft overload and comfort first, repair-resource cost second, shifts third' if mode=='repair' else 'resource cost first, soft proxy second, shifts third',
+        capacity_scope='soft per-section proposal proxy; hard independent actual boarding and physics gates remain required')
+
+
+def joint_proposal(data, bundle, state, second, service_end, *, return_by_second,
+                   maintenance_rates, deadline=None, time_limit_seconds=20, **feedback):
+    from goal43_policy import minimum_headway
+    from metro44_mpc import forecast_section_rates
+    from metro44_run import station_offsets
+    from metro48_temporary import temporary_options
+    options = temporary_options(data, second, service_end, return_by_second=return_by_second, deadline=deadline)
+    ids = [s['station_id'] for s in data['stations'] if s['kind'] == 'line']
+    origin = datetime.fromisoformat(data['period_start'])
+    offsets = station_offsets(data)
+    at = (origin+timedelta(seconds=second)).isoformat()
+    rates = forecast_section_rates(bundle, ids, at, period_start=data['period_start'],
+                                   checkpoint=state, station_offsets_seconds=offsets)
+    trips = {t['trip_id']: t for t in data['plans'][0]['trips']}
+    tracks = {t['track_id']: t for t in data['tracks']}
+    trains = {t['train_id']: t for t in data['trains']}
+    by_trip = defaultdict(list)
+    departures = []
+    for row in data['leg_timing']:
+        identity = row['trip_id']
+        by_trip[identity].append(row)
+        track_id = trains[row['train_id']]['location'] if identity == '@initial' else trips[identity]['route'][row['leg_index']]
+        track = tracks[track_id]
+        if track['from_station'] not in ids or track['to_station'] not in ids:
+            continue
+        direction = 'up' if track_id.endswith('_up') else 'down'
+        clock = row['departure_second']
+        departures.append(dict(track_id=track_id, direction=direction, second=clock,
+            trip_id=identity, minimum_headway_seconds=minimum_headway(origin+timedelta(seconds=clock),data['headway_policy']),
+            terminal_offset_seconds=offsets[direction][ids.index(track['from_station'])],
+            section_index=min(ids.index(track['from_station']),ids.index(track['to_station']))))
+    for row in data.get('previous_departures', []):
+        track_id, clock = row['track_id'], row['departure_second']
+        track = tracks[track_id]
+        if track['from_station'] in ids and track['to_station'] in ids:
+            direction = 'up' if track_id.endswith('_up') else 'down'
+            departures.append(dict(track_id=track_id, direction=direction, second=clock,
+                trip_id='@history', minimum_headway_seconds=minimum_headway(origin+timedelta(seconds=clock), data['headway_policy']),
+                terminal_offset_seconds=offsets[direction][ids.index(track['from_station'])],
+            section_index=min(ids.index(track['from_station']),ids.index(track['to_station']))))
+    controls = future_trip_controls(data, second, min(second+14400, service_end),
+                                    locks={r['resume_trip_id'] for r in options})
+    values = {r['train_id']:float(r['saved_km'])*maintenance_rates[r['train_type']] for r in options}
+    result = solve_joint_clocks(options, departures, values, rates, as_of=second, end_second=service_end,
+        shift_bounds=controls['shift_bounds'], time_limit_seconds=time_limit_seconds, deadline=deadline,
+        continuities=controls['continuities'], trip_controls=controls['trip_controls'], **feedback)
+    result.update(return_by_second=return_by_second, forecast_digest=bundle.get('bundle_id'),
+                  shift_scope='unstarted SERVICE +/-120s and existing future ENTRY +/-600s; relative duty continuity',
+                  entry_control_present=True, eligible_entry_count=controls['eligible_entry_count'],
+                  source_entry_count=controls['source_entry_count'],
+                  entry_release_status='available' if controls['eligible_entry_count'] else 'no_feasible_uncommitted_release',
+                  release_control_scope=controls['release_control_scope'])
+    return result
+
+
+def build_joint_candidate(data, second, planning_end, *, selected_train_ids, return_by_second,
+                          trip_shifts, deadline=None, phase_seconds=0):
+    from metro48_temporary import build_temporary_candidate
+    from metro44_catalog import physical_gate
+    if phase_seconds:
+        raise ValueError('explicit trip shifts required')
+    changed, audit = (build_temporary_candidate(data, second, planning_end,
+        selected_train_ids=selected_train_ids, return_by_second=return_by_second, deadline=deadline)
+        if selected_train_ids else (deepcopy(data), {}))
+    controls = future_trip_controls(data, second, float('inf'))
+    existing = {t['trip_id']: t for t in changed['plans'][0]['trips']}
+    for identity, delta in trip_shifts.items():
+        if not delta or identity not in existing:
+            continue
+        trip = existing[identity]
+        rows = [r for r in changed['leg_timing'] if r['trip_id']==identity]
+        entry = trip['route'][0].startswith('ENTRY_')
+        if min(r['departure_second'] for r in rows) < second or (not trip['passenger'] and not entry):
+            raise ValueError('cannot change committed trip')
+        if type(delta) is not int or abs(delta) > (600 if entry else 120):
+            raise ValueError('invalid whole-duty shift')
+        if entry:
+            identity_control = controls['trip_controls'].get(identity)
+            if identity_control is None or identity_control['kind'] != 'ENTRY':
+                raise ValueError('cannot change committed entry preparation')
+            lower, upper = controls['shift_bounds'][identity]
+            if not lower <= delta <= upper:
+                raise ValueError('entry precedes preparation or readiness')
+        if min(r['departure_second'] for r in rows)+delta < second:
+            raise ValueError('cannot shift departure before decision')
+        trip['departure_second'] += delta
+        for row in rows:
+            row['departure_second'] += delta
+    verified = physical_gate(changed, second, planning_end, reference=data,
+                             deadline=deadline if deadline is not None else float('inf'))
+    if not verified['movement_passed']:
+        raise ValueError('joint clock proposal failed independent physical gate')
+    return changed, {**audit, **verified, 'trip_shifts':trip_shifts,
+        'joint_clock_and_withdrawal_search':True, 'fixed_headway_grid_used':False}

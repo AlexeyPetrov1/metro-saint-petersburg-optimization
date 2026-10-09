@@ -1,0 +1,3946 @@
+{
+  "B001": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B002": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B003": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B004": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B005": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B006": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B007": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B008": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B009": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B010": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B011": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B012": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B013": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B014": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B015": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B016": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B017": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B018": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B019": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B020": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B021": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B022": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B023": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B024": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B025": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B026": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B027": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B028": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B029": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B030": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B031": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B032": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B033": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B034": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B035": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B036": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "B037": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Baltiets",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y001": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y002": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y003": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y004": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y005": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y006": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y007": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y008": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y009": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y010": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y011": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y012": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y013": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y014": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y015": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y016": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y017": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y018": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y019": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y020": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y021": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y022": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y023": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y024": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y025": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y026": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y027": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y028": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y029": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y030": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ],
+  "Y031": [
+    {
+      "car_id": "C1",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C2",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C3",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C4",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C5",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C6",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C7",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    },
+    {
+      "car_id": "C8",
+      "car_type": "demo-Yubileyny",
+      "max_capacity": 160,
+      "normal_threshold": 120,
+      "source": "GOAL4.3 per-car operating limits; manufacturer distribution not inferred"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "pdf_created": true,
+  "annual_scenario_emitted": true,
+  "source_results_overwritten": false,
+  "full_fleet_size": 68,
+  "side_columns": [
+    "Без СР и КР",
+    "С СР и КР"
+  ],
+  "per_train_csv_rows": 544,
+  "input_file_count": 760,
+  "all_results_admissible": false,
+  "ensemble_verified": true,
+  "campaign_status": {
+    "expected_arms": [
+      "balanced",
+      "reference"
+    ],
+    "completed_arms": [
+      "balanced",
+      "reference"
+    ],
+    "unfinished_arms": [],
+    "all_arms_finished": true,
+    "pilot_passed": false,
+    "full_day_status": "completed",
+    "full_day_completed": true,
+    "future_full_day_ran_in_another_folder_unknown": true
+  },
+  "decision_explanations_in_dispatcher": true,
+  "pdf": {
+    "pages": 231,
+    "sha256": "489b989e2c17ca32c5f397662fa632a7ba2218f93a10f530cd8046e04bf561e1",
+    "verified_text": true
+  },
+  "artifacts": {
+    "comfort.csv": "29cdf2b7c516155af238a771cb57a10ba54e20c405e7836dd9e5323962aee3da",
+    "comparison.json": "455ed73afcc67f69ad43c1e6956749c47cdcb4cf941b22f65bcf6c7f7239ca5c",
+    "cost.png": "5d5367aa44f2704c710127586e11c788e225fe682d9a70db9482dcd4b33269fb",
+    "decisions.csv": "52cd9abfbff458c8b83a7af1039670fafe7792d73bac816f93cb386de62dfb32",
+    "dispatcher.html": "aee79aa37fc49160cc4cf887d030e02b0ff0535bdc14cd8669dcbaca3cbbf063",
+    "economics.csv": "b175eb3add025d78ba7b3628d76c5fd97dee26a47d5366cecf07eb27344d93ae",
+    "explanations.csv": "067d410baded42d571fcbf7d97bae931f1a03cb96eb0586f7f0988310cc64eb4",
+    "incident_probes.csv": "41d55821d71480d3c36b3cb5f68f1a72755e2052cf95c8ba06b46d5ec0fbc0e7",
+    "input_inventory.csv": "6fb5f225c7dff085523b45c85153535e4d76f95607d008bb02c7b158d8287445",
+    "local_cohorts.csv": "728241410cf124a75cd0c427e60476e54b05e17cd32dd78b9030df63b24352a7",
+    "local_misses.png": "4dae24a925372d5298a22d4d544ba307e89a1d5bb6c6496c699ae8196d842dc3",
+    "local_waiting.csv": "3be9b853560a1d3b99943f712f24e3eaa7fed4c6e8e1fbc6b15e620d44b96649",
+    "pdf_renderer.log": "cfac5c1325f98412da1c63eb64506feedcf3dd400c426fd4c979ea157bcc1192",
+    "pdf_text.txt": "e0569d138b9589a2d729ccbb96fb4b5f34d91bfb9d6ea1e439c9ab883bdd131b",
+    "per_train.csv": "905762dab8689d7e0925f94cf795b700237bf864145b44033010fd5c68845b51",
+    "post_execution_forecasts.csv": "322c8d5a5255ed71f16190ddf9e304c1d678b854b451621c0c08b02220278556",
+    "report.html": "7164c75b90aeaf670932cf350b1313125dfffc67c0573ba9b40db1f460548c62",
+    "report.md": "f5eb5965d11c3010b7f97154c1ce3328451b9d4c8d21ba3cc87b22b8f80e0a5e",
+    "report.pdf": "489b989e2c17ca32c5f397662fa632a7ba2218f93a10f530cd8046e04bf561e1",
+    "waiting_budgets.csv": "65b1b57d27a119ff80d611e33d6ae73f7463109b0c60010f6eb22cfd9cb6fc37"
+  }
+}

@@ -1,0 +1,23 @@
+﻿{
+    "requested_at_utc":  "2026-10-09T19:48:06.2940977Z",
+    "preserved_process_ids":  [
+                                  10304,
+                                  13024,
+                                  2732,
+                                  16184,
+                                  22856,
+                                  23196
+                              ],
+    "skipped_arms":  [
+                         "old",
+                         "ensemble_old"
+                     ],
+    "reason":  "User requested only the already running ensemble with the current optimizer",
+    "stopped_scheduler_pid":  23520,
+    "expected_arms":  [
+                          "reference",
+                          "balanced"
+                      ],
+    "full_day_resumed_at_utc":  "2026-10-09T20:59:42.8521435Z",
+    "requested_completion":  "Full original REFERENCE and already running BALANCED; user revoked cutoff60"
+}

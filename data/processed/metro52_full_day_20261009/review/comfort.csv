@@ -1,0 +1,9 @@
+﻿arm,window,observed_car_seconds,occupied_car_seconds,above_120_car_seconds,above_140_car_seconds,count,p95,p99,maximum,start_second,end_second,above_120_time_share,above_140_time_share,denominator,quantile_scope
+balanced,whole_window,30528000,24800837,231825,70457,131944,91,122,150,0,72000,0.009347466781060656,0.002840912183729928,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+balanced,morning_peak,3052800,2766488,166141,55327,17352,124,150,150,7200,14400,0.06005484209582691,0.01999900234521169,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+balanced,evening_peak,3052800,2873440,16660,700,18016,98,116,145,39600,46800,0.005797928615179019,0.00024361044601592515,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+balanced,peak,,,,,35368,111,141,150,,,,,,
+reference,whole_window,30528000,25479408,226811,70457,135400,87,122,150,0,72000,0.00890173743440193,0.0027652526306733657,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+reference,morning_peak,3052800,2873272,166141,55327,18024,124,150,150,7200,14400,0.057822928006815925,0.019255747454470024,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+reference,evening_peak,3052800,2873440,16660,700,18016,98,116,145,39600,46800,0.005797928615179019,0.00024361044601592515,positive-load car-seconds; zero-load observed time reported separately,every car at passenger departure in this time window; zero loads included
+reference,peak,,,,,36040,110,141,150,,,,,,

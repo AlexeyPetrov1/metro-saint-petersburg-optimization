@@ -1,0 +1,24 @@
+{
+  "ended": true,
+  "completion_reason": "user_scope_completion",
+  "expected_arms": [
+    "reference",
+    "balanced"
+  ],
+  "facts": 71,
+  "valid": 71,
+  "completion": {
+    "llm_child": {
+      "exit_code": 125,
+      "intentional": true,
+      "reason": "user_scope_completion"
+    },
+    "llm_stub": {
+      "exit_code": 125,
+      "intentional": false,
+      "reason": "natural_exit"
+    }
+  },
+  "all_simulations_finished_for_selected_scope": true,
+  "all_original_arms_finished": false
+}

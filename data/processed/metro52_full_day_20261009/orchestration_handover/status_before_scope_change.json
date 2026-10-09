@@ -1,0 +1,125 @@
+{
+  "stage": "running",
+  "readiness": [
+    {
+      "path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\core\\final_junit.xml",
+      "sha256": "d72061fed704558189920076db41becb81f69ec7c8bb55578633de9b1bebdf83",
+      "tests": 2073,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\core\\final_readiness_junit.xml",
+      "sha256": "dbc2ce165681bf540e6b483e1f45d139f0997af2dd0fffd05d7d5b850bf64989",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\portable_final_junit.xml",
+      "sha256": "23aee6630604257a488d9921592feebed9d7146e83f981e864eb524ac456fc8a",
+      "tests": 1172,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\ui\\tests_final.xml",
+      "sha256": "2da4ead39efb23cf67c152b00ce99440fcea109573a26643c660032b76088c13",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\ui\\legacy_probe.xml",
+      "sha256": "772b153ee829ba210b574a75a95a46273fe57e30d0e2d9930747fc2a8a820296",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "started_at": 1791573900.072438,
+  "jobs": {
+    "reference": {
+      "pid": 10580,
+      "command": [
+        "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\lesha\\HackathonSPB\\metro51_run.py",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_full_day_20261009\\reference",
+        "--arm",
+        "REFERENCE",
+        "--stage",
+        "full_day",
+        "--seed",
+        "7",
+        "--control-start-second",
+        "900",
+        "--max-attempts",
+        "2"
+      ],
+      "started_at": 1791573900.079386,
+      "exit_code": 0
+    },
+    "explanations": {
+      "pid": 2732,
+      "command": [
+        "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.metro51_explain_campaign",
+        "--root",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_full_day_20261009",
+        "--watch",
+        "--timeout",
+        "15",
+        "--max-seconds",
+        "43200"
+      ],
+      "started_at": 1791573900.0865037,
+      "exit_code": null
+    },
+    "balanced": {
+      "pid": 10304,
+      "command": [
+        "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\lesha\\HackathonSPB\\metro51_run.py",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_full_day_20261009\\balanced",
+        "--arm",
+        "BALANCED",
+        "--stage",
+        "full_day",
+        "--seed",
+        "7",
+        "--control-start-second",
+        "900",
+        "--max-attempts",
+        "2"
+      ],
+      "started_at": 1791573975.1651368,
+      "exit_code": null
+    }
+  },
+  "features": [
+    "full_frozen_ensemble",
+    "causal_quarter_forecasts",
+    "joint_optimizer",
+    "stochastic_boarding",
+    "local_service_gates",
+    "stabling_and_depot_mileage",
+    "yandexgpt_explanations",
+    "forecast_audit",
+    "synthetic_stops",
+    "economics_pdf"
+  ],
+  "updated_at": 1791575285.773298,
+  "available_memory_bytes": 2792558592,
+  "pending_arms": [
+    "old",
+    "ensemble_old"
+  ]
+}

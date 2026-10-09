@@ -1,0 +1,2 @@
+arm,n_predictions,n_scored,n_origins,unique_station_targets,overlapping_forecasts,missing_truth,incomplete_truth,actual_sum,absolute_error_sum,wape,mae,bias_fraction,mean_signed_error,n_interval_scored,q10_q90_coverage,q90_upper_coverage,q10_lower_coverage
+balanced,10640,10640,70,1463,True,0,0,5770801,442713.0,0.07671603993968948,41.608364661654136,-0.017963364184625324,-9.742763157894737,10080,0.7577380952380952,0.8561507936507936,0.9015873015873016
