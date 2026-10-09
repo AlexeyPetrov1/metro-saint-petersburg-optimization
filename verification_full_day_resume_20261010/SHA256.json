@@ -1,0 +1,26 @@
+{
+  "scope": "full_day_resume",
+  "results_ready": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11835,
+      "sha256": "dac0f5095dc433fdd4b9433962dc9d99c44d095ad0c863702ab8f8d0bd98fa6b"
+    },
+    {
+      "path": "verification_full_day_resume_20261010/RESUME.md",
+      "bytes": 2171,
+      "sha256": "63f28ae851e897224c7b1f0984ae140b5c201605d1770ec7c15e41b099c5829e"
+    },
+    {
+      "path": "verification_full_day_resume_20261010/scope.json",
+      "bytes": 580,
+      "sha256": "0b5d3d5347800c01014ab247647d6e4c7bfa15784a314a505783612379731d8b"
+    },
+    {
+      "path": "verification_full_day_resume_20261010/tests.xml",
+      "bytes": 5712,
+      "sha256": "ab6cb3efedae3f609681b2ee43556aed79ffd75de8f6c32321c59a87ce575171"
+    }
+  ]
+}
