@@ -1,0 +1,18 @@
+{
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.56,
+  "tests_first": true,
+  "initial_expected_failure": "ModuleNotFoundError: scripts.metro52_deliver",
+  "watcher_launched": false,
+  "git_executed": false,
+  "live_processes_changed": false,
+  "core_runtime_changed": false,
+  "sha256": {
+    "scripts/metro52_deliver.py": "7b4bde16c186c0c5e789c52f79f68c5bf7928a499b0ec8494fe84be266e993ea",
+    "tests/test_metro52_deliver.py": "1f3b508eaf72bd3d7b816f3612cff7f959a5dbb7be86e48b7c8d4091c761fedf"
+  },
+  "readme_update_tests_first": true
+}
