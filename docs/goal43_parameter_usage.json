@@ -1,0 +1,2431 @@
+{
+  "schema_version": 1,
+  "profile_id": "goal4_3",
+  "captured_at": "2026-10-08T21:38:06.974321+03:00",
+  "evidence_scope": "Static source-to-config-to-code evidence snapshot. A call site proves a parameter read, not execution in every branch or live railway validity. No simulation performance or savings results are claimed.",
+  "source_file": {
+    "path": "GOAL_4_3_METRO.txt",
+    "sha256": "3c24bc9eee147100db6f244a8d5c6f97a2f58e58108cc95b25a1f96cdf54128a"
+  },
+  "config_file": {
+    "path": "config/decision_engine/goal4_3.json",
+    "sha256": "249c40c6fe141fd6b0daae86d7d63d0f0df94f43d2a5887d63759b9e00936cb4"
+  },
+  "code_files": {
+    "dwell.py": {
+      "sha256": "a31dbc83fd8a3c41d1399d793853f0ae059d34ee2daf08956e1e9db4c01a272e"
+    },
+    "forecasting.py": {
+      "sha256": "4f7f8c2258badbc9b95b1cda0b03345448885406901d4b49d38931db87228f17"
+    },
+    "goal43_actions.py": {
+      "sha256": "affe600aeac22456b576e6dc7e4c9db5784d9710414c6fc6a34104983ac8e689"
+    },
+    "goal43_campaign.py": {
+      "sha256": "3ab2267df443c2158021f04568d3814944f9edc205cbd45b3349f1782aee3762"
+    },
+    "goal43_controller.py": {
+      "sha256": "36e002eac976f302b54fd6dfb66f8be0867b1766a1b366fddd36261e5e59590d"
+    },
+    "goal43_demo.py": {
+      "sha256": "bbf6c05b58f7410d7190b399eed99be5df61fe7800a2301b3318476c9dc9ed06"
+    },
+    "goal43_economics.py": {
+      "sha256": "b4c0593280e43e8ea23ee1f9c1cddb39124a80184715edf70f96dbf69d7ee076"
+    },
+    "goal43_extend.py": {
+      "sha256": "da90b63c89e775bbb1af884747b7466ef40513637e4b2627e85a2eda7db657fc"
+    },
+    "goal43_notifications.py": {
+      "sha256": "fa1248b055f12fc5d8093f4d42e59f33765487ca0bad5635d6cfb4380045e2c8"
+    },
+    "goal43_optimizer.py": {
+      "sha256": "297818ebada3f595180355fa94c6dd53c4df73f70685294cd9946d0a5881c6c8"
+    },
+    "goal43_policy.py": {
+      "sha256": "eed7aaabd92b5556b3c59c005fc3258b7b00caf1803d2a96e487b7447c5da504"
+    },
+    "goal43_replay.py": {
+      "sha256": "8c3c690998d872d2fea155d4e352b8c14eb680408ae68f0f4b3069041bb908c6"
+    },
+    "goal43_report.py": {
+      "sha256": "83fb8c0543231039793ea1f54d3baa5b44afbd75bd72ade9fc5064ea7e4d9a80"
+    },
+    "goal43_source_refresh.py": {
+      "sha256": "947467ff3d6b1d1d08342299e87a924e535e6a1bc4ab62069c6b9ca5739cb08a"
+    },
+    "goal43_ui_probe.py": {
+      "sha256": "af90ac4cc12edf0eeafea1f7d4dd8b901344917c94f038860c5a231ed66ad4fb"
+    },
+    "goal43_verify.py": {
+      "sha256": "890236bff67e13eaaf2001cc75db5a1b142cbce0692d8875274139358ff7ee93"
+    },
+    "passenger_groups.py": {
+      "sha256": "ff8a8a69762dbaa3a1dcf172ac9ed2fc8ae79d8d30aeff72e1049d74c4bad76b"
+    },
+    "rolling.py": {
+      "sha256": "4eff60a6db5a945d1cf1f98ba24de2c0397a8d4cb08bdb74d69a8dde942e258e"
+    },
+    "simulation.py": {
+      "sha256": "38251bb989e69c5a5edfdb482c17dbf8f856cc89ff92f82639b1ec5c3353dc70"
+    }
+  },
+  "parameters": {
+    "timezone": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 25,
+          "text": "Время показывать по Москве; машинные отметки должны однозначно задавать часовой пояс Europe/Moscow."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 27,
+          "text": "Пиковые часы: 08:00–10:00 и 17:00–19:00 по будням. Минимальный интервал между отправлениями поездов одного направления на одной станции:"
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/timezone",
+        "value": "Europe/Moscow",
+        "unit": "IANA timezone"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 45,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if p(\"timezone\") != \"Europe/Moscow\":"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 75,
+          "function": "minimum_headway",
+          "kind": "static_parameter_read",
+          "code": "local = _aware_datetime(at).astimezone(ZoneInfo(parameter(policy, \"timezone\")))"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "peak_windows": {
+      "source": "User peak-hours clarification; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 27,
+          "text": "Пиковые часы: 08:00–10:00 и 17:00–19:00 по будням. Минимальный интервал между отправлениями поездов одного направления на одной станции:"
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/peak_windows",
+        "value": [
+          {
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "start": "08:00",
+            "end": "10:00"
+          },
+          {
+            "weekdays": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "start": "17:00",
+            "end": "19:00"
+          }
+        ],
+        "unit": "local time, half-open intervals; Monday=0"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 152,
+          "function": "_headway_windows",
+          "kind": "static_parameter_read",
+          "code": "for window in parameter(policy, \"peak_windows\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 59,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "for window in p(\"peak_windows\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 76,
+          "function": "minimum_headway",
+          "kind": "static_parameter_read",
+          "code": "for window in parameter(policy, \"peak_windows\"):"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "physical_headway_min_s": {
+      "source": "User physical headway limit; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 28,
+          "text": "- в пик: 113 секунд;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 32,
+          "text": "Физический минимум 113 секунд нельзя нарушать ради восстановления графика. Превышение 480 секунд, вызванное блокировкой движения, отражать как нарушение с причиной и длительностью. Нельзя ограничить число в отчёте или объявить аварийный план штатно допустимым."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/physical_headway_min_s",
+        "value": 113,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 222,
+          "function": "regulate_plan",
+          "kind": "static_parameter_read",
+          "code": "target = max(parameter(policy, \"physical_headway_min_s\"), target)"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 235,
+          "function": "regulate_plan",
+          "kind": "static_parameter_read",
+          "code": "solution = solve_departures(rows, min_headway_seconds=parameter(policy, \"physical_headway_min_s\"),"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 52,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"physical_headway_min_s\") <= p(\"peak_headway_min_s\") <= p(\"offpeak_headway_min_s\") <= p(\"headway_max_s\"):"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 157,
+          "function": "_movement",
+          "kind": "static_parameter_read",
+          "code": "minimum = parameter(policy, \"physical_headway_min_s\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "peak_headway_min_s": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 27,
+          "text": "Пиковые часы: 08:00–10:00 и 17:00–19:00 по будням. Минимальный интервал между отправлениями поездов одного направления на одной станции:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 28,
+          "text": "- в пик: 113 секунд;"
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/peak_headway_min_s",
+        "value": 113,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 52,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"physical_headway_min_s\") <= p(\"peak_headway_min_s\") <= p(\"offpeak_headway_min_s\") <= p(\"headway_max_s\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 78,
+          "function": "minimum_headway",
+          "kind": "static_parameter_read",
+          "code": "return parameter(policy, \"peak_headway_min_s\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "offpeak_headway_min_s": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 27,
+          "text": "Пиковые часы: 08:00–10:00 и 17:00–19:00 по будням. Минимальный интервал между отправлениями поездов одного направления на одной станции:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 29,
+          "text": "- вне пика: 150 секунд;"
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/offpeak_headway_min_s",
+        "value": 150,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 52,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"physical_headway_min_s\") <= p(\"peak_headway_min_s\") <= p(\"offpeak_headway_min_s\") <= p(\"headway_max_s\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 79,
+          "function": "minimum_headway",
+          "kind": "static_parameter_read",
+          "code": "return parameter(policy, \"offpeak_headway_min_s\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "headway_max_s": {
+      "source": "GOAL 4.3 section 2; target violations remain visible during incidents",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 30,
+          "text": "- максимальный целевой интервал: 480 секунд."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 32,
+          "text": "Физический минимум 113 секунд нельзя нарушать ради восстановления графика. Превышение 480 секунд, вызванное блокировкой движения, отражать как нарушение с причиной и длительностью. Нельзя ограничить число в отчёте или объявить аварийный план штатно допустимым."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/headway_max_s",
+        "value": 480,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 236,
+          "function": "regulate_plan",
+          "kind": "static_parameter_read",
+          "code": "max_headway_seconds=parameter(policy, \"headway_max_s\"), max_hold_seconds=480,"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 52,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"physical_headway_min_s\") <= p(\"peak_headway_min_s\") <= p(\"offpeak_headway_min_s\") <= p(\"headway_max_s\"):"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 86,
+          "function": "_service_headways",
+          "kind": "static_parameter_read",
+          "code": "maximum = parameter(policy, \"headway_max_s\")"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 166,
+          "function": "_movement",
+          "kind": "static_parameter_read",
+          "code": "maximum = parameter(policy, \"headway_max_s\")"
+        },
+        {
+          "path": "rolling.py",
+          "line": 141,
+          "function": "operational_headways",
+          "kind": "static_parameter_read",
+          "code": "maximum = parameter(policy, \"headway_max_s\")"
+        },
+        {
+          "path": "rolling.py",
+          "line": 298,
+          "function": "_decide_operational",
+          "kind": "static_parameter_read",
+          "code": "allowance = approach_delay + parameter(policy, \"headway_max_s\")"
+        },
+        {
+          "path": "rolling.py",
+          "line": 348,
+          "function": "_decide_operational",
+          "kind": "static_parameter_read",
+          "code": "headway_max_seconds=parameter(policy, \"headway_max_s\"), allowance_seconds=allowance,"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "turnaround_s": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 34,
+          "text": "Разворот поезда на конечной занимает 180 секунд. Время оборота вычислять из перегонов, обслуживания, разворотов и удержаний. Отозванные 99 минут не использовать как ограничение, целевое значение или источник калибровки. Прежние одинаковые времена перегонов остаются предположениями до получения измерений."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/turnaround_s",
+        "value": 180,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 34,
+          "function": "attach_operational_depots",
+          "kind": "static_parameter_read",
+          "code": "if stations[terminal][\"turnaround_seconds\"] != parameter(policy, \"turnaround_s\"):"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 189,
+          "function": "build_operational_day",
+          "kind": "static_parameter_read",
+          "code": "config[\"turnaround_seconds\"] = parameter(policy, \"turnaround_s\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "depot_release_s": {
+      "source": "User inclusive depot-release clarification; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 36,
+          "text": "Подача из депо от команды до первого пассажирского отправления:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 37,
+          "text": "- Северное: 780 секунд;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 38,
+          "text": "- Автово: 720 секунд."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 40,
+          "text": "Это полные сроки подачи. Не добавлять повторно прежние 900 секунд подготовки или отдельные операции, уже включённые в срок. Последующее движение до проблемной станции считать по маршруту. Отдельно показывать время первого отправления и время эффекта для конкретной станции."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/depot_release_s",
+        "value": {
+          "Avtovo": 720,
+          "Northern": 780
+        },
+        "unit": "s from command to first passenger departure, inclusive"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 54,
+          "function": "attach_operational_depots",
+          "kind": "static_parameter_read",
+          "code": "release = parameter(policy, \"depot_release_s\")[depot]"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 62,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "for depot, seconds in p(\"depot_release_s\").items():"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 83,
+          "function": "depot_release_seconds",
+          "kind": "static_parameter_read",
+          "code": "return parameter(policy or load_policy(), \"depot_release_s\")[depot]"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 112,
+          "function": "build_train_registry",
+          "kind": "static_parameter_read",
+          "code": "if reserve[\"depot\"] not in parameter(policy, \"depot_release_s\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 141,
+          "function": "validate_train_registry",
+          "kind": "static_parameter_read",
+          "code": "if row[\"state\"] == \"reserve\" and (location[\"kind\"] != \"depot\" or location.get(\"depot\") not in parameter(policy, \"depot_release_s\")):"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "fleet_by_type": {
+      "source": "User fleet clarification; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 42,
+          "text": "Общий приписной парк: 37 составов «Балтиец» и 31 состав «Юбилейный», всего 68. Это весь парк, включая составы на линии, резерв и обслуживание. На линии одновременно не более 53 составов любого сочетания типов. Остановившийся на линии поезд продолжает занимать место."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/fleet_by_type",
+        "value": {
+          "Baltiets": 37,
+          "Yubileyny": 31
+        },
+        "unit": "assigned trains, including line, reserve and maintenance"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 64,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "for train_type, count in p(\"fleet_by_type\").items():"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 66,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if p(\"line_train_limit\") > sum(p(\"fleet_by_type\").values()):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 90,
+          "function": "build_train_registry",
+          "kind": "static_parameter_read",
+          "code": "fleet = parameter(policy, \"fleet_by_type\")"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 125,
+          "function": "validate_train_registry",
+          "kind": "static_parameter_read",
+          "code": "fleet = parameter(policy, \"fleet_by_type\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "line_train_limit": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 42,
+          "text": "Общий приписной парк: 37 составов «Балтиец» и 31 состав «Юбилейный», всего 68. Это весь парк, включая составы на линии, резерв и обслуживание. На линии одновременно не более 53 составов любого сочетания типов. Остановившийся на линии поезд продолжает занимать место."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/line_train_limit",
+        "value": 53,
+        "unit": "trains, including stopped trains"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 67,
+          "function": "attach_operational_depots",
+          "kind": "static_parameter_read",
+          "code": "out[\"max_trains_on_line\"] = parameter(policy, \"line_train_limit\")"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 339,
+          "function": "generate_strategy_candidates",
+          "kind": "static_parameter_read",
+          "code": "max_withdrawals=max_withdrawals, line_capacity=parameter(policy, \"line_train_limit\"),"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 66,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if p(\"line_train_limit\") > sum(p(\"fleet_by_type\").values()):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 149,
+          "function": "validate_train_registry",
+          "kind": "static_parameter_read",
+          "code": "if count > parameter(policy, \"line_train_limit\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 150,
+          "function": "validate_train_registry",
+          "kind": "static_parameter_read",
+          "code": "raise ValueError(f\"Line occupancy exceeds {parameter(policy, 'line_train_limit')}\")"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 136,
+          "function": "_movement",
+          "kind": "static_parameter_read",
+          "code": "limit = parameter(policy, \"line_train_limit\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "cars_per_train": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 48,
+          "text": "Каждый состав имеет восемь вагонов. Порог применять отдельно к каждому вагону:"
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/cars_per_train",
+        "value": 8,
+        "unit": "cars/train"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_actions.py",
+          "line": 50,
+          "function": "attach_operational_depots",
+          "kind": "static_parameter_read",
+          "code": "cars=parameter(policy, \"cars_per_train\"), state=\"standby\","
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 196,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "if row[\"car_index\"] >= parameter(policy, \"cars_per_train\") or not isinstance(row[\"train_id\"], str) or not row[\"train_id\"]:"
+        }
+      ],
+      "usage_status": "static_read_found",
+      "usage_note": "Fleet and exposure use the configured count; economics annual-service conversion and replay car profiles currently use literal eight, matching this fixed GOAL profile."
+    },
+    "comfort_limit": {
+      "source": "User comfort clarification; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 49,
+          "text": "- 120 человек: цель комфорта;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 54,
+          "text": "Прежний отказ любого действия из-за превышения 120 убрать из нового профиля. Суммарная вместимость состава не доказывает соблюдение порога каждого вагона."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/comfort_limit",
+        "value": 120,
+        "unit": "passengers/car; soft goal"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 54,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"comfort_limit\") < p(\"normal_limit\") < p(\"hard_limit\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 215,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "comfort = parameter(policy, \"comfort_limit\")"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 228,
+          "function": "build_operational_day",
+          "kind": "static_parameter_read",
+          "code": "max_capacity=parameter(policy, \"hard_limit\"), normal_threshold=parameter(policy, \"comfort_limit\"),"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 289,
+          "function": "_exposure",
+          "kind": "static_parameter_read",
+          "code": "comfort_car_seconds=prior > parameter(policy, \"comfort_limit\"),"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "normal_limit": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 50,
+          "text": "- 121–150: допустимая обычная загрузка;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 57,
+          "text": "exceptional_time_share = сумма вагоно-секунд с загрузкой >150 / сумма вагоно-секунд перевозки пассажиров."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/normal_limit",
+        "value": 150,
+        "unit": "passengers/car"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 54,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"comfort_limit\") < p(\"normal_limit\") < p(\"hard_limit\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 216,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "normal = parameter(policy, \"normal_limit\")"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 290,
+          "function": "_exposure",
+          "kind": "static_parameter_read",
+          "code": "exceptional_car_seconds=prior > parameter(policy, \"normal_limit\"),"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "hard_limit": {
+      "source": "GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 51,
+          "text": "- 151–160: исключительный режим, не более 1% времени перевозки;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 52,
+          "text": "- более 160: недопустимо."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/hard_limit",
+        "value": 160,
+        "unit": "passengers/car; hard maximum"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 54,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if not p(\"comfort_limit\") < p(\"normal_limit\") < p(\"hard_limit\"):"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 217,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "hard = parameter(policy, \"hard_limit\")"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 228,
+          "function": "build_operational_day",
+          "kind": "static_parameter_read",
+          "code": "max_capacity=parameter(policy, \"hard_limit\"), normal_threshold=parameter(policy, \"comfort_limit\"),"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 291,
+          "function": "_exposure",
+          "kind": "static_parameter_read",
+          "code": "hard_limit_car_seconds=prior > parameter(policy, \"hard_limit\"))"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 594,
+          "function": "verify",
+          "kind": "static_parameter_read",
+          "code": "violations.append(dict(kind=\"hard_car_limit\", limit=parameter(policy, \"hard_limit\"), car_seconds=passengers[\"hard_limit_car_seconds\"]))"
+        },
+        {
+          "path": "rolling.py",
+          "line": 351,
+          "function": "_decide_operational",
+          "kind": "static_parameter_read",
+          "code": "hard_passed=instant_peak <= parameter(policy, \"hard_limit\"),"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "exceptional_time_share_max": {
+      "source": "User exceptional-time clarification; GOAL 4.3 section 2",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 51,
+          "text": "- 151–160: исключительный режим, не более 1% времени перевозки;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 57,
+          "text": "exceptional_time_share = сумма вагоно-секунд с загрузкой >150 / сумма вагоно-секунд перевозки пассажиров."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 59,
+          "text": "В знаменатель входят движение, пассажирские стоянки и аварийное ожидание с людьми. Пустой отстой и пустые рейсы не входят. При нулевом знаменателе показывать отсутствие перевозки, а не успешную проверку риска. Порог 1% проверять за весь эпизод и каждый 15-минутный шаг; эта детализация является выбранной политикой демо. Отдельно выводить превышения по каждому составу и худшему вагону, чтобы среднее не скрывало локальную перегрузку."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/exceptional_time_share_max",
+        "value": 0.01,
+        "unit": "exceptional occupied-car time / occupied-car time"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 56,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "share = p(\"exceptional_time_share_max\")"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 218,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "limit = Fraction(str(parameter(policy, \"exceptional_time_share_max\")))"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "exceptional_time_scope": {
+      "source": "GOAL 4.3 section 2; selected demo policy",
+      "source_status": "assumed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 59,
+          "text": "В знаменатель входят движение, пассажирские стоянки и аварийное ожидание с людьми. Пустой отстой и пустые рейсы не входят. При нулевом знаменателе показывать отсутствие перевозки, а не успешную проверку риска. Порог 1% проверять за весь эпизод и каждый 15-минутный шаг; эта детализация является выбранной политикой демо. Отдельно выводить превышения по каждому составу и худшему вагону, чтобы среднее не скрывало локальную перегрузку."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/exceptional_time_scope",
+        "value": [
+          "whole_episode",
+          "every_decision_step"
+        ],
+        "unit": "demo verification scope"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 257,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "\"unit\": \"car-seconds\", \"policy_scope\": parameter(policy, \"exceptional_time_scope\")}"
+        }
+      ],
+      "usage_status": "static_read_found",
+      "usage_note": "occupancy_exposure checks whole episode and every decision_step; per-car and per-train values are diagnostics."
+    },
+    "decision_step_s": {
+      "source": "GOAL 4.3 sections 2 and 5",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 40,
+          "text": "Это полные сроки подачи. Не добавлять повторно прежние 900 секунд подготовки или отдельные операции, уже включённые в срок. Последующее движение до проблемной станции считать по маршруту. Отдельно показывать время первого отправления и время эффекта для конкретной станции."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 59,
+          "text": "В знаменатель входят движение, пассажирские стоянки и аварийное ожидание с людьми. Пустой отстой и пустые рейсы не входят. При нулевом знаменателе показывать отсутствие перевозки, а не успешную проверку риска. Порог 1% проверять за весь эпизод и каждый 15-минутный шаг; эта детализация является выбранной политикой демо. Отдельно выводить превышения по каждому составу и худшему вагону, чтобы среднее не скрывало локальную перегрузку."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/decision_step_s",
+        "value": 900,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 204,
+          "function": "occupancy_exposure",
+          "kind": "static_parameter_read",
+          "code": "step = parameter(policy, \"decision_step_s\")"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 278,
+          "function": "_exposure",
+          "kind": "static_parameter_read",
+          "code": "step = parameter(policy, \"decision_step_s\")"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "notification_budget_s": {
+      "source": "User eight-minute clarification; GOAL 4.3 sections 4 and 5",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 126,
+          "text": "Бюджет от обнаружения до выдачи результата: не более 480 секунд, включая подготовку, поиск, подробную проверку и формирование карточки. Заложить резерв на выдачу результата и ограничить число финалистов оставшимся временем. Сначала измерить время одного расчёта и профилировать узкие места."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/notification_budget_s",
+        "value": 480,
+        "unit": "s from detection through checked recommendation or explicit failure"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_replay.py",
+          "line": 112,
+          "function": "live_decision",
+          "kind": "static_parameter_read",
+          "code": "budget = min(float(budget_seconds), parameter(policy, \"notification_budget_s\"))"
+        },
+        {
+          "path": "rolling.py",
+          "line": 213,
+          "function": "decide_operational",
+          "kind": "static_parameter_read",
+          "code": "deadline = began + min(float(budget_seconds), parameter(policy, \"notification_budget_s\"))"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "reference_roundtrip_s": {
+      "source": "User withdrew artificial 99-minute requirement; GOAL 4.3 section 2",
+      "source_status": "withdrawn",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 34,
+          "text": "Разворот поезда на конечной занимает 180 секунд. Время оборота вычислять из перегонов, обслуживания, разворотов и удержаний. Отозванные 99 минут не использовать как ограничение, целевое значение или источник калибровки. Прежние одинаковые времена перегонов остаются предположениями до получения измерений."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/reference_roundtrip_s",
+        "value": null,
+        "unit": "s"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_policy.py",
+          "line": 68,
+          "function": "validate_policy",
+          "kind": "validation_guard",
+          "code": "if p(\"reference_roundtrip_s\") is not None:"
+        }
+      ],
+      "usage_status": "validation_guard_only",
+      "usage_note": "Withdrawn requirement: validate_policy requires null; it is not a movement target."
+    },
+    "to1_interval_km": {
+      "source": "User maintenance interval; GOAL 4.3 section 6; overrides old 10000-km reference",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 142,
+          "text": "ТО1: один раз в 15 000 км. Цены ниже заданы на один восьмивагонный состав, в рублях:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 148,
+          "text": "Сохранить исходную формулировку «текущий ремонт» и рабочее обозначение ТР1. Не приравнивать автоматически ТР2/ТР3 к иначе названным работам в старом регламенте. Противоречие прежнего интервала ТО1 и новых 15 000 км зафиксировать; в новом профиле применять указание пользователя."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/to1_interval_km",
+        "value": 15000,
+        "unit": "train-km"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_economics.py",
+          "line": 58,
+          "function": "maintenance_registry",
+          "kind": "static_parameter_read",
+          "code": "interval = _value(_parameter(policy, \"to1_interval_km\"))"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "maintenance_prices_rub_by_type": {
+      "source": "User prices; GOAL 4.3 section 6; TR1 working label for current repair, TR2/TR3 not mapped to historical labels",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 142,
+          "text": "ТО1: один раз в 15 000 км. Цены ниже заданы на один восьмивагонный состав, в рублях:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 144,
+          "text": "Тип          ТО1       ТО2       ТР1       ТР2         ТР3"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 145,
+          "text": "Юбилейный    111000    313000    714000    3181000     46651000"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 146,
+          "text": "Балтиец      138000    426000    956000    3409000     47951000"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 148,
+          "text": "Сохранить исходную формулировку «текущий ремонт» и рабочее обозначение ТР1. Не приравнивать автоматически ТР2/ТР3 к иначе названным работам в старом регламенте. Противоречие прежнего интервала ТО1 и новых 15 000 км зафиксировать; в новом профиле применять указание пользователя."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/maintenance_prices_rub_by_type",
+        "value": {
+          "Baltiets": {
+            "TO1": 138000,
+            "TO2": 426000,
+            "TR1": 956000,
+            "TR2": 3409000,
+            "TR3": 47951000
+          },
+          "Yubileyny": {
+            "TO1": 111000,
+            "TO2": 313000,
+            "TR1": 714000,
+            "TR2": 3181000,
+            "TR3": 46651000
+          }
+        },
+        "unit": "RUB per eight-car train service"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_economics.py",
+          "line": 55,
+          "function": "maintenance_registry",
+          "kind": "static_parameter_read",
+          "code": "for kind, rows in _parameter(policy, \"maintenance_prices_rub_by_type\").items()}"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "annual_car_service_counts": {
+      "source": "User annual maintenance volumes; GOAL 4.3 section 6; reference period not otherwise specified",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 158,
+          "text": "Годовые объёмы работ, сообщённые пользователем, относятся к вагонам:"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 159,
+          "text": "- Юбилейный: ТО1 2328, ТО2 176, ТР1 128;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 160,
+          "text": "- Балтиец: ТО1 2904, ТО2 824, ТР1 112."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 163,
+          "text": "- Юбилейный: ТО1 291, ТО2 22, ТР1 16;"
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 164,
+          "text": "- Балтиец: ТО1 363, ТО2 103, ТР1 14."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/annual_car_service_counts",
+        "value": {
+          "Baltiets": {
+            "TO1": 2904,
+            "TO2": 824,
+            "TR1": 112
+          },
+          "Yubileyny": {
+            "TO1": 2328,
+            "TO2": 176,
+            "TR1": 128
+          }
+        },
+        "unit": "car-service events/year, not unique cars or trains"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_economics.py",
+          "line": 57,
+          "function": "maintenance_registry",
+          "kind": "static_parameter_read",
+          "code": "for kind, rows in _parameter(policy, \"annual_car_service_counts\").items()}"
+        }
+      ],
+      "usage_status": "static_read_found",
+      "usage_note": "maintenance_registry divides by eight to form repeated whole-train service equivalents, not distinct train counts."
+    },
+    "fare_revenue_rub": {
+      "source": "User revenue clarification; GOAL 4.3 section 6",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 170,
+          "text": "Средний доход с оплаченной поездки: 50,9 рубля. Это выручка до расходов. Число поездок синей ветки за 2025 год: 200 400 000. При применении среднего 50,9 рубля расчётная выручка составляет 10 200 360 000 рублей. Текущая модель относится к линии 1; годовой объём синей ветки не использовать для её масштабирования. Ранее названные 699 300 000 поездок не использовать в годовом расчёте до установления линии и периода."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/fare_revenue_rub",
+        "value": 50.9,
+        "unit": "RUB/paid trip, gross revenue"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_economics.py",
+          "line": 61,
+          "function": "maintenance_registry",
+          "kind": "static_parameter_read",
+          "code": "fare = _value(_parameter(policy, \"fare_revenue_rub\"))"
+        }
+      ],
+      "usage_status": "static_read_found"
+    },
+    "annual_blue_line_trips2025": {
+      "source": "User line-specific annual volume clarification; GOAL 4.3 section 6",
+      "source_status": "user_confirmed",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 170,
+          "text": "Средний доход с оплаченной поездки: 50,9 рубля. Это выручка до расходов. Число поездок синей ветки за 2025 год: 200 400 000. При применении среднего 50,9 рубля расчётная выручка составляет 10 200 360 000 рублей. Текущая модель относится к линии 1; годовой объём синей ветки не использовать для её масштабирования. Ранее названные 699 300 000 поездок не использовать в годовом расчёте до установления линии и периода."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/annual_blue_line_trips2025",
+        "value": 200400000,
+        "unit": "paid trips, blue line, 2025; reference only for L1 project"
+      },
+      "code_evidence": [
+        {
+          "path": "goal43_economics.py",
+          "line": 62,
+          "function": "maintenance_registry",
+          "kind": "static_parameter_read",
+          "code": "trips = _value(_parameter(policy, \"annual_blue_line_trips2025\"))"
+        }
+      ],
+      "usage_status": "static_read_found",
+      "usage_note": "Reference scope is line 2, 2025; maintenance_registry sets scale_line1=False."
+    },
+    "abandonment_probability": {
+      "source": "GOAL 4.3 section 6; no measured abandonment data",
+      "source_status": "unknown",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 172,
+          "text": "Потерянную выручку считать по дополнительным несостоявшимся оплачиваемым поездкам относительно KEEP. Возвраты учитывать отдельно без повторного счёта одних потерь. Ожидание и отказ в посадке уже прошедшего турникет человека сами по себе не означают потерю оплаты."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 174,
+          "text": "Если данных об отказах до оплаты нет, показать явно заданные сценарии чувствительности и порог, при котором потерянная выручка перекрывает оценённую выгоду. Подписывать предполагаемые доли отказов как assumed. Упущенную прибыль считать только с учётом соответствующих переменных расходов; без них выводить потерянную выручку и ограниченность денежного сравнения."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/abandonment_probability",
+        "value": null,
+        "unit": "probability of refusing a paid trip before payment"
+      },
+      "code_evidence": [],
+      "usage_status": "no_direct_parameter_read_found",
+      "usage_note": "Unknown reference parameter; supplied unpaid-trip counts or explicit sensitivity assumptions are handled separately in goal43_economics. No measured abandonment probability is applied."
+    },
+    "variable_cost_per_trip_rub": {
+      "source": "GOAL 4.3 section 6; no measured contribution margin",
+      "source_status": "unknown",
+      "source_evidence": [
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 168,
+          "text": "Цены ТО2 и ТР хранить и использовать для справочных расчётов. Не добавлять их автоматически в стоимость километра без периодичности, объёмов и правил вложенности работ. Неизвестные затраты на энергию, персонал и другие статьи не считать нулевыми."
+        },
+        {
+          "path": "GOAL_4_3_METRO.txt",
+          "line": 174,
+          "text": "Если данных об отказах до оплаты нет, показать явно заданные сценарии чувствительности и порог, при котором потерянная выручка перекрывает оценённую выгоду. Подписывать предполагаемые доли отказов как assumed. Упущенную прибыль считать только с учётом соответствующих переменных расходов; без них выводить потерянную выручку и ограниченность денежного сравнения."
+        }
+      ],
+      "config": {
+        "path": "config/decision_engine/goal4_3.json",
+        "json_pointer": "/parameters/variable_cost_per_trip_rub",
+        "value": null,
+        "unit": "RUB/paid trip"
+      },
+      "code_evidence": [],
+      "usage_status": "no_direct_parameter_read_found",
+      "usage_note": "Unknown reference parameter; no default profit or margin is inferred. Economic profit remains unknown unless separate applicable inputs are supplied."
+    }
+  },
+  "downstream_evidence": [
+    {
+      "path": "simulation.py",
+      "function": "simulate",
+      "relationship": "Calls minimum_headway at actual later departure timestamp when headway_policy is present; legacy 113-second guard remains for old profiles."
+    },
+    {
+      "path": "dwell.py",
+      "function": "compile_operational_timing",
+      "relationship": "Copies the policy to the operational plan and propagates actual departure minima and directional platform slot precedence; absence of a real release cannot clear an occupied slot."
+    },
+    {
+      "path": "rolling.py",
+      "function": "decide_operational",
+      "relationship": "Monotonic budget includes preparation and detailed validation; a late worker result is discarded. Grouped passenger loop cooperatively checks cancellation every 256 events."
+    }
+  ],
+  "assumed_or_fixed_demo_values": [
+    {
+      "path": "rolling.py",
+      "function": "_decide_operational",
+      "value": 120,
+      "unit": "s",
+      "purpose": "assumed turnstile-to-platform delay; maturity allowance adds configured headway_max_s"
+    },
+    {
+      "path": "dwell.py",
+      "function": "compile_operational_timing",
+      "value": 480,
+      "unit": "s",
+      "purpose": "assumed forward protection for unresolved incidents; it is not a known recovery time"
+    },
+    {
+      "config_pointer": "/demo/platform_capacity_by_station",
+      "purpose": "assumed finite directional platform slots; actual railway interlocking remains unknown"
+    },
+    {
+      "config_pointer": "/demo/terminal_parking_capacity_by_station",
+      "purpose": "declared demo parking capacity; no parking movement is inferred by the platform compiler"
+    }
+  ],
+  "executed_evidence": [
+    {
+      "evidence_id": "policy_contract",
+      "functions": [
+        {
+          "path": "goal43_policy.py",
+          "line": 19,
+          "function": "load_policy"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 73,
+          "function": "minimum_headway"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 82,
+          "function": "depot_release_seconds"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 86,
+          "function": "build_train_registry"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 123,
+          "function": "validate_train_registry"
+        },
+        {
+          "path": "goal43_policy.py",
+          "line": 172,
+          "function": "occupancy_exposure"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 23,
+          "function": "test_profile_keeps_provenance_and_withdrawn_roundtrip",
+          "node_id": "tests/test_goal43_policy.py::test_profile_keeps_provenance_and_withdrawn_roundtrip",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_profile_keeps_provenance_and_withdrawn_roundtrip"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 61,
+          "function": "test_headway_uses_moscow_weekdays_and_half_open_windows",
+          "node_id": "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T05:00:00Z-113]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T07:59:59+03:00-150]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T08:00:00+03:00-113]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T09:59:59+03:00-113]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T10:00:00+03:00-150]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T16:59:59+03:00-150]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T17:00:00+03:00-113]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T18:59:59+03:00-113]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-01T19:00:00+03:00-150]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-05T08:30:00+03:00-150]",
+            "tests/test_goal43_policy.py::test_headway_uses_moscow_weekdays_and_half_open_windows[2026-09-06T17:30:00+03:00-150]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 72,
+          "function": "test_depot_time_includes_all_preparation",
+          "node_id": "tests/test_goal43_policy.py::test_depot_time_includes_all_preparation",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_depot_time_includes_all_preparation[Avtovo-720]",
+            "tests/test_goal43_policy.py::test_depot_time_includes_all_preparation[Northern-780]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 106,
+          "function": "test_stopped_train_still_occupies_line_and_54th_is_rejected",
+          "node_id": "tests/test_goal43_policy.py::test_stopped_train_still_occupies_line_and_54th_is_rejected",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_stopped_train_still_occupies_line_and_54th_is_rejected"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 238,
+          "function": "test_exposure_matches_an_independent_second_by_second_oracle",
+          "node_id": "tests/test_goal43_policy.py::test_exposure_matches_an_independent_second_by_second_oracle",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_exposure_matches_an_independent_second_by_second_oracle"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_policy.py",
+          "line": 181,
+          "function": "test_per_step_limit_cannot_be_hidden_by_whole_episode_average",
+          "node_id": "tests/test_goal43_policy.py::test_per_step_limit_cannot_be_hidden_by_whole_episode_average",
+          "sha256": "34bad2aaab4b0f9cd04d229fdf44c5fce2422660b0b41f0ac97e8dfeb8f7e9ac",
+          "passed_node_ids": [
+            "tests/test_goal43_policy.py::test_per_step_limit_cannot_be_hidden_by_whole_episode_average"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3/maintenance_registry.json",
+          "sha256": "5b9bda883bdc51c6e6383f8c14772d2343031941156063dc4392d9dadb351813",
+          "purpose": "Executed registry export, with user prices, TO1 mileage and blue-line reference context."
+        },
+        {
+          "path": "data/processed/goal4_3_profile/remaining_cases/validation.json",
+          "sha256": "b0ae8b9bbd6412a44afadf274f4908f377ff15efaa55adddf020f20e9a143f5d",
+          "purpose": "Read-only review of service scopes, complete headway coverage, hard limits and failed 15-minute windows across 30 saved runs."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "operational_optimization",
+      "functions": [
+        {
+          "path": "goal43_optimizer.py",
+          "line": 77,
+          "function": "solve_departures"
+        },
+        {
+          "path": "goal43_optimizer.py",
+          "line": 202,
+          "function": "solve_withdrawals"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 17,
+          "function": "attach_operational_depots"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 101,
+          "function": "expand_operational_action"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 165,
+          "function": "regulate_plan"
+        },
+        {
+          "path": "goal43_actions.py",
+          "line": 304,
+          "function": "generate_strategy_candidates"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_optimizer.py",
+          "line": 37,
+          "function": "test_result_matches_independent_enumeration_of_small_regularization_problem",
+          "node_id": "tests/test_goal43_optimizer.py::test_result_matches_independent_enumeration_of_small_regularization_problem",
+          "sha256": "11b069c8f96aa5b6805583190cb7c713bc8666c9bd67a150d1de0afbad9c01b2",
+          "passed_node_ids": [
+            "tests/test_goal43_optimizer.py::test_result_matches_independent_enumeration_of_small_regularization_problem"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_optimizer.py",
+          "line": 159,
+          "function": "test_withdrawals_match_brute_force_under_explicit_service_and_cut_bounds",
+          "node_id": "tests/test_goal43_optimizer.py::test_withdrawals_match_brute_force_under_explicit_service_and_cut_bounds",
+          "sha256": "11b069c8f96aa5b6805583190cb7c713bc8666c9bd67a150d1de0afbad9c01b2",
+          "passed_node_ids": [
+            "tests/test_goal43_optimizer.py::test_withdrawals_match_brute_force_under_explicit_service_and_cut_bounds"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_optimizer.py",
+          "line": 88,
+          "function": "test_already_expired_budget_does_not_claim_verification",
+          "node_id": "tests/test_goal43_optimizer.py::test_already_expired_budget_does_not_claim_verification",
+          "sha256": "11b069c8f96aa5b6805583190cb7c713bc8666c9bd67a150d1de0afbad9c01b2",
+          "passed_node_ids": [
+            "tests/test_goal43_optimizer.py::test_already_expired_budget_does_not_claim_verification"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_actions.py",
+          "line": 95,
+          "function": "test_withdrawal_finishes_passenger_trip_then_returns_and_closes_its_tail",
+          "node_id": "tests/test_goal43_actions.py::test_withdrawal_finishes_passenger_trip_then_returns_and_closes_its_tail",
+          "sha256": "7430a9bf17a22aad82e748386aafba68bd59b06eff3e16fd7d345bbf50074f4f",
+          "passed_node_ids": [
+            "tests/test_goal43_actions.py::test_withdrawal_finishes_passenger_trip_then_returns_and_closes_its_tail"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_actions.py",
+          "line": 107,
+          "function": "test_deferred_withdrawal_restores_service_without_changing_past",
+          "node_id": "tests/test_goal43_actions.py::test_deferred_withdrawal_restores_service_without_changing_past",
+          "sha256": "7430a9bf17a22aad82e748386aafba68bd59b06eff3e16fd7d345bbf50074f4f",
+          "passed_node_ids": [
+            "tests/test_goal43_actions.py::test_deferred_withdrawal_restores_service_without_changing_past"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_actions.py",
+          "line": 206,
+          "function": "test_solver_budget_starts_after_preparation_and_excludes_verification",
+          "node_id": "tests/test_goal43_actions.py::test_solver_budget_starts_after_preparation_and_excludes_verification",
+          "sha256": "7430a9bf17a22aad82e748386aafba68bd59b06eff3e16fd7d345bbf50074f4f",
+          "passed_node_ids": [
+            "tests/test_goal43_actions.py::test_solver_budget_starts_after_preparation_and_excludes_verification"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3/scenarios/forecast_stress/decisions.json",
+          "sha256": "5831a9ffcc492e67195a77f708d744be2843bcd0a53548baff8bc4d6e5fea905",
+          "purpose": "Executed four strategy families, then three controlled decisions COMBINED and REGULATE on a synthetic three-station line."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "motion_platform_and_line_count",
+      "functions": [
+        {
+          "path": "dwell.py",
+          "line": 138,
+          "function": "compile_operational_timing"
+        },
+        {
+          "path": "simulation.py",
+          "line": 97,
+          "function": "simulate"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_motion.py",
+          "line": 152,
+          "function": "test_initial_platform_incident_preserves_departed_history_and_delays_release",
+          "node_id": "tests/test_goal43_motion.py::test_initial_platform_incident_preserves_departed_history_and_delays_release",
+          "sha256": "703eb71f62c73560756e7bca42d1a16c8e91caaaba803343b5c03ef7e25b64a9",
+          "passed_node_ids": [
+            "tests/test_goal43_motion.py::test_initial_platform_incident_preserves_departed_history_and_delays_release[stop-B]",
+            "tests/test_goal43_motion.py::test_initial_platform_incident_preserves_departed_history_and_delays_release[turnaround-C]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion.py",
+          "line": 166,
+          "function": "test_final_platform_slot_without_actual_departure_is_not_cleared_by_turnaround",
+          "node_id": "tests/test_goal43_motion.py::test_final_platform_slot_without_actual_departure_is_not_cleared_by_turnaround",
+          "sha256": "703eb71f62c73560756e7bca42d1a16c8e91caaaba803343b5c03ef7e25b64a9",
+          "passed_node_ids": [
+            "tests/test_goal43_motion.py::test_final_platform_slot_without_actual_departure_is_not_cleared_by_turnaround"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion.py",
+          "line": 201,
+          "function": "test_unknown_incident_protection_moves_forward_at_each_decision",
+          "node_id": "tests/test_goal43_motion.py::test_unknown_incident_protection_moves_forward_at_each_decision",
+          "sha256": "703eb71f62c73560756e7bca42d1a16c8e91caaaba803343b5c03ef7e25b64a9",
+          "passed_node_ids": [
+            "tests/test_goal43_motion.py::test_unknown_incident_protection_moves_forward_at_each_decision"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_platform_fifo.py",
+          "line": 30,
+          "function": "test_observed_approach_arrival_ties_preserve_same_track_departure_fifo",
+          "node_id": "tests/test_goal43_platform_fifo.py::test_observed_approach_arrival_ties_preserve_same_track_departure_fifo",
+          "sha256": "322061ae9b7cceb7c821a42935588ea74edd391fe96b194d4aec3463fa4393f7",
+          "passed_node_ids": [
+            "tests/test_goal43_platform_fifo.py::test_observed_approach_arrival_ties_preserve_same_track_departure_fifo"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_platform_fifo.py",
+          "line": 49,
+          "function": "test_two_platform_slots_keep_observed_incoming_track_fifo",
+          "node_id": "tests/test_goal43_platform_fifo.py::test_two_platform_slots_keep_observed_incoming_track_fifo",
+          "sha256": "322061ae9b7cceb7c821a42935588ea74edd391fe96b194d4aec3463fa4393f7",
+          "passed_node_ids": [
+            "tests/test_goal43_platform_fifo.py::test_two_platform_slots_keep_observed_incoming_track_fifo"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion_performance.py",
+          "line": 42,
+          "function": "test_stopped_trains_entry_and_return_match_independent_location_ledger",
+          "node_id": "tests/test_goal43_motion_performance.py::test_stopped_trains_entry_and_return_match_independent_location_ledger",
+          "sha256": "d803c454e2e410ebd92c2dca461e90c310147da7871ab16f9d6df43f6569a79c",
+          "passed_node_ids": [
+            "tests/test_goal43_motion_performance.py::test_stopped_trains_entry_and_return_match_independent_location_ledger"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion_performance.py",
+          "line": 53,
+          "function": "test_initial_54_stopped_trains_exceed_the_limit",
+          "node_id": "tests/test_goal43_motion_performance.py::test_initial_54_stopped_trains_exceed_the_limit",
+          "sha256": "d803c454e2e410ebd92c2dca461e90c310147da7871ab16f9d6df43f6569a79c",
+          "passed_node_ids": [
+            "tests/test_goal43_motion_performance.py::test_initial_54_stopped_trains_exceed_the_limit"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion_performance.py",
+          "line": 58,
+          "function": "test_reserve_entering_before_return_completes_exceeds_53",
+          "node_id": "tests/test_goal43_motion_performance.py::test_reserve_entering_before_return_completes_exceeds_53",
+          "sha256": "d803c454e2e410ebd92c2dca461e90c310147da7871ab16f9d6df43f6569a79c",
+          "passed_node_ids": [
+            "tests/test_goal43_motion_performance.py::test_reserve_entering_before_return_completes_exceeds_53"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_motion_performance.py",
+          "line": 82,
+          "function": "test_line_occupancy_work_scales_with_events_instead_of_events_times_fleet",
+          "node_id": "tests/test_goal43_motion_performance.py::test_line_occupancy_work_scales_with_events_instead_of_events_times_fleet",
+          "sha256": "d803c454e2e410ebd92c2dca461e90c310147da7871ab16f9d6df43f6569a79c",
+          "passed_node_ids": [
+            "tests/test_goal43_motion_performance.py::test_line_occupancy_work_scales_with_events_instead_of_events_times_fleet"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3_profile/incremental_line_count/before.json",
+          "sha256": "5fa35726e0f3ee634e753c8ff5da1ecec4f10bd6e92a7c05b4dce32ef089d91f",
+          "purpose": "Pre-edit canonical results for all 12 saved full-line journals."
+        },
+        {
+          "path": "data/processed/goal4_3_profile/incremental_line_count/after.json",
+          "sha256": "52dbe9dc9a09943bc275de06a4ab7cbcb8562a06d69046fe43ba8c033a67462c",
+          "purpose": "All 12 post-edit results matched the saved motion and pre-edit canonical hash."
+        },
+        {
+          "path": "data/processed/goal4_3_profile/platform_fifo_n8/recompile.json",
+          "sha256": "9f6ef08d6caf1dece5c3e976bc203e0cc80e365235e0d247ba253f3526434130",
+          "purpose": "Saved N8 regulation plan recompiled at second2743, preserving all2523 earlier events."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "rolling_forecast_and_deadline",
+      "functions": [
+        {
+          "path": "rolling.py",
+          "line": 200,
+          "function": "decide_operational"
+        },
+        {
+          "path": "rolling.py",
+          "line": 128,
+          "function": "operational_headways"
+        },
+        {
+          "path": "rolling.py",
+          "line": 105,
+          "function": "operational_exposure"
+        },
+        {
+          "path": "rolling.py",
+          "line": 256,
+          "function": "initial_service_obligations"
+        },
+        {
+          "path": "rolling.py",
+          "line": 179,
+          "function": "select_operational_candidate"
+        },
+        {
+          "path": "passenger_groups.py",
+          "line": 423,
+          "function": "GroupedPassengerSimulation.run"
+        },
+        {
+          "path": "passenger_groups.py",
+          "line": 173,
+          "function": "GroupedPassengerSimulation.branch_checkpoint"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_rolling.py",
+          "line": 77,
+          "function": "test_future_actual_does_not_change_decision",
+          "node_id": "tests/test_goal43_rolling.py::test_future_actual_does_not_change_decision",
+          "sha256": "a1ea4c3c57029a25146d660e16d8031f9b0053b8b0f58ff44ce231d468e3f5cf",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling.py::test_future_actual_does_not_change_decision"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_rolling.py",
+          "line": 68,
+          "function": "test_short_window_distance_does_not_win_by_postponement",
+          "node_id": "tests/test_goal43_rolling.py::test_short_window_distance_does_not_win_by_postponement",
+          "sha256": "a1ea4c3c57029a25146d660e16d8031f9b0053b8b0f58ff44ce231d468e3f5cf",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling.py::test_short_window_distance_does_not_win_by_postponement"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_rolling_boundaries.py",
+          "line": 68,
+          "function": "test_horizon_entries_are_censored_but_mature_cohort_can_pass",
+          "node_id": "tests/test_goal43_rolling_boundaries.py::test_horizon_entries_are_censored_but_mature_cohort_can_pass",
+          "sha256": "2bbe45485ebef543519bd93ab61a44bf71e4211fdbc23616405f86fa28934c03",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling_boundaries.py::test_horizon_entries_are_censored_but_mature_cohort_can_pass"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_rolling_boundaries.py",
+          "line": 89,
+          "function": "test_existing_queue_and_approaching_passengers_remain_service_obligations",
+          "node_id": "tests/test_goal43_rolling_boundaries.py::test_existing_queue_and_approaching_passengers_remain_service_obligations",
+          "sha256": "2bbe45485ebef543519bd93ab61a44bf71e4211fdbc23616405f86fa28934c03",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling_boundaries.py::test_existing_queue_and_approaching_passengers_remain_service_obligations[290]",
+            "tests/test_goal43_rolling_boundaries.py::test_existing_queue_and_approaching_passengers_remain_service_obligations[350]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_rolling_boundaries.py",
+          "line": 124,
+          "function": "test_public_deadline_bounds_slow_preparation_and_final_validation",
+          "node_id": "tests/test_goal43_rolling_boundaries.py::test_public_deadline_bounds_slow_preparation_and_final_validation",
+          "sha256": "2bbe45485ebef543519bd93ab61a44bf71e4211fdbc23616405f86fa28934c03",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling_boundaries.py::test_public_deadline_bounds_slow_preparation_and_final_validation[operational_exposure]",
+            "tests/test_goal43_rolling_boundaries.py::test_public_deadline_bounds_slow_preparation_and_final_validation[operational_headways]",
+            "tests/test_goal43_rolling_boundaries.py::test_public_deadline_bounds_slow_preparation_and_final_validation[validate_bundle]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_rolling_boundaries.py",
+          "line": 156,
+          "function": "test_grouped_runner_cancels_within_256_events_and_preserves_legacy_output",
+          "node_id": "tests/test_goal43_rolling_boundaries.py::test_grouped_runner_cancels_within_256_events_and_preserves_legacy_output",
+          "sha256": "2bbe45485ebef543519bd93ab61a44bf71e4211fdbc23616405f86fa28934c03",
+          "passed_node_ids": [
+            "tests/test_goal43_rolling_boundaries.py::test_grouped_runner_cancels_within_256_events_and_preserves_legacy_output"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3_profile/remaining_cases/completed.json",
+          "sha256": "5f06cc96000caed8e61e0f09a3c967f30696f08f18eb6bf3a097b06ad3529b39",
+          "purpose": "Five actual decision latencies were below480s; all90 files in15 existing fixture runs retained size and modification time."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "notification_and_repeated_control",
+      "functions": [
+        {
+          "path": "goal43_notifications.py",
+          "line": 49,
+          "function": "update_incident"
+        },
+        {
+          "path": "goal43_notifications.py",
+          "line": 79,
+          "function": "record_calculation_started"
+        },
+        {
+          "path": "goal43_notifications.py",
+          "line": 88,
+          "function": "record_recommendation"
+        },
+        {
+          "path": "goal43_notifications.py",
+          "line": 116,
+          "function": "analytics"
+        },
+        {
+          "path": "goal43_controller.py",
+          "line": 12,
+          "function": "control_times"
+        },
+        {
+          "path": "goal43_controller.py",
+          "line": 20,
+          "function": "observed_planning_data"
+        },
+        {
+          "path": "goal43_controller.py",
+          "line": 54,
+          "function": "run_controller"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 105,
+          "function": "live_decision"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_notifications.py",
+          "line": 21,
+          "function": "test_detection_is_immediate_and_never_creates_acknowledgement",
+          "node_id": "tests/test_goal43_notifications.py::test_detection_is_immediate_and_never_creates_acknowledgement",
+          "sha256": "51906787a9cbf0721d99a2e6adafeb1433b0c35556499dfc95bee3db61b8c4d7",
+          "passed_node_ids": [
+            "tests/test_goal43_notifications.py::test_detection_is_immediate_and_never_creates_acknowledgement"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_notifications.py",
+          "line": 63,
+          "function": "test_actual_monotonic_budget_boundaries",
+          "node_id": "tests/test_goal43_notifications.py::test_actual_monotonic_budget_boundaries",
+          "sha256": "51906787a9cbf0721d99a2e6adafeb1433b0c35556499dfc95bee3db61b8c4d7",
+          "passed_node_ids": [
+            "tests/test_goal43_notifications.py::test_actual_monotonic_budget_boundaries[0-True]",
+            "tests/test_goal43_notifications.py::test_actual_monotonic_budget_boundaries[479.99-True]",
+            "tests/test_goal43_notifications.py::test_actual_monotonic_budget_boundaries[480-True]",
+            "tests/test_goal43_notifications.py::test_actual_monotonic_budget_boundaries[480.01-False]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_notifications.py",
+          "line": 149,
+          "function": "test_historical_report_to_broadcast_is_not_recommendation_latency",
+          "node_id": "tests/test_goal43_notifications.py::test_historical_report_to_broadcast_is_not_recommendation_latency",
+          "sha256": "51906787a9cbf0721d99a2e6adafeb1433b0c35556499dfc95bee3db61b8c4d7",
+          "passed_node_ids": [
+            "tests/test_goal43_notifications.py::test_historical_report_to_broadcast_is_not_recommendation_latency"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_controller.py",
+          "line": 10,
+          "function": "test_observed_merge_hides_future_actual_arrival_and_unexecuted_departure",
+          "node_id": "tests/test_goal43_controller.py::test_observed_merge_hides_future_actual_arrival_and_unexecuted_departure",
+          "sha256": "a1fd48fbc6168190de636999dd159ea4c03c0b795a2080f23cb5e3d49aa68acd",
+          "passed_node_ids": [
+            "tests/test_goal43_controller.py::test_observed_merge_hides_future_actual_arrival_and_unexecuted_departure"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_controller.py",
+          "line": 66,
+          "function": "test_repeated_keep_preserves_passengers_against_continuous_real_engine",
+          "node_id": "tests/test_goal43_controller.py::test_repeated_keep_preserves_passengers_against_continuous_real_engine",
+          "sha256": "a1fd48fbc6168190de636999dd159ea4c03c0b795a2080f23cb5e3d49aa68acd",
+          "passed_node_ids": [
+            "tests/test_goal43_controller.py::test_repeated_keep_preserves_passengers_against_continuous_real_engine"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_replay.py",
+          "line": 42,
+          "function": "test_live_pipeline_latency_includes_candidate_generation",
+          "node_id": "tests/test_goal43_replay.py::test_live_pipeline_latency_includes_candidate_generation",
+          "sha256": "a11a764de5e4fe98229870d4c74b92c19a7e4dba93b356c0cf57d5b5c95d1478",
+          "passed_node_ids": [
+            "tests/test_goal43_replay.py::test_live_pipeline_latency_includes_candidate_generation"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_replay.py",
+          "line": 107,
+          "function": "test_initial_and_final_persistence_cannot_block_in_memory_delivery",
+          "node_id": "tests/test_goal43_replay.py::test_initial_and_final_persistence_cannot_block_in_memory_delivery",
+          "sha256": "a11a764de5e4fe98229870d4c74b92c19a7e4dba93b356c0cf57d5b5c95d1478",
+          "passed_node_ids": [
+            "tests/test_goal43_replay.py::test_initial_and_final_persistence_cannot_block_in_memory_delivery[1]",
+            "tests/test_goal43_replay.py::test_initial_and_final_persistence_cannot_block_in_memory_delivery[2]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_replay.py",
+          "line": 134,
+          "function": "test_delayed_old_notification_write_cannot_finish_after_newer_write",
+          "node_id": "tests/test_goal43_replay.py::test_delayed_old_notification_write_cannot_finish_after_newer_write",
+          "sha256": "a11a764de5e4fe98229870d4c74b92c19a7e4dba93b356c0cf57d5b5c95d1478",
+          "passed_node_ids": [
+            "tests/test_goal43_replay.py::test_delayed_old_notification_write_cannot_finish_after_newer_write"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3/scenarios/historical_offpeak/notification_analytics.json",
+          "sha256": "de40f2638f96c66acedab6974b3339194fe8a3200ee67b9fe36779d13efb19c8",
+          "purpose": "Executed monotonic notification analytics; acknowledgement, action and external delivery remain unknown/not sent."
+        },
+        {
+          "path": "docs/goal43_incident_sources.json",
+          "sha256": "d4575a5164d1148b7cc83878a834e675505ea18df56b86c21b301288618b0d4b",
+          "purpose": "Historical D12 report-to-broadcast14minutes is separated from unknown recommendation readiness."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "economics_fixed_fleet",
+      "functions": [
+        {
+          "path": "goal43_economics.py",
+          "line": 51,
+          "function": "maintenance_registry"
+        },
+        {
+          "path": "goal43_economics.py",
+          "line": 145,
+          "function": "compare_train_economics"
+        },
+        {
+          "path": "goal43_economics.py",
+          "line": 237,
+          "function": "to1_deferral"
+        },
+        {
+          "path": "goal43_economics.py",
+          "line": 262,
+          "function": "revenue_sensitivity"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 43,
+          "function": "test_fixed_fleet_return_mileage_and_type_rates",
+          "node_id": "tests/test_goal43_economics.py::test_fixed_fleet_return_mileage_and_type_rates",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_fixed_fleet_return_mileage_and_type_rates"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 85,
+          "function": "test_partial_coverage_cannot_claim_final_savings",
+          "node_id": "tests/test_goal43_economics.py::test_partial_coverage_cannot_claim_final_savings",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_partial_coverage_cannot_claim_final_savings[change0]",
+            "tests/test_goal43_economics.py::test_partial_coverage_cannot_claim_final_savings[change1]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 136,
+          "function": "test_registry_prices_per_train_and_annual_service_events",
+          "node_id": "tests/test_goal43_economics.py::test_registry_prices_per_train_and_annual_service_events",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_registry_prices_per_train_and_annual_service_events"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 152,
+          "function": "test_to1_delay_uses_known_odometer_and_future_plan",
+          "node_id": "tests/test_goal43_economics.py::test_to1_delay_uses_known_odometer_and_future_plan",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_to1_delay_uses_known_odometer_and_future_plan"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 185,
+          "function": "test_paid_waiting_is_not_lost_revenue",
+          "node_id": "tests/test_goal43_economics.py::test_paid_waiting_is_not_lost_revenue",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_paid_waiting_is_not_lost_revenue"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 226,
+          "function": "test_resource_and_same_to1_cash_are_not_summed_twice",
+          "node_id": "tests/test_goal43_economics.py::test_resource_and_same_to1_cash_are_not_summed_twice",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_resource_and_same_to1_cash_are_not_summed_twice"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_economics.py",
+          "line": 242,
+          "function": "test_sensitivity_labels_assumptions_and_fare_break_even",
+          "node_id": "tests/test_goal43_economics.py::test_sensitivity_labels_assumptions_and_fare_break_even",
+          "sha256": "e53e0e0f30f161cd2614eabcb897b4ea6a6900326c5429e13a7cd8b87c88877d",
+          "passed_node_ids": [
+            "tests/test_goal43_economics.py::test_sensitivity_labels_assumptions_and_fare_break_even"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3/scenarios/forecast_stress/economics.json",
+          "sha256": "4f92caea09e253a197ed96fc3f818c25caa98428ec30d657feb91c273559248f",
+          "purpose": "Saved synthetic fixed68 comparison:332train-km and3054.4RUB TO1 resource value; cash/profit/revenue losses remain unknown."
+        },
+        {
+          "path": "data/processed/goal4_3/scenarios/historical_offpeak/economics.json",
+          "sha256": "7322ec4f93feedf378a6408fb57e45d99a331dbc1dac71a1893be7c04a79ca33",
+          "purpose": "Saved historical comparison:rolling selected KEEP yields zero kilometre savings; inadmissible alternatives are separate."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "source_refresh",
+      "functions": [
+        {
+          "path": "goal43_source_refresh.py",
+          "line": 37,
+          "function": "read_converted_quarter"
+        },
+        {
+          "path": "goal43_source_refresh.py",
+          "line": 65,
+          "function": "read_converted_transport"
+        },
+        {
+          "path": "goal43_source_refresh.py",
+          "line": 98,
+          "function": "semantic_comparison"
+        },
+        {
+          "path": "goal43_source_refresh.py",
+          "line": 115,
+          "function": "refresh"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_source_refresh.py",
+          "line": 18,
+          "function": "test_adapter_changes_only_the_time_header",
+          "node_id": "tests/test_goal43_source_refresh.py::test_adapter_changes_only_the_time_header",
+          "sha256": "6680a8277db881ecb362dac69aeebb388e20e304f29881765d1a295fec0d1f31",
+          "passed_node_ids": [
+            "tests/test_goal43_source_refresh.py::test_adapter_changes_only_the_time_header"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_source_refresh.py",
+          "line": 24,
+          "function": "test_semantic_comparison_joins_by_identity_not_order_or_source_label",
+          "node_id": "tests/test_goal43_source_refresh.py::test_semantic_comparison_joins_by_identity_not_order_or_source_label",
+          "sha256": "6680a8277db881ecb362dac69aeebb388e20e304f29881765d1a295fec0d1f31",
+          "passed_node_ids": [
+            "tests/test_goal43_source_refresh.py::test_semantic_comparison_joins_by_identity_not_order_or_source_label"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_source_refresh.py",
+          "line": 39,
+          "function": "test_duplicate_input_keys_do_not_silently_merge",
+          "node_id": "tests/test_goal43_source_refresh.py::test_duplicate_input_keys_do_not_silently_merge",
+          "sha256": "6680a8277db881ecb362dac69aeebb388e20e304f29881765d1a295fec0d1f31",
+          "passed_node_ids": [
+            "tests/test_goal43_source_refresh.py::test_duplicate_input_keys_do_not_silently_merge"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_source_refresh.py",
+          "line": 45,
+          "function": "test_refresh_rejects_legacy_output_paths_before_any_read",
+          "node_id": "tests/test_goal43_source_refresh.py::test_refresh_rejects_legacy_output_paths_before_any_read",
+          "sha256": "6680a8277db881ecb362dac69aeebb388e20e304f29881765d1a295fec0d1f31",
+          "passed_node_ids": [
+            "tests/test_goal43_source_refresh.py::test_refresh_rejects_legacy_output_paths_before_any_read"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3_source_refresh/source_refresh_manifest.json",
+          "sha256": "6fd51bec48c7403029295942689c9b99c9c3d260661a7439fd563b9ebd75748e",
+          "purpose": "Drive metadata, versioned content hashes and source receipts."
+        },
+        {
+          "path": "data/processed/goal4_3_source_refresh/semantic_comparison.json",
+          "sha256": "796cfda5d4fbf7e486e52722aef0d64b1c7081c622f2a746a16849405fa6d8e9",
+          "purpose": "Executed pure-parser extraction and keyed semantic comparison; D02/D05/D08 remain semantically equal to legacy sources."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    },
+    {
+      "evidence_id": "report_and_independent_verification",
+      "functions": [
+        {
+          "path": "goal43_report.py",
+          "line": 602,
+          "function": "finalize"
+        },
+        {
+          "path": "goal43_verify.py",
+          "line": 551,
+          "function": "verify"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 300,
+          "function": "_series"
+        },
+        {
+          "path": "goal43_replay.py",
+          "line": 487,
+          "function": "refresh_service_summaries"
+        },
+        {
+          "path": "goal43_extend.py",
+          "line": 44,
+          "function": "refresh_saved_series"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_goal43_report.py",
+          "line": 219,
+          "function": "test_full_day_audit_exposes_failed_windows_and_residual_queue_separately_from_waiting_cohort",
+          "node_id": "tests/test_goal43_report.py::test_full_day_audit_exposes_failed_windows_and_residual_queue_separately_from_waiting_cohort",
+          "sha256": "470bd9488650fe92a37cf852012d878b3eee5dc89f53aeeffcca30ab45f5a713",
+          "passed_node_ids": [
+            "tests/test_goal43_report.py::test_full_day_audit_exposes_failed_windows_and_residual_queue_separately_from_waiting_cohort"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml",
+            "data/processed/goal4_3_verification/pytest_final_changes.xml",
+            "data/processed/goal4_3_verification/report_demo_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_report.py",
+          "line": 204,
+          "function": "test_demo_mean_saving_requires_complete_fixed_68_train_mileage",
+          "node_id": "tests/test_goal43_report.py::test_demo_mean_saving_requires_complete_fixed_68_train_mileage",
+          "sha256": "470bd9488650fe92a37cf852012d878b3eee5dc89f53aeeffcca30ab45f5a713",
+          "passed_node_ids": [
+            "tests/test_goal43_report.py::test_demo_mean_saving_requires_complete_fixed_68_train_mileage[67-False-None]",
+            "tests/test_goal43_report.py::test_demo_mean_saving_requires_complete_fixed_68_train_mileage[68-False-2.0]",
+            "tests/test_goal43_report.py::test_demo_mean_saving_requires_complete_fixed_68_train_mileage[68-True-None]"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml",
+            "data/processed/goal4_3_verification/pytest_final_changes.xml",
+            "data/processed/goal4_3_verification/report_demo_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_report.py",
+          "line": 296,
+          "function": "test_fare_sensitivity_and_maintenance_dates_remain_explicit_hypotheses",
+          "node_id": "tests/test_goal43_report.py::test_fare_sensitivity_and_maintenance_dates_remain_explicit_hypotheses",
+          "sha256": "470bd9488650fe92a37cf852012d878b3eee5dc89f53aeeffcca30ab45f5a713",
+          "passed_node_ids": [
+            "tests/test_goal43_report.py::test_fare_sensitivity_and_maintenance_dates_remain_explicit_hypotheses"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml",
+            "data/processed/goal4_3_verification/pytest_final_changes.xml",
+            "data/processed/goal4_3_verification/report_demo_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_verify.py",
+          "line": 86,
+          "function": "test_verifier_reconstructs_kilometers_conservation_wait_and_car_time",
+          "node_id": "tests/test_goal43_verify.py::test_verifier_reconstructs_kilometers_conservation_wait_and_car_time",
+          "sha256": "434c4a183bd0c490234819de8ede8ff9d713dcd2655f156e37bc94707e2e2d35",
+          "passed_node_ids": [
+            "tests/test_goal43_verify.py::test_verifier_reconstructs_kilometers_conservation_wait_and_car_time"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_verify.py",
+          "line": 269,
+          "function": "test_completed_gap_in_return_tail_is_outside_explicit_service_scope",
+          "node_id": "tests/test_goal43_verify.py::test_completed_gap_in_return_tail_is_outside_explicit_service_scope",
+          "sha256": "434c4a183bd0c490234819de8ede8ff9d713dcd2655f156e37bc94707e2e2d35",
+          "passed_node_ids": [
+            "tests/test_goal43_verify.py::test_completed_gap_in_return_tail_is_outside_explicit_service_scope"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_series.py",
+          "line": 10,
+          "function": "test_headway_series_uses_maximum_across_directions_in_each_minute",
+          "node_id": "tests/test_goal43_series.py::test_headway_series_uses_maximum_across_directions_in_each_minute",
+          "sha256": "edfd48f9a373ce5065fd9bd9c671d423ddf0676d1ae3876ea5aaad308da89f57",
+          "passed_node_ids": [
+            "tests/test_goal43_series.py::test_headway_series_uses_maximum_across_directions_in_each_minute"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_series.py",
+          "line": 43,
+          "function": "test_refresh_uses_each_primary_run_including_rolling_selected",
+          "node_id": "tests/test_goal43_series.py::test_refresh_uses_each_primary_run_including_rolling_selected",
+          "sha256": "edfd48f9a373ce5065fd9bd9c671d423ddf0676d1ae3876ea5aaad308da89f57",
+          "passed_node_ids": [
+            "tests/test_goal43_series.py::test_refresh_uses_each_primary_run_including_rolling_selected"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final.xml"
+          ]
+        },
+        {
+          "path": "tests/test_goal43_report.py",
+          "function": "test_incomplete_search_does_not_claim_no_feasible_plan_exists",
+          "line": 155,
+          "node_id": "tests/test_goal43_report.py::test_incomplete_search_does_not_claim_no_feasible_plan_exists",
+          "sha256": "470bd9488650fe92a37cf852012d878b3eee5dc89f53aeeffcca30ab45f5a713",
+          "passed_node_ids": [
+            "tests/test_goal43_report.py::test_incomplete_search_does_not_claim_no_feasible_plan_exists"
+          ],
+          "execution_receipts": [
+            "data/processed/goal4_3_verification/pytest_final_changes.xml",
+            "data/processed/goal4_3_verification/report_demo_final.xml"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/processed/goal4_3_profile/remaining_cases/historical_residual_queue.json",
+          "sha256": "b2c9daf121b8604861905215ee80f16e0f61e5008e7e27bb1ec88caebb1d978f",
+          "purpose": "Read-only checkpoint proof:49 remaining passengers arrived after their last eligible service; abandonment/unpaid losses are not inferred."
+        }
+      ],
+      "execution_status": "named_test_contracts_passed_and_artifact_evidence_verified"
+    }
+  ],
+  "execution_scope": "Saved artifacts establish the recorded behavior. The code hashes are the current frozen snapshot; no old run is claimed to attest every current source line or branch. Full-suite receipt status is recorded separately.",
+  "test_execution_receipts": [
+    {
+      "path": "data/processed/goal4_3_verification/pytest_final.xml",
+      "sha256": "d46bfc51e8694dc89128f7b7a145a3c7f302eaf64455344e8655bf9c92afbb67",
+      "log": "data/processed/goal4_3_verification/pytest_final.log",
+      "log_sha256": "ecb6639b3de6a2b1e5c06850b96e1ec7226d3ef03c12f6793ab4000532853fc6",
+      "scope": "Full repository suite before the final report explanation and browser probe tests.",
+      "status": "passed",
+      "test_cases": 860,
+      "passed": 860,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 170.458,
+      "timestamps": [
+        "2026-10-08T21:32:33.723289+03:00"
+      ]
+    },
+    {
+      "path": "data/processed/goal4_3_verification/pytest_final_changes.xml",
+      "sha256": "e46a493c1ab8e32338dd5219d5d2671d601548333a60d38a949ca8c6949969e3",
+      "log": "data/processed/goal4_3_verification/pytest_final_changes.log",
+      "log_sha256": "dfb88e9c52f14a85fd2e2811d204ae83d3456354c771e90b0c27dfe70dedc021",
+      "scope": "Final report/demo and browser-probe tests after the last report explanation.",
+      "status": "passed",
+      "test_cases": 49,
+      "passed": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.065,
+      "timestamps": [
+        "2026-10-08T21:36:39.450928+03:00"
+      ]
+    },
+    {
+      "path": "data/processed/goal4_3_verification/report_demo_final.xml",
+      "sha256": "e791bc10f29a3c5939ec38111f26691ce63eb52c6668c512dcb695f72f49f3d7",
+      "log": "data/processed/goal4_3_verification/report_demo_final.log",
+      "log_sha256": "f71ac17c3e11054c00d6baf5d7a33917708bf587cbbf473efc5a6ec90ef15867",
+      "scope": "Independent final report/demo check at the frozen source snapshot.",
+      "status": "passed",
+      "test_cases": 45,
+      "passed": 45,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.723,
+      "timestamps": [
+        "2026-10-08T21:36:50.550811+03:00"
+      ]
+    }
+  ],
+  "test_execution_summary": {
+    "unique_passed_node_ids": 865,
+    "all_receipts_passed": true,
+    "scope": "Receipt union avoids counting repeated focused checks twice; this is test-contract provenance, not exhaustive branch or runtime line coverage."
+  }
+}

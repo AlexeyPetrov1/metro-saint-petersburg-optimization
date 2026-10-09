@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+/*__UI_CSS__*/
+.panel { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin: 2px; }
+.head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+h3 { margin: 0; font-size: 15px; font-weight: 600; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
+
+/* Time slider */
+.slider { position: relative; margin: 26px 70px 6px 70px; height: 40px; }
+.slider input { position: absolute; inset: 0 -10px auto -10px; width: calc(100% + 20px); margin: 0; height: 22px; appearance: none; background: transparent; cursor: pointer; z-index: 2; }
+.slider input:focus-visible { outline: 2px solid var(--calm); outline-offset: 4px; border-radius: 6px; }
+.slider input::-webkit-slider-thumb { appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--calm); border: 3px solid #fff; box-shadow: 0 1px 4px rgba(27,36,48,.35); }
+.slider input::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--calm); border: 3px solid #fff; box-shadow: 0 1px 4px rgba(27,36,48,.35); }
+.track { position: absolute; left: 0; right: 0; top: 8px; height: 6px; border-radius: 3px; background: #E3E6EA; }
+.fillbar { position: absolute; left: 0; top: 8px; height: 6px; border-radius: 3px; background: var(--calm); }
+.labels { position: absolute; left: 0; right: 0; top: 26px; font-size: 11.5px; color: var(--muted); }
+.labels span { position: absolute; transform: translateX(-50%); }
+.labels span.on { color: var(--ink); font-weight: 600; }
+.bubble { position: absolute; top: -24px; transform: translateX(-50%); background: var(--ink); color: #fff; font-size: 12px; font-weight: 600; padding: 2px 7px; border-radius: 5px; pointer-events: none; }
+
+#strip .sg { transform-box: fill-box; transform-origin: center; transition: transform .18s ease, filter .18s ease; }
+#strip .sg:hover { transform: scale(1.14); filter: drop-shadow(0 3px 4px rgba(27,36,48,.28)); }
+#strip .hl { stroke: var(--ink); stroke-width: 2.5; animation: pulse 1.1s ease-in-out infinite; }
+@keyframes pulse { 50% { stroke-opacity: .25; } }
+</style>
+</head>
+<body>
+<div id="banner"></div>
+<section class="panel">
+  <div class="head"><h3>Загрузка перегонов: прогноз</h3><div class="legend">
+    <span><i style="background:#CFE3F3"></i>до 50 %</span><span><i style="background:#0078C9"></i>50–80 %</span>
+    <span><i style="background:#EA7125"></i>80–100 %</span><span><i style="background:#D6083B"></i>больше 100 %</span>
+    <span id="anomLeg" style="display:none"><i class="ring"></i>аномалия</span>
+    </div></div>
+  <div class="slider" id="slider">
+    <div class="track"></div><div class="fillbar" id="fillbar"></div>
+    <input type="range" id="rng" min="0" step="any" value="0" aria-label="Время прогноза">
+    <div class="bubble" id="bubble"></div>
+    <div class="labels" id="labels"></div>
+  </div>
+  <svg id="strip" width="100%" height="262"></svg>
+</section>
+<script>
+//__UI_JS__
+const P = __PAYLOAD__;
+const T = P.times.length, S = P.segs.length, ST = P.stations.length, DIRS = ["north", "south"];
+const at = (arr, pos) => { const k = Math.floor(pos); return lerp(arr[k], arr[Math.min(k + 1, T - 1)], pos - k); };
+renderBanner(P.banner, $("banner"));
+if (P.anomaly.some(r => r.some(Boolean))) $("anomLeg").style.display = "";
+const state = { pos: 0, target: 0 };
+let dirty = true;
+
+// slider: native range input (keyboard and touch for free), time labels, recommendation windows
+const rng = $("rng"); rng.max = T - 1;
+const xOf = (k) => (T > 1 ? k / (T - 1) : 0) * 100;
+$("labels").innerHTML = P.times.map((t, k) => `<span style="left:${xOf(k)}%">${t}</span>`).join("");
+rng.addEventListener("input", () => { state.target = +rng.value; dirty = true; });
+const snap = () => { state.target = Math.round(+rng.value); rng.value = state.target; dirty = true; };
+rng.addEventListener("change", snap); rng.addEventListener("pointerup", snap);
+rng.addEventListener("keydown", (e) => { const d = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[e.key];
+  if (d) { e.preventDefault(); rng.value = Math.max(0, Math.min(T - 1, Math.round(state.target) + d)); snap(); } });
+
+// strip
+let E = null;
+function build() {
+  const sv = $("strip"), w = sv.clientWidth; if (!w) return; sv.innerHTML = "";
+  const L = 70, R = 24, dx = (w - L - R) / (ST - 1), yN = 40, yS = 104, yL = 72;
+  el("text", { x: 0, y: yN + 4, fill: C.muted, "font-size": 12 }, sv).textContent = "на север";
+  el("text", { x: 0, y: yS + 4, fill: C.muted, "font-size": 12 }, sv).textContent = "на юг";
+  el("line", { x1: L, x2: w - R, y1: yL, y2: yL, stroke: C.line1, "stroke-width": 3 }, sv);
+  const segs = [];
+  for (let i = 0; i < S; i++) { const x = L + i * dx + 3, wd = dx - 6, row = {};
+    for (const [d, y] of [["north", yN], ["south", yS]]) { const g = el("g", { class: "sg" }, sv);
+      row[d] = { r: el("rect", { x, y: y - 14, width: wd, height: 28, rx: 4 }, g),
+        t: el("text", { x: x + wd / 2, y: y + 4, "text-anchor": "middle", "font-size": 11, "font-weight": 600, "pointer-events": "none" }, g),
+        ti: el("title", {}, g) };
+      const nb = el("g", { visibility: "hidden", "pointer-events": "none" }, sv);
+      el("circle", { cx: x + wd - 2, cy: y - 14, r: 8, fill: C.tight, stroke: "#fff", "stroke-width": 1.5 }, nb);
+      row[d].nb = nb; row[d].nt = el("text", { x: x + wd - 2, y: y - 10.5, "text-anchor": "middle", "font-size": 10, "font-weight": 700, fill: "#fff" }, nb); }
+    segs.push(row); }
+  const st = [];
+  for (let s = 0; s < ST; s++) { const x = L + s * dx;
+    const g = el("g", {}, sv);
+    const ring = el("circle", { cx: x, cy: yL, r: 11, fill: "none", stroke: C.tight, "stroke-width": 2, "stroke-dasharray": "3 2", visibility: "hidden", class: "anom" }, g);
+    const dot = el("circle", { cx: x, cy: yL, r: 4, fill: "#fff", stroke: C.line1, "stroke-width": 2 }, g);
+    const ti = el("title", {}, g);
+    st.push({ dot, ring, ti });
+    el("text", { x, y: 138, "font-size": 11.5, fill: C.ink, "text-anchor": "end", transform: `rotate(-40 ${x} 138)` }, sv).textContent = P.stations[s]; }
+  E = { segs, st };
+}
+function draw() {
+  if (!E) build(); if (!E) return;
+  const k = Math.round(state.pos), here = P.recs.filter(r => r.slots.includes(k)), active = here.filter(r => r.target);
+  for (let i = 0; i < S; i++) for (const d of DIRS) {
+    const f = at(P.fill[d][i], state.pos), e = E.segs[i][d];
+    e.r.setAttribute("fill", smooth(f));
+    e.t.textContent = f != null && f > 0.8 ? Math.round(f * 100) + "%" : "";
+    e.t.setAttribute("fill", f != null && f > 1.0 ? "#fff" : C.ink);
+    const mine = active.filter(r => r.target.seg === i && r.target.dir === d);
+    e.r.setAttribute("class", mine.length ? "hl" : "");
+    e.nb.setAttribute("visibility", mine.length ? "visible" : "hidden"); e.nt.textContent = mine.map(r => r.n).join(",");
+    const dem = P.demand[d][i][k];
+    const why = [...new Set([...P.reasons[i][k], ...P.reasons[i + 1][k]])];
+    e.ti.textContent = `${P.segs[i].tip}, ${d === "north" ? "на север" : "на юг"}, ${P.times[k]}: ` +
+      (f == null ? "нет движения" : `загрузка ${Math.round(f * 100)} %` + (dem != null ? `, пассажиров ${Math.round(dem)}` : "")) +
+      (why.length ? "\n" + why.join("\n") : "");
+  }
+  E.st.forEach((c, s) => { c.dot.setAttribute("r", active.some(r => r.target.station === s) ? 8 : 4);
+    c.ring.setAttribute("visibility", P.anomaly[s][k] ? "visible" : "hidden");
+    c.ti.textContent = stationTip(P.stations[s], P.reasons[s][k], P.anomaly[s][k]); });
+  const pct = xOf(state.pos);
+  $("fillbar").style.width = pct + "%"; $("bubble").style.left = pct + "%"; $("bubble").textContent = P.times[k];
+  [...$("labels").children].forEach((s, n) => s.classList.toggle("on", n === k));
+}
+let last = null;
+function loop(ts) {
+  const dt = last == null ? 0 : Math.min(0.1, (ts - last) / 1000); last = ts;
+  const d = state.target - state.pos;
+  if (Math.abs(d) > 0.002) { state.pos += d * Math.min(1, dt * 8); dirty = true; } else if (state.pos !== state.target) { state.pos = state.target; dirty = true; }
+  if (dirty) { dirty = false; try { draw(); } catch (e) { console.error(e); } }
+  requestAnimationFrame(loop);
+}
+new ResizeObserver(() => { E = null; dirty = true; }).observe(document.body);
+requestAnimationFrame(loop);
+if (document.fonts) document.fonts.ready.then(() => { E = null; dirty = true; });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+{
+  "profile_id": "goal4_3",
+  "schema_version": 1,
+  "parameters": {
+    "timezone": {"value": "Europe/Moscow", "unit": "IANA timezone", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "peak_windows": {"value": [{"weekdays": [0, 1, 2, 3, 4], "start": "08:00", "end": "10:00"}, {"weekdays": [0, 1, 2, 3, 4], "start": "17:00", "end": "19:00"}], "unit": "local time, half-open intervals; Monday=0", "source": "User peak-hours clarification; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "physical_headway_min_s": {"value": 113, "unit": "s", "source": "User physical headway limit; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "peak_headway_min_s": {"value": 113, "unit": "s", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "offpeak_headway_min_s": {"value": 150, "unit": "s", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "headway_max_s": {"value": 480, "unit": "s", "source": "GOAL 4.3 section 2; target violations remain visible during incidents", "status": "user_confirmed"},
+    "turnaround_s": {"value": 180, "unit": "s", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "depot_release_s": {"value": {"Avtovo": 720, "Northern": 780}, "unit": "s from command to first passenger departure, inclusive", "source": "User inclusive depot-release clarification; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "fleet_by_type": {"value": {"Baltiets": 37, "Yubileyny": 31}, "unit": "assigned trains, including line, reserve and maintenance", "source": "User fleet clarification; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "line_train_limit": {"value": 53, "unit": "trains, including stopped trains", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "cars_per_train": {"value": 8, "unit": "cars/train", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "comfort_limit": {"value": 120, "unit": "passengers/car; soft goal", "source": "User comfort clarification; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "normal_limit": {"value": 150, "unit": "passengers/car", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "hard_limit": {"value": 160, "unit": "passengers/car; hard maximum", "source": "GOAL 4.3 section 2", "status": "user_confirmed"},
+    "exceptional_time_share_max": {"value": 0.01, "unit": "exceptional occupied-car time / occupied-car time", "source": "User exceptional-time clarification; GOAL 4.3 section 2", "status": "user_confirmed"},
+    "exceptional_time_scope": {"value": ["whole_episode", "every_decision_step"], "unit": "demo verification scope", "source": "GOAL 4.3 section 2; selected demo policy", "status": "assumed"},
+    "decision_step_s": {"value": 900, "unit": "s", "source": "GOAL 4.3 sections 2 and 5", "status": "user_confirmed"},
+    "notification_budget_s": {"value": 480, "unit": "s from detection through checked recommendation or explicit failure", "source": "User eight-minute clarification; GOAL 4.3 sections 4 and 5", "status": "user_confirmed"},
+    "reference_roundtrip_s": {"value": null, "unit": "s", "source": "User withdrew artificial 99-minute requirement; GOAL 4.3 section 2", "status": "withdrawn"},
+    "to1_interval_km": {"value": 15000, "unit": "train-km", "source": "User maintenance interval; GOAL 4.3 section 6; overrides old 10000-km reference", "status": "user_confirmed"},
+    "maintenance_prices_rub_by_type": {"value": {"Baltiets": {"TO1": 138000, "TO2": 426000, "TR1": 956000, "TR2": 3409000, "TR3": 47951000}, "Yubileyny": {"TO1": 111000, "TO2": 313000, "TR1": 714000, "TR2": 3181000, "TR3": 46651000}}, "unit": "RUB per eight-car train service", "source": "User prices; GOAL 4.3 section 6; TR1 working label for current repair, TR2/TR3 not mapped to historical labels", "status": "user_confirmed"},
+    "annual_car_service_counts": {"value": {"Baltiets": {"TO1": 2904, "TO2": 824, "TR1": 112}, "Yubileyny": {"TO1": 2328, "TO2": 176, "TR1": 128}}, "unit": "car-service events/year, not unique cars or trains", "source": "User annual maintenance volumes; GOAL 4.3 section 6; reference period not otherwise specified", "status": "user_confirmed"},
+    "fare_revenue_rub": {"value": 50.9, "unit": "RUB/paid trip, gross revenue", "source": "User revenue clarification; GOAL 4.3 section 6", "status": "user_confirmed"},
+    "annual_blue_line_trips2025": {"value": 200400000, "unit": "paid trips, blue line, 2025; reference only for L1 project", "source": "User line-specific annual volume clarification; GOAL 4.3 section 6", "status": "user_confirmed"},
+    "abandonment_probability": {"value": null, "unit": "probability of refusing a paid trip before payment", "source": "GOAL 4.3 section 6; no measured abandonment data", "status": "unknown"},
+    "variable_cost_per_trip_rub": {"value": null, "unit": "RUB/paid trip", "source": "GOAL 4.3 section 6; no measured contribution margin", "status": "unknown"}
+  },
+  "demo": {
+    "status": "assumed",
+    "source": "Explicit GOAL 4.3 demo allocation; not an observed operating roster",
+    "initial_on_line": {"Baltiets": 29, "Yubileyny": 24},
+    "reserves": [
+      {"train_id": "B030", "depot": "Avtovo", "ready_at": "2026-09-01T06:00:00+03:00", "status": "assumed"},
+      {"train_id": "Y025", "depot": "Northern", "ready_at": "2026-09-01T06:00:00+03:00", "status": "assumed"}
+    ],
+    "unassigned_readiness": "unknown",
+    "odometer_status": "unknown",
+    "platform_capacity_by_station": {"L1_01": 2, "L1_19": 2},
+    "platform_capacity_default": 1,
+    "terminal_holding_max_s": 480,
+    "terminal_parking_capacity_by_station": {"L1_01": 1, "L1_19": 1},
+    "infrastructure_status": "assumed",
+    "infrastructure_source": "Explicit demo directional platform/parking resources; supports 180-s turnaround with 113-s arrivals; not validated against real interlocking or terminal layouts"
+  }
+}

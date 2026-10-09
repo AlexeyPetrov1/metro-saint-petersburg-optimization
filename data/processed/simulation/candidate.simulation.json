@@ -1,0 +1,107 @@
+{
+  "boundary_crossing_movements": [],
+  "checks": {
+    "absent": [
+      "passenger demand, queues and capacity",
+      "block occupancy and signalling",
+      "switch routes and dispatcher permissions",
+      "crew schedules and paid work",
+      "maintenance history, EO validity and regulatory applicability",
+      "real energy consumption, tariffs and actual train release readiness"
+    ],
+    "headway_seconds": 113,
+    "peak_trains_on_line": 1,
+    "performed": [
+      {
+        "name": "references and positive lengths/times",
+        "status": "passed"
+      },
+      {
+        "name": "route continuity and train location",
+        "status": "passed"
+      },
+      {
+        "name": "train exclusivity, stops and turnarounds",
+        "status": "passed"
+      },
+      {
+        "name": "directed track departure headways",
+        "status": "passed"
+      },
+      {
+        "name": "state time conservation",
+        "status": "passed"
+      },
+      {
+        "name": "arrival-derived distance ledger",
+        "status": "passed"
+      },
+      {
+        "name": "initial departure boundary context",
+        "status": "passed"
+      },
+      {
+        "name": "line capacity",
+        "status": "passed"
+      }
+    ],
+    "supported_constraints_status": "passed"
+  },
+  "demand_id": "passengers-not-modeled",
+  "duration_seconds": 960,
+  "evaluation_mode": "fixture",
+  "events": [],
+  "final_state": [
+    {
+      "location": "A",
+      "ready_second": 960,
+      "ready_to_depart": true,
+      "state": "standby",
+      "train_id": "T1"
+    }
+  ],
+  "initial_state": [
+    {
+      "cars": 8,
+      "location": "A",
+      "ready_after_seconds": 0,
+      "state": "standby",
+      "train_id": "T1",
+      "train_type": "educational-eight-car"
+    }
+  ],
+  "initial_state_id": "dfc39bcfcc7af811907f39e36680065043567a0a72380cd3a4d50802d14af246",
+  "mileage_complete": true,
+  "model_version": "simulation-v1.1",
+  "obligations_closed": true,
+  "obligations_scope": "scheduled_movement_and_station_waits_only",
+  "passenger_impact_checked": false,
+  "period_end": "2026-05-01T03:16:00+03:00",
+  "period_start": "2026-05-01T03:00:00+03:00",
+  "plan_id": "candidate",
+  "release_authorized": false,
+  "schema_version": "1.0",
+  "source": "GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro",
+  "status": "complete",
+  "transport_work": [
+    {
+      "car_km": "0",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "0",
+      "passenger_train_km": "0",
+      "state_seconds": {
+        "moving": 0,
+        "standby": 960,
+        "stop": 0,
+        "turnaround": 0
+      },
+      "train_id": "T1",
+      "train_km": "0",
+      "train_type": "educational-eight-car"
+    }
+  ],
+  "unfinished_movements": [],
+  "unfinished_obligations": []
+}

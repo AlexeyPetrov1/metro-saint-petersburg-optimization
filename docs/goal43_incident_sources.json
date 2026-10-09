@@ -1,0 +1,52 @@
+{
+  "source_id": "D12",
+  "title": "?????? ????????? ????????????? ???????????? ? ??????????? ???????.docx",
+  "url": "https://docs.google.com/document/d/16lLYfROHxXil3OdVy9Dd2L67Zk2sJWxp/edit",
+  "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "modified_time": "2026-10-07T09:41:51.607Z",
+  "recorded_at": "2026-10-08T20:24:48.742955+03:00",
+  "readable_snapshot_sha256": "75b58ea7d23677654b2c5ff694170dd539ca7527f4c62ab77c402624a52e50e3",
+  "readable_snapshot_path": "data/raw/metro/goal4_3_source_versions/20261008/D12_readable_snapshot.txt",
+  "line_id": 1,
+  "date": "2026-08-31",
+  "station": "Чернышевская",
+  "track": 2,
+  "route": "105",
+  "train_type": "Baltiets",
+  "time_zone": "Europe/Moscow",
+  "timestamps": {
+    "detected_at": null,
+    "disruption_started_at": "2026-08-31T07:49:00+03:00",
+    "record_header_started_at": "2026-08-31T07:50:00+03:00",
+    "fault_reported_at": "2026-08-31T07:52:00+03:00",
+    "broadcast_started_at": "2026-08-31T08:06:00+03:00",
+    "power_off_at": "2026-08-31T08:41:00+03:00",
+    "power_restored_at": "2026-08-31T09:05:00+03:00",
+    "head_ready_at": "2026-08-31T09:06:00+03:00",
+    "head_departed_at": "2026-08-31T09:11:00+03:00",
+    "tail_ready_at": "2026-08-31T09:12:00+03:00",
+    "tail_departed_at": "2026-08-31T09:26:00+03:00",
+    "disruption_ended_at": "2026-08-31T09:29:00+03:00",
+    "broadcast_ended_at": "2026-08-31T09:32:00+03:00",
+    "record_header_ended_at": "2026-08-31T10:31:00+03:00",
+    "recommendation_ready_at": null,
+    "acknowledged_at": null
+  },
+  "analytics": {
+    "report_to_broadcast_minutes": 14,
+    "disruption_start_to_broadcast_minutes": 17,
+    "disruption_duration_minutes": 100,
+    "recommendation_sla_compliance": null,
+    "recommendation_sla_reason": "Recommendation readiness and detection times are not documented."
+  },
+  "operations": {
+    "head_cars": 6,
+    "tail_cars": 2,
+    "rescue_speed_limit_kmh": 35,
+    "turnbacks_ploshchad_vosstaniya": 9,
+    "turnbacks_ploshchad_lenina": 4,
+    "gate_closure_intervals": 6,
+    "gate_restriction_intervals": 7
+  },
+  "demo_scope": "Simple station-stop demo does not reproduce splitting, rescue movements or short turnbacks. No same-date demand data identified in loaded four-month 15-minute source set."
+}

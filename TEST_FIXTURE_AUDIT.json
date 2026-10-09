@@ -1,0 +1,212 @@
+{
+  "existing_literal_file_references": [
+    {
+      "test": "test_economics.py",
+      "line": 178,
+      "path": "data/processed/metro/maintenance_rules.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics.py",
+      "line": 244,
+      "path": "data/processed/metro/transport_work.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics.py",
+      "line": 198,
+      "path": "data/processed/metro/transport_work.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics.py",
+      "line": 278,
+      "path": "data/processed/metro/maintenance_rules.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics_audit.py",
+      "line": 315,
+      "path": "data/processed/metro/maintenance_rules.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics_audit.py",
+      "line": 442,
+      "path": "data/processed/metro/maintenance_rules.csv",
+      "included": true
+    },
+    {
+      "test": "test_economics_audit.py",
+      "line": 451,
+      "path": "data/processed/metro/transport_work.csv",
+      "included": true
+    },
+    {
+      "test": "test_line1.py",
+      "line": 108,
+      "path": "data/processed/metro/entries_station_15m.parquet",
+      "included": true
+    },
+    {
+      "test": "test_line1.py",
+      "line": 121,
+      "path": "data/processed/metro/entries_station_15m.parquet",
+      "included": true
+    },
+    {
+      "test": "test_line1.py",
+      "line": 128,
+      "path": "data/processed/metro/entries_station_15m.parquet",
+      "included": true
+    },
+    {
+      "test": "test_line1.py",
+      "line": 310,
+      "path": "data/processed/metro/entries_station_15m.parquet",
+      "included": true
+    },
+    {
+      "test": "test_line1.py",
+      "line": 100,
+      "path": "data/processed/metro/vestibule_map.csv",
+      "included": true
+    },
+    {
+      "test": "test_metro44_bridge_reserves.py",
+      "line": 19,
+      "path": "data/processed/metro_daily_experiments_20261009/baseline.json.gz",
+      "included": true
+    },
+    {
+      "test": "test_metro44_catalog.py",
+      "line": 35,
+      "path": "data/processed/metro_daily_experiments_20261009/forecasts/ML_10.json",
+      "included": true
+    },
+    {
+      "test": "test_metro44_catalog.py",
+      "line": 243,
+      "path": "data/processed/metro44_continuation_6h_closed_20261009/runs/CONT6H_CLOSED_KEEP_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro44_catalog.py",
+      "line": 255,
+      "path": "data/processed/metro_daily_experiments_20261009/forecasts/ML_09.json",
+      "included": true
+    },
+    {
+      "test": "test_metro44_catalog_campaign.py",
+      "line": 8,
+      "path": "data/processed/metro44_catalog_cont6h_20261009/campaign.py",
+      "included": true
+    },
+    {
+      "test": "test_metro44_cp_chain_repair_probe.py",
+      "line": 65,
+      "path": "data/processed/metro44_continuation_6h_closed_20261009/runs/CONT6H_CLOSED_KEEP_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro44_cp_chain_repair_probe.py",
+      "line": 66,
+      "path": "data/processed/metro44_catalog_cp30_incumbent_20261009/directional_profile.json",
+      "included": true
+    },
+    {
+      "test": "test_metro46_partial_trip.py",
+      "line": 63,
+      "path": "data/processed/metro44_wait_calendar_physical_20261009/wait_calendar_reference_plan.json.gz",
+      "included": true
+    },
+    {
+      "test": "test_metro46_partial_trip.py",
+      "line": 95,
+      "path": "data/processed/metro44_bridge_off160_actual_6h_20261009_v2/runs/OFF160_BRIDGE_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro47_direct_reference.py",
+      "line": 13,
+      "path": "data/processed/metro_daily_experiments_20261009/baseline.json.gz",
+      "included": true
+    },
+    {
+      "test": "test_metro47_withdrawal.py",
+      "line": 16,
+      "path": "data/processed/metro44_bridge_off160_actual_6h_20261009_v2/runs/OFF160_BRIDGE_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro48_daily_reference.py",
+      "line": 30,
+      "path": "data/processed/metro_daily_experiments_20261009/baseline.json.gz",
+      "included": true
+    },
+    {
+      "test": "test_metro48_gru.py",
+      "line": 105,
+      "path": "data/processed/metro44_catalog_pilot_20261009/observed_frame.parquet",
+      "included": true
+    },
+    {
+      "test": "test_metro48_temporary.py",
+      "line": 18,
+      "path": "data/processed/metro44_bridge_off160_actual_6h_20261009_v2/runs/OFF160_BRIDGE_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro48_temporary.py",
+      "line": 99,
+      "path": "data/processed/metro47_withdrawal_normalized_actual_20261009/runs/NORMALIZED_REFERENCE_S1_7/movement_input.json",
+      "included": true
+    },
+    {
+      "test": "test_metro51_optimizer_v3.py",
+      "line": 137,
+      "path": "data/processed/metro51_balanced_pilot_20261009_v2/balanced/common_scenario.json.gz",
+      "included": true
+    },
+    {
+      "test": "test_metro52_package.py",
+      "line": 83,
+      "path": "data/processed/metro44_catalog_cont6h_20261009/campaign.py",
+      "included": true
+    },
+    {
+      "test": "test_metro_ml.py",
+      "line": 98,
+      "path": "data/processed/metro_ml_inputs/lgbm_final/meta.json",
+      "included": true
+    }
+  ],
+  "literal_files_complete": true,
+  "explicit_runtime_paths": [
+    "data/processed/metro51_inputs_20261009",
+    "data/processed/metro48_daily_fifo_20261009_v7/runs/DAILY_FIFO_S1_7"
+  ],
+  "explicit_legacy_paths": [
+    "data/processed/metro",
+    "data/processed/economics",
+    "data/processed/economics_audit",
+    "data/processed/line1",
+    "data/processed/simulation",
+    "data/processed/metro48_gru_inputs_20261009",
+    "data/processed/metro_ml_inputs/lgbm_final",
+    "data/processed/metro_ml_inputs/data/reference",
+    "data/processed/metro_daily_experiments_20261009/baseline.json.gz",
+    "data/processed/metro_daily_experiments_20261009/forecasts/ML_09.json",
+    "data/processed/metro_daily_experiments_20261009/forecasts/ML_10.json",
+    "data/processed/metro44_catalog_pilot_20261009/observed_frame.parquet",
+    "data/processed/metro44_catalog_cont6h_20261009/campaign.py",
+    "data/processed/metro44_catalog_cp30_incumbent_20261009/directional_profile.json",
+    "data/processed/metro44_wait_calendar_physical_20261009/wait_calendar_reference_plan.json.gz",
+    "data/processed/metro44_continuation_6h_closed_20261009/runs/CONT6H_CLOSED_KEEP_S1_7/movement_input.json",
+    "data/processed/metro44_bridge_off160_actual_6h_20261009_v2/runs/OFF160_BRIDGE_S1_7/movement_input.json",
+    "data/processed/metro44_bridge_off160_actual_6h_20261009_v2/runs/OFF160_BRIDGE_S1_7/motion.json",
+    "data/processed/metro47_withdrawal_normalized_actual_20261009/runs/NORMALIZED_REFERENCE_S1_7/movement_input.json"
+  ],
+  "scope": "Literal existing file paths plus explicit symbolic model/SOURCE/FRAME dependencies; raw archive regeneration excluded",
+  "all_legacy_execution_verified_in_export": false
+}

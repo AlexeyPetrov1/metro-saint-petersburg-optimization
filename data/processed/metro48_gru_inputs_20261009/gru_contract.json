@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "params": {
+      "hidden": 32,
+      "head": 64,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "batch": 512,
+      "max_epochs": 100,
+      "patience": 8,
+      "es_days": 7,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "threads": 1
+    },
+    "scaler": {
+      "mean": [
+        -0.014025194829795916,
+        -0.00814081266781802
+      ],
+      "std": [
+        0.19312183260716848,
+        0.11156816523038739
+      ]
+    },
+    "n_vestibules": 23,
+    "info": {
+      "n_train": 64331,
+      "n_hold": 58387,
+      "n_es": 5944,
+      "train_start": "2026-02-09",
+      "train_end": "2026-07-31",
+      "es_start": "2026-07-25",
+      "epochs": [
+        53,
+        51,
+        17
+      ],
+      "es_loss": [
+        0.06002202257514,
+        0.05985407531261444,
+        0.0602220743894577
+      ]
+    }
+  },
+  "vestibule_order": [
+    "akademicheskaya_1",
+    "avtovo_1",
+    "baltiyskaya_1",
+    "chernyshevskaya_1",
+    "devyatkino_1",
+    "devyatkino_2",
+    "grazhdansky_prospekt_1",
+    "kirovsky_zavod_1",
+    "leninsky_prospekt_1",
+    "leninsky_prospekt_2",
+    "lesnaya_1",
+    "narvskaya_1",
+    "ploshchad_lenina_1",
+    "ploshchad_lenina_2",
+    "ploshchad_muzhestva_1",
+    "politekhnicheskaya_1",
+    "prospekt_veteranov_1",
+    "prospekt_veteranov_2",
+    "pushkinskaya_1",
+    "vladimirskaya_1",
+    "vosstaniya_1",
+    "vosstaniya_2",
+    "vyborgskaya_1"
+  ],
+  "weights_sha256": {
+    "gru_seed0.pt": "715f91023fbed105c2f0b6784f3e006baafebf5aeffd53b8185177704dd74421",
+    "gru_seed1.pt": "23a8a04cebd3de62777f4310262aa9ce76232af76f16b9c762eea99e95ba9f39",
+    "gru_seed2.pt": "75b8b86f4a82b9af2bd6d63e8cf2266dd89e11449467fa9658a041b09013835e",
+    "meta.json": "52d79907621cf395c4ddb3bf9ac5083b76fadb8a5818e30acc53e74a2ec4071d"
+  },
+  "feature_shape": [
+    23,
+    16,
+    4
+  ],
+  "output_shape": [
+    23,
+    4,
+    3
+  ],
+  "input_channels": [
+    "log((quarter_entries+1)/(quarter_norm+1))",
+    "missing_ves",
+    "log((sum_valid_entries+1)/(sum_valid_norm+1))",
+    "missing_line"
+  ],
+  "native_target": "four30minute_slot_log_deviations",
+  "native_training_update_seconds": 1800,
+  "simulator_refresh_seconds": 900,
+  "shifted_updates_are_experimental": true,
+  "standalone_prediction": true,
+  "full_stack_weights_in_archive": false,
+  "required_assets": [
+    "hourly.parquet",
+    "15min.parquet",
+    "15min_reconciliation.parquet",
+    "calendar2026",
+    "vestibule/reference schedules",
+    "threeweights+scaler"
+  ],
+  "uncovered_station_ids": [
+    "L1_07"
+  ],
+  "historical_flags": false,
+  "original_source_files": {
+    "stack/nn.py": "b877cefa038affc8eaf62747241d0c4ffa6493ce049fc680884e00470b44f090",
+    "stack/data.py": "5fc895aa6c2d9e295ca7b20c59511a71d58ecfc2b7a766876804ec456b280bb9",
+    "intrahour.py": "21365a2e63e6e81372e2517d2f4045eddf255bbae7bb57d235d68fbe348f4f37",
+    "baseline.py": "8d79ebb3f91c56d8a3786db045300983ac8440f694375ba1b8f93a3b8c16c3f5"
+  },
+  "archive_sha256": "efa2b2c00ce5516a36c5bd599a6cd47794d18118affe6cdc4fda794051ac2cea",
+  "loading_seconds": 57.991972999996506,
+  "original_cached_B3_parity": {
+    "retrospective_cleaning_mode": true,
+    "records": [
+      {
+        "as_of": "2026-09-02T09:00:00+03:00",
+        "rows": 92,
+        "max_abs_z_delta": 6.953875225645945e-08,
+        "mean_abs_z_delta": 1.7158606131245358e-08
+      },
+      {
+        "as_of": "2026-09-16T09:30:00+03:00",
+        "rows": 92,
+        "max_abs_z_delta": 3.97364298514169e-08,
+        "mean_abs_z_delta": 9.264859960074277e-09
+      },
+      {
+        "as_of": "2026-09-29T18:00:00+03:00",
+        "rows": 92,
+        "max_abs_z_delta": 4.221995672515355e-08,
+        "mean_abs_z_delta": 5.789272091046483e-09
+      }
+    ],
+    "default_causal_mode_parity_claim": false
+  }
+}

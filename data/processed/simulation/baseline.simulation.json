@@ -1,0 +1,252 @@
+{
+  "boundary_crossing_movements": [],
+  "checks": {
+    "absent": [
+      "passenger demand, queues and capacity",
+      "block occupancy and signalling",
+      "switch routes and dispatcher permissions",
+      "crew schedules and paid work",
+      "maintenance history, EO validity and regulatory applicability",
+      "real energy consumption, tariffs and actual train release readiness"
+    ],
+    "headway_seconds": 113,
+    "peak_trains_on_line": 1,
+    "performed": [
+      {
+        "name": "references and positive lengths/times",
+        "status": "passed"
+      },
+      {
+        "name": "route continuity and train location",
+        "status": "passed"
+      },
+      {
+        "name": "train exclusivity, stops and turnarounds",
+        "status": "passed"
+      },
+      {
+        "name": "directed track departure headways",
+        "status": "passed"
+      },
+      {
+        "name": "state time conservation",
+        "status": "passed"
+      },
+      {
+        "name": "arrival-derived distance ledger",
+        "status": "passed"
+      },
+      {
+        "name": "initial departure boundary context",
+        "status": "passed"
+      },
+      {
+        "name": "line capacity",
+        "status": "passed"
+      }
+    ],
+    "supported_constraints_status": "passed"
+  },
+  "demand_id": "passengers-not-modeled",
+  "duration_seconds": 960,
+  "evaluation_mode": "fixture",
+  "events": [
+    {
+      "event_id": "baseline:E000001",
+      "event_type": "departure",
+      "location": "AB",
+      "next_state": "moving",
+      "previous_state": "standby",
+      "second": 0,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:00:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000002",
+      "event_type": "arrival",
+      "location": "B",
+      "next_state": "stop",
+      "previous_state": "moving",
+      "second": 120,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:02:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000003",
+      "event_type": "stop_complete",
+      "location": "B",
+      "next_state": "standby",
+      "previous_state": "stop",
+      "second": 180,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:03:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000004",
+      "event_type": "departure",
+      "location": "BC",
+      "next_state": "moving",
+      "previous_state": "standby",
+      "second": 180,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:03:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000005",
+      "event_type": "arrival",
+      "location": "C",
+      "next_state": "turnaround",
+      "previous_state": "moving",
+      "second": 360,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:06:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000006",
+      "event_type": "turnaround_complete",
+      "location": "C",
+      "next_state": "standby",
+      "previous_state": "turnaround",
+      "second": 480,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:08:00+03:00",
+      "train_id": "T1",
+      "trip_id": "out"
+    },
+    {
+      "event_id": "baseline:E000007",
+      "event_type": "departure",
+      "location": "CB",
+      "next_state": "moving",
+      "previous_state": "standby",
+      "second": 480,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:08:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    },
+    {
+      "event_id": "baseline:E000008",
+      "event_type": "arrival",
+      "location": "B",
+      "next_state": "stop",
+      "previous_state": "moving",
+      "second": 660,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:11:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    },
+    {
+      "event_id": "baseline:E000009",
+      "event_type": "stop_complete",
+      "location": "B",
+      "next_state": "standby",
+      "previous_state": "stop",
+      "second": 720,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:12:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    },
+    {
+      "event_id": "baseline:E000010",
+      "event_type": "departure",
+      "location": "BA",
+      "next_state": "moving",
+      "previous_state": "standby",
+      "second": 720,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:12:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    },
+    {
+      "event_id": "baseline:E000011",
+      "event_type": "arrival",
+      "location": "A",
+      "next_state": "turnaround",
+      "previous_state": "moving",
+      "second": 840,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:14:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    },
+    {
+      "event_id": "baseline:E000012",
+      "event_type": "turnaround_complete",
+      "location": "A",
+      "next_state": "standby",
+      "previous_state": "turnaround",
+      "second": 960,
+      "source_plan_id": "baseline",
+      "timestamp": "2026-05-01T03:16:00+03:00",
+      "train_id": "T1",
+      "trip_id": "back"
+    }
+  ],
+  "final_state": [
+    {
+      "location": "A",
+      "ready_second": 960,
+      "ready_to_depart": true,
+      "state": "standby",
+      "train_id": "T1"
+    }
+  ],
+  "initial_state": [
+    {
+      "cars": 8,
+      "location": "A",
+      "ready_after_seconds": 0,
+      "state": "standby",
+      "train_id": "T1",
+      "train_type": "educational-eight-car"
+    }
+  ],
+  "initial_state_id": "dfc39bcfcc7af811907f39e36680065043567a0a72380cd3a4d50802d14af246",
+  "mileage_complete": true,
+  "model_version": "simulation-v1.1",
+  "obligations_closed": true,
+  "obligations_scope": "scheduled_movement_and_station_waits_only",
+  "passenger_impact_checked": false,
+  "period_end": "2026-05-01T03:16:00+03:00",
+  "period_start": "2026-05-01T03:00:00+03:00",
+  "plan_id": "baseline",
+  "release_authorized": false,
+  "schema_version": "1.0",
+  "source": "GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro",
+  "status": "complete",
+  "transport_work": [
+    {
+      "car_km": "48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "48",
+      "passenger_train_km": "6",
+      "state_seconds": {
+        "moving": 600,
+        "standby": 0,
+        "stop": 120,
+        "turnaround": 240
+      },
+      "train_id": "T1",
+      "train_km": "6",
+      "train_type": "educational-eight-car"
+    }
+  ],
+  "unfinished_movements": [],
+  "unfinished_obligations": []
+}

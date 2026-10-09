@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "failed_checks": [],
+  "checks": {
+    "actual_model_tests": true,
+    "test_proof_hashes": true,
+    "b1_saved_equation_parity": true,
+    "contract_feature_and_time_shape": true,
+    "model_weight_hashes": true,
+    "source_identity": true,
+    "evidence_files_present": true,
+    "complete_native_components": true,
+    "input_manifest_weight_hashes": true,
+    "run_model_contract_parity": true
+  },
+  "required_model_tests": [
+    "test_actual_contract_uses_all_native_bases_and_true_cutoffs",
+    "test_available_at_prevents_using_late_observations",
+    "test_b3_output_matches_saved_native_networks_on_same_input",
+    "test_bundle_complete_quarter_refresh_and_future_mutation_invariance",
+    "test_feature_evidence_uses_measured_lightgbm_contributions",
+    "test_source_frame_has_all_red_stations_and_same_day_truth",
+    "test_training_period_and_unsupported_horizon_are_rejected"
+  ],
+  "b2_sha256": "cbc0147a8651b63572c91b7f2bbc4627cb65db36cc27f48ddec5c3275247ee8d",
+  "b2_code_sha_matches": {
+    "stack/base.py": true,
+    "stack/data.py": true,
+    "intrahour.py": true,
+    "baseline.py": true
+  },
+  "b2_data_sha_matches": {
+    "spb_line1_15min.parquet": true,
+    "spb_line1_15min_reconciliation.parquet": true,
+    "spb_line1_hourly.parquet": true
+  },
+  "source_proof_hashes": {
+    "C:\\Users\\lesha\\HackathonSPB\\metro51_ensemble.py": "525fdeceeac93fd3384dfe2f4353b5cfcfb6683bb869c8403a894fa484cc1f2d",
+    "C:\\Users\\lesha\\HackathonSPB\\tests\\test_metro51_ensemble.py": "5a84c3771f9403ebbab1b3e22bc5f7f346f8ddedff4829d7e9febafe0a1615f6"
+  },
+  "campaign_folder_created": false,
+  "method": "Called real campaign.model_proof with only save replaced in memory; real verify_model_evidence read actual files; wrote readiness evidence only"
+}

@@ -1,0 +1,20 @@
+station_id,name,name_external,line_order,n_vestibules,has_data
+devyatkino,Девяткино,Девяткино,0,2,true
+grazhdansky_prospekt,Гражданский проспект,Гражданский проспект,1,1,true
+akademicheskaya,Академическая,Академическая,2,1,true
+politekhnicheskaya,Политехническая,Политехническая,3,1,true
+ploshchad_muzhestva,Площадь Мужества,Площадь Мужества,4,1,true
+lesnaya,Лесная,Лесная,5,1,true
+vyborgskaya,Выборгская,Выборгская,6,1,true
+ploshchad_lenina,Площадь Ленина,Площадь Ленина,7,2,true
+chernyshevskaya,Чернышевская,Чернышевская,8,1,true
+vosstaniya,Площадь Восстания,Площадь Восстания,9,2,true
+vladimirskaya,Владимирская,Владимирская,10,1,true
+pushkinskaya,Пушкинская,Пушкинская,11,1,true
+tekhnologichesky_institut,Технологический институт,Технологический институт,12,0,false
+baltiyskaya,Балтийская,Балтийская,13,1,true
+narvskaya,Нарвская,Нарвская,14,1,true
+kirovsky_zavod,Кировский завод,Кировский завод,15,1,true
+avtovo,Автово,Автово,16,1,true
+leninsky_prospekt,Ленинский проспект,Ленинский проспект,17,2,true
+prospekt_veteranov,Проспект Ветеранов,Проспект Ветеранов,18,2,true

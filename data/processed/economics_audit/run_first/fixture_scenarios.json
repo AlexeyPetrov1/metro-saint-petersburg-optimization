@@ -1,0 +1,1784 @@
+{
+  "alternatives": [
+    "low_price",
+    "higher_price",
+    "extra_delay_and_maneuver"
+  ],
+  "cash_savings_range": {
+    "complete": true,
+    "currency": "RUB",
+    "known_max": "1480",
+    "known_min": "-1480",
+    "max": "1480",
+    "min": "-1480"
+  },
+  "evaluation_mode": "fixture",
+  "frontiers": [
+    {
+      "domain": "rate >= 0; quantities and other rates held fixed",
+      "other_savings": "-1480",
+      "other_savings_unit": "RUB",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "profitable_when": "rate > boundary",
+      "quantity_delta": "59.2",
+      "quantity_key": "passenger_train_km",
+      "rate": "25",
+      "scenario": "low_price",
+      "source": "scenario quantities and other costs",
+      "status": "assumed",
+      "unit": "RUB/train_km"
+    },
+    {
+      "domain": "rate >= 0; quantities and other rates held fixed",
+      "other_savings": "-1480",
+      "other_savings_unit": "RUB",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "profitable_when": "rate > boundary",
+      "quantity_delta": "59.2",
+      "quantity_key": "passenger_train_km",
+      "rate": "25",
+      "scenario": "higher_price",
+      "source": "scenario quantities and other costs",
+      "status": "assumed",
+      "unit": "RUB/train_km"
+    },
+    {
+      "domain": "rate >= 0; quantities and other rates held fixed",
+      "other_savings": "-4440",
+      "other_savings_unit": "RUB",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "profitable_when": "rate > boundary",
+      "quantity_delta": "59.2",
+      "quantity_key": "passenger_train_km",
+      "rate": "75",
+      "scenario": "extra_delay_and_maneuver",
+      "source": "scenario quantities and other costs",
+      "status": "assumed",
+      "unit": "RUB/train_km"
+    }
+  ],
+  "release_authorized": false,
+  "scenarios": [
+    {
+      "delay_minutes": "0",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "name": "low_price",
+      "result": {
+        "articles": [
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "592",
+              "currency": "RUB",
+              "known_subtotal": "592",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "59.2",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "10",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "10",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "passenger_traction"
+            ],
+            "name": "passenger_traction",
+            "quantity_key": "passenger_train_km",
+            "savings": "592",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "1480",
+              "currency": "RUB",
+              "known_subtotal": "1480",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "14.8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "nonpassenger_traction"
+            ],
+            "name": "nonpassenger_traction",
+            "quantity_key": "nonpassenger_train_km",
+            "savings": "-1480",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "paid_labor"
+            ],
+            "name": "paid_labor",
+            "quantity_key": "paid_person_hours",
+            "savings": "0",
+            "status": "assumed"
+          }
+        ],
+        "boundary": {
+          "closure_end": "2026-05-01T06:00:00+03:00",
+          "obligations_closed": true,
+          "period_end": "2026-05-01T05:00:00+03:00",
+          "period_start": "2026-05-01T03:00:00+03:00"
+        },
+        "cost_scope": "configured_articles_only",
+        "demand_id": "fixture-demand",
+        "evaluation_mode": "fixture",
+        "evaluation_model_version": "fixture-v1",
+        "events": {
+          "baseline": [],
+          "candidate": [
+            {
+              "at": "2026-05-01T03:07:00+03:00",
+              "event_id": "withdraw",
+              "operation_id": "withdraw",
+              "operation_id_explicit": false,
+              "quantities": {
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                },
+                "withdrawal_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            },
+            {
+              "at": "2026-05-01T05:30:00+03:00",
+              "event_id": "return",
+              "operation_id": "return",
+              "operation_id_explicit": false,
+              "quantities": {
+                "entry_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                },
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            }
+          ]
+        },
+        "groups": {
+          "capital": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          },
+          "cash": {
+            "baseline": "4592",
+            "candidate": "5480",
+            "currency": "RUB",
+            "known_subtotal_baseline": "4592",
+            "known_subtotal_candidate": "5480",
+            "savings": "-888",
+            "savings_pct": "-19.33797909407665505226480836",
+            "status": "assumed",
+            "vat_basis": "unspecified"
+          },
+          "resource_accrual": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          }
+        },
+        "initial_state_id": "fixture-initial-state",
+        "missing_required_articles": [],
+        "model_version": "economics-v1.1",
+        "natural_deltas": {
+          "entry_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          },
+          "moving_hours": {
+            "baseline": {
+              "amount": "1.65",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "1.45",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "nonpassenger_car_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "118.4",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "-118.4",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "nonpassenger_train_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "14.8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "-14.8",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "paid_person_hours": {
+            "baseline": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "candidate": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "person_h"
+          },
+          "passenger_car_km": {
+            "baseline": {
+              "amount": "473.6",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "473.6",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "passenger_train_km": {
+            "baseline": {
+              "amount": "59.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "59.2",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "purchased_energy": {
+            "baseline": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "candidate": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "delta": null,
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "kWh"
+          },
+          "standby_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "1.65",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "-1.65",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "stopped_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "withdrawal_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          }
+        },
+        "operational_status": {
+          "baseline": "unknown",
+          "candidate": "unknown"
+        },
+        "plans": {
+          "baseline": "baseline-round-trip",
+          "candidate": "withdraw-and-return"
+        },
+        "release_authorized": false,
+        "required_cash_articles": [],
+        "schema_version": "1.1",
+        "status": "assumed"
+      }
+    },
+    {
+      "delay_minutes": "0",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "name": "higher_price",
+      "result": {
+        "articles": [
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "2960",
+              "currency": "RUB",
+              "known_subtotal": "2960",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "59.2",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "50",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "50",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "passenger_traction"
+            ],
+            "name": "passenger_traction",
+            "quantity_key": "passenger_train_km",
+            "savings": "2960",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "1480",
+              "currency": "RUB",
+              "known_subtotal": "1480",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "14.8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "nonpassenger_traction"
+            ],
+            "name": "nonpassenger_traction",
+            "quantity_key": "nonpassenger_train_km",
+            "savings": "-1480",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "paid_labor"
+            ],
+            "name": "paid_labor",
+            "quantity_key": "paid_person_hours",
+            "savings": "0",
+            "status": "assumed"
+          }
+        ],
+        "boundary": {
+          "closure_end": "2026-05-01T06:00:00+03:00",
+          "obligations_closed": true,
+          "period_end": "2026-05-01T05:00:00+03:00",
+          "period_start": "2026-05-01T03:00:00+03:00"
+        },
+        "cost_scope": "configured_articles_only",
+        "demand_id": "fixture-demand",
+        "evaluation_mode": "fixture",
+        "evaluation_model_version": "fixture-v1",
+        "events": {
+          "baseline": [],
+          "candidate": [
+            {
+              "at": "2026-05-01T03:07:00+03:00",
+              "event_id": "withdraw",
+              "operation_id": "withdraw",
+              "operation_id_explicit": false,
+              "quantities": {
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                },
+                "withdrawal_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            },
+            {
+              "at": "2026-05-01T05:30:00+03:00",
+              "event_id": "return",
+              "operation_id": "return",
+              "operation_id_explicit": false,
+              "quantities": {
+                "entry_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                },
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            }
+          ]
+        },
+        "groups": {
+          "capital": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          },
+          "cash": {
+            "baseline": "6960",
+            "candidate": "5480",
+            "currency": "RUB",
+            "known_subtotal_baseline": "6960",
+            "known_subtotal_candidate": "5480",
+            "savings": "1480",
+            "savings_pct": "21.26436781609195402298850575",
+            "status": "assumed",
+            "vat_basis": "unspecified"
+          },
+          "resource_accrual": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          }
+        },
+        "initial_state_id": "fixture-initial-state",
+        "missing_required_articles": [],
+        "model_version": "economics-v1.1",
+        "natural_deltas": {
+          "entry_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          },
+          "moving_hours": {
+            "baseline": {
+              "amount": "1.65",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "1.45",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "nonpassenger_car_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "118.4",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "-118.4",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "nonpassenger_train_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "14.8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "-14.8",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "paid_person_hours": {
+            "baseline": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "candidate": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "person_h"
+          },
+          "passenger_car_km": {
+            "baseline": {
+              "amount": "473.6",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "473.6",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "passenger_train_km": {
+            "baseline": {
+              "amount": "59.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "59.2",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "purchased_energy": {
+            "baseline": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "candidate": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "delta": null,
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "kWh"
+          },
+          "standby_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "1.65",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "-1.65",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "stopped_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "withdrawal_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          }
+        },
+        "operational_status": {
+          "baseline": "unknown",
+          "candidate": "unknown"
+        },
+        "plans": {
+          "baseline": "baseline-round-trip",
+          "candidate": "withdraw-and-return"
+        },
+        "release_authorized": false,
+        "required_cash_articles": [],
+        "schema_version": "1.1",
+        "status": "assumed"
+      }
+    },
+    {
+      "delay_minutes": "30",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "name": "extra_delay_and_maneuver",
+      "result": {
+        "articles": [
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "2960",
+              "currency": "RUB",
+              "known_subtotal": "2960",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "59.2",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "50",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "50",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "passenger_traction"
+            ],
+            "name": "passenger_traction",
+            "quantity_key": "passenger_train_km",
+            "savings": "2960",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "0",
+              "currency": "RUB",
+              "known_subtotal": "0",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "0",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": "known_zero",
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "4440",
+              "currency": "RUB",
+              "known_subtotal": "4440",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "44.4",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "train_km"
+              },
+              "rate": "100",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/train_km",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "nonpassenger_traction"
+            ],
+            "name": "nonpassenger_traction",
+            "quantity_key": "nonpassenger_train_km",
+            "savings": "-4440",
+            "status": "assumed"
+          },
+          {
+            "accounting_kind": "cash",
+            "baseline": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "candidate": {
+              "amount": "4000",
+              "currency": "RUB",
+              "known_subtotal": "4000",
+              "period": {
+                "end": "2026-05-01T06:00:00+03:00",
+                "start": "2026-05-01T03:00:00+03:00"
+              },
+              "quantity": {
+                "amount": "8",
+                "applicability": "applicable",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed",
+                "unit": "person_h"
+              },
+              "rate": "500",
+              "rate_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "rate_status": "assumed",
+              "rate_unit": "RUB/person_h",
+              "reason": null,
+              "status": "assumed",
+              "vat_basis": "unspecified"
+            },
+            "covered_components": [
+              "paid_labor"
+            ],
+            "name": "paid_labor",
+            "quantity_key": "paid_person_hours",
+            "savings": "0",
+            "status": "assumed"
+          }
+        ],
+        "boundary": {
+          "closure_end": "2026-05-01T06:00:00+03:00",
+          "obligations_closed": true,
+          "period_end": "2026-05-01T05:00:00+03:00",
+          "period_start": "2026-05-01T03:00:00+03:00"
+        },
+        "cost_scope": "configured_articles_only",
+        "demand_id": "fixture-demand",
+        "evaluation_mode": "fixture",
+        "evaluation_model_version": "fixture-v1",
+        "events": {
+          "baseline": [],
+          "candidate": [
+            {
+              "at": "2026-05-01T03:07:00+03:00",
+              "event_id": "withdraw",
+              "operation_id": "withdraw",
+              "operation_id_explicit": false,
+              "quantities": {
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                },
+                "withdrawal_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            },
+            {
+              "at": "2026-05-01T04:30:00+03:00",
+              "event_id": "extra-maneuver",
+              "operation_id": "extra-maneuver",
+              "operation_id_explicit": false,
+              "quantities": {
+                "moving_hours": {
+                  "amount": "0.5",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "236.8",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "29.6",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            },
+            {
+              "at": "2026-05-01T05:30:00+03:00",
+              "event_id": "return",
+              "operation_id": "return",
+              "operation_id_explicit": false,
+              "quantities": {
+                "entry_events": {
+                  "amount": "1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "event"
+                },
+                "moving_hours": {
+                  "amount": "0.1",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_h"
+                },
+                "nonpassenger_car_km": {
+                  "amount": "59.2",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "car_km"
+                },
+                "nonpassenger_train_km": {
+                  "amount": "7.4",
+                  "applicability": "applicable",
+                  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                  "status": "assumed",
+                  "unit": "train_km"
+                }
+              },
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+            }
+          ]
+        },
+        "groups": {
+          "capital": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          },
+          "cash": {
+            "baseline": "6960",
+            "candidate": "8440",
+            "currency": "RUB",
+            "known_subtotal_baseline": "6960",
+            "known_subtotal_candidate": "8440",
+            "savings": "-1480",
+            "savings_pct": "-21.26436781609195402298850575",
+            "status": "assumed",
+            "vat_basis": "unspecified"
+          },
+          "resource_accrual": {
+            "baseline": "0",
+            "candidate": "0",
+            "currency": "RUB",
+            "known_subtotal_baseline": "0",
+            "known_subtotal_candidate": "0",
+            "savings": "0",
+            "savings_pct": null,
+            "status": "confirmed",
+            "vat_basis": null
+          }
+        },
+        "initial_state_id": "fixture-initial-state",
+        "missing_required_articles": [],
+        "model_version": "economics-v1.1",
+        "natural_deltas": {
+          "entry_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          },
+          "moving_hours": {
+            "baseline": {
+              "amount": "1.65",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0.7",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "0.95",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "nonpassenger_car_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "355.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "-355.2",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "nonpassenger_train_km": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "44.4",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "-44.4",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "paid_person_hours": {
+            "baseline": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "candidate": {
+              "amount": "8",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "person_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "person_h"
+          },
+          "passenger_car_km": {
+            "baseline": {
+              "amount": "473.6",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "car_km"
+            },
+            "delta": "473.6",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "car_km"
+          },
+          "passenger_train_km": {
+            "baseline": {
+              "amount": "59.2",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_km"
+            },
+            "delta": "59.2",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_km"
+          },
+          "purchased_energy": {
+            "baseline": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "candidate": {
+              "amount": null,
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "unknown",
+              "unit": "kWh"
+            },
+            "delta": null,
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "kWh"
+          },
+          "standby_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "2.15",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "-2.15",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "stopped_hours": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "candidate": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "train_h"
+            },
+            "delta": "0",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "train_h"
+          },
+          "withdrawal_events": {
+            "baseline": {
+              "amount": "0",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "candidate": {
+              "amount": "1",
+              "applicability": "applicable",
+              "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+              "status": "assumed",
+              "unit": "event"
+            },
+            "delta": "-1",
+            "period": {
+              "end": "2026-05-01T06:00:00+03:00",
+              "start": "2026-05-01T03:00:00+03:00"
+            },
+            "unit": "event"
+          }
+        },
+        "operational_status": {
+          "baseline": "unknown",
+          "candidate": "unknown"
+        },
+        "plans": {
+          "baseline": "baseline-round-trip",
+          "candidate": "withdraw-with-extra-maneuver"
+        },
+        "release_authorized": false,
+        "required_cash_articles": [],
+        "schema_version": "1.1",
+        "status": "assumed"
+      }
+    }
+  ],
+  "sign_change": true,
+  "status": "assumed"
+}

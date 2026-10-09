@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="4.494" timestamp="2026-10-09T22:07:43.222527+03:00" hostname="petrov"><testcase classname="" name="tests.test_clean_spb" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\lesha\HackathonSPB\vendor\metro_petersburg\tests\test_clean_spb.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\apps\miniconda3\envs\ml\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_clean_spb.py:6: in &lt;module&gt;
+    from src.clean_spb import (FLOW_HEADER, FOOTER_PREFIX, clean_flow, find_raw, label_to_local, parse_flow_sheet,
+src\clean_spb.py:26: in &lt;module&gt;
+    from bs4 import BeautifulSoup
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase><testcase classname="" name="tests.test_clean_spb_15min" time="0.000"><error message="collection failure">ImportError while importing test module 'C:\Users\lesha\HackathonSPB\vendor\metro_petersburg\tests\test_clean_spb_15min.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\apps\miniconda3\envs\ml\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_clean_spb_15min.py:8: in &lt;module&gt;
+    from src.clean_spb_15min import (FLAGS, OUT_COLS, WEEKDAYS_RU, clean_15min, parse_day_sheet, slot_closure,
+src\clean_spb_15min.py:42: in &lt;module&gt;
+    from src.clean_spb import REGIME, ONE_OFF, closure_reason, find_raw, incident_mask
+src\clean_spb.py:26: in &lt;module&gt;
+    from bs4 import BeautifulSoup
+E   ModuleNotFoundError: No module named 'bs4'</error></testcase></testsuite></testsuites>

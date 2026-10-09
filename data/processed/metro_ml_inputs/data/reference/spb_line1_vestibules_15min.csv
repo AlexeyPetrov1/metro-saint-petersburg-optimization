@@ -1,0 +1,25 @@
+raw_name_15min,vestibule_id,station_id,vestibule_no,in_hourly,first_hour,last_hour
+Девяткино-1,devyatkino_1,devyatkino,1,true,5,0
+Девяткино-2,devyatkino_2,devyatkino,2,true,5,0
+Гражданский пр.,grazhdansky_prospekt_1,grazhdansky_prospekt,1,true,5,0
+Академическая,akademicheskaya_1,akademicheskaya,1,true,5,0
+Политехническая,politekhnicheskaya_1,politekhnicheskaya,1,true,5,0
+Пл. Мужества,ploshchad_muzhestva_1,ploshchad_muzhestva,1,true,5,0
+Лесная,lesnaya_1,lesnaya,1,true,5,0
+Выборгская,vyborgskaya_1,vyborgskaya,1,true,5,0
+Пл.Ленина-1,ploshchad_lenina_1,ploshchad_lenina,1,true,5,0
+Пл.Ленина-2,ploshchad_lenina_2,ploshchad_lenina,2,true,5,22
+Чернышевская,chernyshevskaya_1,chernyshevskaya,1,true,5,0
+Пл. Восстания-1,vosstaniya_1,vosstaniya,1,true,5,0
+Пл. Восстания-2,vosstaniya_2,vosstaniya,2,true,5,0
+Владимирская,vladimirskaya_1,vladimirskaya,1,true,5,0
+Пушкинская,pushkinskaya_1,pushkinskaya,1,true,5,0
+Технологический институт-1,tekhnologichesky_institut_1,tekhnologichesky_institut,1,false,5,0
+Балтийская,baltiyskaya_1,baltiyskaya,1,true,5,0
+Нарвская,narvskaya_1,narvskaya,1,true,5,0
+Кировский завод,kirovsky_zavod_1,kirovsky_zavod,1,true,5,0
+Автово,avtovo_1,avtovo,1,true,5,0
+Ленинский пр.-1,leninsky_prospekt_1,leninsky_prospekt,1,true,5,0
+Ленинский пр.-2,leninsky_prospekt_2,leninsky_prospekt,2,true,6,21
+Пр.Ветеранов-1,prospekt_veteranov_1,prospekt_veteranov,1,true,5,0
+Пр.Ветеранов-2,prospekt_veteranov_2,prospekt_veteranov,2,true,5,0

@@ -1,0 +1,3 @@
+period,filter,N,days,hours,anomalies,big,alarms_per_day,false_per_day,precision,recall_all,recall_big,recall_all_60,recall_big_60,median_min_all,median_min_big
+май + июль,без фильтра (правило этапа 6),,57,24146,1691,220,58.087719,34.350877,0.401691,0.788882,0.877273,0.913661,0.981818,30.0,30.0
+май + июль,фильтр N = 340.0,340.0,57,24146,1691,220,9.298246,3.807018,0.590566,0.185098,0.854545,0.249556,0.981818,inf,30.0

@@ -1,0 +1,13 @@
+event_id,timestamp,second,train_id,event_type,location,previous_state,next_state,source_plan_id,trip_id
+baseline:E000001,2026-05-01T03:00:00+03:00,0,T1,departure,AB,standby,moving,baseline,out
+baseline:E000002,2026-05-01T03:02:00+03:00,120,T1,arrival,B,moving,stop,baseline,out
+baseline:E000003,2026-05-01T03:03:00+03:00,180,T1,stop_complete,B,stop,standby,baseline,out
+baseline:E000004,2026-05-01T03:03:00+03:00,180,T1,departure,BC,standby,moving,baseline,out
+baseline:E000005,2026-05-01T03:06:00+03:00,360,T1,arrival,C,moving,turnaround,baseline,out
+baseline:E000006,2026-05-01T03:08:00+03:00,480,T1,turnaround_complete,C,turnaround,standby,baseline,out
+baseline:E000007,2026-05-01T03:08:00+03:00,480,T1,departure,CB,standby,moving,baseline,back
+baseline:E000008,2026-05-01T03:11:00+03:00,660,T1,arrival,B,moving,stop,baseline,back
+baseline:E000009,2026-05-01T03:12:00+03:00,720,T1,stop_complete,B,stop,standby,baseline,back
+baseline:E000010,2026-05-01T03:12:00+03:00,720,T1,departure,BA,standby,moving,baseline,back
+baseline:E000011,2026-05-01T03:14:00+03:00,840,T1,arrival,A,moving,turnaround,baseline,back
+baseline:E000012,2026-05-01T03:16:00+03:00,960,T1,turnaround_complete,A,turnaround,standby,baseline,back

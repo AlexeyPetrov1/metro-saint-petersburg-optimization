@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.495" timestamp="2026-10-09T22:20:00.656435+03:00" hostname="petrov"><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_progress_cache_does_not_retain_five_passenger_ledgers" time="1.465"><failure message="assert 5 &lt;= 2&#10; +  where 5 = sum(&lt;generator object test_progress_cache_does_not_retain_five_passenger_ledgers.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000245635BB510&gt;)">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-477/test_progress_cache_does_not_r0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024563307200&gt;
+replay = &lt;interfaces.streamlit_dispatcher.adapter.Replay object at 0x0000024563307170&gt;
+
+    def test_progress_cache_does_not_retain_five_passenger_ledgers(tmp_path, monkeypatch, replay):
+        created = []
+        original = Replay.from_arm
+    
+        def load(cls, path):
+            saved = original(path)
+            created.append(weakref.ref(saved))
+            return saved
+    
+        monkeypatch.setattr(Replay, "from_arm", classmethod(load))
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", str(tmp_path))
+        arm_files(tmp_path, replay, second=1000)
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+        for second in [1800, 2700, 3600, 4500]:
+            arm_files(tmp_path, replay, second=second)
+            app.button[0].click().run()
+            assert not app.exception
+        gc.collect()
+        assert len(created) == 5
+&gt;       assert sum(ref() is not None for ref in created) &lt;= 2
+E       assert 5 &lt;= 2
+E        +  where 5 = sum(&lt;generator object test_progress_cache_does_not_retain_five_passenger_ledgers.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000245635BB510&gt;)
+
+interfaces\streamlit_dispatcher\tests\test_campaign_progress.py:114: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "source": "Educational GOAL 3.2 fixture; invented A-B line and timings, not a real timetable",
+  "period_start": "2026-05-01T03:00:00+03:00",
+  "period_end": "2026-05-01T03:10:00+03:00",
+  "max_trains_on_line": 2,
+  "previous_departures": [],
+  "stations": [
+    {"station_id": "A", "kind": "line", "stop_seconds": 0, "turnaround_seconds": 0},
+    {"station_id": "B", "kind": "line", "stop_seconds": 0, "turnaround_seconds": 0}
+  ],
+  "tracks": [
+    {"track_id": "AB", "from_station": "A", "to_station": "B", "length_km": "1", "travel_seconds": 120}
+  ],
+  "trains": [
+    {"train_id": "T1", "train_type": "educational", "cars": 1, "location": "A", "state": "standby", "ready_after_seconds": 0},
+    {"train_id": "T2", "train_type": "educational", "cars": 1, "location": "A", "state": "standby", "ready_after_seconds": 0}
+  ],
+  "plans": [
+    {"plan_id": "service", "trips": [
+      {"trip_id": "first", "train_id": "T1", "departure_second": 60, "route": ["AB"], "passenger": true},
+      {"trip_id": "second", "train_id": "T2", "departure_second": 180, "route": ["AB"], "passenger": true}
+    ]},
+    {"plan_id": "no_trains", "trips": []}
+  ]
+}

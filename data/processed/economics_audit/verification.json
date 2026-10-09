@@ -1,0 +1,35 @@
+{
+  "audit_sources_sha256": {
+    "config/costs/default.json": "33b6f91d6457a5980bf71e629f7b2e4c143e112a7211a8ea0e35867c3e80fc77",
+    "docs/economics.md": "8735da89e43f121b2ce88c55418179ecd2b725788e1dbfdabec75a933ce7bc2e",
+    "docs/economics_audit.md": "baa6bb76cf45941b33e3b2f63fc8d5627210625828607fc73aed2814276107e4",
+    "economics.py": "6adea55099da8bc5cbd4e3283dabfe5332d6b22a2d11725a01da7e1daad4668f",
+    "tests/test_economics.py": "b46efe43c9c245574c2a56e0bcbcd588d30a101cd57fb4599ad538be88b50c40",
+    "tests/test_economics_audit.py": "4225d6a48b3f0d2d03d1d331dee8c51292edc75dcdd6a63911d13aa8772cc3ff"
+  },
+  "audit_tests": 43,
+  "core_sha256": {
+    "build_manifest.json": "9804e19c8e356036841d167609bca54d489488353047eb860de0ab2188febec3",
+    "entries_station_15m.parquet": "e1e0698450d87f47896af2ca547364606f1d299f4b643a12efaebabef0e824ae",
+    "entries_vestibule_15m.parquet": "51bbea4a1cb89488024658fd34c6b232af3af8bc8f8b3b841fabb4e3acb65d55",
+    "entries_vestibule_1h.parquet": "c818c4bc6832c72580efe0fc597c64424eb22e8e37a730862afbc32183008b6b",
+    "hourly_vestibule_aliases.csv": "e58ae989cec29a037be7e52c7a6febb91880d80b44dfca1beaf718906fe46111",
+    "maintenance_rules.csv": "2eb44fbc6453fd345d51851b3f49296fbcf39e5f751451b4dd0a7a46dc8a7ea4",
+    "parameters.json": "ebf018952613c1953227416cef3161a8b95e27438a8a9f2d4cf10a56d67d8946",
+    "quality_report.json": "59f201a090e500fe42777e67d0ec2458350d39d9fcd43f0bde70e72a45232668",
+    "quality_report.md": "d04c7fe3c5842a7189ced17f1aea113003ff1dcf67a897cbb81a06e9daaed1aa",
+    "reconciliation.csv": "86c487257a12ef550346d9281b2121aaa05555bac1cb2b7ed3c033b78c237178",
+    "source_text.json": "0e1079d6710b49ea0a39f28a4c269943c188b9f7f99c69365b2b7b02bc892aeb",
+    "sources.csv": "e26d086b0b5bf13269003f31327a0b96059863c001a3b015300da460d7f27eea",
+    "transport_work.csv": "bf3c851e59fdeb4d1fe80286ab1f18502c20293bcc25feffab10da45a9038a65",
+    "vestibule_map.csv": "77fbf09fb5200bd700d272a480549c06c877fcc4ed22b978797320bbc0885fe8"
+  },
+  "data_tests": 24,
+  "economic_files_identical": 8,
+  "metro_files_unchanged": 14,
+  "model_version": "economics-v1.1",
+  "old_tests": 61,
+  "real_metro_savings_verified": false,
+  "simulator_integration_verified": false,
+  "tests": 104
+}

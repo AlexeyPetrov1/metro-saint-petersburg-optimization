@@ -1,0 +1,7 @@
+{
+  "clock_timezone": "Europe/Moscow",
+  "load_interpolation": "piecewise constant known state; missing events never replaced by zero",
+  "queue_sample_seconds": 60,
+  "selected_train_id": "T11",
+  "selected_train_max_car_load": 162
+}

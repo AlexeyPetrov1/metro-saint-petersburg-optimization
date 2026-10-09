@@ -1,0 +1,112 @@
+{
+  "components": [
+    "b1_lightgbm",
+    "b2_persistence",
+    "b3_gru_seeds012",
+    "frozen_meta_stack"
+  ],
+  "input_dir": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009",
+  "model_dir": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\models",
+  "weights_sha256": {
+    "b1": {
+      "meta.json": "703d71e025b50e99c9f9a3239a8ace01722fdb2282086a9629c78719c5c5e8f4",
+      "q10.txt": "6d72d1ed6e6ae7779cc135f3c1a1a927a74417f135d3edaab99541273a25a333",
+      "q50.txt": "92b30a1299729394fd59e5d0ec6adff9ee078d1cf0a2ff3a6d58b9fb44a6137d",
+      "q90.txt": "5ef95e5f8bc6405d04339990950c65fedcf1541dd5ed89cea9ac6160c7d2ae3e",
+      "station_quantiles.csv": "4e5abfb4611b68698dd3d8b892aa39388f0c32f8ae949bd22a557317b54eff2e"
+    },
+    "b3": {
+      "gru_seed0.pt": "715f91023fbed105c2f0b6784f3e006baafebf5aeffd53b8185177704dd74421",
+      "gru_seed1.pt": "23a8a04cebd3de62777f4310262aa9ce76232af76f16b9c762eea99e95ba9f39",
+      "gru_seed2.pt": "75b8b86f4a82b9af2bd6d63e8cf2266dd89e11449467fa9658a041b09013835e",
+      "meta.json": "52d79907621cf395c4ddb3bf9ac5083b76fadb8a5818e30acc53e74a2ec4071d"
+    },
+    "stack_params": "5fe338d798ff9690921ee3f79eea9d731c77c80e1da9c90a1296774dd40c74c0",
+    "b2": "cbc0147a8651b63572c91b7f2bbc4627cb65db36cc27f48ddec5c3275247ee8d"
+  },
+  "b1_train_end": "2026-08-24",
+  "b3_train_end": "2026-07-31",
+  "meta_fit_months": [
+    5,
+    7
+  ],
+  "b2_calibration_months": [
+    2,
+    5,
+    7
+  ],
+  "native_update_seconds": 1800,
+  "simulator_refresh_seconds": 900,
+  "shifted_updates_are_experimental": true,
+  "feature_order": [
+    "vestibule",
+    "station_group",
+    "hour_tau",
+    "dow_tau",
+    "day_type_tau",
+    "h",
+    "b4_tau",
+    "level",
+    "y_t",
+    "y_t1",
+    "y_tau24",
+    "y_tau168",
+    "r_t",
+    "ewm_r_2h",
+    "ewm_r_6h",
+    "cum_ratio",
+    "ratio_168",
+    "r_line",
+    "ewm_r_line_2h",
+    "r_neighbors",
+    "r_twin",
+    "share_dev",
+    "r_yday",
+    "cum_ratio_yday",
+    "fc_precip_tau",
+    "fc_precip_3h_tau"
+  ],
+  "vestibule_order": [
+    "akademicheskaya_1",
+    "avtovo_1",
+    "baltiyskaya_1",
+    "chernyshevskaya_1",
+    "devyatkino_1",
+    "devyatkino_2",
+    "grazhdansky_prospekt_1",
+    "kirovsky_zavod_1",
+    "leninsky_prospekt_1",
+    "leninsky_prospekt_2",
+    "lesnaya_1",
+    "narvskaya_1",
+    "ploshchad_lenina_1",
+    "ploshchad_lenina_2",
+    "ploshchad_muzhestva_1",
+    "politekhnicheskaya_1",
+    "prospekt_veteranov_1",
+    "prospekt_veteranov_2",
+    "pushkinskaya_1",
+    "vladimirskaya_1",
+    "vosstaniya_1",
+    "vosstaniya_2",
+    "vyborgskaya_1"
+  ],
+  "uncovered_station_ids": [
+    "L1_07"
+  ],
+  "station_quantiles": "frozen meta params",
+  "b1_hourly_horizons": [
+    1,
+    2,
+    3
+  ],
+  "hour3_extrapolation": true,
+  "temporal_holdout_requires": "after max component train_end plus seven-day embargo",
+  "September_is_reused_development_period": true,
+  "future_truth_used": false,
+  "retrospective_history_flags": false,
+  "weather_publication_timestamps": "unknown",
+  "b1_hourly_observations_end": "2026-09-30T02:00:00+03:00",
+  "b1_missing_hourly_history": "causally completed 15-minute source sums used where uploaded hourly source has ended",
+  "native_b1_equation_parity_checked_on": "2026-09-29T09:00:00+03:00"
+}

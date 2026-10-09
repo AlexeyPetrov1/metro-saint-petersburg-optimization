@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "currency": "RUB",
+  "model_version": "economics-v1.1",
+  "note": "Фактические денежные ставки не предоставлены. null означает неизвестную ставку, а не нулевую цену.",
+  "articles": [
+    {"name": "purchased_energy", "quantity_key": "purchased_energy", "rate": null, "unit": "RUB/kWh", "covered_components": ["purchased_traction_energy", "purchased_auxiliary_energy"], "accounting_kind": "cash", "source": "not supplied", "status": "unknown"},
+    {"name": "paid_labor", "quantity_key": "paid_person_hours", "rate": null, "unit": "RUB/person_h", "covered_components": ["paid_labor"], "accounting_kind": "cash", "source": "not supplied", "status": "unknown"},
+    {"name": "avoidable_maintenance", "quantity_key": "avoidable_maintenance_events", "rate": null, "unit": "RUB/event", "covered_components": ["avoidable_maintenance_payments"], "accounting_kind": "cash", "source": "not supplied", "status": "unknown"},
+    {"name": "entry_preparation", "quantity_key": "entry_events", "rate": null, "unit": "RUB/event", "covered_components": ["entry_preparation_excluding_energy_labor_maintenance"], "accounting_kind": "cash", "source": "not supplied", "status": "unknown"},
+    {"name": "withdrawal_preparation", "quantity_key": "withdrawal_events", "rate": null, "unit": "RUB/event", "covered_components": ["withdrawal_preparation_excluding_energy_labor_maintenance"], "accounting_kind": "cash", "source": "not supplied", "status": "unknown"},
+    {"name": "implementation", "quantity_key": "implementation_events", "rate": null, "unit": "RUB/event", "covered_components": ["implementation_capital"], "accounting_kind": "capital", "source": "not supplied", "status": "unknown"}
+  ]
+}

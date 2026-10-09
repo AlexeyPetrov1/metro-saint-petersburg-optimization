@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Predictions",
+  "type": "array",
+  "items": {
+    "additionalProperties": false,
+    "description": "Дополнительно проверяется: q10 <= q50 <= q90; минуты ts кратны 15, секунды = 0",
+    "properties": {
+      "station_id": {
+        "minLength": 1,
+        "title": "Station Id",
+        "type": "string"
+      },
+      "ts": {
+        "description": "Начало слота, локальное время со смещением",
+        "format": "date-time",
+        "title": "Ts",
+        "type": "string"
+      },
+      "horizon_min": {
+        "maximum": 120,
+        "minimum": 15,
+        "multipleOf": 15,
+        "title": "Horizon Min",
+        "type": "integer"
+      },
+      "q10": {
+        "minimum": 0,
+        "title": "Q10",
+        "type": "number"
+      },
+      "q50": {
+        "minimum": 0,
+        "title": "Q50",
+        "type": "number"
+      },
+      "q90": {
+        "minimum": 0,
+        "title": "Q90",
+        "type": "number"
+      },
+      "baseline": {
+        "description": "Расчётный поток для слота и типа дня",
+        "minimum": 0,
+        "title": "Baseline",
+        "type": "number"
+      },
+      "is_anomaly": {
+        "title": "Is Anomaly",
+        "type": "boolean"
+      },
+      "model_version": {
+        "minLength": 1,
+        "title": "Model Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "station_id",
+      "ts",
+      "horizon_min",
+      "q10",
+      "q50",
+      "q90",
+      "baseline",
+      "is_anomaly",
+      "model_version"
+    ],
+    "title": "Prediction",
+    "type": "object"
+  }
+}

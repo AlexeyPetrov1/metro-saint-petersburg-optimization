@@ -1,0 +1,32 @@
+{
+  "absent_checks": [
+    "passenger demand, queues and capacity",
+    "block occupancy and signalling",
+    "switch routes and dispatcher permissions",
+    "crew schedules and paid work",
+    "maintenance history, EO validity and regulatory applicability",
+    "real energy consumption, tariffs and actual train release readiness"
+  ],
+  "assumptions": [
+    "prescribed trips and constant directed segment times; no speed model",
+    "distance credited once on arrival, including closing instant; no prorating",
+    "arrival, wait completion, departure; ties sorted by train_id, trip_id and leg",
+    "all listed trains are present throughout the whole window",
+    "line includes moving, stopping, turning and standby trains at line locations",
+    "depot-to-line counts on departure; line-to-depot until arrival",
+    "obligations_closed covers only scheduled movements and station waits in this fixture"
+  ],
+  "evaluation_mode": "fixture",
+  "passenger_impact_checked": false,
+  "recommendation": "Влияние на пассажиров не проверялось. Сравнение не даёт рекомендации снять поезд.",
+  "release_authorized": false,
+  "source": "GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro",
+  "unknown_quantities": {
+    "avoidable_maintenance_events": "event",
+    "entry_events": "event",
+    "implementation_events": "event",
+    "paid_person_hours": "person_h",
+    "purchased_energy": "kWh",
+    "withdrawal_events": "event"
+  }
+}

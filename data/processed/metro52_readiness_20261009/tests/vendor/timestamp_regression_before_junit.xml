@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="1.573" timestamp="2026-10-09T22:13:23.241610+03:00" hostname="petrov"><testcase classname="tests.test_stack_timestamp_units" name="test_blocks_follow_elapsed_quarters_for_each_timestamp_unit[ns]" time="0.002" /><testcase classname="tests.test_stack_timestamp_units" name="test_blocks_follow_elapsed_quarters_for_each_timestamp_unit[us]" time="0.002"><failure message="AssertionError: &#10;Arrays are not equal&#10;&#10;Mismatched elements: 79 / 80 (98.8%)&#10;First 5 mismatches are at indices:&#10; [1]: 1 (ACTUAL), 0 (DESIRED)&#10; [2]: 2 (ACTUAL), 0 (DESIRED)&#10; [3]: 3 (ACTUAL), 0 (DESIRED)&#10; [4]: 4 (ACTUAL), 0 (DESIRED)&#10; [5]: 5 (ACTUAL), 0 (DESIRED)&#10;Max absolute difference among violations: 78&#10;Max relative difference among violations: 78.&#10; ACTUAL: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,&#10;       17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,&#10;       34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,...&#10; DESIRED: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,&#10;       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,&#10;       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,&#10;       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])">unit = 'us'
+
+    @pytest.mark.parametrize("unit", ["ns", "us", "ms"])
+    def test_blocks_follow_elapsed_quarters_for_each_timestamp_unit(unit):
+        first = pd.date_range("2026-02-27", periods=40, freq="15min", tz="UTC")
+        second = pd.date_range("2026-05-01", periods=40, freq="15min", tz="UTC")
+        timestamps = first.append(second).as_unit(unit)
+&gt;       np.testing.assert_array_equal(blocks_of(timestamps), [0] * 40 + [1] * 40)
+E       AssertionError: 
+E       Arrays are not equal
+E       
+E       Mismatched elements: 79 / 80 (98.8%)
+E       First 5 mismatches are at indices:
+E        [1]: 1 (ACTUAL), 0 (DESIRED)
+E        [2]: 2 (ACTUAL), 0 (DESIRED)
+E        [3]: 3 (ACTUAL), 0 (DESIRED)
+E        [4]: 4 (ACTUAL), 0 (DESIRED)
+E        [5]: 5 (ACTUAL), 0 (DESIRED)
+E       Max absolute difference among violations: 78
+E       Max relative difference among violations: 78.
+E        ACTUAL: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+E              17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+E              34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,...
+E        DESIRED: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+E              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+E              1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+E              1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+
+tests\test_stack_timestamp_units.py:13: AssertionError</failure></testcase><testcase classname="tests.test_stack_timestamp_units" name="test_blocks_follow_elapsed_quarters_for_each_timestamp_unit[ms]" time="0.002"><failure message="AssertionError: &#10;Arrays are not equal&#10;&#10;Mismatched elements: 79 / 80 (98.8%)&#10;First 5 mismatches are at indices:&#10; [1]: 1 (ACTUAL), 0 (DESIRED)&#10; [2]: 2 (ACTUAL), 0 (DESIRED)&#10; [3]: 3 (ACTUAL), 0 (DESIRED)&#10; [4]: 4 (ACTUAL), 0 (DESIRED)&#10; [5]: 5 (ACTUAL), 0 (DESIRED)&#10;Max absolute difference among violations: 78&#10;Max relative difference among violations: 78.&#10; ACTUAL: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,&#10;       17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,&#10;       34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,...&#10; DESIRED: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,&#10;       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,&#10;       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,&#10;       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])">unit = 'ms'
+
+    @pytest.mark.parametrize("unit", ["ns", "us", "ms"])
+    def test_blocks_follow_elapsed_quarters_for_each_timestamp_unit(unit):
+        first = pd.date_range("2026-02-27", periods=40, freq="15min", tz="UTC")
+        second = pd.date_range("2026-05-01", periods=40, freq="15min", tz="UTC")
+        timestamps = first.append(second).as_unit(unit)
+&gt;       np.testing.assert_array_equal(blocks_of(timestamps), [0] * 40 + [1] * 40)
+E       AssertionError: 
+E       Arrays are not equal
+E       
+E       Mismatched elements: 79 / 80 (98.8%)
+E       First 5 mismatches are at indices:
+E        [1]: 1 (ACTUAL), 0 (DESIRED)
+E        [2]: 2 (ACTUAL), 0 (DESIRED)
+E        [3]: 3 (ACTUAL), 0 (DESIRED)
+E        [4]: 4 (ACTUAL), 0 (DESIRED)
+E        [5]: 5 (ACTUAL), 0 (DESIRED)
+E       Max absolute difference among violations: 78
+E       Max relative difference among violations: 78.
+E        ACTUAL: array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+E              17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+E              34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,...
+E        DESIRED: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+E              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+E              1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+E              1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+
+tests\test_stack_timestamp_units.py:13: AssertionError</failure></testcase></testsuite></testsuites>

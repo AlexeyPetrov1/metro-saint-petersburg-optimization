@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "actual": "6",
+      "expected": "6",
+      "quantity": "passenger_train_km",
+      "status": "passed"
+    },
+    {
+      "actual": "48",
+      "expected": "48",
+      "quantity": "passenger_car_km",
+      "status": "passed"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "quantity": "nonpassenger_train_km",
+      "status": "passed"
+    },
+    {
+      "actual": 600,
+      "expected": 600,
+      "quantity": "moving",
+      "status": "passed"
+    },
+    {
+      "actual": 120,
+      "expected": 120,
+      "quantity": "stop",
+      "status": "passed"
+    },
+    {
+      "actual": 240,
+      "expected": 240,
+      "quantity": "turnaround",
+      "status": "passed"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "quantity": "standby",
+      "status": "passed"
+    },
+    {
+      "actual": 960,
+      "expected": 960,
+      "quantity": "total_seconds",
+      "status": "passed"
+    },
+    {
+      "actual": "A",
+      "expected": "A",
+      "quantity": "final_location",
+      "status": "passed"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "quantity": "ready_to_depart",
+      "status": "passed"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "quantity": "unfinished_movements",
+      "status": "passed"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "quantity": "unfinished_obligations",
+      "status": "passed"
+    }
+  ],
+  "oracle_source": "GOAL 3.1 manual values for educational A-B-C cycle",
+  "status": "passed"
+}

@@ -1,0 +1,67 @@
+{
+  "phase": "initial",
+  "tests": 2066,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 573.639,
+  "exit_code": 0,
+  "warnings_count": 14,
+  "warnings": [
+    "Pandas4Warning: sum(1) in vendor/src/intrahour.py; all(1) in metro48_gru.py"
+  ],
+  "changes_by_test_agent": [],
+  "scope": "root tests/ only; Streamlit and vendor tested separately",
+  "slowest_testcases": [
+    {
+      "classname": "tests.test_goal43_campaign",
+      "name": "test_campaign_compares_four_families_then_validates_frozen_plan",
+      "seconds": 73.312
+    },
+    {
+      "classname": "tests.test_metro51_ensemble",
+      "name": "test_bundle_complete_quarter_refresh_and_future_mutation_invariance",
+      "seconds": 46.15
+    },
+    {
+      "classname": "tests.test_metro_ml",
+      "name": "test_actual_frozen_bundle_is_causal_and_hourly_refresh_has_no_third_hour",
+      "seconds": 22.847
+    },
+    {
+      "classname": "tests.test_metro_ml",
+      "name": "test_actual_frozen_weights_reject_unknown_line_and_show_observation_cutoff",
+      "seconds": 21.034
+    },
+    {
+      "classname": "tests.test_metro44_planner",
+      "name": "test_dense_reference_is_checked_for_the_whole_service_day",
+      "seconds": 20.746
+    },
+    {
+      "classname": "tests.test_line1",
+      "name": "test_s1_real_groups_whole_run_equals_warmup_and_three_main_windows",
+      "seconds": 20.659
+    },
+    {
+      "classname": "tests.test_metro_ml",
+      "name": "test_future_late_vestibule_schedules_are_public_and_missing_weather_stays_nan",
+      "seconds": 18.367
+    },
+    {
+      "classname": "tests.test_metro_ml",
+      "name": "test_loader_uses_hourly_history_only_where_observed_quarters_are_absent",
+      "seconds": 16.857
+    },
+    {
+      "classname": "tests.test_metro44_linked_gap_repair",
+      "name": "test_compiled_future_leg_hold_preserves_a_real_started_movement",
+      "seconds": 16.21
+    },
+    {
+      "classname": "tests.test_goal43_extend",
+      "name": "test_stop_resume_creates_missing_summary_from_saved_first_decision",
+      "seconds": 16.016
+    }
+  ]
+}

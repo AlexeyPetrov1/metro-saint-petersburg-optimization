@@ -1,0 +1,44 @@
+{
+  "b1_native_slot_max_absolute_error": 4.544975507059235e-16,
+  "origin": "2026-09-29T09:00:00+03:00",
+  "native_rows": 92,
+  "clarification": "native slot conversion equation matched on identical causal hourly predictions; not parity against retrospectively flagged offline cache",
+  "limited_forecast_comparison": [
+    {
+      "model": "full_stack",
+      "origin": "2026-09-30T08:00:00+03:00",
+      "n": 152,
+      "actual_sum": 128155,
+      "absolute_error_sum": 8211,
+      "wape": 0.06407085170301588
+    },
+    {
+      "model": "full_stack",
+      "origin": "2026-09-30T09:00:00+03:00",
+      "n": 152,
+      "actual_sum": 87625,
+      "absolute_error_sum": 7087,
+      "wape": 0.08087874465049928
+    },
+    {
+      "model": "standalone_GRU",
+      "origin": "2026-09-30T08:00:00+03:00",
+      "n": 152,
+      "actual_sum": 128155,
+      "absolute_error_sum": 8426,
+      "wape": 0.0657485076664976
+    },
+    {
+      "model": "standalone_GRU",
+      "origin": "2026-09-30T09:00:00+03:00",
+      "n": 152,
+      "actual_sum": 87625,
+      "absolute_error_sum": 6785,
+      "wape": 0.07743223965763195
+    }
+  ],
+  "validation_seconds": 56.80948009999884,
+  "interval": "two native origins, eight quarters each; overlapping forecast targets are scored per origin",
+  "development_day_reused": true,
+  "model_does_not_claim_improvement": true
+}

@@ -1,0 +1,257 @@
+{
+  "all_constraints_verified": false,
+  "capacity_by_type": {
+    "81-722.1": 168,
+    "81-723.1": 187,
+    "81-724.1": 187
+  },
+  "car_types": [
+    "81-722.1",
+    "81-723.1",
+    "81-724.1",
+    "81-723.1",
+    "81-723.1",
+    "81-724.1",
+    "81-723.1",
+    "81-722.1"
+  ],
+  "date": "2026-09-01",
+  "end": "10:00",
+  "initial_state_influence_removed": false,
+  "length_m": 29600,
+  "main_start": "08:00",
+  "normal_threshold": 120,
+  "plan_checks": {
+    "cycle_seconds": 5940,
+    "distance_status": "assumed_reference_length",
+    "half_cycle_seconds": 2970,
+    "headway_seconds": 135,
+    "length_m": 29600,
+    "segment_lengths_m": [
+      1645,
+      1645,
+      1645,
+      1645,
+      1645,
+      1645,
+      1645,
+      1645,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644,
+      1644
+    ],
+    "timing_status": "assumed",
+    "train_count": 44
+  },
+  "platform_delay_seconds": 120,
+  "provenance": {
+    "OD": {
+      "source": "GOAL 3.3 S1/S2/S3; largest remainders, ties by explicit line position",
+      "status": "assumed"
+    },
+    "boarding_policy": {
+      "status": "assumed",
+      "value": "least-loaded car, stable tie by car index; may understate real uneven loading"
+    },
+    "capacity_by_type": {
+      "applicability": "experiment admission limit at organizer-selected density, actual fleet applicability unknown",
+      "note": "The source's whole-train maximum/nominal labels appear reversed; use per-car row, not the inconsistent aggregate labels. The 10 persons/m2 row is not used.",
+      "source": "D14: Вместимость составов.docx#word/media/image1.png; per-car 5 persons/m2 row",
+      "status": "source_observed"
+    },
+    "car_types": {
+      "note": "Exact intermediate car positions are assumed; heads are placed at ends.",
+      "source": "D14 text confirms 2 heads, 4 motor intermediates, 2 nonmotor intermediates",
+      "status": "partial"
+    },
+    "historical_entries": {
+      "source": "D02; historical replay, not a forecast available in advance",
+      "status": "source_observed"
+    },
+    "initial_passengers": {
+      "status": "assumed",
+      "value": "empty queues, approaches and cars at 06:00; warmup does not prove independence from this assumption"
+    },
+    "length_m": {
+      "allocation": "largest remainders across 18 integer-metre sections; earliest sections win ties",
+      "source": "docs/reference/План_человека_4_экономика_оптимизация_рекомендации.docx; 29.6km reference arithmetic, not verified operator geometry",
+      "status": "assumed"
+    },
+    "minute_distribution": {
+      "rule": "divmod(interval_count,15); first remainder minutes get one extra person; arrivals at minute start",
+      "status": "assumed"
+    },
+    "normal_threshold": {
+      "source": "parameters.json#regular_load_limit_per_car; separate from boarding limit",
+      "status": "organizer_confirmed"
+    },
+    "platform_delay_seconds": {
+      "source": "GOAL 3.3 constant turnstile-to-platform delay",
+      "status": "assumed"
+    },
+    "station_order": {
+      "source": "data/processed/metro/vestibule_map.csv; explicit L1_01 to L1_19 traversal",
+      "status": "explicit_project_dictionary"
+    },
+    "train_count": {
+      "source": "GOAL 3.3 periodic experiment",
+      "status": "assumed"
+    },
+    "transfer_inflow": {
+      "status": "not_modeled",
+      "value": "пересадочный приток не учтён"
+    },
+    "travel_stop_turnaround": {
+      "source": "GOAL 3.3 teaching geometry; aggregate 5940s agrees only with D13 approximate cycle",
+      "status": "assumed"
+    }
+  },
+  "release_authorized": false,
+  "schema_version": "1.0",
+  "source_review": {
+    "changed_metadata_since_registry": [],
+    "drive_listing_status": "completed",
+    "files": [
+      {
+        "id": "1oawuaT1wlpALzsJLkoRq60XFailCum2q",
+        "modified_time": "2026-10-07T12:16:24.942Z",
+        "name": "Входные пассажиропотоки Линия 1 июль 2026 по 15-мин.xlsx",
+        "size_bytes": 423340,
+        "url": "https://docs.google.com/spreadsheets/d/1oawuaT1wlpALzsJLkoRq60XFailCum2q/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1zNYr89aNuY60LEIwVRXYB6UXn1UA0lSD",
+        "modified_time": "2026-10-07T12:16:24.942Z",
+        "name": "Входные пассажиропотоки Линия 1 сен 2026 по 15-мин.xlsx",
+        "size_bytes": 411437,
+        "url": "https://docs.google.com/spreadsheets/d/1zNYr89aNuY60LEIwVRXYB6UXn1UA0lSD/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1GrSiIxtuluDkyYZX5u1PzV1NGAJFcTe0",
+        "modified_time": "2026-10-07T12:16:24.939Z",
+        "name": "Входные пассажиропотоки Линия 1 май 2026 по 15-мин.xlsx",
+        "size_bytes": 423922,
+        "url": "https://docs.google.com/spreadsheets/d/1GrSiIxtuluDkyYZX5u1PzV1NGAJFcTe0/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1rb5H52ZeE0mIV8nNjLdU2AqwCC5_lhsu",
+        "modified_time": "2026-10-07T12:16:24.938Z",
+        "name": "Входные пассажиропотоки Линия 1 фев 2026 по 15-мин.xlsx",
+        "size_bytes": 383298,
+        "url": "https://docs.google.com/spreadsheets/d/1rb5H52ZeE0mIV8nNjLdU2AqwCC5_lhsu/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "10cr6-19pPlJRIL4S4R3VOININJwBt-8l",
+        "modified_time": "2026-10-07T09:58:08.835Z",
+        "name": "Пассажиропоток 2026 Линия 1.xlsx",
+        "size_bytes": 2459677,
+        "url": "https://docs.google.com/spreadsheets/d/10cr6-19pPlJRIL4S4R3VOININJwBt-8l/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1Bz81Pt6c2wo5aVFrLf4ngBHe1EhSjYWe",
+        "modified_time": "2026-10-07T07:38:17.341Z",
+        "name": "Диаграмма пассажиропотока (пример) Линия 1.docx",
+        "size_bytes": 1107515,
+        "url": "https://docs.google.com/document/d/1Bz81Pt6c2wo5aVFrLf4ngBHe1EhSjYWe/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1VLxubsIQiazYLrA4TaITCmGlhLuBu4fM",
+        "modified_time": "2026-10-07T07:22:13.158Z",
+        "name": "График движения (с 01.09.2026).docx",
+        "size_bytes": 60466,
+        "url": "https://docs.google.com/document/d/1VLxubsIQiazYLrA4TaITCmGlhLuBu4fM/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1t3KYUeYgsRGOLLFrcTYG528zVsMZbigY",
+        "modified_time": "2026-10-07T13:33:16.738Z",
+        "name": "Загрузка состава по РПДП.docx",
+        "size_bytes": 704177,
+        "url": "https://docs.google.com/document/d/1t3KYUeYgsRGOLLFrcTYG528zVsMZbigY/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "16lLYfROHxXil3OdVy9Dd2L67Zk2sJWxp",
+        "modified_time": "2026-10-07T09:41:51.607Z",
+        "name": "Пример остановки транспортного обслуживиния и регулировки графика.docx",
+        "size_bytes": 22207,
+        "url": "https://docs.google.com/document/d/16lLYfROHxXil3OdVy9Dd2L67Zk2sJWxp/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1F2Aeja-fbSImsDQ8rJaOZBKdRdly2lSL",
+        "modified_time": "2026-10-07T09:14:49.659Z",
+        "name": "Время оборота ориентировочное время вывода резервного состава.txt",
+        "size_bytes": 318,
+        "url": "https://drive.google.com/file/d/1F2Aeja-fbSImsDQ8rJaOZBKdRdly2lSL/view?usp=drivesdk"
+      },
+      {
+        "id": "1WD5TNeBc_SmcpVVQZIAFyBZRdJXe3WB_",
+        "modified_time": "2026-10-07T08:12:26.510Z",
+        "name": "Вместимость составов.docx",
+        "size_bytes": 296791,
+        "url": "https://docs.google.com/document/d/1WD5TNeBc_SmcpVVQZIAFyBZRdJXe3WB_/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1GeIYa1n7v2aXJZtMCxqnRLYGZHjtLJJi",
+        "modified_time": "2026-10-07T08:06:47.829Z",
+        "name": "Парность и макс кол-во составов.docx",
+        "size_bytes": 958461,
+        "url": "https://docs.google.com/document/d/1GeIYa1n7v2aXJZtMCxqnRLYGZHjtLJJi/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true"
+      },
+      {
+        "id": "1cljLnOj9ljySTc56Y64hN1LyqoSjuifh",
+        "modified_time": "2026-10-07T08:05:17.500Z",
+        "name": "CCF_000095.pdf",
+        "size_bytes": 458072,
+        "url": "https://drive.google.com/file/d/1cljLnOj9ljySTc56Y64hN1LyqoSjuifh/view?usp=drivesdk"
+      }
+    ],
+    "listed_folders": [
+      "1oBeeo0oAjbEPbkg9lKAFfIrbamkk2UJ5",
+      "14N2jsPNm2pHaJUMwDbuyLa9HHyBIzEaL"
+    ],
+    "local_raw_file_count": 18,
+    "local_review": {
+      "D07": "Image table gives ranges of departure headways, not train IDs or individual movement events.",
+      "D13": "Approximate full line cycle 99 minutes.",
+      "D14": "Typed capacities reviewed in word/media/image1.png; 5 persons/m2: 168,187,187. Per-car 10 persons/m2 row and swapped aggregate headings are not used.",
+      "D15": "Four cropped rotation-plan images with partly visible date headings. Full date and applicability to 01.09.2026 are not established. Not a complete train timetable.",
+      "length": "29.6 km occurs only in reference plan arithmetic; treated as assumed, not operator-confirmed segment geometry."
+    },
+    "new_files_in_listed_folders": [],
+    "scope": "Only two source folders were listed; content hashes were not supplied by Drive listing."
+  },
+  "station_ids": [
+    "L1_01",
+    "L1_02",
+    "L1_03",
+    "L1_04",
+    "L1_05",
+    "L1_06",
+    "L1_07",
+    "L1_08",
+    "L1_09",
+    "L1_10",
+    "L1_11",
+    "L1_12",
+    "L1_13",
+    "L1_14",
+    "L1_15",
+    "L1_16",
+    "L1_17",
+    "L1_18",
+    "L1_19"
+  ],
+  "stop_seconds": 20,
+  "timezone": "Europe/Moscow",
+  "train_count": 44,
+  "train_type": "Юбилейный",
+  "travel_seconds": 140,
+  "turnaround_seconds": 110,
+  "warmup_start": "06:00"
+}

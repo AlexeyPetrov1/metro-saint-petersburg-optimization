@@ -1,0 +1,132 @@
+{
+  "schema_version": "proposal-0.2",
+  "not_executable_approval": true,
+  "parameters": {
+    "headway_min": {
+      "value": 113,
+      "unit": "s",
+      "status": "organizer_confirmed",
+      "source_id": "CHAT_2026-10-07_16-19",
+      "note": ""
+    },
+    "cars_per_train": {
+      "value": 8,
+      "unit": "cars",
+      "status": "organizer_confirmed",
+      "source_id": "D14",
+      "note": ""
+    },
+    "regular_load_limit_per_car": {
+      "value": 120,
+      "unit": "persons/car",
+      "status": "organizer_confirmed",
+      "source_id": "CHAT_2026-10-07_14-47",
+      "note": ""
+    },
+    "max_trains_on_line": {
+      "value": 53,
+      "unit": "trains",
+      "status": "organizer_confirmed",
+      "source_id": "CHAT_2026-10-07_15-13",
+      "note": "Not total fleet plus reserve"
+    },
+    "reference_roundtrip": {
+      "value": null,
+      "unit": "s",
+      "status": "withdrawn",
+      "source_id": "current_user_clarification",
+      "note": "User withdrew the untrue 99-minute value. Cycle duration is calculated from movement events."
+    },
+    "reserve_ideal_total": {
+      "value": 4,
+      "unit": "trains",
+      "status": "source_observed",
+      "source_id": "D13",
+      "note": "Ideal, not actual availability"
+    },
+    "reserve_actual_available": {
+      "value": null,
+      "unit": "trains",
+      "status": "unknown",
+      "source_id": "D13",
+      "note": ""
+    },
+    "release_delay": {
+      "value": null,
+      "unit": "s",
+      "status": "conflict",
+      "source_id": "D13;CHAT_2026-10-07",
+      "note": "Separate preparation, line entry, travel to target; check 420/900/1200/1800 and preparation1800+entry420"
+    },
+    "energy_price": {
+      "value": null,
+      "unit": "RUB/kWh",
+      "status": "unknown",
+      "source_id": null,
+      "note": ""
+    },
+    "energy_rate": {
+      "value": null,
+      "unit": "kWh/train_km",
+      "status": "unknown",
+      "source_id": null,
+      "note": ""
+    },
+    "maintenance_rates": {
+      "value": null,
+      "unit": "RUB/car_km",
+      "status": "unknown",
+      "source_id": null,
+      "note": ""
+    },
+    "platform_capacity": {
+      "value": null,
+      "unit": "persons",
+      "status": "unknown",
+      "source_id": null,
+      "note": ""
+    },
+    "demo_wait_p95_limit": {
+      "value": 600,
+      "unit": "s",
+      "status": "assumed",
+      "source_id": "PLAN_V1",
+      "note": "Engineering demo value, not metro regulation"
+    },
+    "eo_nominal_runtime": {
+      "value": 20,
+      "unit": "h",
+      "status": "source_observed",
+      "source_id": "A02",
+      "note": "20 ±4 h; line work clock persists across depot entry; verify full interpretation"
+    },
+    "decision_period": {
+      "value": 900,
+      "unit": "s",
+      "status": "assumed",
+      "source_id": "PLAN_V1",
+      "note": ""
+    },
+    "forecast_horizon": {
+      "value": 7200,
+      "unit": "s",
+      "status": "source_observed",
+      "source_id": "SOURCE_PRESENTATION",
+      "note": ""
+    }
+  },
+  "lifecycle_statuses": [
+    "proposed",
+    "accepted",
+    "executing",
+    "completed",
+    "cancelled",
+    "rejected"
+  ],
+  "evaluation_modes": [
+    "fixture",
+    "scenario",
+    "calibrated_replay",
+    "operational_candidate"
+  ]
+}

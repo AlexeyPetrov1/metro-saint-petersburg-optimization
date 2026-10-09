@@ -1,0 +1,12 @@
+.............                                                            [100%]
+============================ slowest 10 durations =============================
+0.48s call     tests/test_metro52_report_readiness.py::test_fallback_prefix_requires_saved_same_history[evaluation_error]
+0.04s call     tests/test_metro52_package.py::test_export_generates_placeholder_and_sha_manifest
+0.02s call     tests/test_metro52_package.py::test_prefixed_tokens_and_file_limit_block_export
+0.01s call     tests/test_metro52_package.py::test_secret_gate_reports_path_and_kind_without_secret
+0.01s call     tests/test_metro52_package.py::test_manifest_excludes_secrets_caches_and_old_runs
+0.01s setup    tests/test_metro52_report_readiness.py::test_fallback_prefix_requires_saved_same_history[evaluation_error]
+0.01s call     tests/test_metro52_package.py::test_export_cannot_overwrite_source
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+13 passed in 1.21s

@@ -1,0 +1,599 @@
+
+  
+
+
+
+    
+<html>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-r">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="Wed, 26 Feb 1997 8:27:51 GMT">
+<script language="javascript" type="text/javascript" src="../jsFunc/moment.min.js"></script>
+<script language="javascript" type="text/javascript" src="../jsFunc/jquery.js"></script>
+<style>
+    .toggle-detail-link:hover{
+	text-decoration: underline;
+	cursor: pointer;
+    }
+</style>
+<SCRIPT language="JavaScript">
+	function toggleDetail()	{
+		var elements = document.getElementsByClassName('detail-vagon-km');
+		if(elements != null && elements.length > 0){
+		    for(var i=0; i< elements.length; i++){
+			if(elements[i].style.display == 'none'){
+			    elements[i].style.display = '';
+			}
+			else
+    			    elements[i].style.display = 'none';
+		    }
+		}
+    	};
+
+</script>
+
+
+
+<SCRIPT language="JavaScript">
+//переключение типа периода
+function switchPeriodType( radioValue ){
+	if(radioValue == 0 || radioValue == -1)
+	{
+	    document.getElementById('monthTab').style.display='block';
+	}
+	else document.getElementById('monthTab').style.display='none';    
+
+	if(radioValue == 1)
+	{
+	    document.getElementById('randomnessTab').style.display='block';
+	}
+	else document.getElementById('randomnessTab').style.display='none';    
+
+	if(radioValue == 2)
+	{
+	    document.getElementById('quarterTab').style.display='block';
+	}
+	else document.getElementById('quarterTab').style.display='none';    
+
+	if(radioValue == 3)
+	{
+	    document.getElementById('yearTab').style.display='block';
+	}
+	else document.getElementById('yearTab').style.display='none';    
+
+	if(radioValue == 4)
+	{
+	    document.getElementById('halfYearTab').style.display='block';
+	}
+	else document.getElementById('halfYearTab').style.display='none';    
+
+}
+function switchPrintType(clickOn){
+
+	if( clickOn == 2 )
+	{
+	    if( document.getElementById('print').checked == true )
+	    {
+		document.getElementById('print').checked = false;
+	    }
+	    if( document.getElementById('word').checked == true )
+	    {
+		document.getElementById('word').checked = false;
+	    }
+	}    
+	if( clickOn == 1 )
+	{
+	    if( document.getElementById('print').checked == true )
+	    {
+		document.getElementById('print').checked = false;
+	    }
+	    if( document.getElementById('excel').checked == true )
+	    {
+		document.getElementById('excel').checked = false;
+	    }
+	}    
+	if( clickOn == 0 )
+	{
+	    if( document.getElementById('word').checked == true )
+	    {
+		document.getElementById('word').checked = false;
+	    }
+	    if( document.getElementById('excel').checked == true )
+	    {
+		document.getElementById('excel').checked = false;
+	    }
+	}    
+}
+function checkPeriod(formObj){
+var ckeckIndex = -1;
+    for( var i=0 ; i < formObj["periodType"].length; i++)
+    {
+	if(formObj.periodType[i].checked == true)
+	{ checkIndex = i; break; }
+    }
+    if(checkIndex == -1)return false;
+    
+    //если выбран отчетный период месяц
+    if(formObj.periodType[checkIndex].value == 0)
+    {
+	 //переменная используемая для проверки корректности ввода даты    
+	var dateCur   		= new Date();
+	
+	if(formObj["month"].value-1 > dateCur.getMonth() && dateCur.getFullYear()==formObj["yearInMonthTab"].value)
+	{
+    	    alert("Данный месяц еще не наступил"); 
+	    return false;
+	}
+    }
+    //если выбран отчетный период произвольный
+    if(formObj.periodType[checkIndex].value == 1)
+    {
+	var dateFrom = new Date(formObj.yf.options[formObj.yf.selectedIndex].value, formObj.mf.options[formObj.mf.selectedIndex].value-1, formObj.df.options[formObj.df.selectedIndex].value);
+	var dateTo   = new Date(formObj.yt.options[formObj.yt.selectedIndex].value, formObj.mt.options[formObj.mt.selectedIndex].value-1,  formObj.dt.options[formObj.dt.selectedIndex].value); 
+
+//        var dstr = formObj.yf.options[formObj.yf.selectedIndex].value+' '+formObj.mf.options[formObj.mf.selectedIndex].value+' '+formObj.df.options[formObj.df.selectedIndex].value;
+//	var m =  moment(dstr,'YYYY MM DD').format('M');
+
+//        if ( m !=formObj.mf.options[formObj.mf.selectedIndex].value)
+	if(formObj.df.options[formObj.df.selectedIndex].value >28 )
+        if (dateFrom.getMonth()!=formObj.mf.options[formObj.mf.selectedIndex].value-1)
+	{
+	    alert("Дата начала поиска введена неправильно");
+	    return false;
+	} 
+
+	if (dateTo.getMonth()!=formObj.mt.options[formObj.mt.selectedIndex].value-1)
+	{
+	    alert("Дата окончания поиска введена неправильно");
+	    return false;
+        }
+	if ((dateTo-dateFrom)<0)
+	{
+	    alert("Начало поиска больше чем окончание поиска");
+	    return false;
+	}
+
+    }
+    //если выбран отчетный период квартал
+    //проверяем наступил ли и закончился ли данный квартал
+    if(formObj.periodType[checkIndex].value == 2)
+    {
+	var quarter = parseInt(formObj["quarter"].value);
+	//номер квартала (к примеру 1-ый) * на число месяцев в квартале - получим последний месяц в данном квартале (3-ий)
+	//отнимаем 3, а не 2, т.к. в javascript отсчет месяцев с 0
+	var beginQuarter = new Date( formObj.yearInQuarterTab.value, (quarter*3-3), 01 );
+	var endQuarter   = new Date( formObj.yearInQuarterTab.value, (quarter*3-1), 01 ); 
+	var dateCur   		= new Date();
+
+	if((dateCur - beginQuarter) < 0 )
+	{
+	    alert("Выбранный квартал еще не наступил");
+	    return false;
+	}			
+	if((dateCur - endQuarter) < 0 )
+	{
+	    alert("Выбранный квартал еще не закончился");
+	    return false;
+	}			
+    }
+    //если выбран отчетный период полугодие
+    //проверяем наступил ли и закончился ли данное полугодие
+    if(formObj.periodType[checkIndex].value == 4)
+    {
+	var halfYear = parseInt(formObj["halfYear"].value);
+	var beginQuarter = new Date( formObj.yearInHalfYearTab.value, (halfYear*6-6), 01 );
+	var endQuarter   = new Date( formObj.yearInHalfYearTab.value, (halfYear*6-1), 01 ); 
+	var dateCur   		= new Date();
+
+	if((dateCur - beginQuarter) < 0 )
+	{
+	    alert("Выбранное полугодие еще не наступило");
+	    return false;
+	}			
+	if((dateCur - endQuarter) < 0 )
+	{
+	    alert("Выбранное полугодие еще не закончилось");
+	    return false;
+	}			
+    }
+    
+    if( document.getElementById('print').checked == true )
+    {
+    	formObj.target = "_blank";
+    }else	
+	formObj.target = "_self";	
+	
+    return true; 
+}
+
+</script>
+<head><title>Отчетная форма МО-I</title></head>
+<link REL="STYLESHEET" HREF="../asu_arlm.css" TYPE="text/css">
+<body>
+
+
+<div align="center">
+
+<form action="viewMO1Report.jsp" name="view" method="post">
+
+    <table style="width: 85%">
+    
+    <tr>
+	<td width="75%"	 colspan="7">&nbsp;</td>
+	<td width="25%" align="right"><font class="report">Форма МО-I</font></td>
+    </tr>
+    
+    <tr>
+	<td colspan="8" align="center"><b class="report" style="font-size: 14pt"><br>ОСНОВНЫЕ ПОКАЗАТЕЛИ</b></td>
+    </tr>
+    <tr>	
+	<td colspan="8" align="center">
+	    <font class="report" style="font-size: 12pt">
+
+		выполнения графика движения поездов 
+за II квартал 2026 года
+	    </font>
+	</td>			
+    </tr>
+    </table>
+    
+    <br>
+    <table style=width: 85% cellpadding = "3" cellspacing="1" border=1 bordercolor="#000000h" >
+        <tr>
+	    <td   align="center" width="40%"	rowspan="2">
+		
+		<font class="report" style="font-size: 14pt">Наименование показателя</font></td>
+		
+	    <td   align="center" width="60%"	colspan="6"><font class=report style="font-size: 14pt">ЛИНИЯ</font></td>
+	    <td   align="center" width="9%"	rowspan="2"><font class=report style="font-size: 14pt">ПО МЕТРО-<br>ПОЛИТЕНУ</font></td>
+	</tr>
+	
+        <tr>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">1</font></td>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">2</font></td>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">3</font></td>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">4</font></td>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">5</font></td>
+	
+	    <td  align="center" width="8%"><font class=report style="font-size: 14pt">6</font></td>
+	
+	</tr>
+
+	
+        <tr >
+	    <td  class=rowMO1>Процент выполнения графика <i>(%)</i></td>
+	
+	    <td class=row3MO1>99,44</td>
+	
+	    <td class=row3MO1>99,74</td>
+	
+	    <td class=row3MO1>99,88</td>
+	
+	    <td class=row3MO1>99,46</td>
+	
+	    <td class=row3MO1>99,72</td>
+	
+	    <td class=row3MO1>99,94</td>
+	    
+	    <td class=row3MO1>99,68</td>
+	</tr>
+	
+	<tr >
+	    <td class=rowMO1>Максимальная парность <i>(пар)</i></td>
+	
+	    <td class=row3MO1>32</td>
+	
+	    <td class=row3MO1>35</td>
+	
+	    <td class=row3MO1>27</td>
+	
+	    <td class=row3MO1>29</td>
+	
+	    <td class=row3MO1>23</td>
+	
+	    <td class=row3MO1>14</td>
+	    
+	    <td class=row3MO1>-</td>
+        </tr>
+	<tr >
+	    <td class=rowMO1>Средняя парность <i>(пар)</i></td>
+	
+	    <td class=row3MO1>21,13</td>
+	
+	    <td class=row3MO1>23,1</td>
+	
+	    <td class=row3MO1>19,51</td>
+	
+	    <td class=row3MO1>17,96</td>
+	
+	    <td class=row3MO1>16,31</td>
+	
+	    <td class=row3MO1>9,69</td>
+	    
+	    <td class=row3MO1>-</td>	    
+	</tr>
+        <tr >
+	    <td class=rowMO1>Поездов по плану <i>(поезд)</i></td>
+	
+	    <td class=row3MO1>75 411</td>
+	
+	    <td class=row3MO1>84 708</td>
+	
+	    <td class=row3MO1>71 208</td>
+	
+	    <td class=row3MO1>63 842</td>
+	
+	    <td class=row3MO1>60 450</td>
+	
+	    <td class=row3MO1>35 000</td>
+	    
+	    <td class=row3MO1>390 619</td>
+        </tr>
+        <tr >
+	    <td class=row3MO1>Поездов по факту <i>(поезд)</i></td>
+	
+	    <td class=row3MO1>75 197</td>
+	
+	    <td class=row3MO1>84 561</td>
+	
+	    <td class=row3MO1>71 198</td>
+	
+	    <td class=row3MO1>63 817</td>
+	
+	    <td class=row3MO1>60 429</td>
+	
+	    <td class=row3MO1>34 985</td>
+	    
+	    <td class=row3MO1>390 187</td>
+        </tr>
+        <tr >
+	    <td class=row3MO1>Поездов по расписанию <i>(поезд)</i></td>
+	
+	    <td class=row3MO1>74 991</td>
+	
+	    <td class=row3MO1>84 484</td>
+	
+	    <td class=row3MO1>71 123</td>
+	
+	    <td class=row3MO1>63 499</td>
+	
+	    <td class=row3MO1>60 283</td>
+	
+	    <td class=row3MO1>34 980</td>
+	    
+	    <td class=row3MO1>389 360</td>
+        </tr>
+        <tr >
+	    <td class=row3MO1>Поездо/км <i>(п/км)</i></td>
+	
+	    <td class=row3MO1>2 082 241,8</td>
+	
+	    <td class=row3MO1>2 357 696,9</td>
+	
+	    <td class=row3MO1>1 835 694,21</td>
+	
+	    <td class=row3MO1>911 586,92</td>
+	
+	    <td class=row3MO1>1 459 410,7</td>
+	
+	    <td class=row3MO1>89 846,15</td>
+	    
+	    <td class=row3MO1>8 736 476,68</td>
+        </tr>
+
+        <tr >
+	    <td class=row3Mo1 onclick="return toggleDetail()"><span class="toggle-detail-link">Общие ваг/км <i>(в/км)</i></span></td>
+
+	    <td class=row3MO1>17 650 269,62</td>
+
+	    <td class=row3MO1>15 062 840,72</td>
+
+	    <td class=row3MO1>11 519 056,14</td>
+
+	    <td class=row3MO1>6 855 102,34</td>
+
+	    <td class=row3MO1>10 780 790,97</td>
+
+	    <td class=row3MO1>903 346,64</td>
+
+	    <td class=row3MO1>62 771 406,43</td>
+
+        </tr>
+
+        <tr class="detail-vagon-km">
+	    <td class=row3MO1>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		с пассажирами <i>(в/км)</i></td>
+
+	    <td class=row3MO1>16 657 934,4</td>
+
+	    <td class=row3MO1>14 148 183</td>
+
+	    <td class=row3MO1>11 014 165,12</td>
+
+	    <td class=row3MO1>6 381 108,12</td>
+
+	    <td class=row3MO1>10 182 001,78</td>
+
+	    <td class=row3MO1>718 767,99</td>
+
+	    <td class=row3MO1>59 102 160,41</td>
+        </tr>
+
+        <tr class="detail-vagon-km">
+	    <td class=row3MO1>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+	        нулевой пробег<i>(в/км)</i>
+
+
+	        , в том числе
+
+	        </td>
+
+	    <td class=row3MO1>992 335,22</td>
+
+	    <td class=row3MO1>914 657,72</td>
+
+	    <td class=row3MO1>504 891,01</td>
+
+	    <td class=row3MO1>473 994,22</td>
+
+	    <td class=row3MO1>598 789,12</td>
+
+	    <td class=row3MO1>184 578,67</td>
+
+	    <td class=row3MO1>3 669 245,96</td>
+
+        </tr>
+
+
+        <tr class="detail-vagon-km">
+	    <td class=row3MO1>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		нулевой пробег депо <i>(в/км)</i></td>
+	
+	    <td class=row3MO1>25 188</td>
+	
+	    <td class=row3MO1>34 082</td>
+	
+	    <td class=row3MO1>5 408,8</td>
+	
+	    <td class=row3MO1>11 147</td>
+	
+	    <td class=row3MO1>13 065</td>
+	
+	    <td class=row3MO1>0</td>
+	    
+	    <td class=row3MO1>88 890,8</td>
+        </tr>
+
+        <tr class="detail-vagon-km">
+	    <td class=row3MO1>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		нулевой пробег обкатки <i>(в/км)</i></td>
+	
+	    <td class=row3MO1>70 547,12</td>
+	
+	    <td class=row3MO1>33 186,88</td>
+	
+	    <td class=row3MO1>12 830,82</td>
+	
+	    <td class=row3MO1>26 815,59</td>
+	
+	    <td class=row3MO1>34 030,09</td>
+	
+	    <td class=row3MO1>0</td>
+	    
+	    <td class=row3MO1>177 410,5</td>
+        </tr>
+
+        <tr >
+	    <td class=row3MO1>Поездо/час <i>(п/час)</i></td>
+	
+	    <td class=row3MO1>56 504,47</td>
+	
+	    <td class=row3MO1>63 317,21</td>
+	
+	    <td class=row3MO1>45 127,76</td>
+	
+	    <td class=row3MO1>23 624,59</td>
+	
+	    <td class=row3MO1>34 140,64</td>
+	
+	    <td class=row3MO1>2 052,53</td>
+	    
+	    <td class=row3MO1>224 767,2</td>
+        </tr>
+
+        <tr >
+	    <td class=row3MO1>Поездо/час в движении <i>(п/час)</i></td>
+	
+	    <td class=row3MO1>46 881,8</td>
+	
+	    <td class=row3MO1>53 121,01</td>
+	
+	    <td class=row3MO1>37 829,4</td>
+	
+	    <td class=row3MO1>19 114,47</td>
+	
+	    <td class=row3MO1>28 789,49</td>
+	
+	    <td class=row3MO1>1 467,88</td>
+	    
+	    <td class=row3MO1>187 204,05</td>
+        </tr>
+
+        <tr >
+	    <td class=row3MO1>Простой <i>(п/час)</i></td>
+	
+	    <td class=row3MO1>9 622,69</td>
+	
+	    <td class=row3MO1>10 196,14</td>
+	
+	    <td class=row3MO1>7 298,37</td>
+	
+	    <td class=row3MO1>4 510,14</td>
+	
+	    <td class=row3MO1>5 351,13</td>
+	
+	    <td class=row3MO1>584,93</td>
+	    
+	    <td class=row3MO1>37 563,4</td>
+        </tr>
+
+        <tr >
+	    <td class=row3MO1>Эксплуатационная скорость <i>(км/ч)</i></td>
+	
+	    <td class=row3MO1>36,86</td>
+	
+	    <td class=row3MO1>37,22</td>
+	
+	    <td class=row3MO1>40,68</td>
+	
+	    <td class=row3MO1>38,58</td>
+	
+	    <td class=row3MO1>42,74</td>
+	
+	    <td class=row3MO1>43,78</td>
+	    
+	    <td class=row3MO1>39,98</td>
+        </tr>
+
+        <tr >
+	    <td class=row3MO1>Техническая скорость <i>(км/ч)</i></td>
+	
+	    <td class=row3MO1>44,43</td>
+	
+	    <td class=row3MO1>44,36</td>
+	
+	    <td class=row3MO1>48,53</td>
+	
+	    <td class=row3MO1>47,71</td>
+	
+	    <td class=row3MO1>50,69</td>
+	
+	    <td class=row3MO1>61,22</td>
+	    
+	    <td class=row3MO1>49,49</td>
+        </tr>
+</table>	
+<br>
+
+</form>    
+</div>
+
+<script language="JavaScript">
+//начальные установки и восстанавливаем состояние при перегрузке страницы
+switchPeriodType(2);
+</script>
+</body>
+</html>

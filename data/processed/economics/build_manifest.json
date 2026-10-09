@@ -1,0 +1,25 @@
+{
+  "fixture_is_simulator_integration": false,
+  "inputs": {
+    "config/costs/default.json": "33b6f91d6457a5980bf71e629f7b2e4c143e112a7211a8ea0e35867c3e80fc77",
+    "data/processed/metro/build_manifest.json": "9804e19c8e356036841d167609bca54d489488353047eb860de0ab2188febec3",
+    "data/processed/metro/maintenance_rules.csv": "2eb44fbc6453fd345d51851b3f49296fbcf39e5f751451b4dd0a7a46dc8a7ea4",
+    "data/processed/metro/quality_report.json": "59f201a090e500fe42777e67d0ec2458350d39d9fcd43f0bde70e72a45232668",
+    "data/processed/metro/transport_work.csv": "bf3c851e59fdeb4d1fe80286ab1f18502c20293bcc25feffab10da45a9038a65",
+    "docs/reference/maintenance_photo_review.json": "6cfbc4aba34064c06b76c1de6df2bd9967d8d18988e09d78f09296e6bca131c6",
+    "economics.py": "6adea55099da8bc5cbd4e3283dabfe5332d6b22a2d11725a01da7e1daad4668f",
+    "examples/economics/withdrawal.json": "e93ddee373e692d411e75c6265b2d71a6ad0cff852d45eba332d2039dec54c3a",
+    "requirements.txt": "132bf1b06558627e8be59e689c1247d5dd3aaa5e83cc1735eb8d4d4fc4d218d4"
+  },
+  "model_version": "economics-v1.1",
+  "outputs": {
+    "fixture_days.json": "cd71a25387549c4a39968c9c40d5b5755d72eecfcbd8e9083104981a997b70fb",
+    "fixture_resources.json": "c36c355f581279fa5fb7d5d61abd3a0174908c1abf647451515921fb4f5c068e",
+    "fixture_scenarios.json": "4d099056305486bc7c96326e27f0ed65761fa18ea2ab16c23ad72cb9f5035e79",
+    "fixture_threshold.json": "7f5f7145d3eddef21801638e3138b5535a8620a543ec97795633359b95b2d14f",
+    "maintenance_resources.json": "52324fbe5df883d8bbee761c7eaa4d119043a2bf830c0f4ff5972dddc3eaf70a",
+    "natural_transport.json": "53586a6359507c9f5bd084a9e4521c1c149cef5bfb24e34d56af85400dfd3b38",
+    "summary.md": "a28de33b2554ce4394be91336fd763be8cf37953882e040d80bcd398d8b31c83"
+  },
+  "status": "success"
+}

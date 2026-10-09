@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "method": "manual_visual_review_of_user_images",
+  "review_date": "2026-10-07",
+  "regulation_date": null,
+  "valid_from": null,
+  "full_regulation_available": false,
+  "sources": {
+    "A01": {
+      "source_locator": "Текущий чат, второе фото, таблица 3",
+      "binary_available": false,
+      "series": "81-722/723/724",
+      "source_unit": "т. км",
+      "source_condition": "Перед выдачей состава на линию *",
+      "note": "Примечание к звёздочке для таблицы 3 не попало в кадр. Дата и полнота регламента неизвестны.",
+      "rows": [
+        {"maintenance_type": "ТО-1", "nominal": 10, "lower_delta": 2, "upper_delta": 2},
+        {"maintenance_type": "ТО-2", "nominal": 70, "lower_delta": 10, "upper_delta": 10},
+        {"maintenance_type": "ТР-1", "nominal": 140, "lower_delta": 20, "upper_delta": 20},
+        {"maintenance_type": "ТР-2", "nominal": 280, "lower_delta": 40, "upper_delta": 40},
+        {"maintenance_type": "ТР-3", "nominal": 560, "lower_delta": 80, "upper_delta": 80},
+        {"maintenance_type": "СР", "nominal": 1680, "lower_delta": 240, "upper_delta": 240},
+        {"maintenance_type": "КР", "nominal": 4300, "lower_delta": 800, "upper_delta": 800}
+      ]
+    },
+    "A02": {
+      "source_locator": "Текущий чат, первое фото, таблица 4",
+      "binary_available": false,
+      "series": "81-725/726/727",
+      "source_unit": "т. км",
+      "source_condition": "ЕО: один раз в сутки; остальные работы указаны по пробегу",
+      "note": "Дата и полнота регламента неизвестны. Порядок планирования работ определяется отдельными положениями ГУП «Петербургский метрополитен».",
+      "rows": [
+        {"maintenance_type": "ТО-1", "nominal": 10, "lower_delta": 2, "upper_delta": 2,
+          "note": "Примечание 2: для ТО-1 осуществляется только замена салонных воздушных фильтров."},
+        {"maintenance_type": "ТО-2", "nominal": 35, "lower_delta": 5, "upper_delta": 8},
+        {"maintenance_type": "ПР-1", "nominal": 140, "lower_delta": 20, "upper_delta": 20},
+        {"maintenance_type": "ПР-2", "nominal": 280, "lower_delta": 40, "upper_delta": 40},
+        {"maintenance_type": "ПДР-1", "nominal": 560, "lower_delta": 80, "upper_delta": 80,
+          "note": "Примечание 3: после ремонта необходимо выполнить работы по осмотру и наладке вагонов перед выдачей их в эксплуатацию."},
+        {"maintenance_type": "ПДР-2", "nominal": 1120, "lower_delta": 160, "upper_delta": 160,
+          "note": "Примечание 3: после ремонта необходимо выполнить работы по осмотру и наладке вагонов перед выдачей их в эксплуатацию."},
+        {"maintenance_type": "КР", "nominal": 4300, "lower_delta": 800, "upper_delta": 800,
+          "note": "Примечание 3: после ремонта необходимо выполнить работы по осмотру и наладке вагонов перед выдачей их в эксплуатацию."}
+      ],
+      "eo": {
+        "frequency_per_day": 1,
+        "inspection_validity_h": 20,
+        "tolerance_h": 4,
+        "clock_start": "С момента выдачи состава на линию с площадки электродепо",
+        "note": "20 ±4 часа описывают срок действия осмотра. В примечании указано непосредственное время работы состава на линии. Последнее слово о дополнительном месте работы читается неуверенно; его трактовка не добавлена. Верхний допуск не принят как разрешённая цель эксплуатации."
+      }
+    }
+  },
+  "binary_provenance_note": "Фото видны в сообщении пользователя, но их исходные файлы не доступны в локальном каталоге вложений. SHA-256 и размер исходных фото неизвестны. Хеши из attachment_sources.csv остаются прежними справочными значениями; совпадение байтов не заявляется."
+}

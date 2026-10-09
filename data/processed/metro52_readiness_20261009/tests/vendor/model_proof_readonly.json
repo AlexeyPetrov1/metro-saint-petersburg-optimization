@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "command": [
+    "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests"
+  ],
+  "junit_xml": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\core\\final_junit.xml",
+  "junit_sha256": "d72061fed704558189920076db41becb81f69ec7c8bb55578633de9b1bebdf83",
+  "source_sha256": {
+    "C:\\Users\\lesha\\HackathonSPB\\metro51_ensemble.py": "525fdeceeac93fd3384dfe2f4353b5cfcfb6683bb869c8403a894fa484cc1f2d",
+    "C:\\Users\\lesha\\HackathonSPB\\tests\\test_metro51_ensemble.py": "5a84c3771f9403ebbab1b3e22bc5f7f346f8ddedff4829d7e9febafe0a1615f6"
+  },
+  "input_manifest_sha256": "50758a7521ed7bc9a83d8cc70dadfb2a4f0dd57c9f3ffeebeeb840e63f47963a"
+}

@@ -1,0 +1,19 @@
+[theme]
+base = "light"
+primaryColor = "#0078C9"
+backgroundColor = "#F4F5F7"
+secondaryBackgroundColor = "#E9ECEF"
+textColor = "#1B2430"
+font = "Golos Text, sans-serif"
+
+[[theme.fontFaces]]
+family = "Golos Text"
+url = "app/static/GolosText.ttf"
+weight = "400 800"
+
+[server]
+enableStaticServing = true
+
+[client]
+toolbarMode = "minimal"
+

@@ -1,0 +1,3 @@
+period,filter,N,days,hours,anomalies,big,alarms_per_day,false_per_day,precision,recall_all,recall_big,recall_all_60,recall_big_60,median_min_all,median_min_big
+сентябрь,без фильтра (правило этапа 6),,28,11833,2389,855,106.142857,29.75,0.716353,0.892424,0.968421,0.96149,0.995322,15.0,15.0
+сентябрь,фильтр N = 340.0,340.0,28,11833,2389,855,44.714286,3.928571,0.912141,0.478024,0.955556,0.545416,0.995322,60.0,15.0

@@ -1,0 +1,23 @@
+station_complex_id,station_complex,borough,lat,lon
+447,Flushing-Main St (7),Queens,40.7596,-73.83003
+448,Mets-Willets Point (7),Queens,40.754623,-73.84563
+449,111 St (7),Queens,40.75173,-73.85533
+450,103 St-Corona Plaza (7),Queens,40.749866,-73.8627
+451,Junction Blvd (7),Queens,40.749146,-73.86953
+452,90 St-Elmhurst Av (7),Queens,40.74841,-73.87661
+453,82 St-Jackson Hts (7),Queens,40.747658,-73.8837
+455,69 St (7),Queens,40.746326,-73.8964
+456,61 St-Woodside (7),Queens,40.74563,-73.902985
+457,52 St (7),Queens,40.74415,-73.91255
+458,46 St-Bliss St (7),Queens,40.743134,-73.918434
+459,40 St-Lowery St (7),Queens,40.743782,-73.92402
+460,33 St-Rawson St (7),Queens,40.744587,-73.931
+461,"Queensboro Plaza (7,N,W)",Queens,40.750584,-73.9402
+463,Hunters Point Av (7),Queens,40.742214,-73.94891
+464,Vernon Blvd-Jackson Av (7),Queens,40.742626,-73.95358
+471,34 St-Hudson Yards (7),Manhattan,40.755882,-74.00191
+606,"Court Sq (E,G,M,7)",Queens,40.747845,-73.94383
+609,"Bryant Pk (B,D,F,M)/5 Av (7)",Manhattan,40.754223,-73.981964
+610,"Grand Central-42 St (S,4,5,6,7)",Manhattan,40.751778,-73.976845
+611,"Times Sq-42 St (N,Q,R,W,S,1,2,3,7)/42 St (A,C,E)",Manhattan,40.75731,-73.986755
+616,"74-Broadway (7)/Jackson Hts-Roosevelt Av (E,F,M,R)",Queens,40.74685,-73.891335

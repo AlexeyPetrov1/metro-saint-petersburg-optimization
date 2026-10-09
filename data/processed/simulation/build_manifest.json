@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "C:\\Users\\lesha\\HackathonSPB\\config\\costs\\default.json": "33b6f91d6457a5980bf71e629f7b2e4c143e112a7211a8ea0e35867c3e80fc77",
+    "C:\\Users\\lesha\\HackathonSPB\\economics.py": "6adea55099da8bc5cbd4e3283dabfe5332d6b22a2d11725a01da7e1daad4668f",
+    "C:\\Users\\lesha\\HackathonSPB\\examples\\simulation\\cycle.json": "d1edd3c10ce654457a48c041e265bf3cea751deae3bc155d196871f214e9c0aa",
+    "C:\\Users\\lesha\\HackathonSPB\\simulation.py": "d8dfd4d1b8c68f910a32153449502b898db0db898e94d91be86c3748b9659601"
+  },
+  "model_version": "simulation-v1.1",
+  "outputs": {
+    "assumptions.json": "8e95fb16fccb8b49f521a233a1b711ab0ce0436fd7aa0fe4e8a59453c001869a",
+    "baseline.evaluation.json": "6f1d7d070c9bafb21b0cc4c58fe6bb5721570c016cf3e67413a9b67d39308298",
+    "baseline.events.csv": "84703d02bfdbf5accda9314851f0fb3ac96a05b65dfc4d5c0274fd528abde81d",
+    "baseline.simulation.json": "47ae465bc9f65e24bcd54eda92728d3e7b989562626653d3d9c16d83a9879bd8",
+    "candidate.evaluation.json": "c9c711fd6fec4dc3f2fd2472ff12e4502a3990033c5c3e9c35fb7522896e4b86",
+    "candidate.events.csv": "bfb4d5ab12cb1c126db0a9bfdc22ae0092fe35606e78fffe824ae2c6252de9f6",
+    "candidate.simulation.json": "053d7b3ddd4cf8774e487fb16d278fe5c605f51cb931b28782f72ae6342265b2",
+    "control_check.json": "859664441795baa59e5025954eade2637e0e421f6f1b4c552d3009681ff09c78",
+    "economic_comparison.json": "cc1541b9f70d623c6c919f28b69f2a7a8fa8b96ce5afc2a5493aff78e3f5a57f",
+    "summary.md": "32c377d9f1ad7df76a74f88c1c5a7998c5e2257bcae2425bf1d5fbe0676931af"
+  },
+  "status": "success"
+}

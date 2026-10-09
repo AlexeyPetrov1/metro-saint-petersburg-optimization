@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.213" timestamp="2026-10-08T08:10:14.547053+03:00" hostname="petrov"><testcase classname="tests.test_economics_audit" name="test_cli_output_cannot_overwrite_an_input" time="0.093"><failure message="AssertionError: assert (0 != 0)&#10; +  where 0 = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...l\\Temp\\pytest-of-lesha\\pytest-126\\test_cli_output_cannot_overwri0\\base.json'], returncode=0, stdout='', stderr='').returncode">tests\test_economics_audit.py:396: in test_cli_output_cannot_overwrite_an_input
+    assert result.returncode != 0 and "input" in result.stderr
+E   AssertionError: assert (0 != 0)
+E    +  where 0 = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...l\\Temp\\pytest-of-lesha\\pytest-126\\test_cli_output_cannot_overwri0\\base.json'], returncode=0, stdout='', stderr='').returncode</failure></testcase><testcase classname="tests.test_economics_audit" name="test_report_output_cannot_invalidate_source_manifest" time="0.006"><failure message="assert b'{\n  &quot;messa... &quot;error&quot;\n}\n' == b'{&quot;protected_source&quot;:true}'&#10;  &#10;  At index 1 diff: b'\n' != b'&quot;'&#10;  Use -v to get more diff">tests\test_economics_audit.py:408: in test_report_output_cannot_invalidate_source_manifest
+    assert manifest.read_bytes() == before
+E   assert b'{\n  "messa... "error"\n}\n' == b'{"protected_source":true}'
+E     
+E     At index 1 diff: b'\n' != b'"'
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_economics_audit" name="test_scenarios_with_different_accounting_scope_are_not_a_price_range" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:414: in test_scenarios_with_different_accounting_scope_are_not_a_price_range
+    with pytest.raises(ValueError, match="scope"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase></testsuite></testsuites>

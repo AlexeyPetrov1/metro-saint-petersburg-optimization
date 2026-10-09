@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.188" timestamp="2026-10-08T08:16:45.231241+03:00" hostname="petrov"><testcase classname="tests.test_economics_audit" name="test_same_global_return_operation_cannot_be_charged_in_two_days" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:429: in test_same_global_return_operation_cannot_be_charged_in_two_days
+    with pytest.raises(ValueError, match="operation"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_resource_cycle_complete_requires_boolean_true" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:434: in test_resource_cycle_complete_requires_boolean_true
+    with pytest.raises(ValueError, match="cycle"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_partial_maintenance_history_cannot_produce_a_full_balance" time="0.003"><failure message="assert False&#10; +  where False = all(&lt;generator object test_partial_maintenance_history_cannot_produce_a_full_balance.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000232BA031B10&gt;)">tests\test_economics_audit.py:443: in test_partial_maintenance_history_cannot_produce_a_full_balance
+    assert all(row["remaining_nominal_km"] is None for row in out["rows"])
+E   assert False
+E    +  where False = all(&lt;generator object test_partial_maintenance_history_cannot_produce_a_full_balance.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000232BA031B10&gt;)</failure></testcase></testsuite></testsuites>

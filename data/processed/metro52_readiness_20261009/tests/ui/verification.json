@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "test_counts": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "python": "3.12.13",
+  "streamlit": "1.65.0",
+  "server_health": "ok",
+  "server_stopped": false,
+  "core_modules_changed_by_ui_task": false,
+  "new_campaign_compatibility": {
+    "completed_arm": "tested synthetic full-day 72000 seconds + real preserved metro50 full-day",
+    "incremental_checkpoints": "tested 1000 -> 1800 -> completed 72000",
+    "pending_first_checkpoint": "info instead of application error",
+    "refresh": "same session picks new checkpoint/result through cache version",
+    "future_prediction": "never fabricate raw forecasts; absent/stale output remains explicit"
+  },
+  "full_day_source": {
+    "source": "data\\processed\\metro50_full_day_20261009_v4\\reference",
+    "end": 72000,
+    "partial": false,
+    "forecasts": 0,
+    "decisions": 0,
+    "payload_bytes": 8772444,
+    "completed": 758936,
+    "entered": 758936,
+    "purpose": "read-only full-day compatibility, not current ensemble result"
+  },
+  "changes": [
+    "interfaces/streamlit_dispatcher/app.py",
+    "interfaces/streamlit_dispatcher/tests/test_campaign_progress.py",
+    "interfaces/streamlit_dispatcher/tests/test_browser.py"
+  ],
+  "sha256": {
+    "interfaces/streamlit_dispatcher/app.py": "f83a559302f70003ba6b8c5e740312efe5b456e99985cd3949775989e77f54c6",
+    "interfaces/streamlit_dispatcher/tests/test_campaign_progress.py": "036b388c283655b7ad95a859f6d3dfee58338f08752e4d9d9846d0a4fee3de7e",
+    "interfaces/streamlit_dispatcher/tests/test_browser.py": "e429fd755a9607ba22e9e79dd3e90c22399b270762623a2f8edad445b04fe5c3"
+  },
+  "proof_before_fix": "progress_before.xml",
+  "junit": "tests_final.xml",
+  "legacy_goal43_ui_probe": {
+    "status": "passed",
+    "tests": 4,
+    "elapsed_seconds": 0.11,
+    "scope": "automatic unit tests for old static HTML demo, browser process mocked",
+    "junit": "legacy_probe.xml",
+    "stdout": "legacy_probe.log"
+  },
+  "external_test_inventory": [
+    "scripts/test_goal43_ui_probe.py",
+    "interfaces/streamlit_dispatcher/tests/test_adapter.py",
+    "interfaces/streamlit_dispatcher/tests/test_app.py",
+    "interfaces/streamlit_dispatcher/tests/test_browser.py",
+    "interfaces/streamlit_dispatcher/tests/test_campaign_progress.py"
+  ],
+  "checkpoint_cache": {
+    "max_entries": 2,
+    "test": "test_progress_cache_does_not_retain_five_passenger_ledgers",
+    "actual_cached_snapshots_after_five_refreshes": 2,
+    "baseline_and_policy_fit": true,
+    "before_failure": "cache_before.xml"
+  }
+}

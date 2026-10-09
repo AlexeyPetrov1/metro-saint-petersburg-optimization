@@ -1,0 +1,787 @@
+{
+  "articles": [
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "kWh"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/kWh",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "kWh"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/kWh",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "purchased_traction_energy",
+        "purchased_auxiliary_energy"
+      ],
+      "name": "purchased_energy",
+      "quantity_key": "purchased_energy",
+      "savings": null,
+      "status": "unknown"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "person_h"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/person_h",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "person_h"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/person_h",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "paid_labor"
+      ],
+      "name": "paid_labor",
+      "quantity_key": "paid_person_hours",
+      "savings": null,
+      "status": "unknown"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "avoidable_maintenance_payments"
+      ],
+      "name": "avoidable_maintenance",
+      "quantity_key": "avoidable_maintenance_events",
+      "savings": null,
+      "status": "unknown"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "entry_preparation_excluding_energy_labor_maintenance"
+      ],
+      "name": "entry_preparation",
+      "quantity_key": "entry_events",
+      "savings": null,
+      "status": "unknown"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "withdrawal_preparation_excluding_energy_labor_maintenance"
+      ],
+      "name": "withdrawal_preparation",
+      "quantity_key": "withdrawal_events",
+      "savings": null,
+      "status": "unknown"
+    },
+    {
+      "accounting_kind": "capital",
+      "baseline": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": null,
+        "currency": "RUB",
+        "known_subtotal": null,
+        "period": {
+          "end": "2026-05-01T03:16:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not modeled or supplied; no inference from train work",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "rate": null,
+        "rate_source": "not supplied",
+        "rate_status": "unknown",
+        "rate_unit": "RUB/event",
+        "reason": "unknown_quantity",
+        "status": "unknown",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "implementation_capital"
+      ],
+      "name": "implementation",
+      "quantity_key": "implementation_events",
+      "savings": null,
+      "status": "unknown"
+    }
+  ],
+  "boundary": {
+    "closure_end": "2026-05-01T03:16:00+03:00",
+    "obligations_closed": true,
+    "period_end": "2026-05-01T03:16:00+03:00",
+    "period_start": "2026-05-01T03:00:00+03:00"
+  },
+  "cost_scope": "configured_articles_only",
+  "demand_id": "passengers-not-modeled",
+  "evaluation_mode": "fixture",
+  "evaluation_model_version": "simulation-v1.1",
+  "events": {
+    "baseline": [],
+    "candidate": []
+  },
+  "groups": {
+    "capital": {
+      "baseline": null,
+      "candidate": null,
+      "currency": "RUB",
+      "known_subtotal_baseline": "0",
+      "known_subtotal_candidate": "0",
+      "savings": null,
+      "savings_pct": null,
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    "cash": {
+      "baseline": null,
+      "candidate": null,
+      "currency": "RUB",
+      "known_subtotal_baseline": "0",
+      "known_subtotal_candidate": "0",
+      "savings": null,
+      "savings_pct": null,
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    "resource_accrual": {
+      "baseline": "0",
+      "candidate": "0",
+      "currency": "RUB",
+      "known_subtotal_baseline": "0",
+      "known_subtotal_candidate": "0",
+      "savings": "0",
+      "savings_pct": null,
+      "status": "confirmed",
+      "vat_basis": null
+    }
+  },
+  "initial_state_id": "dfc39bcfcc7af811907f39e36680065043567a0a72380cd3a4d50802d14af246",
+  "missing_required_articles": [],
+  "model_version": "economics-v1.1",
+  "natural_deltas": {
+    "avoidable_maintenance_events": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    },
+    "car_km": {
+      "baseline": {
+        "amount": "48",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "delta": "48",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "car_km"
+    },
+    "entry_events": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    },
+    "implementation_events": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    },
+    "moving_hours": {
+      "baseline": {
+        "amount": "0.1666666666666666666666666667",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "delta": "0.1666666666666666666666666667",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_h"
+    },
+    "nonpassenger_car_km": {
+      "baseline": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "delta": "0",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "car_km"
+    },
+    "nonpassenger_train_km": {
+      "baseline": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "delta": "0",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_km"
+    },
+    "paid_person_hours": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "person_h"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "person_h"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "person_h"
+    },
+    "passenger_car_km": {
+      "baseline": {
+        "amount": "48",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "car_km"
+      },
+      "delta": "48",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "car_km"
+    },
+    "passenger_train_km": {
+      "baseline": {
+        "amount": "6",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "delta": "6",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_km"
+    },
+    "purchased_energy": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "kWh"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "kWh"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "kWh"
+    },
+    "standby_hours": {
+      "baseline": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "candidate": {
+        "amount": "0.2666666666666666666666666667",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "delta": "-0.2666666666666666666666666667",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_h"
+    },
+    "stop_hours": {
+      "baseline": {
+        "amount": "0.03333333333333333333333333333",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "delta": "0.03333333333333333333333333333",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_h"
+    },
+    "stopped_hours": {
+      "baseline": {
+        "amount": "0.1",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "delta": "0.1",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_h"
+    },
+    "train_km": {
+      "baseline": {
+        "amount": "6",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_km"
+      },
+      "delta": "6",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_km"
+    },
+    "turnaround_hours": {
+      "baseline": {
+        "amount": "0.06666666666666666666666666667",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "candidate": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "delta": "0.06666666666666666666666666667",
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "train_h"
+    },
+    "withdrawal_events": {
+      "baseline": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "delta": null,
+      "period": {
+        "end": "2026-05-01T03:16:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    }
+  },
+  "operational_status": {
+    "baseline": "unknown",
+    "candidate": "unknown"
+  },
+  "plans": {
+    "baseline": "baseline",
+    "candidate": "candidate"
+  },
+  "release_authorized": false,
+  "required_cash_articles": [
+    "purchased_energy",
+    "paid_labor",
+    "avoidable_maintenance",
+    "entry_preparation",
+    "withdrawal_preparation"
+  ],
+  "schema_version": "1.1",
+  "status": "unknown"
+}

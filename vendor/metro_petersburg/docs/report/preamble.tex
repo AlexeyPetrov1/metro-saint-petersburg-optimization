@@ -1,0 +1,63 @@
+% Преамбула отчёта (pandoc + XeTeX): заголовки PT Sans, подписи по-русски, нумерация по разделам,
+% мелкий шрифт таблиц, альбомные страницы, рисунки на месте, без висящих заголовков, приложения А–Д.
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{needspace}
+\usepackage[font=small,labelfont=bf,labelsep=endash,justification=centering,singlelinecheck=true]{caption}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage{newunicodechar}
+\makeatletter
+\def\fps@figure{tp}
+\makeatother
+\usepackage[section]{placeins}
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\AtBeginDocument{%
+  \renewcommand{\figurename}{Рисунок}%
+  \renewcommand{\tablename}{Таблица}%
+  \renewcommand{\contentsname}{Содержание}}
+% заголовки: раздел — с новой страницы; в приложениях — «Приложение А.»
+\newif\ifinappendix
+\titleformat{\section}{\normalfont\sffamily\Large\bfseries}{\ifinappendix Приложение~\thesection.\else\thesection\fi}{0.6em}{}
+\titleformat{\subsection}{\normalfont\sffamily\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\sffamily\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{4ex plus 1ex minus .3ex}{1.4ex plus .3ex}
+\titlespacing*{\subsection}{0pt}{2.6ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{2ex plus .8ex minus .2ex}{0.8ex plus .2ex}
+\pretocmd{\section}{\needspace{14\baselineskip}}{}{}
+% титул и оглавление — на отдельных страницах
+\AtBeginDocument{\apptocmd{\maketitle}{\thispagestyle{empty}\clearpage}{}{}%
+  \apptocmd{\tableofcontents}{\clearpage}{}{}}
+\pretocmd{\subsection}{\needspace{11\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\needspace{10\baselineskip}}{}{}
+% приложения: буквы А–Е, уникальные якоря hyperref
+\newcommand{\startappendix}{%
+  \clearpage\appendix\inappendixtrue
+  \renewcommand{\thesection}{\ifcase\value{section}\or А\or Б\or В\or Г\or Д\or Е\fi}%
+  \renewcommand{\theHsection}{app\arabic{section}}}
+% таблицы — мелким шрифтом и плотнее
+\AtBeginEnvironment{longtable}{\footnotesize\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}}
+\setlength{\emergencystretch}{3em}
+\widowpenalty=10000
+\clubpenalty=10000
+% символы, которых нет в PT Serif / PT Sans / PT Mono, — из STIXGeneral
+\newfontfamily\fallbackfont{STIXGeneral}
+\newunicodechar{τ}{{\fallbackfont\upshape τ}}
+\newunicodechar{Σ}{{\fallbackfont\upshape Σ}}
+\newunicodechar{α}{{\fallbackfont\upshape α}}
+\newunicodechar{→}{{\fallbackfont\upshape →}}
+\newunicodechar{∈}{{\fallbackfont\upshape ∈}}
+\newunicodechar{⊂}{{\fallbackfont\upshape ⊂}}
+% уникальные якоря hyperref при нумерации по разделам
+\AtBeginDocument{%
+  \renewcommand{\theHtable}{\theHsection.\arabic{table}}%
+  \renewcommand{\theHfigure}{\theHsection.\arabic{figure}}%
+  \renewcommand{\theHequation}{\theHsection.\arabic{equation}}}
+% блоки кода: мельче и с переносом длинных строк
+\usepackage{fvextra}
+\AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines,breakanywhere,fontsize=\footnotesize}}

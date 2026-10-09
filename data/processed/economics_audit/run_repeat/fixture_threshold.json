@@ -1,0 +1,13 @@
+{
+  "evaluation_mode": "fixture",
+  "hourly_rate_unit": "RUB/train_h",
+  "reason": "finite boundary; profitable strictly above it",
+  "release_authorized": false,
+  "running_rate": "2000",
+  "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+  "standby_rate": "200",
+  "status": "assumed",
+  "switch_cost": "1480",
+  "switch_cost_unit": "RUB",
+  "threshold_hours": "0.8222222222222222222222222222"
+}

@@ -1,0 +1,216 @@
+{
+  "exit_code": 0,
+  "junit_xml": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\portable_final_junit.xml",
+  "junit_sha256": "23aee6630604257a488d9921592feebed9d7146e83f981e864eb524ac456fc8a",
+  "stdout_log": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\portable_final_stdout.log",
+  "counts": {
+    "tests": 1172,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_summary": "529 passed, 643 subtests passed in 82.37s",
+  "command": [
+    "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-c",
+    "pytest.ini",
+    "--rootdir=C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg",
+    "-p",
+    "readiness_vendor_inputs",
+    "tests",
+    "external_data",
+    "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\readiness_bootstrap_tests.py",
+    "-q",
+    "--junitxml=C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\portable_final_junit.xml",
+    "--durations=25"
+  ],
+  "working_directory": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg",
+  "environment": {
+    "PYTHONPATH": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor;C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg",
+    "PYTHONUTF8": "1"
+  },
+  "executed_source_hashes": {
+    "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\readiness_vendor_inputs.py": "39022ccbf3c123b9252716807d2740c77858e61c86e6993621aa49f04a5a7d80",
+    "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_readiness_20261009\\tests\\vendor\\readiness_bootstrap_tests.py": "1e56b37fd41bc1021358d9a96e1d4b4abd92de340a35a1dff063d0426c2313a2"
+  },
+  "adaptations": {
+    "test_only": true,
+    "production_code_changed": false,
+    "models_refitted": false,
+    "frozen_config_changed": false,
+    "b2_cache_changed": false,
+    "input_root": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009",
+    "input_aliases": {
+      "DATA": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data"
+      },
+      "RAW": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\raw",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\raw"
+      },
+      "INTERIM": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim"
+      },
+      "FEATURES": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\features",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\features"
+      },
+      "PREDICTIONS": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\predictions",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\predictions"
+      },
+      "REFERENCE": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference"
+      },
+      "EVENTS_MANUAL": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\events_manual.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\events_manual.csv"
+      },
+      "SPB_RAW": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\raw\\spb",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\raw\\spb"
+      },
+      "SPB_STATIONS_CSV": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\spb_line1_stations.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\spb_line1_stations.csv"
+      },
+      "SPB_VESTIBULES_CSV": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\spb_line1_vestibules.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\spb_line1_vestibules.csv"
+      },
+      "SPB_INCIDENTS_CSV": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\incidents.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\incidents.csv"
+      },
+      "SPB_EVENTS_CSV": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\events_spb.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\events_spb.csv"
+      },
+      "LINE1_OPERATIONS_YAML": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\line1_operations.yaml",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\line1_operations.yaml"
+      },
+      "SPB_HOURLY": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim\\spb_line1_hourly.parquet",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim\\spb_line1_hourly.parquet"
+      },
+      "SPB_VESTIBULES_15MIN_CSV": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\reference\\spb_line1_vestibules_15min.csv",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\reference\\spb_line1_vestibules_15min.csv"
+      },
+      "SPB_15MIN": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim\\spb_line1_15min.parquet",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim\\spb_line1_15min.parquet"
+      },
+      "SPB_15MIN_RECON": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim\\spb_line1_15min_reconciliation.parquet",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim\\spb_line1_15min_reconciliation.parquet"
+      },
+      "MO1_OUT": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim\\mo1_reports.parquet",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim\\mo1_reports.parquet"
+      },
+      "CALENDAR_OUT": {
+        "original": "C:\\Users\\lesha\\HackathonSPB\\vendor\\metro_petersburg\\data\\interim\\calendar_ru_2026.parquet",
+        "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\interim\\calendar_ru_2026.parquet"
+      }
+    },
+    "model_root": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\models",
+    "canonical_source_checks": {
+      "src/features.py": {
+        "raw_sha256": "8f288eb3afbb29e41766488cd831daac9a41619aa325a7b16396c676d890de4b",
+        "canonical_lf_sha256": "795e4a34c27d6ca023977529191d07f6ffc49cb65e5f983cb9eece27edea491b",
+        "frozen_sha256": "795e4a34c27d6ca023977529191d07f6ffc49cb65e5f983cb9eece27edea491b",
+        "only_line_endings_differ": true
+      },
+      "src/model.py": {
+        "raw_sha256": "44fe94c76ca4024edfa8e7e0cd73dcaa00275d893784d0254c632f23aa771c25",
+        "canonical_lf_sha256": "2954c3aba6696ee55d72a4ae3d2ab776cb36fe2f11c88fdc24389d0e97bdb760",
+        "frozen_sha256": "2954c3aba6696ee55d72a4ae3d2ab776cb36fe2f11c88fdc24389d0e97bdb760",
+        "only_line_endings_differ": true
+      },
+      "src/baseline.py": {
+        "raw_sha256": "8d79ebb3f91c56d8a3786db045300983ac8440f694375ba1b8f93a3b8c16c3f5",
+        "canonical_lf_sha256": "b25996e564ad61ff6c0df423bba0046ebf1a0670f1f04d05d9473803818e0b1b",
+        "frozen_sha256": "b25996e564ad61ff6c0df423bba0046ebf1a0670f1f04d05d9473803818e0b1b",
+        "only_line_endings_differ": true
+      },
+      "src/backtest.py": {
+        "raw_sha256": "eee58dde29e60de94d5f5d5f9efc4e83b8e8654bd86e9384f8c5d1e62a97ed0b",
+        "canonical_lf_sha256": "be67092609ea9855c259698fdcd597f1576c23d261b5933a0368f8cd9215d642",
+        "frozen_sha256": "be67092609ea9855c259698fdcd597f1576c23d261b5933a0368f8cd9215d642",
+        "only_line_endings_differ": true
+      },
+      "src/eda_spb.py": {
+        "raw_sha256": "04760c17f81f0d97d0c51bb10d1dc24c53221ae6a32b868663dc7526a1d6ff48",
+        "canonical_lf_sha256": "5937cad9a15d09f26cea3f2feaa74f635f9eb73d3bca4ad0ab0452a21afab44e",
+        "frozen_sha256": "5937cad9a15d09f26cea3f2feaa74f635f9eb73d3bca4ad0ab0452a21afab44e",
+        "only_line_endings_differ": true
+      }
+    },
+    "raw_workbook_alias": {
+      "input": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro51_inputs_20261009\\data\\raw\\spb\\drive-download-20261007T113240Z-1-001\\╨ƒ╨░╤ü╤ü╨░╨╢╨╕╤Ç╨╛╨┐╨╛╤é╨╛╨║ 2026 ╨¢╨╕╨╜╨╕╤Å 1.xlsx",
+      "archive": "C:\\Users\\lesha\\Downloads\\Telegram Desktop\\data (2).zip",
+      "member": "data/raw/spb/drive-download-20261007T113240Z-1-001/╨ƒ╨░╤ü╤ü╨░╨╢╨╕╤Ç╨╛╨┐╨╛╤é╨╛╨║ 2026 ╨¢╨╕╨╜╨╕╤Å 1.xlsx",
+      "input_sha256": "2c6a8d7cc06ff69e5d7c1a00f9f680f41ef636975436fba96b3fd3acca946125",
+      "published_sha256": "2c6a8d7cc06ff69e5d7c1a00f9f680f41ef636975436fba96b3fd3acca946125",
+      "archive_member_sha256": "2c6a8d7cc06ff69e5d7c1a00f9f680f41ef636975436fba96b3fd3acca946125",
+      "verification_source": "original_archive_and_published_manifest_sha256",
+      "archive_available": true,
+      "published_bytes_identical": true,
+      "expected_name": "Пассажиропоток 2026 Линия 1.xlsx",
+      "unique_decoded_name": true
+    },
+    "exit_code": 0,
+    "pandas": "2.3.3",
+    "numpy": "2.4.6"
+  },
+  "model_verification": {
+    "passed": true,
+    "failed_checks": [],
+    "checks": {
+      "actual_model_tests": true,
+      "test_proof_hashes": true,
+      "b1_saved_equation_parity": true,
+      "contract_feature_and_time_shape": true,
+      "model_weight_hashes": true,
+      "source_identity": true,
+      "evidence_files_present": true,
+      "complete_native_components": true,
+      "input_manifest_weight_hashes": true,
+      "run_model_contract_parity": true
+    },
+    "required_model_tests": [
+      "test_actual_contract_uses_all_native_bases_and_true_cutoffs",
+      "test_available_at_prevents_using_late_observations",
+      "test_b3_output_matches_saved_native_networks_on_same_input",
+      "test_bundle_complete_quarter_refresh_and_future_mutation_invariance",
+      "test_feature_evidence_uses_measured_lightgbm_contributions",
+      "test_source_frame_has_all_red_stations_and_same_day_truth",
+      "test_training_period_and_unsupported_horizon_are_rejected"
+    ],
+    "b2_sha256": "cbc0147a8651b63572c91b7f2bbc4627cb65db36cc27f48ddec5c3275247ee8d",
+    "b2_code_sha_matches": {
+      "stack/base.py": true,
+      "stack/data.py": true,
+      "intrahour.py": true,
+      "baseline.py": true
+    },
+    "b2_data_sha_matches": {
+      "spb_line1_15min.parquet": true,
+      "spb_line1_15min_reconciliation.parquet": true,
+      "spb_line1_hourly.parquet": true
+    },
+    "source_proof_hashes": {
+      "C:\\Users\\lesha\\HackathonSPB\\metro51_ensemble.py": "525fdeceeac93fd3384dfe2f4353b5cfcfb6683bb869c8403a894fa484cc1f2d",
+      "C:\\Users\\lesha\\HackathonSPB\\tests\\test_metro51_ensemble.py": "5a84c3771f9403ebbab1b3e22bc5f7f346f8ddedff4829d7e9febafe0a1615f6"
+    },
+    "campaign_folder_created": false,
+    "method": "Called real campaign.model_proof with only save replaced in memory; real verify_model_evidence read actual files; wrote readiness evidence only"
+  }
+}

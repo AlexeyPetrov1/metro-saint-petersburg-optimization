@@ -1,0 +1,81 @@
+{
+  "expected_source": "literal values from user task; independent manual oracle",
+  "results": [
+    {
+      "actual": [
+        "7000",
+        "5950",
+        "1050"
+      ],
+      "case": "A",
+      "currency": "RUB",
+      "evaluation_mode": "fixture",
+      "expected": [
+        "7000",
+        "5950",
+        "1050"
+      ],
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "7000",
+        "6250",
+        "750"
+      ],
+      "case": "A_fees",
+      "currency": "RUB",
+      "evaluation_mode": "fixture",
+      "expected": [
+        "7000",
+        "6250",
+        "750"
+      ],
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "160",
+        "0",
+        "160"
+      ],
+      "case": "C",
+      "currency": "RUB",
+      "evaluation_mode": "fixture",
+      "expected": [
+        "160",
+        "0",
+        "160"
+      ],
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "10000",
+        "10500",
+        "-500"
+      ],
+      "case": "return",
+      "currency": "RUB",
+      "evaluation_mode": "fixture",
+      "expected": [
+        "10000",
+        "10500",
+        "-500"
+      ],
+      "status": "pass"
+    },
+    {
+      "actual": "unsupported profile rejected",
+      "case": "B",
+      "evaluation_mode": "fixture",
+      "manual_expected": [
+        "700",
+        "800",
+        "-100"
+      ],
+      "reason": "unsupported Article fields: tariff_periods",
+      "status": "pass"
+    }
+  ]
+}

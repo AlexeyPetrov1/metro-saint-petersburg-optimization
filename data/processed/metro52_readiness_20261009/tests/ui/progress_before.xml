@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="5.304" timestamp="2026-10-09T22:05:29.137207+03:00" hostname="petrov"><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_pending_arm_is_progress_not_application_error" time="0.259"><failure message="AssertionError: assert not ElementList(_list=[Error()])&#10; +  where ElementList(_list=[Error()]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\interfaces\\streamlit_dispatcher\\app.py',\n    default_time...рогон работает отдельно.')\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).error">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-463/test_pending_arm_is_progress_n0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001DD62CA6F00&gt;
+replay = &lt;interfaces.streamlit_dispatcher.adapter.Replay object at 0x000001DD62CA6E70&gt;
+
+    def test_pending_arm_is_progress_not_application_error(tmp_path, monkeypatch, replay):
+        arm_files(tmp_path, replay)
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", str(tmp_path))
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+        assert not app.exception
+&gt;       assert not app.error
+E       AssertionError: assert not ElementList(_list=[Error()])
+E        +  where ElementList(_list=[Error()]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\interfaces\\streamlit_dispatcher\\app.py',\n    default_time...рогон работает отдельно.')\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).error
+
+interfaces\streamlit_dispatcher\tests\test_campaign_progress.py:48: AssertionError</failure></testcase><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_refresh_reads_new_checkpoint_and_completed_day" time="0.617" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_saved_full_day_counts_and_empty_forecasts" time="3.884" /></testsuite></testsuites>

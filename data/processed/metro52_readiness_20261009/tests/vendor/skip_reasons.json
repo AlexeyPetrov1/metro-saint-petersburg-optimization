@@ -1,0 +1,81 @@
+{
+  "skipped_count": 65,
+  "reasons": [
+    {
+      "count": 14,
+      "reason": "нет interim СПб — запустите python -m src.clean_spb"
+    },
+    {
+      "count": 8,
+      "reason": "нет interim СПб или model_final.json"
+    },
+    {
+      "count": 6,
+      "reason": "нет data/interim — запустите python -m src.download && python -m src.clean"
+    },
+    {
+      "count": 6,
+      "reason": "нет data/interim/spb_line1_hourly.parquet — запустите python -m src.clean_spb"
+    },
+    {
+      "count": 4,
+      "reason": "нет data/interim/spb_line1_15min.parquet — запустите python -m src.clean_spb_15min"
+    },
+    {
+      "count": 4,
+      "reason": "нет 15-минутных данных или моделей фолдов — clean_spb_15min и model --save-folds"
+    },
+    {
+      "count": 4,
+      "reason": "нет 15-минутных данных — python -m src.clean_spb_15min"
+    },
+    {
+      "count": 4,
+      "reason": "нет прогнозов базовых моделей — python -m src.stack --fit"
+    },
+    {
+      "count": 3,
+      "reason": "нет data/interim/spb_line1_15min*.parquet — запустите python -m src.clean_spb_15min"
+    },
+    {
+      "count": 2,
+      "reason": "нет mo1_reports.parquet"
+    },
+    {
+      "count": 2,
+      "reason": "нет lgbm_fold_2026-05"
+    },
+    {
+      "count": 1,
+      "reason": "нет baseline_aug.json — запустите python -m src.backtest --export-august"
+    },
+    {
+      "count": 1,
+      "reason": "нет data/interim/stations.parquet"
+    },
+    {
+      "count": 1,
+      "reason": "нет файла организаторов в data/raw/spb"
+    },
+    {
+      "count": 1,
+      "reason": "нет календаря в interim"
+    },
+    {
+      "count": 1,
+      "reason": "нет weather_archive_spb.parquet"
+    },
+    {
+      "count": 1,
+      "reason": "нет weather_hist_forecast_spb.parquet"
+    },
+    {
+      "count": 1,
+      "reason": "нет model_aug.json — запустите python -m src.model --export-august"
+    },
+    {
+      "count": 1,
+      "reason": "нет моделей фолдов — python -m src.model --save-folds"
+    }
+  ]
+}

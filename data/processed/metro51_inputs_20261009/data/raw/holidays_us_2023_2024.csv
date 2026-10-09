@@ -1,0 +1,78 @@
+date,name,category
+2023-01-01,New Year's Day,government
+2023-01-01,New Year's Day,public
+2023-01-02,New Year's Day (observed),government
+2023-01-02,New Year's Day (observed),public
+2023-01-16,"Birthday of Martin Luther King, Jr.",government
+2023-01-16,Martin Luther King Jr. Day,public
+2023-02-02,Groundhog Day,unofficial
+2023-02-12,Lincoln's Birthday,ny_public
+2023-02-13,Lincoln's Birthday (observed),ny_public
+2023-02-14,Valentine's Day,unofficial
+2023-02-15,Susan B. Anthony Day,ny_public
+2023-02-20,Washington's Birthday,government
+2023-02-20,Washington's Birthday,public
+2023-03-17,Saint Patrick's Day,unofficial
+2023-04-07,Good Friday,unofficial
+2023-04-09,Easter Sunday,unofficial
+2023-05-14,Mother's Day,unofficial
+2023-05-29,Memorial Day,government
+2023-05-29,Memorial Day,public
+2023-06-18,Father's Day,unofficial
+2023-06-19,Juneteenth National Independence Day,government
+2023-06-19,Juneteenth National Independence Day,public
+2023-07-04,Independence Day,government
+2023-07-04,Independence Day,public
+2023-09-04,Labor Day,government
+2023-09-04,Labor Day,public
+2023-10-09,Columbus Day,government
+2023-10-09,Columbus Day,public
+2023-10-31,Halloween,unofficial
+2023-11-07,Election Day,ny_public
+2023-11-10,Veterans Day (observed),government
+2023-11-10,Veterans Day (observed),public
+2023-11-11,Veterans Day,government
+2023-11-11,Veterans Day,public
+2023-11-23,Thanksgiving Day,government
+2023-11-23,Thanksgiving Day,public
+2023-12-24,Christmas Eve,unofficial
+2023-12-25,Christmas Day,government
+2023-12-25,Christmas Day,public
+2023-12-31,New Year's Eve,unofficial
+2024-01-01,New Year's Day,government
+2024-01-01,New Year's Day,public
+2024-01-15,"Birthday of Martin Luther King, Jr.",government
+2024-01-15,Martin Luther King Jr. Day,public
+2024-02-02,Groundhog Day,unofficial
+2024-02-12,Lincoln's Birthday,ny_public
+2024-02-14,Valentine's Day,unofficial
+2024-02-15,Susan B. Anthony Day,ny_public
+2024-02-19,Washington's Birthday,government
+2024-02-19,Washington's Birthday,public
+2024-03-17,Saint Patrick's Day,unofficial
+2024-03-29,Good Friday,unofficial
+2024-03-31,Easter Sunday,unofficial
+2024-05-12,Mother's Day,unofficial
+2024-05-27,Memorial Day,government
+2024-05-27,Memorial Day,public
+2024-06-16,Father's Day,unofficial
+2024-06-19,Juneteenth National Independence Day,government
+2024-06-19,Juneteenth National Independence Day,public
+2024-07-04,Independence Day,government
+2024-07-04,Independence Day,public
+2024-09-02,Labor Day,government
+2024-09-02,Labor Day,public
+2024-10-14,Columbus Day,government
+2024-10-14,Columbus Day,public
+2024-10-31,Halloween,unofficial
+2024-11-05,Election Day,ny_public
+2024-11-05,Election Day,unofficial
+2024-11-11,Veterans Day,government
+2024-11-11,Veterans Day,public
+2024-11-28,Thanksgiving Day,government
+2024-11-28,Thanksgiving Day,public
+2024-12-24,Christmas Eve,government
+2024-12-24,Christmas Eve,unofficial
+2024-12-25,Christmas Day,government
+2024-12-25,Christmas Day,public
+2024-12-31,New Year's Eve,unofficial

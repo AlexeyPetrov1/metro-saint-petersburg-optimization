@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "policy_version": "regular-release-policy-v1",
+  "comparison_mode": "retrospective_planned_release",
+  "warmup_start": "06:00",
+  "main_start": "08:00",
+  "main_end": "10:00",
+  "continuation_end": "12:00",
+  "scenario_ids": ["S1", "S2", "S3"],
+  "fleet_offsets": [-2, -1, 0, 1, 2],
+  "max_boarded_p95_wait_seconds": null,
+  "max_active_wait_seconds": null,
+  "prevent_queue_growth": false,
+  "optional_waiting_policy_source": "demonstration settings; not organizer requirements; disabled by default",
+  "dominance_criteria": ["train_km", "waiting_passenger_seconds", "p95", "queued_main", "queue_age_main", "queued_end", "queue_age_end", "threshold_observations"],
+  "dominance_scope": "minimize each criterion separately in every OD scenario; no probabilities or averaging",
+  "normal_load_source": "parameters.json#regular_load_limit_per_car: organizer_confirmed 120; distinct from boarding capacity",
+  "operational_transition_modeled": false
+}

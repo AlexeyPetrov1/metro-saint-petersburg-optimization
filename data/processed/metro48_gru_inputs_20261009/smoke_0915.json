@@ -1,0 +1,1107 @@
+{
+  "schema_version": "1.0",
+  "model_version": "frozen-b3-gru-native30m-quarter-refresh-v1",
+  "issued_at": "2026-09-30T09:15:00+03:00",
+  "as_of": "2026-09-30T09:15:00+03:00",
+  "available_at": "2026-09-30T09:15:00+03:00",
+  "features_available_at": "2026-09-30T09:15:00+03:00",
+  "target": "turnstile_entries",
+  "unit": "passengers_per_15m",
+  "coverage": "complete",
+  "feature_version": "original16x4-with-causal-quarter-slot-split-v1",
+  "source_versions": {
+    "weights": {
+      "gru_seed0.pt": "715f91023fbed105c2f0b6784f3e006baafebf5aeffd53b8185177704dd74421",
+      "gru_seed1.pt": "23a8a04cebd3de62777f4310262aa9ce76232af76f16b9c762eea99e95ba9f39",
+      "gru_seed2.pt": "75b8b86f4a82b9af2bd6d63e8cf2266dd89e11449467fa9658a041b09013835e",
+      "meta.json": "52d79907621cf395c4ddb3bf9ac5083b76fadb8a5818e30acc53e74a2ec4071d"
+    },
+    "train_end": "2026-07-31",
+    "model_family": "upstream_standalone_B3_not_meta_stack",
+    "native_output_seconds": 1800,
+    "native_training_update_seconds": 1800,
+    "shifted_quarter_inference": true,
+    "fallback_station_ids": [
+      "L1_07"
+    ],
+    "retrospective_history_flags": false,
+    "normalization": "original baseline.norm+intrahour.past_profile+source_scale; strictly previous service days",
+    "quarter_split": "native vestibule slot total allocated by causal target-quarter normalization",
+    "preprocessing_input_digest": "01302db3e1f0ee74cc09106e959a8a21be338ed6ac8bb50318cffd9ecba23f5c",
+    "future_truth_used": false,
+    "input_publication_times": "unknown",
+    "target_anomaly_mask": false
+  },
+  "included_event_ids": [],
+  "refresh_seconds": 900,
+  "availability_assumption": "Completed station intervals and original uploaded vestibule proportions are assumed available at interval end; calendar and entrance opening hours are treated as public schedules. Archive cleaning flags are disabled by default.",
+  "rounding": "native half-hour totals rounded HALF_UP; largest remainders over causal quarter shares",
+  "rows": [
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 1694,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 971,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 785,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 261,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 332,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 1241,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 70,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 455,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 181,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 712,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 289,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 824,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 149,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 692,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 427,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 333,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 932,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 1136,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T09:15:00+03:00",
+      "interval_end": "2026-09-30T09:30:00+03:00",
+      "predicted_count": 3067,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 1358,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 790,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 643,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 223,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 272,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 986,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 70,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 343,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 165,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 548,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 272,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 645,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 137,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 813,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 365,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 279,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 765,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 943,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T09:30:00+03:00",
+      "interval_end": "2026-09-30T09:45:00+03:00",
+      "predicted_count": 2460,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 1171,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 650,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 531,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 183,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 238,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 839,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 70,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 301,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 148,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 522,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 249,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 479,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 126,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 549,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 298,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 240,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 671,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 800,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T09:45:00+03:00",
+      "interval_end": "2026-09-30T10:00:00+03:00",
+      "predicted_count": 2014,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 1088,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 628,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 503,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 193,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 254,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 824,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 72,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 324,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 175,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 691,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 276,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 481,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 122,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 418,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 292,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 238,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 615,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 726,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T10:00:00+03:00",
+      "interval_end": "2026-09-30T10:15:00+03:00",
+      "predicted_count": 1760,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 1018,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 594,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 490,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 198,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 274,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 728,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 71,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 285,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 177,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 671,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 294,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 622,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 129,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 430,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 294,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 232,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 582,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 673,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T10:15:00+03:00",
+      "interval_end": "2026-09-30T10:30:00+03:00",
+      "predicted_count": 1658,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 858,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 516,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 451,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 183,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 261,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 481,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 71,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 230,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 168,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 647,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 286,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 581,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 128,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 399,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 263,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 203,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 494,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 569,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T10:30:00+03:00",
+      "interval_end": "2026-09-30T10:45:00+03:00",
+      "predicted_count": 1380,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 842,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 488,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 391,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 169,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 246,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 613,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 71,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 202,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 163,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 663,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 285,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 667,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 127,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 346,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 241,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 195,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 452,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 521,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T10:45:00+03:00",
+      "interval_end": "2026-09-30T11:00:00+03:00",
+      "predicted_count": 1272,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_01",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 735,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_02",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 425,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_03",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 378,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_04",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 178,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_05",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 250,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_06",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 719,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_07",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 84,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_08",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 266,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_09",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 170,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_10",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 671,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_11",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 297,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_12",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 391,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_13",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 138,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_14",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 402,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_15",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 239,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_16",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 233,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_17",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 438,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_18",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 463,
+      "coverage": "complete"
+    },
+    {
+      "station_id": "L1_19",
+      "interval_start": "2026-09-30T11:00:00+03:00",
+      "interval_end": "2026-09-30T11:15:00+03:00",
+      "predicted_count": 1221,
+      "coverage": "complete"
+    }
+  ],
+  "evaluation_mode": "frozen_GRU_shifted15m_experimental",
+  "claimed_ml_WAPE": null
+}

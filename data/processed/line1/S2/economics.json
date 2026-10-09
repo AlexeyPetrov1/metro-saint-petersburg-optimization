@@ -1,0 +1,304 @@
+{
+  "all_constraints_verified": false,
+  "articles": [
+    {
+      "accounting_kind": "cash",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "purchased_energy",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "kWh"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/kWh",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    {
+      "accounting_kind": "cash",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "paid_labor",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "person_h"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/person_h",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    {
+      "accounting_kind": "cash",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "avoidable_maintenance",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/event",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    {
+      "accounting_kind": "cash",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "entry_preparation",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/event",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    {
+      "accounting_kind": "cash",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "withdrawal_preparation",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/event",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    },
+    {
+      "accounting_kind": "capital",
+      "amount": null,
+      "currency": "RUB",
+      "known_subtotal": null,
+      "name": "implementation",
+      "period": {
+        "end": "2026-09-01T10:00:00+03:00",
+        "start": "2026-09-01T08:00:00+03:00"
+      },
+      "quantity": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "rate": null,
+      "rate_source": "not supplied",
+      "rate_status": "unknown",
+      "rate_unit": "RUB/event",
+      "reason": "unknown_quantity",
+      "status": "unknown",
+      "vat_basis": "unspecified"
+    }
+  ],
+  "cash_total_RUB": null,
+  "comparison_performed": false,
+  "distance_scope": "arrival ledger (start,end], partial at moving boundaries; assumed segment geometry",
+  "evaluation": {
+    "closure_end": "2026-09-01T10:00:00+03:00",
+    "constraint_status": "unknown",
+    "demand_id": "passengers-not-modeled",
+    "evaluation_mode": "fixture",
+    "events": [],
+    "initial_state_id": "74294808bb56ac763999b2916667ccf9a3dd66bbf50e16ea933490b0b7afeaa2",
+    "model_version": "simulation-v1.1",
+    "obligations_closed": false,
+    "period_end": "2026-09-01T10:00:00+03:00",
+    "period_start": "2026-09-01T08:00:00+03:00",
+    "plan_id": "line1-baseline",
+    "quantities": {
+      "avoidable_maintenance_events": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "car_km": {
+        "amount": "25232.352",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "car_km"
+      },
+      "entry_events": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "implementation_events": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      },
+      "moving_hours": {
+        "amount": "74.66388888888888888888888889",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "nonpassenger_car_km": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "car_km"
+      },
+      "nonpassenger_train_km": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "train_km"
+      },
+      "paid_person_hours": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "person_h"
+      },
+      "passenger_car_km": {
+        "amount": "25232.352",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "car_km"
+      },
+      "passenger_train_km": {
+        "amount": "3154.044",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "train_km"
+      },
+      "purchased_energy": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "kWh"
+      },
+      "standby_hours": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "stop_hours": {
+        "amount": "10.07222222222222222222222222",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "stopped_hours": {
+        "amount": "13.33611111111111111111111111",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "train_km": {
+        "amount": "3154.044",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "partial",
+        "unit": "train_km"
+      },
+      "turnaround_hours": {
+        "amount": "3.263888888888888888888888889",
+        "applicability": "applicable",
+        "source": "simulation-v1.1; GOAL 3.3 assumed periodic plan, historical entries are separate; plan=line1-baseline; fixture",
+        "status": "assumed",
+        "unit": "train_h"
+      },
+      "withdrawal_events": {
+        "amount": null,
+        "applicability": "applicable",
+        "source": "not modeled or supplied; no inference from train work",
+        "status": "unknown",
+        "unit": "event"
+      }
+    },
+    "required_cash_articles": [
+      "purchased_energy",
+      "paid_labor",
+      "avoidable_maintenance",
+      "entry_preparation",
+      "withdrawal_preparation"
+    ]
+  },
+  "model_version": "economics-v1.1",
+  "money_status": "unknown",
+  "reason": "one movement plan; energy and paid work models and money rates are missing",
+  "release_authorized": false,
+  "savings": null
+}

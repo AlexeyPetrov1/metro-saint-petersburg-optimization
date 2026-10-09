@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="24" skipped="0" tests="36" time="0.956" timestamp="2026-10-08T08:00:16.147635+03:00" hostname="petrov"><testcase classname="tests.test_economics_audit" name="test_A_energy_and_two_disjoint_fees" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_B_tariff_profile_is_explicitly_rejected" time="0.006"><failure message="TypeError: Article.__init__() got an unexpected keyword argument 'tariff_periods'">tests\test_economics_audit.py:63: in test_B_tariff_profile_is_explicitly_rejected
+    load_costs(path)
+economics.py:487: in load_costs
+    articles = [Article(**{**row, "covered_components": tuple(row["covered_components"])}) for row in config["articles"]]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: Article.__init__() got an unexpected keyword argument 'tariff_periods'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_C_explicit_car_km_and_trip_both_cost_160" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_sign_symmetry_equal_plans_and_undefined_percentage" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_decimal_totals_are_independent_of_display_precision_and_order" time="0.001"><failure message="AssertionError: assert ['70000', '70000', '0'] == ['70000.07', '70000', '0.07']&#10;  &#10;  At index 0 diff: '70000' != '70000.07'&#10;  Use -v to get more diff">tests\test_economics_audit.py:88: in test_decimal_totals_are_independent_of_display_precision_and_order
+    assert [money(out)[key] for key in ("baseline", "candidate", "savings")] == ["70000.07", "70000", "0.07"]
+E   AssertionError: assert ['70000', '70000', '0'] == ['70000.07', '70000', '0.07']
+E     
+E     At index 0 diff: '70000' != '70000.07'
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_economics_audit" name="test_unknown_missing_zero_and_not_applicable_are_distinct" time="0.000"><failure message="KeyError: 'reason'">tests\test_economics_audit.py:100: in test_unknown_missing_zero_and_not_applicable_are_distinct
+    assert unknown_rate["articles"][0]["baseline"]["reason"] == "unknown_rate"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'reason'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_missing_required_cash_article_blocks_complete_saving" time="0.000"><failure message="TypeError: Evaluation.__init__() got an unexpected keyword argument 'required_cash_articles'">tests\test_economics_audit.py:113: in test_missing_required_cash_article_blocks_complete_saving
+    base, candidate = plan(required_cash_articles=("energy", "return")), plan("850", required_cash_articles=("energy", "return"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_economics_audit.py:31: in plan
+    return replace(result, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\dataclasses.py:1588: in replace
+    return obj.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: Evaluation.__init__() got an unexpected keyword argument 'required_cash_articles'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_equal_partial_observations_do_not_cancel_unknown_remainders" time="0.001"><failure message="AssertionError: assert ('700' is None)">tests\test_economics_audit.py:123: in test_equal_partial_observations_do_not_cancel_unknown_remainders
+    assert money(out)["baseline"] is None and money(out)["savings"] is None
+E   AssertionError: assert ('700' is None)</failure></testcase><testcase classname="tests.test_economics_audit" name="test_overlapping_energy_model_maneuver_or_operation_cost_is_rejected[components0]" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_overlapping_energy_model_maneuver_or_operation_cost_is_rejected[components1]" time="0.000" /><testcase classname="tests.test_economics_audit" name="test_overlapping_energy_model_maneuver_or_operation_cost_is_rejected[components2]" time="0.000" /><testcase classname="tests.test_economics_audit" name="test_cash_maintenance_cannot_be_repeated_as_priced_resource" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:139: in test_cash_maintenance_cannot_be_repeated_as_priced_resource
+    with pytest.raises(ValueError, match="overlap"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_vat_bases_cannot_be_mixed" time="0.001"><failure message="TypeError: Article.__init__() got an unexpected keyword argument 'vat_basis'">tests\test_economics_audit.py:144: in test_vat_bases_cannot_be_mixed
+    fees = rate(name="fee", covered_components=("fee",), vat_basis="excluded")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_economics_audit.py:37: in rate
+    return replace(result, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\dataclasses.py:1588: in replace
+    return obj.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: Article.__init__() got an unexpected keyword argument 'vat_basis'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_undeclared_currency_scale_is_not_ignored" time="0.003"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:152: in test_undeclared_currency_scale_is_not_ignored
+    with pytest.raises(ValueError, match="currency_scale"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_minutes_are_not_hours_and_salary_tracks_paid_shift" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_invalid_physical_quantities_and_rates_are_rejected[NaN]" time="0.000" /><testcase classname="tests.test_economics_audit" name="test_invalid_physical_quantities_and_rates_are_rejected[Infinity]" time="0.000" /><testcase classname="tests.test_economics_audit" name="test_invalid_physical_quantities_and_rates_are_rejected[-1]" time="0.000" /><testcase classname="tests.test_economics_audit" name="test_return_changes_1500_window_saving_to_minus_500" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_return_after_midnight_and_incompatible_boundaries" time="0.001" /><testcase classname="tests.test_economics_audit" name="test_missing_closure_evidence_is_not_defaulted_to_true" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:207: in test_missing_closure_evidence_is_not_defaulted_to_true
+    with pytest.raises(ValueError, match="obligations"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_duplicate_return_identity_is_detected_even_with_different_event_labels" time="0.000"><failure message="TypeError: Event.__init__() got an unexpected keyword argument 'operation_id'">tests\test_economics_audit.py:213: in test_duplicate_return_identity_is_detected_even_with_different_event_labels
+    event = replace(candidate.events[0], operation_id="actual-return-1")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\dataclasses.py:1588: in replace
+    return obj.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: Event.__init__() got an unexpected keyword argument 'operation_id'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_scenarios_are_isolated_order_independent_and_have_no_unweighted_expectation" time="0.001"><failure message="KeyError: 'cash_savings_range'">tests\test_economics_audit.py:231: in test_scenarios_are_isolated_order_independent_and_have_no_unweighted_expectation
+    assert first["cash_savings_range"]["min"] == "50" and first["cash_savings_range"]["max"] == "200"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'cash_savings_range'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_invalid_or_incomplete_scenario_probabilities_are_rejected[probabilities0]" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:243: in test_invalid_or_incomplete_scenario_probabilities_are_rejected
+    with pytest.raises(ValueError, match="probabilit"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_invalid_or_incomplete_scenario_probabilities_are_rejected[probabilities1]" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:243: in test_invalid_or_incomplete_scenario_probabilities_are_rejected
+    with pytest.raises(ValueError, match="probabilit"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_invalid_or_incomplete_scenario_probabilities_are_rejected[probabilities2]" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:243: in test_invalid_or_incomplete_scenario_probabilities_are_rejected
+    with pytest.raises(ValueError, match="probabilit"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_invalid_or_incomplete_scenario_probabilities_are_rejected[probabilities3]" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:243: in test_invalid_or_incomplete_scenario_probabilities_are_rejected
+    with pytest.raises(ValueError, match="probabilit"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_explicit_probabilities_and_unknown_scenario_do_not_create_false_expectation" time="0.001"><failure message="KeyError: 'expected_savings'">tests\test_economics_audit.py:251: in test_explicit_probabilities_and_unknown_scenario_do_not_create_false_expectation
+    assert out["expected_savings"]["amount"] == "162.5"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'expected_savings'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_disjoint_parts_match_direct_day_and_windows_are_not_days" time="0.001"><failure message="KeyError: 'evaluation_mode'">tests\test_economics_audit.py:269: in test_disjoint_parts_match_direct_day_and_windows_are_not_days
+    assert out["evaluation_mode"] == "fixture" and out["annualized"] is False
+           ^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'evaluation_mode'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_boundary_event_is_counted_once_and_timezones_are_consistent" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:288: in test_boundary_event_is_counted_once_and_timezones_are_consistent
+    with pytest.raises(ValueError, match="timezone"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_day_aggregation_requires_one_cost_scope_and_no_output_aliasing" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tests\test_economics_audit.py:295: in test_day_aggregation_requires_one_cost_scope_and_no_output_aliasing
+    with pytest.raises(ValueError, match="scope"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.test_economics_audit" name="test_day_summary_does_not_alias_input_results" time="0.001"><failure message="AssertionError: assert 'bad' == '70'&#10;  &#10;  - 70&#10;  + bad">tests\test_economics_audit.py:303: in test_day_summary_does_not_alias_input_results
+    assert first["articles"][0]["savings"] == "70"
+E   AssertionError: assert 'bad' == '70'
+E     
+E     - 70
+E     + bad</failure></testcase><testcase classname="tests.test_economics_audit" name="test_all_photo_rules_eo_and_history_remain_scoped" time="0.001"><failure message="KeyError: 'upper_is_operating_target'">tests\test_economics_audit.py:320: in test_all_photo_rules_eo_and_history_remain_scoped
+    assert eo["upper_is_operating_target"] is False and eo["depot_time_accounting"] == "unknown"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'upper_is_operating_target'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_failed_cli_replaces_stale_success_with_explicit_failure" time="0.164"><failure message="assert (1 != 0 and 'finite' in 'Traceback (most recent call last):\n  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main\n  File &quot;&lt;frozen runpy&gt;...economics.py&quot;, line 26, in decimal\n    raise ValueError(&quot;number must be finite&quot;)\nValueError: number must be finite\n' and 'Traceback' not in 'Traceback (... be finite\n'&#10; +  where 1 = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...conomics.py&quot;, line 26, in decimal\n    raise ValueError(&quot;number must be finite&quot;)\nValueError: number must be finite\n').returncode&#10; +  and   'Traceback (most recent call last):\n  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main\n  File &quot;&lt;frozen runpy&gt;...economics.py&quot;, line 26, in decimal\n    raise ValueError(&quot;number must be finite&quot;)\nValueError: number must be finite\n' = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...conomics.py&quot;, line 26, in decimal\n    raise ValueError(&quot;number must be finite&quot;)\nValueError: number must be finite\n').stderr&#10;  &#10;  'Traceback' is contained here:&#10;    Traceback (most recent call last):&#10;  ? +++++++++&#10;      File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main&#10;      File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code&#10;      File &quot;C:\Users\lesha\HackathonSPB\economics.py&quot;, line 591, in &lt;module&gt;...&#10;  &#10;  ...Full output truncated (14 lines hidden), use '-vv' to show)">tests\test_economics_audit.py:341: in test_failed_cli_replaces_stale_success_with_explicit_failure
+    assert failed.returncode != 0 and "finite" in failed.stderr and "Traceback" not in failed.stderr
+E   assert (1 != 0 and 'finite' in 'Traceback (most recent call last):\n  File "&lt;frozen runpy&gt;", line 198, in _run_module_as_main\n  File "&lt;frozen runpy&gt;...economics.py", line 26, in decimal\n    raise ValueError("number must be finite")\nValueError: number must be finite\n' and 'Traceback' not in 'Traceback (... be finite\n'
+E    +  where 1 = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...conomics.py", line 26, in decimal\n    raise ValueError("number must be finite")\nValueError: number must be finite\n').returncode
+E    +  and   'Traceback (most recent call last):\n  File "&lt;frozen runpy&gt;", line 198, in _run_module_as_main\n  File "&lt;frozen runpy&gt;...economics.py", line 26, in decimal\n    raise ValueError("number must be finite")\nValueError: number must be finite\n' = CompletedProcess(args=['C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe', '-m', 'economics', 'compare', '--...conomics.py", line 26, in decimal\n    raise ValueError("number must be finite")\nValueError: number must be finite\n').stderr
+E     
+E     'Traceback' is contained here:
+E       Traceback (most recent call last):
+E     ? +++++++++
+E         File "&lt;frozen runpy&gt;", line 198, in _run_module_as_main
+E         File "&lt;frozen runpy&gt;", line 88, in _run_code
+E         File "C:\Users\lesha\HackathonSPB\economics.py", line 591, in &lt;module&gt;...
+E     
+E     ...Full output truncated (14 lines hidden), use '-vv' to show)</failure></testcase><testcase classname="tests.test_economics_audit" name="test_fresh_output_reproducibility_and_human_table_agree" time="0.360"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\lesha\\AppData\\Local\\Temp\\pytest-of-lesha\\pytest-123\\test_fresh_output_reproducibil0\\first\\summary.md'">tests\test_economics_audit.py:354: in test_fresh_output_reproducibility_and_human_table_agree
+    table = (folders[0] / "summary.md").read_text(encoding="utf-8")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\pathlib.py:1013: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\lesha\\AppData\\Local\\Temp\\pytest-of-lesha\\pytest-123\\test_fresh_output_reproducibil0\\first\\summary.md'</failure></testcase><testcase classname="tests.test_economics_audit" name="test_failed_rebuild_invalidates_previous_manifest" time="0.025"><failure message="KeyError: 'status'">tests\test_economics_audit.py:383: in test_failed_rebuild_invalidates_previous_manifest
+    assert json.loads((output / "build_manifest.json").read_text())["status"] == "error"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'status'</failure></testcase></testsuite></testsuites>

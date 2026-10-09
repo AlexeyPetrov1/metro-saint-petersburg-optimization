@@ -1,0 +1,586 @@
+{
+  "evaluation_mode": "observed_aggregate",
+  "line_id": 1,
+  "maintenance_history_status": "unknown",
+  "model_version": "economics-v1.1",
+  "periods": [
+    {
+      "cash_amount": null,
+      "cash_status": "unknown",
+      "checks": {
+        "car_km_total_delta": "0",
+        "reported_train_km_x8_minus_passenger_car_km": "532.8",
+        "train_hours_delta": "0.03"
+      },
+      "note": "Depot/test mileage are subsets of zero mileage. Stopped hours are not assumed to be depot standby.",
+      "period_end": "2025-12-31",
+      "period_label": "выполнения графика движения поездов за 2025 ГОД",
+      "period_start": "2025-01-01",
+      "quantities": {
+        "depot_car_km_subset": {
+          "amount": "100556.5",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег депо (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "100 556,5",
+          "source": "D10",
+          "source_locator": "HTML tr[16]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "entry_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "moving_hours": {
+          "amount": "181032.04",
+          "applicability": "applicable",
+          "original_label": "Поездо/час в движении (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "181 032,04",
+          "source": "D10",
+          "source_locator": "HTML tr[19]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_car_km": {
+          "amount": "3049454.71",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег(в/км) , в том числе",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "3 049 454,71",
+          "source": "D10",
+          "source_locator": "HTML tr[15]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "paid_person_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "person_h"
+        },
+        "passenger_car_km": {
+          "amount": "65459168",
+          "applicability": "applicable",
+          "original_label": "с пассажирами (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "65 459 168",
+          "source": "D10",
+          "source_locator": "HTML tr[14]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "passenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "purchased_energy": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "kWh"
+        },
+        "reported_train_hours": {
+          "amount": "219275.97",
+          "applicability": "applicable",
+          "original_label": "Поездо/час (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "219 275,97",
+          "source": "D10",
+          "source_locator": "HTML tr[18]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "reported_train_km": {
+          "amount": "8182462.6",
+          "applicability": "applicable",
+          "original_label": "Поездо/км (п/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "8 182 462,6",
+          "source": "D10",
+          "source_locator": "HTML tr[12]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "standby_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_h"
+        },
+        "stopped_hours": {
+          "amount": "38243.96",
+          "applicability": "applicable",
+          "original_label": "Простой (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "38 243,96",
+          "source": "D10",
+          "source_locator": "HTML tr[20]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "test_car_km_subset": {
+          "amount": "269523.33",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег обкатки (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "269 523,33",
+          "source": "D10",
+          "source_locator": "HTML tr[17]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "total_car_km": {
+          "amount": "68508622.71",
+          "applicability": "applicable",
+          "original_label": "Общие ваг/км (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "68 508 622,71",
+          "source": "D10",
+          "source_locator": "HTML tr[13]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1.xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1DBYSUeZVQao_1cFq3mQkODngpUrAdKy3/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "withdrawal_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        }
+      },
+      "rate_source": "not supplied",
+      "series_breakdown": null
+    },
+    {
+      "cash_amount": null,
+      "cash_status": "unknown",
+      "checks": {
+        "car_km_total_delta": "0",
+        "reported_train_km_x8_minus_passenger_car_km": "0",
+        "train_hours_delta": "0.02"
+      },
+      "note": "Depot/test mileage are subsets of zero mileage. Stopped hours are not assumed to be depot standby.",
+      "period_end": "2026-06-30",
+      "period_label": "выполнения графика движения поездов за II квартал 2026 года",
+      "period_start": "2026-04-01",
+      "quantities": {
+        "depot_car_km_subset": {
+          "amount": "25188",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег депо (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "25 188",
+          "source": "D08",
+          "source_locator": "HTML tr[16]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "entry_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "moving_hours": {
+          "amount": "46881.8",
+          "applicability": "applicable",
+          "original_label": "Поездо/час в движении (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "46 881,8",
+          "source": "D08",
+          "source_locator": "HTML tr[19]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_car_km": {
+          "amount": "992335.22",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег(в/км) , в том числе",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "992 335,22",
+          "source": "D08",
+          "source_locator": "HTML tr[15]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "paid_person_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "person_h"
+        },
+        "passenger_car_km": {
+          "amount": "16657934.4",
+          "applicability": "applicable",
+          "original_label": "с пассажирами (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "16 657 934,4",
+          "source": "D08",
+          "source_locator": "HTML tr[14]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "passenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "purchased_energy": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "kWh"
+        },
+        "reported_train_hours": {
+          "amount": "56504.47",
+          "applicability": "applicable",
+          "original_label": "Поездо/час (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "56 504,47",
+          "source": "D08",
+          "source_locator": "HTML tr[18]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "reported_train_km": {
+          "amount": "2082241.8",
+          "applicability": "applicable",
+          "original_label": "Поездо/км (п/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "2 082 241,8",
+          "source": "D08",
+          "source_locator": "HTML tr[12]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "standby_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_h"
+        },
+        "stopped_hours": {
+          "amount": "9622.69",
+          "applicability": "applicable",
+          "original_label": "Простой (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "9 622,69",
+          "source": "D08",
+          "source_locator": "HTML tr[20]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "test_car_km_subset": {
+          "amount": "70547.12",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег обкатки (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "70 547,12",
+          "source": "D08",
+          "source_locator": "HTML tr[17]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "total_car_km": {
+          "amount": "17650269.62",
+          "applicability": "applicable",
+          "original_label": "Общие ваг/км (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "17 650 269,62",
+          "source": "D08",
+          "source_locator": "HTML tr[13]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (2).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1RH2kw2e2NLvxa6byMo82F4-h1eD1UiXa/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "withdrawal_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        }
+      },
+      "rate_source": "not supplied",
+      "series_breakdown": null
+    },
+    {
+      "cash_amount": null,
+      "cash_status": "unknown",
+      "checks": {
+        "car_km_total_delta": "0",
+        "reported_train_km_x8_minus_passenger_car_km": "12.2",
+        "train_hours_delta": "-0.02"
+      },
+      "note": "Depot/test mileage are subsets of zero mileage. Stopped hours are not assumed to be depot standby.",
+      "period_end": "2026-09-30",
+      "period_label": "выполнения графика движения поездов за III квартал 2026 года",
+      "period_start": "2026-07-01",
+      "quantities": {
+        "depot_car_km_subset": {
+          "amount": "24767.4",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег депо (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "24 767,4",
+          "source": "D09",
+          "source_locator": "HTML tr[16]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "entry_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        },
+        "moving_hours": {
+          "amount": "46276.33",
+          "applicability": "applicable",
+          "original_label": "Поездо/час в движении (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "46 276,33",
+          "source": "D09",
+          "source_locator": "HTML tr[19]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_car_km": {
+          "amount": "987646.53",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег(в/км) , в том числе",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "987 646,53",
+          "source": "D09",
+          "source_locator": "HTML tr[15]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "nonpassenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "paid_person_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "person_h"
+        },
+        "passenger_car_km": {
+          "amount": "16332207.8",
+          "applicability": "applicable",
+          "original_label": "с пассажирами (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "16 332 207,8",
+          "source": "D09",
+          "source_locator": "HTML tr[14]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "passenger_train_km": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_km"
+        },
+        "purchased_energy": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "kWh"
+        },
+        "reported_train_hours": {
+          "amount": "55394.89",
+          "applicability": "applicable",
+          "original_label": "Поездо/час (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "55 394,89",
+          "source": "D09",
+          "source_locator": "HTML tr[18]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "reported_train_km": {
+          "amount": "2041527.5",
+          "applicability": "applicable",
+          "original_label": "Поездо/км (п/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "2 041 527,5",
+          "source": "D09",
+          "source_locator": "HTML tr[12]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "standby_hours": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "train_h"
+        },
+        "stopped_hours": {
+          "amount": "9118.54",
+          "applicability": "applicable",
+          "original_label": "Простой (п/час)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "9 118,54",
+          "source": "D09",
+          "source_locator": "HTML tr[20]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "train_h",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "test_car_km_subset": {
+          "amount": "68557.59",
+          "applicability": "applicable",
+          "original_label": "нулевой пробег обкатки (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "68 557,59",
+          "source": "D09",
+          "source_locator": "HTML tr[17]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "total_car_km": {
+          "amount": "17319854.33",
+          "applicability": "applicable",
+          "original_label": "Общие ваг/км (в/км)",
+          "quality_flag": "source_discrepancy",
+          "raw_value": "17 319 854,33",
+          "source": "D09",
+          "source_locator": "HTML tr[13]/td[2]",
+          "source_path": "data/raw/metro/Данные Сириус/2.ОСНОВНЫЕ ПОКАЗАТЕЛИ выполнения ГД/MO1 (1).xls",
+          "source_url": "https://docs.google.com/spreadsheets/d/1cyleLE3xwr4f2A6VlV5yJrMZpwalhLnc/edit?usp=drivesdk&ouid=107442089860481415862&rtpof=true&sd=true",
+          "status": "confirmed",
+          "unit": "car_km",
+          "verification_scope": "value transcribed from MO-I; source inconsistencies retained"
+        },
+        "withdrawal_events": {
+          "amount": null,
+          "applicability": "applicable",
+          "source": "not separately supplied by MO-I",
+          "status": "unknown",
+          "unit": "event"
+        }
+      },
+      "rate_source": "not supplied",
+      "series_breakdown": null
+    }
+  ],
+  "release_authorized": false,
+  "schema_version": "1.0"
+}

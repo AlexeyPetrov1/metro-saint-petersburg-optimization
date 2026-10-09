@@ -1,0 +1,11 @@
+{
+  "source": "data\\processed\\metro50_full_day_20261009_v4\\reference",
+  "end": 72000,
+  "partial": false,
+  "forecasts": 0,
+  "decisions": 0,
+  "payload_bytes": 8772444,
+  "completed": 758936,
+  "entered": 758936,
+  "purpose": "read-only full-day compatibility, not current ensemble result"
+}

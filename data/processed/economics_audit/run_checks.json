@@ -1,0 +1,87 @@
+{
+  "commands": [
+    {
+      "args": [
+        "-m",
+        "metro_data",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"validation_passed\": [\n    \"unique keys\",\n    \"nonnegative integral counts\",\n    \"timezone and interval grid\",\n    \"midnight and month boundary\",\n    \"96 intervals and expected vestibules/stations\",\n    \"explicit station mapping\",\n    \"missing values distinct from zero\",\n    \"station sums and completeness recomputed\"\n  ],\n  \"input_and_output_hashes\": \"pass\",\n  \"source_discrepancies_preserved\": 5,\n  \"tables\": {\n    \"entries_station_15m\": {\n      \"calendar_days\": 124,\n      \"interval_end_max\": \"2026-10-01T03:00:00+03:00\",\n      \"interval_start_max\": \"2026-10-01T02:45:00+03:00\",\n      \"interval_start_min\": \"2026-02-01T03:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 218880,\n      \"service_date_max\": \"2026-09-30\",\n      \"service_date_min\": \"2026-02-01\",\n      \"service_days\": 120,\n      \"stations\": 19,\n      \"total_entries\": 75929175,\n      \"vestibules\": null,\n      \"zeros\": 37365\n    },\n    \"entries_vestibule_15m\": {\n      \"calendar_days\": 124,\n      \"interval_end_max\": \"2026-10-01T03:00:00+03:00\",\n      \"interval_start_max\": \"2026-10-01T02:45:00+03:00\",\n      \"interval_start_min\": \"2026-02-01T03:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 276480,\n      \"service_date_max\": \"2026-09-30\",\n      \"service_date_min\": \"2026-02-01\",\n      \"service_days\": 120,\n      \"stations\": 19,\n      \"total_entries\": 75929175,\n      \"vestibules\": 24,\n      \"zeros\": 50706\n    },\n    \"entries_vestibule_1h\": {\n      \"calendar_days\": 273,\n      \"interval_end_max\": \"2026-09-30T01:00:00+03:00\",\n      \"interval_start_max\": \"2026-09-30T00:00:00+03:00\",\n      \"interval_start_min\": \"2026-01-01T00:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 150167,\n      \"service_date_max\": \"2026-09-29\",\n      \"service_date_min\": \"2025-12-31\",\n      \"service_days\": 273,\n      \"stations\": 18,\n      \"total_entries\": 164877135,\n      \"vestibules\": 23,\n      \"zeros\": 24022\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "metro_data",
+        "check",
+        "--output",
+        "data/processed/metro_repeat"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"validation_passed\": [\n    \"unique keys\",\n    \"nonnegative integral counts\",\n    \"timezone and interval grid\",\n    \"midnight and month boundary\",\n    \"96 intervals and expected vestibules/stations\",\n    \"explicit station mapping\",\n    \"missing values distinct from zero\",\n    \"station sums and completeness recomputed\"\n  ],\n  \"input_and_output_hashes\": \"pass\",\n  \"source_discrepancies_preserved\": 5,\n  \"tables\": {\n    \"entries_station_15m\": {\n      \"calendar_days\": 124,\n      \"interval_end_max\": \"2026-10-01T03:00:00+03:00\",\n      \"interval_start_max\": \"2026-10-01T02:45:00+03:00\",\n      \"interval_start_min\": \"2026-02-01T03:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 218880,\n      \"service_date_max\": \"2026-09-30\",\n      \"service_date_min\": \"2026-02-01\",\n      \"service_days\": 120,\n      \"stations\": 19,\n      \"total_entries\": 75929175,\n      \"vestibules\": null,\n      \"zeros\": 37365\n    },\n    \"entries_vestibule_15m\": {\n      \"calendar_days\": 124,\n      \"interval_end_max\": \"2026-10-01T03:00:00+03:00\",\n      \"interval_start_max\": \"2026-10-01T02:45:00+03:00\",\n      \"interval_start_min\": \"2026-02-01T03:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 276480,\n      \"service_date_max\": \"2026-09-30\",\n      \"service_date_min\": \"2026-02-01\",\n      \"service_days\": 120,\n      \"stations\": 19,\n      \"total_entries\": 75929175,\n      \"vestibules\": 24,\n      \"zeros\": 50706\n    },\n    \"entries_vestibule_1h\": {\n      \"calendar_days\": 273,\n      \"interval_end_max\": \"2026-09-30T01:00:00+03:00\",\n      \"interval_start_max\": \"2026-09-30T00:00:00+03:00\",\n      \"interval_start_min\": \"2026-01-01T00:00:00+03:00\",\n      \"missing_values\": 0,\n      \"rows\": 150167,\n      \"service_date_max\": \"2026-09-29\",\n      \"service_date_min\": \"2025-12-31\",\n      \"service_days\": 273,\n      \"stations\": 18,\n      \"total_entries\": 164877135,\n      \"vestibules\": 23,\n      \"zeros\": 24022\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "economics",
+        "prepare",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_first"
+      ],
+      "exit_code": 0,
+      "stdout": "Prepared 8 economic report files: C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_first\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "economics",
+        "check",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_first"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"files\": 8,\n  \"hashes\": \"pass\",\n  \"model_version\": \"economics-v1.1\",\n  \"fixture_is_simulator_integration\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "economics",
+        "prepare",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_repeat"
+      ],
+      "exit_code": 0,
+      "stdout": "Prepared 8 economic report files: C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_repeat\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "economics",
+        "check",
+        "--output",
+        "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\run_repeat"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"files\": 8,\n  \"hashes\": \"pass\",\n  \"model_version\": \"economics-v1.1\",\n  \"fixture_is_simulator_integration\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=C:\\Users\\lesha\\HackathonSPB\\data\\processed\\economics_audit\\after.xml"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 69%]\n................................                                         [100%]\n104 passed in 5.48s\n",
+      "stderr": ""
+    }
+  ],
+  "fresh_output_directories": true,
+  "economic_files_identical": 8
+}

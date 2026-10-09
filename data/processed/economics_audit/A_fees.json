@@ -1,0 +1,304 @@
+{
+  "articles": [
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": "7000",
+        "currency": "RUB",
+        "known_subtotal": "7000",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "1000",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "kWh"
+        },
+        "rate": "7",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/kWh",
+        "reason": null,
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": "5950",
+        "currency": "RUB",
+        "known_subtotal": "5950",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "850",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "kWh"
+        },
+        "rate": "7",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/kWh",
+        "reason": null,
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "traction"
+      ],
+      "name": "energy",
+      "quantity_key": "energy",
+      "savings": "1050",
+      "status": "assumed"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": "0",
+        "currency": "RUB",
+        "known_subtotal": "0",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "0",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "event"
+        },
+        "rate": "100",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/event",
+        "reason": "known_zero",
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": "100",
+        "currency": "RUB",
+        "known_subtotal": "100",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "1",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "event"
+        },
+        "rate": "100",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/event",
+        "reason": null,
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "fee1"
+      ],
+      "name": "fee1",
+      "quantity_key": "fee1",
+      "savings": "-100",
+      "status": "assumed"
+    },
+    {
+      "accounting_kind": "cash",
+      "baseline": {
+        "amount": "0",
+        "currency": "RUB",
+        "known_subtotal": "0",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "0",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "event"
+        },
+        "rate": "200",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/event",
+        "reason": "known_zero",
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "candidate": {
+        "amount": "200",
+        "currency": "RUB",
+        "known_subtotal": "200",
+        "period": {
+          "end": "2026-05-01T06:00:00+03:00",
+          "start": "2026-05-01T03:00:00+03:00"
+        },
+        "quantity": {
+          "amount": "1",
+          "applicability": "applicable",
+          "source": "independent fixture",
+          "status": "assumed",
+          "unit": "event"
+        },
+        "rate": "200",
+        "rate_source": "independent fixture",
+        "rate_status": "assumed",
+        "rate_unit": "RUB/event",
+        "reason": null,
+        "status": "assumed",
+        "vat_basis": "unspecified"
+      },
+      "covered_components": [
+        "fee2"
+      ],
+      "name": "fee2",
+      "quantity_key": "fee2",
+      "savings": "-200",
+      "status": "assumed"
+    }
+  ],
+  "boundary": {
+    "closure_end": "2026-05-01T06:00:00+03:00",
+    "obligations_closed": true,
+    "period_end": "2026-05-01T05:00:00+03:00",
+    "period_start": "2026-05-01T03:00:00+03:00"
+  },
+  "cost_scope": "configured_articles_only",
+  "demand_id": "audit-demand",
+  "evaluation_mode": "fixture",
+  "evaluation_model_version": "fixture-v1",
+  "events": {
+    "baseline": [],
+    "candidate": []
+  },
+  "groups": {
+    "capital": {
+      "baseline": "0",
+      "candidate": "0",
+      "currency": "RUB",
+      "known_subtotal_baseline": "0",
+      "known_subtotal_candidate": "0",
+      "savings": "0",
+      "savings_pct": null,
+      "status": "confirmed",
+      "vat_basis": null
+    },
+    "cash": {
+      "baseline": "7000",
+      "candidate": "6250",
+      "currency": "RUB",
+      "known_subtotal_baseline": "7000",
+      "known_subtotal_candidate": "6250",
+      "savings": "750",
+      "savings_pct": "10.71428571428571428571428571",
+      "status": "assumed",
+      "vat_basis": "unspecified"
+    },
+    "resource_accrual": {
+      "baseline": "0",
+      "candidate": "0",
+      "currency": "RUB",
+      "known_subtotal_baseline": "0",
+      "known_subtotal_candidate": "0",
+      "savings": "0",
+      "savings_pct": null,
+      "status": "confirmed",
+      "vat_basis": null
+    }
+  },
+  "initial_state_id": "audit-state",
+  "missing_required_articles": [],
+  "model_version": "economics-v1.1",
+  "natural_deltas": {
+    "energy": {
+      "baseline": {
+        "amount": "1000",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "kWh"
+      },
+      "candidate": {
+        "amount": "850",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "kWh"
+      },
+      "delta": "150",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "kWh"
+    },
+    "fee1": {
+      "baseline": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": "1",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "event"
+      },
+      "delta": "-1",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    },
+    "fee2": {
+      "baseline": {
+        "amount": "0",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "event"
+      },
+      "candidate": {
+        "amount": "1",
+        "applicability": "applicable",
+        "source": "independent fixture",
+        "status": "assumed",
+        "unit": "event"
+      },
+      "delta": "-1",
+      "period": {
+        "end": "2026-05-01T06:00:00+03:00",
+        "start": "2026-05-01T03:00:00+03:00"
+      },
+      "unit": "event"
+    }
+  },
+  "operational_status": {
+    "baseline": "unknown",
+    "candidate": "unknown"
+  },
+  "plans": {
+    "baseline": "baseline",
+    "candidate": "baseline"
+  },
+  "release_authorized": false,
+  "required_cash_articles": [],
+  "schema_version": "1.1",
+  "status": "assumed"
+}

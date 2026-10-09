@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "source": "Educational five individual arrivals at second zero; explicit A-B rides, not inferred OD",
+  "arrivals": [
+    {"passenger_id": "P1", "arrival_second": 0, "route": ["AB"]},
+    {"passenger_id": "P2", "arrival_second": 0, "route": ["AB"]},
+    {"passenger_id": "P3", "arrival_second": 0, "route": ["AB"]},
+    {"passenger_id": "P4", "arrival_second": 0, "route": ["AB"]},
+    {"passenger_id": "P5", "arrival_second": 0, "route": ["AB"]}
+  ],
+  "capacities": [
+    {"train_id": "T1", "max_capacity": 3, "normal_threshold": 2, "source": "Educational whole-train capacity=3 and normal threshold=2; regulatory applicability unknown"},
+    {"train_id": "T2", "max_capacity": 3, "normal_threshold": 2, "source": "Educational whole-train capacity=3 and normal threshold=2; regulatory applicability unknown"}
+  ]
+}

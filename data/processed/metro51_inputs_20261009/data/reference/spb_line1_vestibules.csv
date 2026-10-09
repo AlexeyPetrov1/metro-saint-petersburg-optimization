@@ -1,0 +1,24 @@
+vestibule_id,raw_name,station_id,vestibule_no,closes_early,first_hour,last_hour
+devyatkino_1,Девяткино I,devyatkino,1,false,5,0
+devyatkino_2,Девяткино II,devyatkino,2,false,5,0
+grazhdansky_prospekt_1,Гражданский,grazhdansky_prospekt,1,false,5,0
+akademicheskaya_1,Академическая,akademicheskaya,1,false,5,0
+politekhnicheskaya_1,Политехническая,politekhnicheskaya,1,false,5,0
+ploshchad_muzhestva_1,пл.Мужества,ploshchad_muzhestva,1,false,5,0
+lesnaya_1,Лесная,lesnaya,1,false,5,0
+vyborgskaya_1,Выборгская,vyborgskaya,1,false,5,0
+ploshchad_lenina_1,пл.Ленина-1,ploshchad_lenina,1,false,5,0
+ploshchad_lenina_2,пл.Ленина-2,ploshchad_lenina,2,true,5,22
+chernyshevskaya_1,Чернышевская,chernyshevskaya,1,false,5,0
+vosstaniya_1,пл.Восстания-1,vosstaniya,1,false,5,0
+vosstaniya_2,пл.Восстания-2,vosstaniya,2,false,5,0
+vladimirskaya_1,Владимирская,vladimirskaya,1,false,5,0
+pushkinskaya_1,Пушкинская,pushkinskaya,1,false,5,0
+baltiyskaya_1,Балтийская,baltiyskaya,1,false,5,0
+narvskaya_1,Нарвская,narvskaya,1,false,5,0
+kirovsky_zavod_1,Кировский завод,kirovsky_zavod,1,false,5,0
+avtovo_1,Автово,avtovo,1,false,5,0
+leninsky_prospekt_1,Ленинский пр.-1,leninsky_prospekt,1,false,5,0
+leninsky_prospekt_2,Ленинский пр.-2,leninsky_prospekt,2,true,6,21
+prospekt_veteranov_1,пр. Ветеранов-1,prospekt_veteranov,1,false,5,0
+prospekt_veteranov_2,пр. Ветеранов-2,prospekt_veteranov,2,false,5,0

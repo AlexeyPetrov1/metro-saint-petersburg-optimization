@@ -1,0 +1,34 @@
+title: "Прогноз пассажиропотока 1 линии метро Санкт-Петербурга"
+subtitle: "Отчёт по ML-части проекта"
+author: "Команда проекта, ML-часть"
+date: "Октябрь 2026"
+lang: ru
+documentclass: article
+papersize: a4
+fontsize: 11pt
+geometry: "top=2cm, bottom=2.2cm, left=2.2cm, right=2cm"
+mainfont: "PT Serif"
+sansfont: "PT Sans"
+monofont: "PT Mono"
+linestretch: 1.03
+numbersections: true
+toc: true
+toc-depth: 2
+toc-title: "Содержание"
+colorlinks: true
+linkcolor: "black"
+urlcolor: "blue"
+toccolor: "black"
+# pandoc-crossref: подписи и ссылки по-русски, нумерация по разделам (3.2)
+figureTitle: "Рисунок"
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+figPrefix: "рис."
+tblPrefix: "табл."
+eqnPrefix: "формула"
+secPrefix: "раздел"
+titleDelim: " —"
+chapters: true
+chaptersDepth: 1
+linkReferences: true
+nameInLink: false

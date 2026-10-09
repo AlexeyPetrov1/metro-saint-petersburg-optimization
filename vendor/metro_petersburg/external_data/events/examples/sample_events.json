@@ -1,0 +1,534 @@
+[
+  {
+    "id": "today",
+    "text": "Сегодня в 19:30 на Газпром Арене матч, ожидается 50 тысяч зрителей.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Матч",
+          "event_type": "sport_event",
+          "start_time": "2026-10-07T19:30:00+03:00",
+          "end_time": null,
+          "location_name": "Газпром Арена",
+          "address": null,
+          "expected_people": 50000,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Сегодня в 19:30 на Газпром Арене матч, ожидается 50 тысяч зрителей."
+        }
+      ]
+    }
+  },
+  {
+    "id": "date_without_time",
+    "text": "8 октября в Ледовом дворце состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": null,
+          "end_time": null,
+          "location_name": "Ледовый дворец",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "8 октября в Ледовом дворце состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "vague_evening",
+    "text": "Завтра вечером пройдет фестиваль на Дворцовой площади.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Фестиваль",
+          "event_type": "festival",
+          "start_time": null,
+          "end_time": null,
+          "location_name": "Дворцовая площадь",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Завтра вечером пройдет фестиваль на Дворцовой площади."
+        }
+      ]
+    }
+  },
+  {
+    "id": "non_event",
+    "text": "В городе обновили статистику благоустройства за прошлый год.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": false,
+      "events": []
+    }
+  },
+  {
+    "id": "no_date",
+    "text": "В Ледовом дворце состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": null,
+          "end_time": null,
+          "location_name": "Ледовый дворец",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "В Ледовом дворце состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "no_location",
+    "text": "8 октября 2026 года в 20:00 состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-08T20:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "8 октября 2026 года в 20:00 состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "multiple",
+    "text": "Сегодня в 18:00 концерт в клубе. Завтра в 12:00 фестиваль в парке.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-07T18:00:00+03:00",
+          "end_time": null,
+          "location_name": "Клуб",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Сегодня в 18:00 концерт в клубе."
+        },
+        {
+          "event_name": "Фестиваль",
+          "event_type": "festival",
+          "start_time": "2026-10-08T12:00:00+03:00",
+          "end_time": null,
+          "location_name": "Парк",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Завтра в 12:00 фестиваль в парке."
+        }
+      ]
+    }
+  },
+  {
+    "id": "rescheduled",
+    "text": "Концерт 8 октября в 19:00 перенесён на 10 октября 2026 года в 20:00.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-10T20:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Концерт 8 октября в 19:00 перенесён на 10 октября 2026 года в 20:00."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cancelled",
+    "text": "Концерт 8 октября 2026 года в 19:00 отменён.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": false,
+      "events": []
+    }
+  },
+  {
+    "id": "tomorrow",
+    "text": "Завтра в 19:00 в Ледовом дворце состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-08T19:00:00+03:00",
+          "end_time": null,
+          "location_name": "Ледовый дворец",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Завтра в 19:00 в Ледовом дворце состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "date_without_year",
+    "text": "8 октября в 19:00 состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-08T19:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "8 октября в 19:00 состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "time_without_date",
+    "text": "В 19:00 состоится концерт в клубе.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": null,
+          "end_time": null,
+          "location_name": "Клуб",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "В 19:00 состоится концерт в клубе."
+        }
+      ]
+    }
+  },
+  {
+    "id": "relative_without_publication",
+    "text": "Завтра в 19:00 состоится концерт.",
+    "published_at": null,
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": null,
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Завтра в 19:00 состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "explicit_date",
+    "text": "8 октября 2026 года в 19:00 состоится концерт.",
+    "published_at": null,
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-08T19:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "8 октября 2026 года в 19:00 состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "rescheduled_unknown",
+    "text": "Концерт 8 октября в 19:00 перенесён, новую дату объявят позже.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": null,
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "Концерт 8 октября в 19:00 перенесён, новую дату объявят позже."
+        }
+      ]
+    }
+  },
+  {
+    "id": "past",
+    "text": "6 октября 2026 года в 19:00 прошёл концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-06T19:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "6 октября 2026 года в 19:00 прошёл концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "friday",
+    "text": "В пятницу в 19:00 состоится концерт.",
+    "published_at": "2026-10-07T11:30:00+03:00",
+    "source_type": "telegram",
+    "source_url": "https://t.me/example/42",
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-09T19:00:00+03:00",
+          "end_time": null,
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": 0.95,
+          "source_fragment": "В пятницу в 19:00 состоится концерт."
+        }
+      ]
+    }
+  },
+  {
+    "id": "separate_concert_occurrences",
+    "text": "Сергей Лазарев выступит на СКА Арене 9 октября в 20:00. Концерты также пройдут 10 и 11 октября в 19:00.",
+    "published_at": "2026-10-07T12:00:00+03:00",
+    "source_type": "telegram",
+    "source_url": null,
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Сергей Лазарев",
+          "event_type": "concert",
+          "start_time": "2026-10-09T20:00:00+03:00",
+          "end_time": null,
+          "location_name": "СКА Арена",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": null,
+          "source_fragment": "Сергей Лазарев выступит на СКА Арене 9 октября в 20:00."
+        },
+        {
+          "event_name": "Сергей Лазарев",
+          "event_type": "concert",
+          "start_time": "2026-10-10T19:00:00+03:00",
+          "end_time": null,
+          "location_name": "СКА Арена",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": null,
+          "source_fragment": "Концерты также пройдут 10 и 11 октября в 19:00."
+        },
+        {
+          "event_name": "Сергей Лазарев",
+          "event_type": "concert",
+          "start_time": "2026-10-11T19:00:00+03:00",
+          "end_time": null,
+          "location_name": "СКА Арена",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": null,
+          "source_fragment": "Концерты также пройдут 10 и 11 октября в 19:00."
+        }
+      ]
+    }
+  },
+  {
+    "id": "match_unspecified_sport",
+    "text": "12 октября в 19:30 на СКА Арене пройдет матч Шанхай Дрэгонс — Динамо Минск",
+    "published_at": "2026-10-07T12:00:00+03:00",
+    "source_type": "telegram",
+    "source_url": null,
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Шанхай Дрэгонс — Динамо Минск",
+          "event_type": "sport_event",
+          "start_time": "2026-10-12T19:30:00+03:00",
+          "end_time": null,
+          "location_name": "СКА Арена",
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": null,
+          "source_fragment": "12 октября в 19:30 на СКА Арене пройдет матч Шанхай Дрэгонс — Динамо Минск"
+        }
+      ]
+    }
+  },
+  {
+    "id": "explicit_concert_end",
+    "text": "Концерт пройдет 12 октября с 19:00 до 22:30.",
+    "published_at": "2026-10-07T12:00:00+03:00",
+    "source_type": "telegram",
+    "source_url": null,
+    "response": {
+      "is_event": true,
+      "events": [
+        {
+          "event_name": "Концерт",
+          "event_type": "concert",
+          "start_time": "2026-10-12T19:00:00+03:00",
+          "end_time": "2026-10-12T22:30:00+03:00",
+          "location_name": null,
+          "address": null,
+          "expected_people": null,
+          "source_type": null,
+          "source_url": null,
+          "published_at": null,
+          "confidence": null,
+          "source_fragment": "Концерт пройдет 12 октября с 19:00 до 22:30."
+        }
+      ]
+    }
+  }
+]

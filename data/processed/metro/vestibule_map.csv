@@ -1,0 +1,25 @@
+local_station_key,station_name,quarter_hour_label,id_status,station_id,vestibule_id
+L1_01,Проспект Ветеранов,Пр.Ветеранов-1,proposed_not_operator_code,L1_01,V01
+L1_01,Проспект Ветеранов,Пр.Ветеранов-2,proposed_not_operator_code,L1_01,V02
+L1_02,Ленинский проспект,Ленинский пр.-1,proposed_not_operator_code,L1_02,V03
+L1_02,Ленинский проспект,Ленинский пр.-2,proposed_not_operator_code,L1_02,V04
+L1_03,Автово,Автово,proposed_not_operator_code,L1_03,V05
+L1_04,Кировский завод,Кировский завод,proposed_not_operator_code,L1_04,V06
+L1_05,Нарвская,Нарвская,proposed_not_operator_code,L1_05,V07
+L1_06,Балтийская,Балтийская,proposed_not_operator_code,L1_06,V08
+L1_07,Технологический институт,Технологический институт-1,proposed_not_operator_code,L1_07,V09
+L1_08,Пушкинская,Пушкинская,proposed_not_operator_code,L1_08,V10
+L1_09,Владимирская,Владимирская,proposed_not_operator_code,L1_09,V11
+L1_10,Площадь Восстания,Пл. Восстания-1,proposed_not_operator_code,L1_10,V12
+L1_10,Площадь Восстания,Пл. Восстания-2,proposed_not_operator_code,L1_10,V13
+L1_11,Чернышевская,Чернышевская,proposed_not_operator_code,L1_11,V14
+L1_12,Площадь Ленина,Пл.Ленина-1,proposed_not_operator_code,L1_12,V15
+L1_12,Площадь Ленина,Пл.Ленина-2,proposed_not_operator_code,L1_12,V16
+L1_13,Выборгская,Выборгская,proposed_not_operator_code,L1_13,V17
+L1_14,Лесная,Лесная,proposed_not_operator_code,L1_14,V18
+L1_15,Площадь Мужества,Пл. Мужества,proposed_not_operator_code,L1_15,V19
+L1_16,Политехническая,Политехническая,proposed_not_operator_code,L1_16,V20
+L1_17,Академическая,Академическая,proposed_not_operator_code,L1_17,V21
+L1_18,Гражданский проспект,Гражданский пр.,proposed_not_operator_code,L1_18,V22
+L1_19,Девяткино,Девяткино-2,proposed_not_operator_code,L1_19,V23
+L1_19,Девяткино,Девяткино-1,proposed_not_operator_code,L1_19,V24

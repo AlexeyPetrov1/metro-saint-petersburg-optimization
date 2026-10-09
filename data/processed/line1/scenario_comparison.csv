@@ -1,0 +1,4 @@
+scenario,turnstile_entries,platform_arrivals,approaching_end,boarded,completed,queue_end,onboard_end,waiting_passenger_seconds,mean_full_wait_seconds,p95_full_wait_seconds,max_total_queue,max_station_direction_queue,max_car_load,car_threshold_exceedance_observations,balance_passed,money_status
+S1,116588,117629,1336,117566,126082,555,14255,7560665,64.32374155793341612370923566,125,2904,1008,162,1326,True,unknown
+S2,116588,117629,1336,117548,126523,569,13184,7563310,64.34384251539796508660291966,125,2882,1008,187,2782,True,unknown
+S3,116588,117629,1336,117556,127851,563,19654,7591880,64.58709040797577324849433461,125,2900,1008,187,4592,True,unknown

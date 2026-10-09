@@ -1,0 +1,7 @@
+-r requirements-runtime.txt
+# Optional dependencies for the separately tested upstream suite.
+beautifulsoup4==4.15.0
+statsmodels==0.15.0
+catboost==1.2.10
+xgboost==3.4.1
+tqdm==4.70.1

@@ -1,0 +1,15 @@
+{
+  "all_constraints_verified": false,
+  "balances_passed": true,
+  "cycle_seconds": 5940,
+  "external_entries_identical_all_scenarios": true,
+  "headway_seconds": 135,
+  "individual_passenger_records_created": 0,
+  "minute_group_count": 4560,
+  "movement_continuity_passed": true,
+  "release_authorized": false,
+  "source_coverage_passed": true,
+  "source_entries_total_06_10": 199850,
+  "source_interval_totals_preserved": true,
+  "transport_work_identical_all_scenarios": true
+}

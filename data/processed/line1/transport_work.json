@@ -1,0 +1,1519 @@
+{
+  "full": [
+    {
+      "car_km": "1144.544",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.544",
+      "passenger_train_km": "143.068",
+      "state_seconds": {
+        "moving": 12300,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 440
+      },
+      "train_id": "T01",
+      "train_km": "143.068",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.696",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.696",
+      "passenger_train_km": "144.712",
+      "state_seconds": {
+        "moving": 12280,
+        "standby": 0,
+        "stop": 1680,
+        "turnaround": 440
+      },
+      "train_id": "T02",
+      "train_km": "144.712",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.688",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.688",
+      "passenger_train_km": "144.711",
+      "state_seconds": {
+        "moving": 12280,
+        "standby": 0,
+        "stop": 1680,
+        "turnaround": 440
+      },
+      "train_id": "T03",
+      "train_km": "144.711",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.68",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.68",
+      "passenger_train_km": "144.71",
+      "state_seconds": {
+        "moving": 12235,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 505
+      },
+      "train_id": "T04",
+      "train_km": "144.71",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.52",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.52",
+      "passenger_train_km": "143.065",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T05",
+      "train_km": "143.065",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.512",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.512",
+      "passenger_train_km": "143.064",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T06",
+      "train_km": "143.064",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.504",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.504",
+      "passenger_train_km": "143.063",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T07",
+      "train_km": "143.063",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.496",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.496",
+      "passenger_train_km": "143.062",
+      "state_seconds": {
+        "moving": 12195,
+        "standby": 0,
+        "stop": 1655,
+        "turnaround": 550
+      },
+      "train_id": "T08",
+      "train_km": "143.062",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.648",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.648",
+      "passenger_train_km": "144.706",
+      "state_seconds": {
+        "moving": 12200,
+        "standby": 0,
+        "stop": 1650,
+        "turnaround": 550
+      },
+      "train_id": "T09",
+      "train_km": "144.706",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.488",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.488",
+      "passenger_train_km": "143.061",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T10",
+      "train_km": "143.061",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T11",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T12",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T13",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12205,
+        "standby": 0,
+        "stop": 1645,
+        "turnaround": 550
+      },
+      "train_id": "T14",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.632",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.632",
+      "passenger_train_km": "144.704",
+      "state_seconds": {
+        "moving": 12190,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 550
+      },
+      "train_id": "T15",
+      "train_km": "144.704",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T16",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.48",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.48",
+      "passenger_train_km": "143.06",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T17",
+      "train_km": "143.06",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.488",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.488",
+      "passenger_train_km": "143.061",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T18",
+      "train_km": "143.061",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.496",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.496",
+      "passenger_train_km": "143.062",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T19",
+      "train_km": "143.062",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.504",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.504",
+      "passenger_train_km": "143.063",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T20",
+      "train_km": "143.063",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.512",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.512",
+      "passenger_train_km": "143.064",
+      "state_seconds": {
+        "moving": 12190,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 550
+      },
+      "train_id": "T21",
+      "train_km": "143.064",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.672",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.672",
+      "passenger_train_km": "144.709",
+      "state_seconds": {
+        "moving": 12205,
+        "standby": 0,
+        "stop": 1645,
+        "turnaround": 550
+      },
+      "train_id": "T22",
+      "train_km": "144.709",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.52",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.52",
+      "passenger_train_km": "143.065",
+      "state_seconds": {
+        "moving": 12300,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 440
+      },
+      "train_id": "T23",
+      "train_km": "143.065",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.68",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.68",
+      "passenger_train_km": "144.71",
+      "state_seconds": {
+        "moving": 12280,
+        "standby": 0,
+        "stop": 1680,
+        "turnaround": 440
+      },
+      "train_id": "T24",
+      "train_km": "144.71",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.688",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.688",
+      "passenger_train_km": "144.711",
+      "state_seconds": {
+        "moving": 12280,
+        "standby": 0,
+        "stop": 1680,
+        "turnaround": 440
+      },
+      "train_id": "T25",
+      "train_km": "144.711",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.696",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.696",
+      "passenger_train_km": "144.712",
+      "state_seconds": {
+        "moving": 12235,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 505
+      },
+      "train_id": "T26",
+      "train_km": "144.712",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.544",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.544",
+      "passenger_train_km": "143.068",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T27",
+      "train_km": "143.068",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.552",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.552",
+      "passenger_train_km": "143.069",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T28",
+      "train_km": "143.069",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.56",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.56",
+      "passenger_train_km": "143.07",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T29",
+      "train_km": "143.07",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.568",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.568",
+      "passenger_train_km": "143.071",
+      "state_seconds": {
+        "moving": 12195,
+        "standby": 0,
+        "stop": 1655,
+        "turnaround": 550
+      },
+      "train_id": "T30",
+      "train_km": "143.071",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.728",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.728",
+      "passenger_train_km": "144.716",
+      "state_seconds": {
+        "moving": 12200,
+        "standby": 0,
+        "stop": 1650,
+        "turnaround": 550
+      },
+      "train_id": "T31",
+      "train_km": "144.716",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.576",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.576",
+      "passenger_train_km": "143.072",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T32",
+      "train_km": "143.072",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.584",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.584",
+      "passenger_train_km": "143.073",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T33",
+      "train_km": "143.073",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.592",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.592",
+      "passenger_train_km": "143.074",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T34",
+      "train_km": "143.074",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.6",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.6",
+      "passenger_train_km": "143.075",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T35",
+      "train_km": "143.075",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.6",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.6",
+      "passenger_train_km": "143.075",
+      "state_seconds": {
+        "moving": 12205,
+        "standby": 0,
+        "stop": 1645,
+        "turnaround": 550
+      },
+      "train_id": "T36",
+      "train_km": "143.075",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.752",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.752",
+      "passenger_train_km": "144.719",
+      "state_seconds": {
+        "moving": 12190,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 550
+      },
+      "train_id": "T37",
+      "train_km": "144.719",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.592",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.592",
+      "passenger_train_km": "143.074",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T38",
+      "train_km": "143.074",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.584",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.584",
+      "passenger_train_km": "143.073",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T39",
+      "train_km": "143.073",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.576",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.576",
+      "passenger_train_km": "143.072",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T40",
+      "train_km": "143.072",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.568",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.568",
+      "passenger_train_km": "143.071",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T41",
+      "train_km": "143.071",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.56",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.56",
+      "passenger_train_km": "143.07",
+      "state_seconds": {
+        "moving": 12210,
+        "standby": 0,
+        "stop": 1640,
+        "turnaround": 550
+      },
+      "train_id": "T42",
+      "train_km": "143.07",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1144.552",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1144.552",
+      "passenger_train_km": "143.069",
+      "state_seconds": {
+        "moving": 12190,
+        "standby": 0,
+        "stop": 1660,
+        "turnaround": 550
+      },
+      "train_id": "T43",
+      "train_km": "143.069",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "1157.704",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "1157.704",
+      "passenger_train_km": "144.713",
+      "state_seconds": {
+        "moving": 12205,
+        "standby": 0,
+        "stop": 1645,
+        "turnaround": 550
+      },
+      "train_id": "T44",
+      "train_km": "144.713",
+      "train_type": "Юбилейный"
+    }
+  ],
+  "full_transport_work_sha256_by_scenario": {
+    "S1": "696e708379f7ab23ff496634aa024cc94f7cd541375fbbff7900608f2ef86be8",
+    "S2": "696e708379f7ab23ff496634aa024cc94f7cd541375fbbff7900608f2ef86be8",
+    "S3": "696e708379f7ab23ff496634aa024cc94f7cd541375fbbff7900608f2ef86be8"
+  },
+  "identical_all_scenarios": true,
+  "main": [
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T01",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T02",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T03",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6095,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 285
+      },
+      "train_id": "T04",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T05",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T06",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6060,
+        "standby": 0,
+        "stop": 810,
+        "turnaround": 330
+      },
+      "train_id": "T07",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6050,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 330
+      },
+      "train_id": "T08",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6060,
+        "standby": 0,
+        "stop": 810,
+        "turnaround": 330
+      },
+      "train_id": "T09",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T10",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T11",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T12",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 310
+      },
+      "train_id": "T13",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T14",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T15",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.664",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.664",
+      "passenger_train_km": "70.708",
+      "state_seconds": {
+        "moving": 6155,
+        "standby": 0,
+        "stop": 825,
+        "turnaround": 220
+      },
+      "train_id": "T16",
+      "train_km": "70.708",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.816",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.816",
+      "passenger_train_km": "72.352",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T17",
+      "train_km": "72.352",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.824",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.824",
+      "passenger_train_km": "72.353",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T18",
+      "train_km": "72.353",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.832",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.832",
+      "passenger_train_km": "72.354",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T19",
+      "train_km": "72.354",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.84",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.84",
+      "passenger_train_km": "72.355",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T20",
+      "train_km": "72.355",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.848",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.848",
+      "passenger_train_km": "72.356",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T21",
+      "train_km": "72.356",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.856",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.856",
+      "passenger_train_km": "72.357",
+      "state_seconds": {
+        "moving": 6155,
+        "standby": 0,
+        "stop": 825,
+        "turnaround": 220
+      },
+      "train_id": "T22",
+      "train_km": "72.357",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.704",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.704",
+      "passenger_train_km": "70.713",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T23",
+      "train_km": "70.713",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.864",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.864",
+      "passenger_train_km": "72.358",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T24",
+      "train_km": "72.358",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.872",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.872",
+      "passenger_train_km": "72.359",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T25",
+      "train_km": "72.359",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.88",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.88",
+      "passenger_train_km": "72.36",
+      "state_seconds": {
+        "moving": 6095,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 285
+      },
+      "train_id": "T26",
+      "train_km": "72.36",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T27",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T28",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6060,
+        "standby": 0,
+        "stop": 810,
+        "turnaround": 330
+      },
+      "train_id": "T29",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.88",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.88",
+      "passenger_train_km": "72.36",
+      "state_seconds": {
+        "moving": 6050,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 330
+      },
+      "train_id": "T30",
+      "train_km": "72.36",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.88",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.88",
+      "passenger_train_km": "72.36",
+      "state_seconds": {
+        "moving": 6060,
+        "standby": 0,
+        "stop": 810,
+        "turnaround": 330
+      },
+      "train_id": "T31",
+      "train_km": "72.36",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T32",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T33",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 800,
+        "turnaround": 330
+      },
+      "train_id": "T34",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.72",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.72",
+      "passenger_train_km": "70.715",
+      "state_seconds": {
+        "moving": 6070,
+        "standby": 0,
+        "stop": 820,
+        "turnaround": 310
+      },
+      "train_id": "T35",
+      "train_km": "70.715",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.88",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.88",
+      "passenger_train_km": "72.36",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T36",
+      "train_km": "72.36",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.872",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.872",
+      "passenger_train_km": "72.359",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T37",
+      "train_km": "72.359",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "565.712",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "565.712",
+      "passenger_train_km": "70.714",
+      "state_seconds": {
+        "moving": 6155,
+        "standby": 0,
+        "stop": 825,
+        "turnaround": 220
+      },
+      "train_id": "T38",
+      "train_km": "70.714",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.864",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.864",
+      "passenger_train_km": "72.358",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T39",
+      "train_km": "72.358",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.856",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.856",
+      "passenger_train_km": "72.357",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T40",
+      "train_km": "72.357",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.848",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.848",
+      "passenger_train_km": "72.356",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T41",
+      "train_km": "72.356",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.84",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.84",
+      "passenger_train_km": "72.355",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T42",
+      "train_km": "72.355",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.832",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.832",
+      "passenger_train_km": "72.354",
+      "state_seconds": {
+        "moving": 6140,
+        "standby": 0,
+        "stop": 840,
+        "turnaround": 220
+      },
+      "train_id": "T43",
+      "train_km": "72.354",
+      "train_type": "Юбилейный"
+    },
+    {
+      "car_km": "578.824",
+      "cars": 8,
+      "nonpassenger_car_km": "0",
+      "nonpassenger_train_km": "0",
+      "passenger_car_km": "578.824",
+      "passenger_train_km": "72.353",
+      "state_seconds": {
+        "moving": 6155,
+        "standby": 0,
+        "stop": 825,
+        "turnaround": 220
+      },
+      "train_id": "T44",
+      "train_km": "72.353",
+      "train_type": "Юбилейный"
+    }
+  ],
+  "main_distance_status": "partial_assumed_geometry",
+  "period": {
+    "date": "2026-09-01",
+    "date_replaced": false,
+    "end": "2026-09-01T10:00:00+03:00",
+    "main_start": "2026-09-01T08:00:00+03:00",
+    "requested_date": "2026-09-01",
+    "source_rows": 304,
+    "start": "2026-09-01T06:00:00+03:00",
+    "timezone": "Europe/Moscow"
+  }
+}

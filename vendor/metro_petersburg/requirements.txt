@@ -1,0 +1,41 @@
+# Python 3.12
+# pandas 2.x: mlforecast 1.1.0 требует pandas<3.0
+# numpy 2.4: с numpy 2.5 pandas 2.3.3 сыплет DeprecationWarning про timedelta без единицы
+
+# данные
+pandas==2.3.3
+numpy==2.4.6
+pyarrow==25.0.1
+requests==2.34.2
+urllib3==2.8.0
+holidays==0.106
+pydantic==2.13.5
+openpyxl==3.1.5           # xlsx организаторов
+beautifulsoup4==4.15.0    # МО-I: HTML в KOI8-R
+PyYAML==6.0.3             # line1_operations.yaml
+
+# модели
+lightgbm==4.7.0
+catboost==1.2.10
+mlforecast==1.1.0
+utilsforecast==0.2.17
+coreforecast==0.0.18
+scikit-learn==1.9.1
+scipy==1.18.1
+xgboost==3.4.1           # сравнение моделей (src/compare_models.py)
+statsmodels==0.15.0       # линейная квантильная регрессия там же
+torch==2.14.1             # GRU для прогноза каждые 30 минут (src/stack/nn.py), CPU
+
+# внешние данные (external_data/, Денис): диапазоны версий — в external_data/*/requirements.txt,
+# здесь — точные версии из общего окружения; pydantic — выше
+httpx==0.28.1             # Яндекс Погода, Расписания, Геокодер
+openai==2.54.0            # события: YandexGPT и OpenRouter через OpenAI-совместимый API
+
+# EDA и ноутбуки
+matplotlib==3.11.2
+jupyter==1.1.1
+notebook==7.6.3
+ipykernel==7.4.0
+
+# тесты
+pytest==9.1.1

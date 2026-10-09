@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "source": "GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro",
+  "period_start": "2026-05-01T03:00:00+03:00",
+  "period_end": "2026-05-01T03:16:00+03:00",
+  "max_trains_on_line": 1,
+  "stations": [
+    {"station_id": "A", "kind": "line", "stop_seconds": 0, "turnaround_seconds": 120},
+    {"station_id": "B", "kind": "line", "stop_seconds": 60, "turnaround_seconds": 0},
+    {"station_id": "C", "kind": "line", "stop_seconds": 0, "turnaround_seconds": 120}
+  ],
+  "tracks": [
+    {"track_id": "AB", "from_station": "A", "to_station": "B", "length_km": "1", "travel_seconds": 120},
+    {"track_id": "BA", "from_station": "B", "to_station": "A", "length_km": "1", "travel_seconds": 120},
+    {"track_id": "BC", "from_station": "B", "to_station": "C", "length_km": "2", "travel_seconds": 180},
+    {"track_id": "CB", "from_station": "C", "to_station": "B", "length_km": "2", "travel_seconds": 180}
+  ],
+  "trains": [
+    {"train_id": "T1", "train_type": "educational-eight-car", "cars": 8, "location": "A", "state": "standby", "ready_after_seconds": 0}
+  ],
+  "previous_departures": [],
+  "plans": [
+    {"plan_id": "baseline", "trips": [
+      {"trip_id": "out", "train_id": "T1", "departure_second": 0, "route": ["AB", "BC"], "passenger": true},
+      {"trip_id": "back", "train_id": "T1", "departure_second": 480, "route": ["CB", "BA"], "passenger": true}
+    ]},
+    {"plan_id": "candidate", "trips": []}
+  ]
+}

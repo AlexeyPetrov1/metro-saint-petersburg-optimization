@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.150" timestamp="2026-10-08T08:20:22.191200+03:00" hostname="petrov"><testcase classname="tests.test_economics_audit" name="test_source_reconciliation_is_independent_of_decimal_display_context" time="0.002"><failure message="AssertionError: assert ['0.03', '0.03', '0.01'] == ['0.03', '0.02', '-0.02']&#10;  &#10;  At index 1 diff: '0.03' != '0.02'&#10;  Use -v to get more diff">tests\test_economics_audit.py:452: in test_source_reconciliation_is_independent_of_decimal_display_context
+    assert [p["checks"]["train_hours_delta"] for p in report["periods"]] == ["0.03", "0.02", "-0.02"]
+E   AssertionError: assert ['0.03', '0.03', '0.01'] == ['0.03', '0.02', '-0.02']
+E     
+E     At index 1 diff: '0.03' != '0.02'
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

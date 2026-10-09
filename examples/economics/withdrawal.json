@@ -1,0 +1,1233 @@
+{
+  "schema_version": "1.0",
+  "note": "Все планы, цены, история вагонов и задержки ниже являются fixture. Модель спроса, очередей и движения отсутствует. Дополнительный манёвр задан явно, а не выведен из длительности задержки.",
+  "baseline": {
+    "plan_id": "baseline-round-trip",
+    "demand_id": "fixture-demand",
+    "initial_state_id": "fixture-initial-state",
+    "period_start": "2026-05-01T03:00:00+03:00",
+    "period_end": "2026-05-01T05:00:00+03:00",
+    "closure_end": "2026-05-01T06:00:00+03:00",
+    "quantities": {
+      "passenger_train_km": {
+        "amount": "59.2",
+        "unit": "train_km",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "passenger_car_km": {
+        "amount": "473.6",
+        "unit": "car_km",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "nonpassenger_train_km": {
+        "amount": "0",
+        "unit": "train_km",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "nonpassenger_car_km": {
+        "amount": "0",
+        "unit": "car_km",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "moving_hours": {
+        "amount": "1.65",
+        "unit": "train_h",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "stopped_hours": {
+        "amount": "0",
+        "unit": "train_h",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "standby_hours": {
+        "amount": "0",
+        "unit": "train_h",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "paid_person_hours": {
+        "amount": "8",
+        "unit": "person_h",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "purchased_energy": {
+        "amount": null,
+        "unit": "kWh",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "unknown"
+      },
+      "entry_events": {
+        "amount": "0",
+        "unit": "event",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      },
+      "withdrawal_events": {
+        "amount": "0",
+        "unit": "event",
+        "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+        "status": "assumed"
+      }
+    },
+    "events": [],
+    "model_version": "fixture-v1",
+    "evaluation_mode": "fixture",
+    "obligations_closed": true,
+    "constraint_status": "unknown"
+  },
+  "scenarios": [
+    {
+      "name": "low_price",
+      "delay_minutes": "0",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "candidate": {
+        "plan_id": "withdraw-and-return",
+        "demand_id": "fixture-demand",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-01T03:00:00+03:00",
+        "period_end": "2026-05-01T05:00:00+03:00",
+        "closure_end": "2026-05-01T06:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "1.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "8",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [
+          {
+            "event_id": "withdraw",
+            "at": "2026-05-01T03:07:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "withdrawal_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "return",
+            "at": "2026-05-01T05:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "entry_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          }
+        ],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "articles": [
+        {
+          "name": "passenger_traction",
+          "quantity_key": "passenger_train_km",
+          "rate": "10",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "passenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "nonpassenger_traction",
+          "quantity_key": "nonpassenger_train_km",
+          "rate": "100",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "nonpassenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "paid_labor",
+          "quantity_key": "paid_person_hours",
+          "rate": "500",
+          "unit": "RUB/person_h",
+          "covered_components": [
+            "paid_labor"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        }
+      ]
+    },
+    {
+      "name": "higher_price",
+      "delay_minutes": "0",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "candidate": {
+        "plan_id": "withdraw-and-return",
+        "demand_id": "fixture-demand",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-01T03:00:00+03:00",
+        "period_end": "2026-05-01T05:00:00+03:00",
+        "closure_end": "2026-05-01T06:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "1.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "8",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [
+          {
+            "event_id": "withdraw",
+            "at": "2026-05-01T03:07:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "withdrawal_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "return",
+            "at": "2026-05-01T05:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "entry_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          }
+        ],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "articles": [
+        {
+          "name": "passenger_traction",
+          "quantity_key": "passenger_train_km",
+          "rate": "50",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "passenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "nonpassenger_traction",
+          "quantity_key": "nonpassenger_train_km",
+          "rate": "100",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "nonpassenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "paid_labor",
+          "quantity_key": "paid_person_hours",
+          "rate": "500",
+          "unit": "RUB/person_h",
+          "covered_components": [
+            "paid_labor"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        }
+      ]
+    },
+    {
+      "name": "extra_delay_and_maneuver",
+      "delay_minutes": "30",
+      "delay_source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "candidate": {
+        "plan_id": "withdraw-with-extra-maneuver",
+        "demand_id": "fixture-demand",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-01T03:00:00+03:00",
+        "period_end": "2026-05-01T05:00:00+03:00",
+        "closure_end": "2026-05-01T06:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "2.15",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "8",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [
+          {
+            "event_id": "withdraw",
+            "at": "2026-05-01T03:07:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "withdrawal_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "extra-maneuver",
+            "at": "2026-05-01T04:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "29.6",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "236.8",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.5",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "return",
+            "at": "2026-05-01T05:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "entry_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          }
+        ],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "articles": [
+        {
+          "name": "passenger_traction",
+          "quantity_key": "passenger_train_km",
+          "rate": "50",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "passenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "nonpassenger_traction",
+          "quantity_key": "nonpassenger_train_km",
+          "rate": "100",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "nonpassenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "paid_labor",
+          "quantity_key": "paid_person_hours",
+          "rate": "500",
+          "unit": "RUB/person_h",
+          "covered_components": [
+            "paid_labor"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        }
+      ]
+    }
+  ],
+  "days": [
+    {
+      "baseline": {
+        "plan_id": "baseline-round-trip-day-1",
+        "demand_id": "fixture-demand-day-1",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-01T03:00:00+03:00",
+        "period_end": "2026-05-02T03:00:00+03:00",
+        "closure_end": "2026-05-02T03:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "1059.2",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "8473.6",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "11.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "1",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "160",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "candidate": {
+        "plan_id": "withdraw-and-return-day-1",
+        "demand_id": "fixture-demand-day-1",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-01T03:00:00+03:00",
+        "period_end": "2026-05-02T03:00:00+03:00",
+        "closure_end": "2026-05-02T03:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "1000",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "8000",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "10",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "1",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "1.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "160",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [
+          {
+            "event_id": "withdraw",
+            "at": "2026-05-01T03:07:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "withdrawal_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "return",
+            "at": "2026-05-01T05:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "entry_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          }
+        ],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "articles": [
+        {
+          "name": "passenger_traction",
+          "quantity_key": "passenger_train_km",
+          "rate": "50",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "passenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "nonpassenger_traction",
+          "quantity_key": "nonpassenger_train_km",
+          "rate": "100",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "nonpassenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "paid_labor",
+          "quantity_key": "paid_person_hours",
+          "rate": "500",
+          "unit": "RUB/person_h",
+          "covered_components": [
+            "paid_labor"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "plan_id": "baseline-round-trip-day-2",
+        "demand_id": "fixture-demand-day-2",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-02T03:00:00+03:00",
+        "period_end": "2026-05-03T03:00:00+03:00",
+        "closure_end": "2026-05-03T03:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "1059.2",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "8473.6",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "11.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "1",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "0",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "160",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "candidate": {
+        "plan_id": "withdraw-and-return-day-2",
+        "demand_id": "fixture-demand-day-2",
+        "initial_state_id": "fixture-initial-state",
+        "period_start": "2026-05-02T03:00:00+03:00",
+        "period_end": "2026-05-03T03:00:00+03:00",
+        "closure_end": "2026-05-03T03:00:00+03:00",
+        "quantities": {
+          "passenger_train_km": {
+            "amount": "1000",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "passenger_car_km": {
+            "amount": "8000",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_train_km": {
+            "amount": "0",
+            "unit": "train_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "nonpassenger_car_km": {
+            "amount": "0",
+            "unit": "car_km",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "moving_hours": {
+            "amount": "10",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "stopped_hours": {
+            "amount": "1",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "standby_hours": {
+            "amount": "1.65",
+            "unit": "train_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "paid_person_hours": {
+            "amount": "160",
+            "unit": "person_h",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "purchased_energy": {
+            "amount": null,
+            "unit": "kWh",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "unknown"
+          },
+          "entry_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          },
+          "withdrawal_events": {
+            "amount": "0",
+            "unit": "event",
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+            "status": "assumed"
+          }
+        },
+        "events": [
+          {
+            "event_id": "withdraw",
+            "at": "2026-05-02T03:07:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "withdrawal_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          },
+          {
+            "event_id": "return",
+            "at": "2026-05-02T05:30:00+03:00",
+            "quantities": {
+              "nonpassenger_train_km": {
+                "amount": "7.4",
+                "unit": "train_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "nonpassenger_car_km": {
+                "amount": "59.2",
+                "unit": "car_km",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "entry_events": {
+                "amount": "1",
+                "unit": "event",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              },
+              "moving_hours": {
+                "amount": "0.1",
+                "unit": "train_h",
+                "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+                "status": "assumed"
+              }
+            },
+            "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики"
+          }
+        ],
+        "model_version": "fixture-v1",
+        "evaluation_mode": "fixture",
+        "obligations_closed": true,
+        "constraint_status": "unknown"
+      },
+      "articles": [
+        {
+          "name": "passenger_traction",
+          "quantity_key": "passenger_train_km",
+          "rate": "50",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "passenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "nonpassenger_traction",
+          "quantity_key": "nonpassenger_train_km",
+          "rate": "100",
+          "unit": "RUB/train_km",
+          "covered_components": [
+            "nonpassenger_traction"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        },
+        {
+          "name": "paid_labor",
+          "quantity_key": "paid_person_hours",
+          "rate": "500",
+          "unit": "RUB/person_h",
+          "covered_components": [
+            "paid_labor"
+          ],
+          "accounting_kind": "cash",
+          "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+          "status": "assumed"
+        }
+      ]
+    }
+  ],
+  "wagons": [
+    {
+      "wagon_id": "fixture-B1",
+      "series": "81-725/726/727",
+      "planned_km": "59.2",
+      "since_maintenance_km": {
+        "ТО-1": "9500",
+        "ТО-2": "29000"
+      },
+      "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "status": "assumed"
+    },
+    {
+      "wagon_id": "fixture-Y1",
+      "series": "81-722/723/724",
+      "planned_km": "59.2",
+      "since_maintenance_km": {},
+      "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+      "status": "assumed"
+    }
+  ],
+  "threshold": {
+    "switch_cost": "1480",
+    "running_per_hour": "2000",
+    "standby_per_hour": "200",
+    "source": "Учебный пример GOAL B; цены и задержки заданы для проверки арифметики",
+    "status": "assumed"
+  }
+}

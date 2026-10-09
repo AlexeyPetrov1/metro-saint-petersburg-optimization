@@ -1,0 +1,950 @@
+{
+  "schema_version": 1,
+  "timezone": "Europe/Moscow",
+  "ingestion_note": "Normalized registry imported at 2026-10-09T02:36:49+03:00. Earlier pipeline ingestion is unknown; archived publication replay is an explicit assumption.",
+  "coverage": "Curated evidence register, not an exhaustive incident log. Line 2 has no local flow observations.",
+  "source_register": "docs/metro_anomaly_events_20261009.json",
+  "id_note": "L1 and V identifiers are existing local project ids; named L2 identifiers are isolated registry aliases, not operator codes.",
+  "station_aliases": {
+    "????????": "L1_05",
+    "??????????": "L1_06",
+    "??????? ?????????": "L1_10",
+    "??????????? ????????": "L1_18"
+  },
+  "events": [
+    {
+      "event_id": "L1_0831",
+      "version_id": "L1_0831:v1",
+      "version": 1,
+      "kind": "train_disruption",
+      "line_id": "L1",
+      "scope": {
+        "level": "track",
+        "station_ids": [
+          "L1_11",
+          "L1_12",
+          "L1_13",
+          "L1_14",
+          "L1_15",
+          "L1_16",
+          "L1_17",
+          "L1_18",
+          "L1_19"
+        ],
+        "track_ids": [
+          "L1_northern_section"
+        ],
+        "coverage_note": "Incident at Chernyshevskaya, northern section affected; this is a local segment id."
+      },
+      "published_at": "2026-08-31T11:43:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "disrupted",
+      "sources": [
+        {
+          "url": "https://www.fontanka.ru/2026/08/31/76616141/",
+          "local_path": "data/raw/metro/Данные Сириус/3.Характеристики состава и Линии/Пример остановки транспортного обслуживиния и регулировки графика.docx",
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "local_record_and_press_confirmed"
+        }
+      ],
+      "description": "Рассоединение вагонов; перерыв движения 100 минут по местному документу. Конец записи 10:31 не равен концу перерыва. Время обнаружения неизвестно.",
+      "data_finding": "В 08 ч Девяткино: 3969 против нормы 13937.5; три северные станции: 11226 против 22764.5. Входы не измеряют число пострадавших или потерянных поездок.",
+      "timing": {
+        "observed": {
+          "start": "2026-08-31T07:49:00+03:00",
+          "end": "2026-08-31T09:29:00+03:00",
+          "knowledge_at": "2026-08-31T11:43:00+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "L1_0717",
+      "version_id": "L1_0717:v1",
+      "version": 1,
+      "kind": "train_disruption",
+      "line_id": "L1",
+      "scope": {
+        "level": "track",
+        "station_ids": [
+          "L1_12",
+          "L1_13",
+          "L1_14",
+          "L1_15",
+          "L1_16",
+          "L1_17",
+          "L1_18",
+          "L1_19"
+        ],
+        "track_ids": [
+          "L1_lenina_devyatkino"
+        ]
+      },
+      "published_at": "2026-07-17T18:28:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "disrupted",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/07/17/na-stanciju-devjatkino-napravili",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        },
+        {
+          "url": "https://max.ru/metrospbofficial/AZ9wvcO9FMI"
+        }
+      ],
+      "description": "Technical fault; increased train running time and headways. Exact end unknown at initial report.",
+      "data_finding": "Девяткино в 18 ч: 3812 против 3844. Выбранный детектор сильных часовых отклонений не сработал ни на одной станции за этот день.",
+      "timing": {
+        "observed": {
+          "start": "2026-07-17T17:42:00+03:00",
+          "end": null,
+          "date_end": "2026-07-17",
+          "knowledge_at": "2026-07-17T18:28:00+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "L1_0717",
+      "version_id": "L1_0717:v2",
+      "version": 2,
+      "kind": "train_disruption",
+      "line_id": "L1",
+      "scope": {
+        "level": "track",
+        "station_ids": [
+          "L1_12",
+          "L1_13",
+          "L1_14",
+          "L1_15",
+          "L1_16",
+          "L1_17",
+          "L1_18",
+          "L1_19"
+        ],
+        "track_ids": [
+          "L1_lenina_devyatkino"
+        ]
+      },
+      "published_at": "2026-07-17T18:41:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "disrupted",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/07/17/na-stanciju-devjatkino-napravili",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        },
+        {
+          "url": "https://max.ru/metrospbofficial/AZ9wvcO9FMI"
+        }
+      ],
+      "description": "Технический сбой, увеличение времени хода и интервалов. В 18:41 сообщено о движении в обычном режиме и восстановлении интервалов; точный конец нарушения не установлен.",
+      "data_finding": "Девяткино в 18 ч: 3812 против 3844. Выбранный детектор сильных часовых отклонений не сработал ни на одной станции за этот день.",
+      "timing": {
+        "observed": {
+          "start": "2026-07-17T17:42:00+03:00",
+          "end": null,
+          "date_end": "2026-07-17",
+          "knowledge_at": "2026-07-17T18:41:00+03:00",
+          "restoration_report_at": "2026-07-17T18:41:00+03:00"
+        }
+      },
+      "exact_end_known": false
+    },
+    {
+      "event_id": "L1_NARV_REPAIR",
+      "version_id": "L1_NARV_REPAIR:v1",
+      "version": 1,
+      "kind": "planned_entrance_closure",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_05"
+        ]
+      },
+      "published_at": "2026-06-16T10:00:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2779",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_with_observed_timing_difference"
+        }
+      ],
+      "description": "По рабочим дням объявлено закрытие входа 08:10–09:15 и ограничение 16:40–19:00.",
+      "data_finding": "В июле все 23 рабочих дня почти нулевые слоты 08:15–09:00; в 09:00–09:15 медиана 204. Объявленный режим и фактический профиль различаются.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-06-18",
+          "date_end": "2026-08-28",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:10",
+              "end_time": "09:15",
+              "entrance_state": "closed"
+            },
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "16:40",
+              "end_time": "19:00",
+              "entrance_state": "restricted"
+            }
+          ]
+        },
+        "observed": {
+          "date_start": "2026-07-01",
+          "date_end": "2026-07-31",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:15",
+              "end_time": "09:00",
+              "entrance_state": "closed"
+            }
+          ],
+          "knowledge_at": "2026-10-09T02:36:49+03:00",
+          "comparison_windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:10",
+              "end_time": "09:15",
+              "entrance_state": "closed"
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        "observed_July_closure_window_differs_from_announced_window"
+      ]
+    },
+    {
+      "event_id": "L1_BALT_REPAIR",
+      "version_id": "L1_BALT_REPAIR:v1",
+      "version": 1,
+      "kind": "planned_entrance_closure",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_06"
+        ]
+      },
+      "published_at": null,
+      "published_date": "2026-03-19",
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://spbvedomosti.ru/news/gorod/gorodskaya-khronika-vazhnoe-v-peterburge-i-lenoblasti-19-marta-2026-goda/",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement_and_flow"
+        },
+        {
+          "url": "https://spbvedomosti.ru/news/gorod/vkhod-s-ogranicheniyami-na-baltiyskoy-i-ploshchadi-vosstaniya-nachinaetsya-remont-eskalatorov/"
+        }
+      ],
+      "description": "Ремонт эскалатора; утреннее закрытие 08:10–09:20, вечерние ограничения. Сообщено о возвращении обычного режима 18 марта.",
+      "data_finding": "Февраль: во все 19 рабочих дней не более 6 входов в каждом слоте 08:30 и 08:45. В 08 ч 17 марта 1456, 18 марта 2196, 19 марта 3221, 24 марта 4376 входов.",
+      "timing": {
+        "planned": {
+          "date_start": "2025-12-05",
+          "date_end": "2026-02-27",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:10",
+              "end_time": "09:20",
+              "entrance_state": "closed"
+            }
+          ]
+        },
+        "observed": {
+          "date_start": "2026-02-01",
+          "date_end": "2026-02-28",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:30",
+              "end_time": "09:00",
+              "entrance_state": "closed"
+            }
+          ],
+          "knowledge_at": "2026-10-09T02:36:49+03:00",
+          "comparison_windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:10",
+              "end_time": "09:20",
+              "entrance_state": "closed"
+            }
+          ]
+        }
+      },
+      "restoration_date": "2026-03-18",
+      "conflicts": [
+        "original_planned_end_precedes_reported_restoration",
+        "observed_window_is_supported_only_in_February",
+        "evening_restriction_times_unknown"
+      ]
+    },
+    {
+      "event_id": "L1_GRAZH_REPAIR",
+      "version_id": "L1_GRAZH_REPAIR:v1",
+      "version": 1,
+      "kind": "planned_entrance_restriction",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_18"
+        ]
+      },
+      "published_at": "2026-05-10T15:52:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "restricted",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/05/10/remont-jeskalatora-ogranichit",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        }
+      ],
+      "description": "Ремонт эскалатора; ограничение входа по рабочим дням 07:30–09:00. Ограничение не означает полное закрытие.",
+      "data_finding": "Самостоятельный причинный эффект не оценён: период совпадает с летней сезонностью.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-05-12",
+          "date_end": "2026-07-17",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "07:30",
+              "end_time": "09:00",
+              "entrance_state": "restricted"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event_id": "L1_0509",
+      "version_id": "L1_0509:v1",
+      "version": 1,
+      "kind": "planned_event_entrance_closure",
+      "line_id": "L1",
+      "scope": {
+        "level": "vestibule",
+        "station_ids": [
+          "L1_10"
+        ],
+        "vestibule_ids": [
+          "V12"
+        ]
+      },
+      "published_at": "2026-05-08T10:00:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2770?v=1",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_schedule_conflicts_with_flow"
+        }
+      ],
+      "description": "В официальном объявлении вестибюль 1 работает только на выход 11:30–15:30; вестибюль 2 открыт.",
+      "data_finding": "Оба источника потока показывают почти нулевые входы примерно 06:30–13:30 и возобновление в 13:30. Причина несовпадения времён не установлена.",
+      "timing": {
+        "planned": {
+          "start": "2026-05-09T11:30:00+03:00",
+          "end": "2026-05-09T15:30:00+03:00"
+        },
+        "observed": {
+          "start": "2026-05-09T06:30:00+03:00",
+          "end": "2026-05-09T13:30:00+03:00",
+          "knowledge_at": "2026-10-09T02:36:49+03:00",
+          "precision": "flow_inferred"
+        }
+      },
+      "conflicts": [
+        "observed_closure_window_differs_from_announced_window"
+      ]
+    },
+    {
+      "event_id": "L1_0222",
+      "version_id": "L1_0222:v1",
+      "version": 1,
+      "kind": "passenger_incident",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_01"
+        ]
+      },
+      "published_at": "2026-02-22T15:27:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "unknown",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/02/22/pjanij-passazhir-upal-na-puti",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        }
+      ],
+      "description": "Пассажир упал на пути и был извлечён до прибытия поезда. Точное время и длительность нарушения движения не приведены.",
+      "data_finding": "Дата публикации известна; её час не используется как начало инцидента.",
+      "timing": {
+        "observed": {
+          "date_start": "2026-02-22",
+          "date_end": "2026-02-22",
+          "precision": "date",
+          "knowledge_at": "2026-02-22T15:27:00+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "L1_0426_CANDIDATE",
+      "version_id": "L1_0426_CANDIDATE:v1",
+      "version": 1,
+      "kind": "unconfirmed_flow_anomaly",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_11",
+          "L1_12",
+          "L1_13"
+        ]
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "candidate",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": null,
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "data_only"
+        }
+      ],
+      "description": "Согласованное снижение входов с последующим восстановлением. В выполненном поиске независимое подтверждение сбоя не найдено.",
+      "data_finding": "В 19 ч 3323 против 4829.5 (−31.2%); максимальное отношение к норме в следующие 3 часа 1.228. Это не доказательство аварии.",
+      "timing": {
+        "observed": {
+          "start": "2026-04-26T19:00:00+03:00",
+          "end": "2026-04-26T21:00:00+03:00",
+          "knowledge_at": "2026-10-09T02:36:49+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "NETWORK_0530_NIGHT",
+      "version_id": "NETWORK_0530_NIGHT:v1",
+      "version": 1,
+      "kind": "planned_night_service",
+      "line_id": null,
+      "scope": {
+        "level": "network"
+      },
+      "published_at": "2026-05-28T10:10:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2776?v=2",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_and_flow"
+        }
+      ],
+      "description": "Ночная работа в связи с празднованием Дня города. Интервал в реестре обозначает анализируемые ночные часы.",
+      "data_finding": "30 мая на линии 1 в 01 ч 1131 вход, в 03 ч 876, в 04 ч 795.",
+      "timing": {
+        "planned": {
+          "start": "2026-05-30T01:00:00+03:00",
+          "end": "2026-05-30T05:00:00+03:00",
+          "precision": "analysis_window"
+        }
+      },
+      "timing_note": "Bounds identify audited night hours, not exact service opening/closing times."
+    },
+    {
+      "event_id": "NETWORK_0628_NIGHT",
+      "version_id": "NETWORK_0628_NIGHT:v1",
+      "version": 1,
+      "kind": "planned_night_service",
+      "line_id": null,
+      "scope": {
+        "level": "network"
+      },
+      "published_at": "2026-06-25T15:00:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2782?v=1",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_and_flow"
+        }
+      ],
+      "description": "Ночная работа на праздник «Алые паруса». Интервал в реестре обозначает анализируемые ночные часы.",
+      "data_finding": "На линии 1 в 01 ч 12956 входов, в 02 ч 5553, в 03 ч 4919, в 04 ч 3798.",
+      "timing": {
+        "planned": {
+          "start": "2026-06-28T01:00:00+03:00",
+          "end": "2026-06-28T05:00:00+03:00",
+          "precision": "analysis_window"
+        }
+      },
+      "timing_note": "Bounds identify audited night hours, not exact service opening/closing times."
+    },
+    {
+      "event_id": "NETWORK_JAN_NIGHTS",
+      "version_id": "NETWORK_JAN_NIGHTS:v1",
+      "version": 1,
+      "kind": "planned_night_service",
+      "line_id": null,
+      "scope": {
+        "level": "network"
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2752?full_version=1",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_and_partial_flow"
+        }
+      ],
+      "description": "Официально объявлена непрерывная работа в новогоднюю и рождественскую ночи. Начало новогодней ночи не покрыто почасовой сеткой после исправления даты.",
+      "data_finding": "1 января наблюдаются 03–04 ч; 7 января есть ночные входы.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-01-01",
+          "date_end": "2026-01-01",
+          "precision": "date"
+        }
+      },
+      "timing_note": "Night-service evidence only; exact hours unavailable."
+    },
+    {
+      "event_id": "NETWORK_JAN_NIGHTS_0107",
+      "version_id": "NETWORK_JAN_NIGHTS_0107:v1",
+      "version": 1,
+      "kind": "planned_night_service",
+      "line_id": null,
+      "scope": {
+        "level": "network"
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2752?full_version=1",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_and_partial_flow"
+        }
+      ],
+      "description": "Официально объявлена непрерывная работа в новогоднюю и рождественскую ночи. Начало новогодней ночи не покрыто почасовой сеткой после исправления даты.",
+      "data_finding": "1 января наблюдаются 03–04 ч; 7 января есть ночные входы.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-01-07",
+          "date_end": "2026-01-07",
+          "precision": "date"
+        }
+      },
+      "timing_note": "Night-service evidence only; exact hours unavailable.",
+      "derived_from_event_id": "NETWORK_JAN_NIGHTS"
+    },
+    {
+      "event_id": "RAIL_0825",
+      "version_id": "RAIL_0825:v1",
+      "version": 1,
+      "kind": "connecting_transport_regime",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_10"
+        ]
+      },
+      "published_at": null,
+      "published_date": "2026-08-14",
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/08/14/jelektrichki-s-moskovskogo-vokzala",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "rail_operator_statement_via_press"
+        },
+        {
+          "url": "https://www.t.me/s/szppk?before=2182"
+        }
+      ],
+      "description": "Объявлен перевод пригородных поездов Московского направления на Рыбацкое и Ладожский вокзал.",
+      "data_finding": "Средние входы Площади Восстания за 10 будних дней сентября ниже 10 будних дней 17–28 августа на 12.1%, при росте суммы 18 станций на 10.7%. Связь с переводом поездов правдоподобна, причинный эффект не выделен.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-08-25",
+          "date_end": null,
+          "open_ended": true
+        }
+      }
+    },
+    {
+      "event_id": "L2_FRUNZ",
+      "version_id": "L2_FRUNZ:v1",
+      "version": 1,
+      "kind": "station_reconstruction_closed",
+      "line_id": "L2",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L2_FRUNZENSKAYA"
+        ]
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/kptremontst.html?v=2",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_current_schedule"
+        },
+        {
+          "url": "https://metro.spb.ru/uploads/shema_transport_frunzenskaya_01.06.2024.pdf"
+        }
+      ],
+      "description": "Длительная реконструкция с закрытием станции; действует в период анализа. Срок на транспортной схеме: по июнь 2027 года.",
+      "data_finding": "Потока линии 2 нет. Возможное перераспределение на Балтийскую и Технологический институт требует отдельной проверки.",
+      "timing": {
+        "planned": {
+          "date_start": "2024-06-01",
+          "date_end": null,
+          "open_ended": true
+        }
+      },
+      "timing_note": "Current archived closure schedule; unknown publication time prevents online replay."
+    },
+    {
+      "event_id": "L2_PARK",
+      "version_id": "L2_PARK:v1",
+      "version": 1,
+      "kind": "station_reconstruction_closed",
+      "line_id": "L2",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L2_PARK_POBEDY"
+        ]
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/news/item/id/2723?v=1",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_current_schedule"
+        }
+      ],
+      "description": "Реконструкция с закрытием станции; действует в период анализа.",
+      "data_finding": "Количественная оценка недоступна без потоков линии 2.",
+      "timing": {
+        "planned": {
+          "date_start": "2025-06-29",
+          "date_end": null,
+          "open_ended": true
+        }
+      },
+      "timing_note": "Current archived closure schedule; unknown publication time prevents online replay."
+    },
+    {
+      "event_id": "L2_TECH_REPAIR",
+      "version_id": "L2_TECH_REPAIR:v1",
+      "version": 1,
+      "kind": "repair_without_station_closure",
+      "line_id": "L2",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L2_TECHNOLOGICHESKY_INSTITUT_2"
+        ]
+      },
+      "published_at": null,
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://metro.spb.ru/kptremontst.html?v=2",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "official_current_schedule"
+        }
+      ],
+      "description": "В текущем официальном графике комплексный ремонт указан в разделе работ без закрытия станции. Старые планы закрытия нельзя автоматически переносить в разметку.",
+      "data_finding": "Наличие входов Технологического института-1 в 15-минутной таблице не определяет режим второго вестибюля.",
+      "timing": {
+        "planned": {
+          "date_start": "2026-02-06",
+          "date_end": "2027-03-31"
+        }
+      }
+    },
+    {
+      "event_id": "L2_0511",
+      "version_id": "L2_0511:v1",
+      "version": 1,
+      "kind": "passenger_incident_train_disruption",
+      "line_id": "L2",
+      "scope": {
+        "level": "track",
+        "station_ids": [
+          "L2_TECHNOLOGICHESKY_INSTITUT_2"
+        ],
+        "track_ids": [
+          "L2_kupchino_nevsky"
+        ],
+        "coverage_note": "Only named station mapped; track scope retained without inventing a station dictionary."
+      },
+      "published_at": "2026-05-11T16:53:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "open",
+      "movement_state": "disrupted",
+      "sources": [
+        {
+          "url": "https://www.fontanka.ru/2026/05/11/76414607/",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        }
+      ],
+      "description": "Кратковременная остановка движения после падения пассажира на пути. Точные границы времени не установлены.",
+      "data_finding": "Потока линии 2 нет; не приписывать падение входов линии 1 в праздничный день этому инциденту.",
+      "timing": {
+        "observed": {
+          "date_start": "2026-05-11",
+          "date_end": "2026-05-11",
+          "precision": "date",
+          "knowledge_at": "2026-05-11T16:53:00+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "L2_0614",
+      "version_id": "L2_0614:v1",
+      "version": 1,
+      "kind": "unplanned_entrance_closure",
+      "line_id": "L2",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L2_PIONERSKAYA"
+        ]
+      },
+      "published_at": "2026-06-14T14:42:00+03:00",
+      "published_date": null,
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://www.dp.ru/a/2026/06/14/stanciju-pionerskaja-zakrili",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement"
+        }
+      ],
+      "description": "Внеплановая остановка эскалатора из-за попавших вещей; вестибюль временно работал только на выход. Время публикации не равно началу.",
+      "data_finding": "Количественная оценка недоступна без потоков линии 2.",
+      "timing": {
+        "observed": {
+          "date_start": "2026-06-14",
+          "date_end": "2026-06-14",
+          "precision": "date",
+          "knowledge_at": "2026-06-14T14:42:00+03:00"
+        }
+      }
+    },
+    {
+      "event_id": "L1_BALT_REPAIR_CONTINUATION",
+      "version_id": "L1_BALT_REPAIR_CONTINUATION:v1",
+      "version": 1,
+      "kind": "planned_entrance_closure",
+      "line_id": "L1",
+      "scope": {
+        "level": "station",
+        "station_ids": [
+          "L1_06"
+        ]
+      },
+      "published_at": null,
+      "published_date": "2026-03-19",
+      "ingested_at": "2026-10-09T02:36:49+03:00",
+      "confidence": "confirmed",
+      "entrance_state": "closed",
+      "movement_state": "normal",
+      "sources": [
+        {
+          "url": "https://spbvedomosti.ru/news/gorod/gorodskaya-khronika-vazhnoe-v-peterburge-i-lenoblasti-19-marta-2026-goda/",
+          "local_path": null,
+          "evidence_register": "docs/metro_anomaly_events_20261009.json",
+          "status": "press_with_operator_statement_and_flow"
+        },
+        {
+          "url": "https://spbvedomosti.ru/news/gorod/vkhod-s-ogranicheniyami-na-baltiyskoy-i-ploshchadi-vosstaniya-nachinaetsya-remont-eskalatorov/"
+        }
+      ],
+      "description": "Possible continuation beyond the original planned end; restoration was reported for 18 March without an exact time. Closure duration remains unknown.",
+      "data_finding": "Февраль: во все 19 рабочих дней не более 6 входов в каждом слоте 08:30 и 08:45. В 08 ч 17 марта 1456, 18 марта 2196, 19 марта 3221, 24 марта 4376 входов.",
+      "timing": {
+        "observed": {
+          "date_start": "2026-03-01",
+          "date_end": "2026-03-18",
+          "uncertain": true,
+          "knowledge_at": "2026-10-09T02:36:49+03:00",
+          "windows": [
+            {
+              "weekdays": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "start_time": "08:10",
+              "end_time": "09:20",
+              "entrance_state": "closed"
+            }
+          ]
+        }
+      },
+      "restoration_date": "2026-03-18",
+      "conflicts": [
+        "exact_access_timing_after_original_planned_end_unknown"
+      ],
+      "derived_from_event_id": "L1_BALT_REPAIR"
+    }
+  ]
+}

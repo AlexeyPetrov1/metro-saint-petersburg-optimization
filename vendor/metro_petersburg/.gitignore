@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.ipynb_checkpoints/
+
+# секреты: ключи API только в переменных окружения или в локальном .env (external_data)
+.env
+.env.*
+!.env.example
+
+# отчёты smoke-проверок внешних API (scripts/smoke_external_apis.sh)
+artifacts/
+
+# данные не коммитим, кроме заглушки контракта для команды
+data/**
+!data/*/
+!data/*/.gitkeep
+!data/predictions/stub.json
+!data/predictions/contract.schema.json
+!data/features_screening.csv
+# ручные справочники (события и т.п.) — в git
+!data/reference/*.csv
+!data/reference/*.yaml
+
+logs/
+catboost_info/
+
+# обученные модели (models/lgbm_*/) — не в git, собираются командами src.model и src.serve
+models/
+
+# отчёт: страницы для просмотра и шаблон docx собираются build.sh
+docs/report/pages/
+docs/report/reference.docx

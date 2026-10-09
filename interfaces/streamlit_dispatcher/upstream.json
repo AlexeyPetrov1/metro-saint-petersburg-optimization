@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/KovalevNikolay710/sirius-subway_simulation",
+  "branch": "dev",
+  "commit": "2bbcdb97dda3a2ba2f12490919bb3fdf57ce58ea",
+  "sha256": {
+    ".streamlit/config.toml": "c41f0ba5688db720e2f95857a62256e210c4201121993e86a8191b3c0b0a7522",
+    "src/metro_control/figures.py": "b3f1c2c30529fc285c8b924471cf05bee80340e2cdbc174cb32fd9e0c03383df",
+    "src/metro_control/sim_view.py": "075da7722bc6f651940533b56aded0ba8c5def0278cb36f7805206d01e09361b",
+    "src/metro_control/timeline.py": "9d71e148668cb1f921c9851ad3aa0816fc75b309897c37c088df6d867b0cd27d",
+    "src/metro_control/assets/load_player.html": "9cfd4492813dfd48205cca95f5f8aa2652d134de0f23d0f8e6585e315aebe8e6",
+    "src/metro_control/assets/sim_player.html": "31501096aa54dd039e433598455804d082b390731c0b5121db4f7aa742302400",
+    "src/metro_control/assets/ui.css": "ed2a214344a9d16c0cf46c83426bc59fc236db2c914661d3d8ff9ba79a101bc4",
+    "src/metro_control/assets/ui.js": "6d77e211171ea38057d47f55e3eb509ce26a5bdbc7e0dde1e0c8edb6dfa09c53"
+  }
+}

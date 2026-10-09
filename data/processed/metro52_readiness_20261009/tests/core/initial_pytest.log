@@ -1,0 +1,73 @@
+........................................................................ [  3%]
+........................................................................ [  6%]
+........................................................................ [ 10%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 20%]
+........................................................................ [ 24%]
+........................................................................ [ 27%]
+........................................................................ [ 31%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 41%]
+........................................................................ [ 45%]
+........................................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 62%]
+........................................................................ [ 66%]
+........................................................................ [ 69%]
+........................................................................ [ 73%]
+........................................................................ [ 76%]
+........................................................................ [ 80%]
+........................................................................ [ 83%]
+........................................................................ [ 87%]
+........................................................................ [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 97%]
+..................................................                       [100%]
+============================== warnings summary ===============================
+tests/test_metro48_gru.py::test_uploaded_contract_has_original_embedding_order_and_training_cutoff
+tests/test_metro51_ensemble.py::test_actual_contract_uses_all_native_bases_and_true_cutoffs
+  C:\Users\lesha\HackathonSPB\vendor\metro_petersburg\src\intrahour.py:80: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+    h["y15"] = h[QCOLS].sum(1)
+
+tests/test_metro48_gru.py: 5 warnings
+tests/test_metro51_ensemble.py: 5 warnings
+  C:\Users\lesha\HackathonSPB\vendor\metro_petersburg\src\intrahour.py:267: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+    tot = m[QCOLS].sum(1)
+
+tests/test_metro48_gru.py::test_uploaded_contract_has_original_embedding_order_and_training_cutoff
+tests/test_metro51_ensemble.py::test_actual_contract_uses_all_native_bases_and_true_cutoffs
+  C:\Users\lesha\HackathonSPB\metro48_gru.py:141: Pandas4Warning: Starting with pandas version 4.0 all arguments of all will be keyword-only.
+    good = h.ok & (h.b4 >= 20) & h[self.I.PCOLS].notna().all(1) & h.s_v.notna()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================ slowest 25 durations =============================
+73.31s call     tests/test_goal43_campaign.py::test_campaign_compares_four_families_then_validates_frozen_plan
+38.40s setup    tests/test_metro51_ensemble.py::test_bundle_complete_quarter_refresh_and_future_mutation_invariance
+22.85s call     tests/test_metro_ml.py::test_actual_frozen_bundle_is_causal_and_hourly_refresh_has_no_third_hour
+21.03s call     tests/test_metro_ml.py::test_actual_frozen_weights_reject_unknown_line_and_show_observation_cutoff
+20.74s call     tests/test_metro44_planner.py::test_dense_reference_is_checked_for_the_whole_service_day
+20.66s call     tests/test_line1.py::test_s1_real_groups_whole_run_equals_warmup_and_three_main_windows
+18.37s call     tests/test_metro_ml.py::test_future_late_vestibule_schedules_are_public_and_missing_weather_stays_nan
+16.86s call     tests/test_metro_ml.py::test_loader_uses_hourly_history_only_where_observed_quarters_are_absent
+16.21s call     tests/test_metro44_linked_gap_repair.py::test_compiled_future_leg_hold_preserves_a_real_started_movement
+16.01s call     tests/test_goal43_extend.py::test_stop_resume_creates_missing_summary_from_saved_first_decision
+12.25s call     tests/test_metro44_bridge_reserves.py::test_complete_small_transition_preserves_physics_and_source
+12.17s call     tests/test_line1.py::test_real_date_has_complete_coverage_and_exact_counts
+11.04s call     tests/test_line1.py::test_date_fallback_only_if_date_absent_and_uses_complete_weekday
+10.54s call     tests/test_metro44_linked_gap_repair.py::test_unchanged_valid_chain_checks_prefix_current_minimum_capacity_and_closure
+10.43s call     tests/test_metro44_chain_repair.py::test_valid_known_plan_is_not_rewritten_and_all_physics_are_checked
+9.74s call     tests/test_metro44_cp_chain_repair_probe.py::test_saved_cp_conflict_is_reproduced_with_same_past_and_nearby_starts
+7.74s call     tests/test_metro51_ensemble.py::test_bundle_complete_quarter_refresh_and_future_mutation_invariance
+7.33s call     tests/test_goal43_extend.py::test_saved_first_decision_extends_without_rewriting_existing_runs
+5.98s setup    tests/test_metro44_planner_bridge.py::test_bridge_preserves_source_past_and_started_arrivals
+5.93s call     tests/test_metro51_ensemble.py::test_month_end_forecast_covers_closed_future_hours_without_fake_demand
+5.93s call     tests/test_metro44_planner.py::test_wear_priority_changes_only_future_vehicle_assignment
+4.84s call     tests/test_metro45_phase.py::test_future_phase_never_rewrites_past_or_current_movement
+4.66s setup    tests/test_metro48_gru.py::test_uploaded_contract_has_original_embedding_order_and_training_cutoff
+4.34s call     tests/test_metro44_assignment_plan.py::test_identity_assignment_preserves_every_service_clock_and_current_motion
+4.32s call     tests/test_metro44_planner_terminal.py::test_zero_time_reserve_return_cannot_be_reinvented_by_terminal_adapter
+2066 passed, 14 warnings in 573.66s (0:09:33)

@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "accounting_kind": "cash",
+      "covered_components": [
+        "traction"
+      ],
+      "name": "energy",
+      "quantity_key": "energy",
+      "rate": null,
+      "source": "independent fixture",
+      "tariff_periods": [
+        {
+          "rate": "6"
+        },
+        {
+          "rate": "10"
+        }
+      ],
+      "unit": "RUB/kWh"
+    }
+  ],
+  "currency": "RUB"
+}

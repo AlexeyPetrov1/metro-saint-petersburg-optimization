@@ -1,0 +1,227 @@
+{
+  "discrepancies": [
+    {
+      "actual": "55394.87",
+      "check": "train_hours_sum",
+      "delta": "-0.02",
+      "expected": "55394.89",
+      "locator": "выполнения графика движения поездов за III квартал 2026 года",
+      "source_id": "D09",
+      "source_sheet": "",
+      "status": "mismatch"
+    },
+    {
+      "actual": "16332220.0",
+      "check": "eight_cars_vs_passenger_km",
+      "delta": "12.2",
+      "expected": "16332207.8",
+      "locator": "выполнения графика движения поездов за III квартал 2026 года",
+      "source_id": "D09",
+      "source_sheet": "",
+      "status": "mismatch"
+    },
+    {
+      "actual": "56504.49",
+      "check": "train_hours_sum",
+      "delta": "0.02",
+      "expected": "56504.47",
+      "locator": "выполнения графика движения поездов за II квартал 2026 года",
+      "source_id": "D08",
+      "source_sheet": "",
+      "status": "mismatch"
+    },
+    {
+      "actual": "219276.00",
+      "check": "train_hours_sum",
+      "delta": "0.03",
+      "expected": "219275.97",
+      "locator": "выполнения графика движения поездов за 2025 ГОД",
+      "source_id": "D10",
+      "source_sheet": "",
+      "status": "mismatch"
+    },
+    {
+      "actual": "65459700.8",
+      "check": "eight_cars_vs_passenger_km",
+      "delta": "532.8",
+      "expected": "65459168",
+      "locator": "выполнения графика движения поездов за 2025 ГОД",
+      "source_id": "D10",
+      "source_sheet": "",
+      "status": "mismatch"
+    }
+  ],
+  "embedded_image_count": 21,
+  "hourly": {
+    "calendar_daily_row_counts": {
+      "23": 1,
+      "552": 272
+    },
+    "excluded_rows": [
+      {
+        "row": 150175,
+        "text": "Общее количество пассажиров за выбранный период:  164877135"
+      }
+    ],
+    "footer_reconciliation": {
+      "actual": 164877135,
+      "check": "hourly_total",
+      "delta": 0,
+      "expected": 164877135,
+      "locator": "A150175",
+      "source_id": "D05",
+      "source_sheet": "Пассажиропоток 2026 Линия 1.xls",
+      "status": "pass"
+    },
+    "missing_vestibules": [
+      "V09"
+    ],
+    "source_id": "D05"
+  },
+  "hourly_comparison": {
+    "compared_hours": 65642,
+    "differing_hours": 56038,
+    "equal_hours": 9604,
+    "mean_absolute_difference": 18.08535693610798,
+    "note": "Calendar alignment without shift, under the stated timestamp assumption; sources kept separate."
+  },
+  "monthly": [
+    {
+      "days": 28,
+      "empty_sheets": [
+        "Лист1"
+      ],
+      "matches_previous_rows": true,
+      "missing_days": [],
+      "month": "2026-02",
+      "previous_rows": 64512,
+      "rows": 64512,
+      "source_id": "D04"
+    },
+    {
+      "days": 31,
+      "empty_sheets": [
+        "Лист1"
+      ],
+      "matches_previous_rows": true,
+      "missing_days": [],
+      "month": "2026-05",
+      "previous_rows": 71424,
+      "rows": 71424,
+      "source_id": "D03"
+    },
+    {
+      "days": 31,
+      "empty_sheets": [
+        "Лист1"
+      ],
+      "matches_previous_rows": true,
+      "missing_days": [],
+      "month": "2026-07",
+      "previous_rows": 71424,
+      "rows": 71424,
+      "source_id": "D01"
+    },
+    {
+      "days": 30,
+      "empty_sheets": [
+        "Лист1"
+      ],
+      "matches_previous_rows": true,
+      "missing_days": [],
+      "month": "2026-09",
+      "previous_rows": 69120,
+      "rows": 69120,
+      "source_id": "D02"
+    }
+  ],
+  "reconciliation": {
+    "incomplete": 0,
+    "mismatch": 5,
+    "pass": 14765
+  },
+  "source_file_count": 18,
+  "station_incomplete_rows": 0,
+  "tables": {
+    "entries_station_15m": {
+      "calendar_days": 124,
+      "interval_end_max": "2026-10-01T03:00:00+03:00",
+      "interval_start_max": "2026-10-01T02:45:00+03:00",
+      "interval_start_min": "2026-02-01T03:00:00+03:00",
+      "missing_values": 0,
+      "rows": 218880,
+      "service_date_max": "2026-09-30",
+      "service_date_min": "2026-02-01",
+      "service_days": 120,
+      "stations": 19,
+      "total_entries": 75929175,
+      "vestibules": null,
+      "zeros": 37365
+    },
+    "entries_vestibule_15m": {
+      "calendar_days": 124,
+      "interval_end_max": "2026-10-01T03:00:00+03:00",
+      "interval_start_max": "2026-10-01T02:45:00+03:00",
+      "interval_start_min": "2026-02-01T03:00:00+03:00",
+      "missing_values": 0,
+      "rows": 276480,
+      "service_date_max": "2026-09-30",
+      "service_date_min": "2026-02-01",
+      "service_days": 120,
+      "stations": 19,
+      "total_entries": 75929175,
+      "vestibules": 24,
+      "zeros": 50706
+    },
+    "entries_vestibule_1h": {
+      "calendar_days": 273,
+      "interval_end_max": "2026-09-30T01:00:00+03:00",
+      "interval_start_max": "2026-09-30T00:00:00+03:00",
+      "interval_start_min": "2026-01-01T00:00:00+03:00",
+      "missing_values": 0,
+      "rows": 150167,
+      "service_date_max": "2026-09-29",
+      "service_date_min": "2025-12-31",
+      "service_days": 273,
+      "stations": 18,
+      "total_entries": 164877135,
+      "vestibules": 23,
+      "zeros": 24022
+    }
+  },
+  "transport_periods": [
+    {
+      "period_end": "2025-12-31",
+      "period_start": "2025-01-01"
+    },
+    {
+      "period_end": "2026-06-30",
+      "period_start": "2026-04-01"
+    },
+    {
+      "period_end": "2026-09-30",
+      "period_start": "2026-07-01"
+    }
+  ],
+  "transport_rows": 30,
+  "validation_passed": [
+    "unique keys",
+    "nonnegative integral counts",
+    "timezone and interval grid",
+    "midnight and month boundary",
+    "96 intervals and expected vestibules/stations",
+    "explicit station mapping",
+    "missing values distinct from zero",
+    "station sums and completeness recomputed",
+    "source daily and line totals checked",
+    "empty and total rows excluded",
+    "HTML XLS format and reported discrepancies preserved"
+  ],
+  "warnings": [
+    "В CU3 дневных листов обнаружен дополнительный суточный итог линии. Он включён в сверки и исключён из наблюдений.",
+    "14 правил обслуживания сверены с фото таблиц 3 и 4 в чате. ЕО: один раз в сутки, срок действия осмотра 20 ±4 часа. Исходные файлы фото локально недоступны; их размер и SHA-256 неизвестны. Дата и полный регламент неизвестны.",
+    "Сканированный PDF и встроенные изображения учтены по формату, хешу и метаданным. Их числа не признаны подтверждёнными параметрами.",
+    "Часовой источник не содержит Технологический институт; 30.09.2026 присутствует только час 00.",
+    "Между четырьмя месяцами основного ряда есть разрывы. Отсутствующие месяцы не заполнены нулями."
+  ]
+}

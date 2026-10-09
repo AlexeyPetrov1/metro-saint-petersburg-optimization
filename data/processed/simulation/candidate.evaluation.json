@@ -1,0 +1,141 @@
+{
+  "closure_end": "2026-05-01T03:16:00+03:00",
+  "constraint_status": "unknown",
+  "demand_id": "passengers-not-modeled",
+  "evaluation_mode": "fixture",
+  "events": [],
+  "initial_state_id": "dfc39bcfcc7af811907f39e36680065043567a0a72380cd3a4d50802d14af246",
+  "model_version": "simulation-v1.1",
+  "obligations_closed": true,
+  "period_end": "2026-05-01T03:16:00+03:00",
+  "period_start": "2026-05-01T03:00:00+03:00",
+  "plan_id": "candidate",
+  "quantities": {
+    "avoidable_maintenance_events": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "event"
+    },
+    "car_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "car_km"
+    },
+    "entry_events": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "event"
+    },
+    "implementation_events": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "event"
+    },
+    "moving_hours": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_h"
+    },
+    "nonpassenger_car_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "car_km"
+    },
+    "nonpassenger_train_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_km"
+    },
+    "paid_person_hours": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "person_h"
+    },
+    "passenger_car_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "car_km"
+    },
+    "passenger_train_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_km"
+    },
+    "purchased_energy": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "kWh"
+    },
+    "standby_hours": {
+      "amount": "0.2666666666666666666666666667",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_h"
+    },
+    "stop_hours": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_h"
+    },
+    "stopped_hours": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_h"
+    },
+    "train_km": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_km"
+    },
+    "turnaround_hours": {
+      "amount": "0",
+      "applicability": "applicable",
+      "source": "simulation-v1.1; GOAL 3.1 educational A-B-C network; not Saint Petersburg Metro; plan=candidate; fixture",
+      "status": "assumed",
+      "unit": "train_h"
+    },
+    "withdrawal_events": {
+      "amount": null,
+      "applicability": "applicable",
+      "source": "not modeled or supplied; no inference from train work",
+      "status": "unknown",
+      "unit": "event"
+    }
+  },
+  "required_cash_articles": [
+    "purchased_energy",
+    "paid_labor",
+    "avoidable_maintenance",
+    "entry_preparation",
+    "withdrawal_preparation"
+  ]
+}

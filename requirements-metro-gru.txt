@@ -1,0 +1,6 @@
+-r requirements.txt
+torch==2.12.0
+lightgbm==4.6.0
+scipy==1.18.1
+matplotlib==3.11.2
+ortools==9.15.6755
