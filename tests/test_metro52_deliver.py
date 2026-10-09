@@ -181,3 +181,83 @@ def test_publication_failure_is_explicit(delivery, tmp_path, failure):
         delivery.publish(tmp_path, ['data/processed/campaign'], execute=execute)
     if failure == 'unrelated_index':
         assert len(calls) == 1
+
+
+@pytest.fixture
+def partial_campaign(campaign):
+    status = json.loads((campaign/'status.json').read_text())
+    status.update(stage='completed_partial', source_process_receipt={'exit_code':125})
+    write_json(campaign/'status.json', status)
+    for arm in ['reference','balanced']:
+        contract = dict(arm=arm.upper(), stage='partial_60', full_day=False, stop_after_steps=60,
+                        period_start='2026-09-30T06:00:00+03:00', observation_end_second=54000)
+        write_json(campaign/arm/'contract.json', contract)
+        write_json(campaign/arm/'result.json', dict(contract=contract, full_day=False))
+    comparison = dict(full_day=False, stage='partial_60', annual_scenario_emitted=False,
+        paired_inputs_passed=True, audits={a:{'passed':False, 'checks':{'passenger_accounting_conserved':True},
+            'checkpoint_verified_against_recompiled_runner':True} for a in ['reference','balanced']},
+        all_results_admissible=False, goal_achieved=False, cash_saving_rub=None)
+    write_json(campaign/'review/comparison.json', comparison)
+    write_json(campaign/'review/verification.json', dict(pdf_created=True, artifacts={
+        name:hashlib.sha256((campaign/'review'/name).read_bytes()).hexdigest()
+        for name in ['report.pdf','comparison.json']}))
+    return campaign
+
+
+def test_missing_campaign_status_waits(delivery, tmp_path):
+    assert delivery.completed(tmp_path/'not_materialized_yet') is False
+
+
+def test_completed_partial_can_deliver_failed_admission_without_a_full_day_claim(delivery, partial_campaign, tmp_path):
+    export = tmp_path/'export'
+    export.mkdir()
+    (export/'README.md').write_text('Новый суточный прогон выполняется; итоговых результатов ещё нет.', encoding='utf8')
+    assert delivery.completed(partial_campaign) is True
+    manifest = delivery.prepare(partial_campaign, export, tmp_path/'delivery')
+    assert manifest['scope'] == 'partial_60'
+    assert manifest['full_day_completed'] is False and manifest['annual_scenario_emitted'] is False
+    after = (export/'README.md').read_text(encoding='utf8')
+    assert '06:00–21:00' in after and 'review/report.pdf' in after
+    assert 'Суточный прогон завершён.' not in after
+    assert (export/'data/processed/campaign/review/comparison.json').read_bytes() == (partial_campaign/'review/comparison.json').read_bytes()
+    with zipfile.ZipFile(tmp_path/'delivery/campaign.zip') as archive:
+        assert archive.testzip() is None
+        for row in manifest['files']:
+            assert hashlib.sha256(archive.read(row['path'])).hexdigest() == row['sha256']
+
+
+@pytest.mark.parametrize('field,value', [('full_day',True),('stage','full_day'),
+    ('annual_scenario_emitted',True),('paired_inputs_passed',False),('cash_saving_rub',1),('goal_achieved',True)])
+def test_partial_comparison_cannot_claim_full_day_annual_or_unpaired_savings(delivery, partial_campaign, field, value):
+    path = partial_campaign/'review/comparison.json'
+    comparison = json.loads(path.read_text())
+    comparison[field] = value
+    write_json(path, comparison)
+    with pytest.raises(ValueError, match='Partial comparison'):
+        delivery.completed(partial_campaign)
+
+
+def test_partial_contract_requires_both_real_materialized_arms(delivery, partial_campaign):
+    contract = json.loads((partial_campaign/'balanced/contract.json').read_text())
+    contract['stop_after_steps'] = 59
+    write_json(partial_campaign/'balanced/contract.json', contract)
+    write_json(partial_campaign/'balanced/result.json', {'contract':contract,'full_day':False})
+    with pytest.raises(ValueError, match='partial'):
+        delivery.completed(partial_campaign)
+
+
+def test_partial_readme_pending_marker_is_replaced_without_changing_other_bytes(delivery, tmp_path):
+    pending = 'Выполняется сокращённый прогон до 60-го решения (21:00); итоговых результатов ещё нет.'
+    before = ('# Existing title\r\n\r\n'+pending+'\r\n\r\nExisting footer.\r\n').encode('utf8')
+    path = tmp_path/'README.md'
+    path.write_bytes(before)
+    receipt = delivery.update_readme(tmp_path, 'data/processed/partial_60', partial=True)
+    after = path.read_bytes()
+    assert receipt['changed'] is True
+    assert pending.encode('utf8') not in after
+    assert after.startswith(b'# Existing title\r\n\r\n') and after.endswith(b'\r\n\r\nExisting footer.\r\n')
+    assert 'Сокращённый опыт 06:00–21:00 завершён после 60 решений'.encode('utf8') in after
+    assert b'data/processed/partial_60/review/report.pdf' in after
+    assert receipt['previous_sha256'] == hashlib.sha256(before).hexdigest()
+    assert receipt['new_sha256'] == hashlib.sha256(after).hexdigest()
+    assert delivery.update_readme(tmp_path, 'data/processed/partial_60', partial=True)['changed'] is False

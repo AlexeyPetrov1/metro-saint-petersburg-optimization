@@ -14,6 +14,7 @@ ROOT = HERE.parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from interfaces.streamlit_dispatcher.adapter import Replay
+from interfaces.streamlit_dispatcher.campaign import resolve_campaign
 from interfaces.streamlit_dispatcher.player import player_html
 
 DEFAULT = ROOT / "data/processed/metro51_balanced_pilot_20261009_v2"
@@ -49,6 +50,10 @@ with st.sidebar:
     campaign = Path(st.text_input("Папка эксперимента", os.environ.get("METRO_CAMPAIGN_DIR", str(DEFAULT)))).expanduser()
     if not campaign.is_absolute():
         campaign = ROOT / campaign
+    selected_campaign = campaign
+    campaign = resolve_campaign(campaign, project_root=ROOT)
+    if campaign != selected_campaign:
+        st.caption(f"Парное сравнение: {campaign.name}")
     arms = sorted(p.name for p in campaign.glob("*") if (p / "common_scenario.json.gz").exists())
     if not arms:
         st.error("В этой папке нет сохранённых вариантов эксперимента.")

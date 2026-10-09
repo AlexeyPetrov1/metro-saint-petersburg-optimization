@@ -46,11 +46,15 @@ def included(relative):
 
 def completed(root):
     root = Path(root)
-    status = read(root/'status.json')
+    try:
+        status = read(root/'status.json')
+    except FileNotFoundError:
+        return False
     if status.get('stage') == 'failed':
         raise ValueError('Campaign failed; completion cannot be delivered')
-    if status.get('stage') != 'completed':
+    if status.get('stage') not in ('completed', 'completed_partial'):
         return False
+    partial = status['stage'] == 'completed_partial'
     if status.get('expected_arms') != ARMS or status.get('pending_arms'):
         raise ValueError('Completed campaign has an unexpected scope')
     for arm in ARMS:
@@ -58,14 +62,28 @@ def completed(root):
             raise ValueError('Required model arm did not exit successfully')
         result = read(root/arm/'result.json')
         contract = result.get('contract', {})
-        if contract.get('arm') != arm.upper() or contract.get('stage') != 'full_day' or result.get('full_day') is not True:
+        if partial:
+            if (contract.get('arm') != arm.upper() or contract.get('stage') != 'partial_60'
+                    or contract.get('full_day') is not False or result.get('full_day') is not False
+                    or contract.get('stop_after_steps') != 60 or read(root/arm/'contract.json') != contract):
+                raise ValueError('Required partial result and matching materialized contract are missing')
+        elif contract.get('arm') != arm.upper() or contract.get('stage') != 'full_day' or result.get('full_day') is not True:
             raise ValueError('Required full-day result is missing')
     pdf = root/'review/report.pdf'
     with long_path(pdf).open('rb') as stream:
         if stream.read(4) != b'%PDF':
             raise ValueError('Required report is not a PDF')
     comparison = read(root/'review/comparison.json')
-    if comparison.get('full_day') is not True or set(comparison.get('audits', {})) != set(ARMS):
+    if partial:
+        audits = comparison.get('audits', {})
+        if (comparison.get('full_day') is not False or comparison.get('stage') != 'partial_60'
+                or comparison.get('annual_scenario_emitted') is not False
+                or comparison.get('paired_inputs_passed') is not True or set(audits) != set(ARMS)
+                or comparison.get('cash_saving_rub') is not None or comparison.get('goal_achieved') is True
+                or not all(isinstance(a, dict) and isinstance(a.get('checks'), dict)
+                           and a.get('checkpoint_verified_against_recompiled_runner') is True for a in audits.values())):
+            raise ValueError('Partial comparison requires paired audits without full-day, annual or cash claims')
+    elif comparison.get('full_day') is not True or set(comparison.get('audits', {})) != set(ARMS):
         raise ValueError('Comparison must cover both completed full-day arms')
     verification = read(root/'review/verification.json')
     artifacts = verification.get('artifacts', {})
@@ -115,16 +133,20 @@ def scan(root, rows):
     return findings
 
 
-def update_readme(export, relative):
+def update_readme(export, relative, *, partial=False):
     path = export/'README.md'
     if not path.exists():
         return dict(exists=False, changed=False)
     before = path.read_bytes()
-    pending = 'Новый суточный прогон выполняется; итоговых результатов ещё нет.'.encode('utf8')
-    complete = (f'Суточный прогон завершён. [PDF]({relative}/review/report.pdf), '
+    pending = ('Новый суточный прогон выполняется; итоговых результатов ещё нет.',
+               'Выполняется сокращённый прогон до 60-го решения (21:00); итоговых результатов ещё нет.')
+    headline = 'Сокращённый опыт 06:00–21:00 завершён после 60 решений; полный день не выполнялся.' if partial else 'Суточный прогон завершён.'
+    complete = (f'{headline} [PDF]({relative}/review/report.pdf), '
                 f'[HTML]({relative}/review/report.html), [отчёты и данные]({relative}). '
                 'Результаты проверок безопасности и экономики приведены в отчётах.').encode('utf8')
-    after = before.replace(pending, complete)
+    after = before
+    for marker in pending:
+        after = after.replace(marker.encode('utf8'), complete)
     if after != before:
         path.write_bytes(after)
     return dict(exists=True, changed=after != before,
@@ -137,6 +159,7 @@ def prepare(root, export, delivery):
         raise ValueError('Archive and public export must be separate from campaign')
     if not completed(root):
         raise ValueError('Campaign is not completed')
+    partial = read(root/'status.json')['stage'] == 'completed_partial'
     rows, omitted = selected(root)
     findings = scan(root, rows)
     if findings:
@@ -174,11 +197,17 @@ def prepare(root, export, delivery):
     manifest = dict(schema_version=1, campaign=root.name, public_path=relative.as_posix(), files=rows,
         omitted=omitted, secret_findings=[], zip_crc_verified=True, zip_sha256=digest(archive),
         zip_bytes=archive.stat().st_size, zip_published=False, source_bytes_preserved=True,
-        economic_goal_required_for_delivery=False)
-    manifest['readme_update'] = update_readme(export, relative.as_posix())
+        economic_goal_required_for_delivery=False, scope='partial_60' if partial else 'full_day',
+        full_day_completed=not partial, annual_scenario_emitted=not partial, accepted_cash_saving_rub=None)
+    manifest['readme_update'] = update_readme(export, relative.as_posix(), partial=partial)
     save(delivery/'MANIFEST.json', manifest)
-    note = ('# Completed campaign delivery\n\n'
-            'Both REFERENCE and BALANCED completed. Reports include safety, forecast, incident and economic findings.\n\n'
+    heading = ('# Partial campaign delivery\n\n'
+               'Paired REFERENCE and BALANCED records cover 06:00–21:00 after 60 decisions. '
+               'Materialization completed; the original full-day process did not complete. '
+               'Unclosed journeys are censored; no daily or annual extrapolation is included.\n\n' if partial else
+               '# Completed campaign delivery\n\nBoth REFERENCE and BALANCED completed. '
+               'Reports include safety, forecast, incident and economic findings.\n\n')
+    note = (heading+
             'Delivery does not certify operational safety, economic improvement or real cash savings. '
             'Failed acceptance checks remain visible in the original reports.\n\n'
             f'Public data: `{relative.as_posix()}`. Local complete archive: `{archive}`. '

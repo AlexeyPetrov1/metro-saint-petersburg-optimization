@@ -1,0 +1,23 @@
+{
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.98,
+  "tests_first": true,
+  "initial_expected_failure": "ModuleNotFoundError: scripts.metro52_partial",
+  "actual_reference_replay_started": false,
+  "live_processes_changed": false,
+  "core_runtime_changed": false,
+  "live_readonly_preflight": {
+    "common_equal": true,
+    "seed_match": true,
+    "control_start_second": 900,
+    "groups": 20520,
+    "fixed_fleet": 68
+  },
+  "sha256": {
+    "scripts/metro52_partial.py": "6acf8b64e405c8a791f3d2af9f13e6d87e8c3cd1fa86a5d90df54070151b3dd7",
+    "tests/test_metro52_partial.py": "80a3eedc42823f2f84e27703abc4776a6e9713ae262e497fba353f12a4125f3a"
+  }
+}

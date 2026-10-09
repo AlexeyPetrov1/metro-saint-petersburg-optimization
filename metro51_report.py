@@ -274,8 +274,32 @@ def expected_control_times(contract):
     if 'decision_times' in contract:
         return contract['decision_times']
     end = contract.get('cohort_end_second', contract.get('entry_end_second'))
+    steps = contract.get('stop_after_steps')
+    end = contract.get('control_end_second', end+(steps is not None))
     times = list(range(contract.get('control_start_second', 3600), end, 900))
+    if steps is not None:
+        times = times[:steps]
     return [s for s in times if s >= 36000] if contract.get('stage') == 'evening' else times
+
+
+def passenger_observation(state, groups, *, partial=False):
+    remaining = sum(state[k] for k in ('queued', 'approaching', 'onboard_count'))
+    conserved = state['entered'] == sum(g['count'] for g in groups) == state['completed']+remaining
+    complete = conserved and remaining == 0
+    return dict(accounting_passed=conserved if partial else complete, journeys_complete=complete,
+                censored=partial and remaining > 0, remaining_passengers=remaining)
+
+
+def observation_scope(comparison):
+    if comparison.get('stage') != 'partial_60':
+        return ('Полный день: входы 06:00–00:00, учёт конца платформенного потока после полуночи, закрытие наблюдения до 02:00.'
+                if comparison.get('full_day') else 'Пилот: входы 06:00–10:30, готовность к посадке до 10:45, наблюдение и экономический пробег до 12:30.')
+    contract = comparison['contracts']['reference']
+    origin = datetime.fromisoformat(contract['period_start'])
+    end = origin+timedelta(seconds=contract['cohort_end_second'])
+    observed = origin+timedelta(seconds=contract['observation_end_second'])
+    return (f'Частичный опыт: входы {origin:%H:%M}–{end:%H:%M}, наблюдение и фактический пробег до {observed:%H:%M}. '
+            'Оставшиеся пассажиры цензурированы границей наблюдения; завершение их поездок не доказано. Пересчёт на день и год не выполняется.')
 
 
 def committed_prefix_preserved(folder, motion, decisions):
@@ -355,8 +379,9 @@ def audit_arm(folder):
     except (ValueError, KeyError, TypeError):
         checks['checkpoint_integrity'] = False
     checks['observation_complete'] = state['second'] == observed and observed >= cohort_end
-    checks['passenger_accounting_complete'] = (state['entered'] == state['completed'] == sum(g['count'] for g in groups)
-        and state['queued'] == state['approaching'] == state['onboard_count'] == 0)
+    partial = contract.get('stage') == 'partial_60'
+    observation = passenger_observation(state, groups, partial=partial)
+    checks['passenger_accounting_conserved' if partial else 'passenger_accounting_complete'] = observation['accounting_passed']
     physical = physical_gate(data, 0, service_end, reference_motion=motion)
     checks['independent_physical_gate'] = physical['movement_passed'] is True
     headways = operational_headways(data, motion, 0, min(service_end, observed))
@@ -407,6 +432,7 @@ def audit_arm(folder):
                  elapsed_run_seconds=result.get('elapsed_seconds'),
                  checkpoint_verified_against_recompiled_runner=True,
                  full_passenger_replay_performed=False,
+                 passenger_observation=observation,
                  actual_mileage_scope='completed arrivals through observation end; initial crossing track convention shared across arms')
     return audit, runner, state
 
@@ -434,7 +460,7 @@ def make_comparison(results, audits, *, paired_inputs_passed, annual_days=250, m
             for row in econ['per_train']:
                 row['observed_window'] = row.pop('daily')
                 row.pop('annual')
-            econ['period_scope'] = 'observed pilot/evening window; daily and annual extrapolation prohibited'
+            econ['period_scope'] = 'observed window only; daily and annual extrapolation prohibited'
         else:
             econ['period_scope'] = 'complete simulated day; annual repetition is an explicit scenario'
         economics[arm] = econ
@@ -508,7 +534,9 @@ def compile_comparison(root, *, annual_days=250):
     expected = [name for name, folder in arms.items() if (folder/'contract.json').is_file()]
     complete = bool(expected) and set(expected) <= set(results)
     pilot_passed = complete and audits.get('balanced', {}).get('passed') is True and model_evidence.get('passed') is True
-    full_status = ('completed' if comparison['full_day'] and complete else 'not_run_pending_pilot' if not complete else
+    partial = comparison.get('stage') == 'partial_60'
+    full_status = ('completed_partial' if partial and complete else 'pending_partial' if partial else
+                   'completed' if comparison['full_day'] and complete else 'not_run_pending_pilot' if not complete else
                    'not_run_pending_full_day' if pilot_passed else 'not_run_due_to_failed_pilot')
     comparison['campaign_status'] = dict(expected_arms=expected, completed_arms=list(results),
         unfinished_arms=sorted(set(expected)-set(results)), all_arms_finished=complete,
@@ -658,7 +686,8 @@ def render_dispatcher(comparison, output):
     output.mkdir(parents=True, exist_ok=True)
     status = comparison.get('campaign_status', {})
     full = status.get('full_day_status')
-    banner = ('Полный суточный прогон не выполнен: пилот не прошёл приёмку.' if full == 'not_run_due_to_failed_pilot' else
+    banner = ('Частичный опыт завершён по запросу после 60 решений; полный день не выполнен.' if full == 'completed_partial' else
+              'Полный суточный прогон не выполнен: пилот не прошёл приёмку.' if full == 'not_run_due_to_failed_pilot' else
               'Полный суточный прогон не выполнен; результаты пилота ещё проверяются.' if not comparison.get('full_day') else
               'Суточный опыт завершён; допустимость каждого варианта показана отдельно.')
     cards = []
@@ -707,7 +736,7 @@ def render_dispatcher(comparison, output):
 <style>body{margin:0;background:#edf2f7;color:#183047;font:16px/1.5 system-ui}main{max-width:1100px;margin:30px auto;padding:20px}h1,h2,h3{line-height:1.2}.notice{padding:20px;background:#fff0d9;border-left:5px solid #bf752b}.decision{background:#fff;border:1px solid #cfdae4;border-radius:12px;margin:20px 0;padding:24px}h4{margin:15px 0 4px}ul{margin:0}li{overflow-wrap:anywhere}small{display:block;color:#5b7185;font-size:12px}.meta{color:#5b7185}table{border-collapse:collapse;width:100%;background:white;font-size:14px}th,td{padding:10px;border:1px solid #cfdae4;text-align:left}th{background:#dce8f2}select,input{padding:10px;border:1px solid #afbfce;border-radius:6px}details{margin-top:14px}a{color:#155f99}</style>
 <main><h1>Красная линия: журнал решений и рисков</h1>'''
     doc += '<p class="notice">'+html.escape(banner)+'</p><p>Это просмотр сохранённых решений и проверенных объяснений. Отображение не отправляет команды поездам.</p>'
-    doc += '<p>Пилот: входы пассажиров 06:00–10:30; учёт готовности к посадке до 10:45; наблюдение и пробег до 12:30. Обязательства последнего окна прослеживаются после 10:30.</p>' if not comparison.get('full_day') else ''
+    doc += '<p>'+html.escape(observation_scope(comparison))+'</p>' if not comparison.get('full_day') else ''
     doc += '<h2>Проверка перевозки</h2>'+audit_table
     doc += '<h2>Объяснения решений</h2><label>Вариант <select id="arm">'+options+'</select></label> <input id="search" placeholder="Поиск по объяснению">'+(''.join(cards) or '<p>Подтверждённые объяснения пока отсутствуют.</p>')
     doc += '<h2>После исполнения: прогноз против факта</h2><p>Эти результаты стали известны после завершения целевых интервалов. Они используются для оценки ошибки и не были данными оптимизатора при выборе действия. Суммы относятся к целевым станциям и интервалам данного прогноза; разные моменты выпуска перекрываются.</p>'+future_table
@@ -825,14 +854,15 @@ def render_reports(comparison, output, *, create_pdf=True):
     warning = ('Все результаты прошли независимые проверки.' if comparison['all_results_admissible'] else
                'Есть нарушения или неполные проверки. Расчётное снижение стоимости таких вариантов не считается допустимой экономией.')
     campaign = comparison.get('campaign_status', {})
-    stage_note = ('Полный суточный прогон не выполнен: пилот не прошёл приёмку.'
+    stage_note = ('Частичный опыт завершён после 60 решений; полный день и годовая экономия не заявляются.'
+                  if campaign.get('full_day_status') == 'completed_partial' else
+                  'Полный суточный прогон не выполнен: пилот не прошёл приёмку.'
                   if campaign.get('full_day_status') == 'not_run_due_to_failed_pilot' else
                   'Полный суточный прогон не выполнен; пилот ещё не завершён или ожидает проверки.' if not full else
                   'Показан результат суточного опыта, а не только утреннего окна.')
     section('Область исследования', [scope, warning,
         stage_note,
-        'Пилот: входы 06:00–10:30, готовность к посадке до 10:45, наблюдение и экономический пробег до 12:30.' if not full else
-        'Полный день: входы 06:00–00:00, учёт конца платформенного потока после полуночи, закрытие наблюдения до 02:00.',
+        observation_scope(comparison),
         'Стоимость описывает расход ремонтного ресурса по пробегу. Денежная экономия бюджета, энергия, работа персонала и упущенная выручка не подтверждены.',
         'Исходный график является модельным. Результат одного дня не доказывает переносимость на реальную линию, другие дни или аварии.'])
     section('Безопасность и качество перевозки', headers=['Вариант', 'Допустим', 'Пробег, км', 'Среднее ожидание, с', 'P95 ожидания, с', 'Худшая первая непосадка, %', 'Худшая повторная, %'],

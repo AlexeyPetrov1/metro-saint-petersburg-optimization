@@ -1,0 +1,16 @@
+{
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_review_blocking_errors": [],
+  "agent_changed_only": [
+    "tests/test_metro52_stop60.py"
+  ],
+  "no_live_process_actions": true,
+  "no_actual_materialization": true,
+  "sha256": {
+    "scripts/metro52_stop60.py": "71d8b45bcd62faf965420e2ea9c3b092fdae7e898949ead286a14b23ed9a1dd5",
+    "tests/test_metro52_stop60.py": "4a999de3b96ab6ecc8d24088d7139b928f497f952b4e3a6f69f694f680874041"
+  }
+}

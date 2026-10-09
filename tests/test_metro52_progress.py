@@ -48,3 +48,34 @@ def test_error_message_is_escaped_in_browser(tmp_path):
     html = (tmp_path / 'progress.html').read_text(encoding='utf8')
     assert '<script>' not in html
     assert '&lt;script&gt;' in html
+
+
+def test_requested_stop_changes_target_without_rewriting_model_contract(tmp_path):
+    arm = tmp_path / 'balanced'
+    arm.mkdir()
+    contract = json.dumps(dict(control_start_second=900, cohort_end_second=64800))
+    (arm / 'contract.json').write_text(contract)
+    (tmp_path / 'campaign_scope.json').write_text(json.dumps(dict(stop_after_steps=60)))
+    assert progress_snapshot(tmp_path)['total_steps'] == 60
+    assert (arm / 'contract.json').read_text() == contract
+
+
+def test_partial_completion_links_to_paired_report_and_is_not_full_day(tmp_path):
+    (tmp_path / 'status.json').write_text(json.dumps(dict(stage='completed_partial')))
+    target = tmp_path.parent / 'paired'
+    (tmp_path / 'campaign_scope.json').write_text(json.dumps(dict(
+        stop_after_steps=60, comparison_root=str(target))))
+    snapshot = progress_snapshot(tmp_path)
+    assert snapshot['finished'] is True
+    assert snapshot['full_day_finished'] is False
+    write_progress(tmp_path, snapshot)
+    page = (tmp_path / 'progress.html').read_text(encoding='utf8')
+    assert '../paired/review/report.pdf' in page
+
+
+def test_invalid_stop_target_is_ignored(tmp_path):
+    arm = tmp_path / 'balanced'
+    arm.mkdir()
+    (arm / 'contract.json').write_text(json.dumps(dict(control_start_second=900, cohort_end_second=64800)))
+    (tmp_path / 'campaign_scope.json').write_text(json.dumps(dict(stop_after_steps=True)))
+    assert progress_snapshot(tmp_path)['total_steps'] == 71

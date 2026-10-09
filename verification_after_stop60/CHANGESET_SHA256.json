@@ -1,0 +1,178 @@
+{
+  "previous_commit": "092e22dba3b5fbcf944a0d9305fceb85807c356f",
+  "created_at": "2026-10-09T20:24:42.870923+00:00",
+  "scope": "stop_after_60_committed_decisions",
+  "new_results_ready": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11740,
+      "sha256": "35fea0b45445a6726b9ea939f6a151c1431e4a108bf0d399a7b712f9283333de"
+    },
+    {
+      "path": "scripts/metro52_stop60.py",
+      "bytes": 7450,
+      "sha256": "71d8b45bcd62faf965420e2ea9c3b092fdae7e898949ead286a14b23ed9a1dd5"
+    },
+    {
+      "path": "scripts/metro52_partial.py",
+      "bytes": 15941,
+      "sha256": "6acf8b64e405c8a791f3d2af9f13e6d87e8c3cd1fa86a5d90df54070151b3dd7"
+    },
+    {
+      "path": "scripts/metro52_progress.py",
+      "bytes": 6479,
+      "sha256": "4f19ea44a0ddf1840081865e4d8221bd89e5849c074edcbeda80774e2064247c"
+    },
+    {
+      "path": "scripts/metro52_deliver.py",
+      "bytes": 15980,
+      "sha256": "3b9776f65786676c81539c754ea24276feeb7d2ebfa9b40d12caed72dc6324b8"
+    },
+    {
+      "path": "metro51_report.py",
+      "bytes": 98551,
+      "sha256": "a84e7af20fbb7b41999d1b219ec4e9b0681273b0c9fd4e31c041d134973b4b67"
+    },
+    {
+      "path": "tests/test_metro52_stop60.py",
+      "bytes": 7424,
+      "sha256": "4a999de3b96ab6ecc8d24088d7139b928f497f952b4e3a6f69f694f680874041"
+    },
+    {
+      "path": "tests/test_metro52_partial.py",
+      "bytes": 8629,
+      "sha256": "80a3eedc42823f2f84e27703abc4776a6e9713ae262e497fba353f12a4125f3a"
+    },
+    {
+      "path": "tests/test_metro52_progress.py",
+      "bytes": 3847,
+      "sha256": "052f3fbc4462e3399634306767ac6138cdef55048ceb9221b36f9972aba7e392"
+    },
+    {
+      "path": "tests/test_metro52_deliver.py",
+      "bytes": 13341,
+      "sha256": "4dc9b16ba0b80eae092666523b2735b6426fde8e26b62e33da41fd464a490002"
+    },
+    {
+      "path": "tests/test_metro51_report.py",
+      "bytes": 23958,
+      "sha256": "9585177049d7247073584bd560b263e774db1f0a5a9a0f120b733b25adbcbeb3"
+    },
+    {
+      "path": "tests/test_metro52_report_readiness.py",
+      "bytes": 9314,
+      "sha256": "7308d577e410186a6441232fc5d648c66da93d59ef5010cd0542c11a8aed6406"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/adapter.py",
+      "bytes": 16018,
+      "sha256": "c8c49fca12995f231b664ca9478391a47d65f00f5c65e2fd19f7339e2aaba787"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/app.py",
+      "bytes": 13961,
+      "sha256": "7525a0788de93c2cef1569b46b406875c040025e9565346a7dd40b71e3144831"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/campaign.py",
+      "bytes": 841,
+      "sha256": "48331da765e392e6c648db299412e86b887d1b0a731cd1b9dcdffdbfed69eb9b"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/tests/test_adapter.py",
+      "bytes": 6510,
+      "sha256": "8f92980a4d6120050e5ee323659dc027a2123d646aaf643fc61173a39abb788e"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/tests/test_app.py",
+      "bytes": 793,
+      "sha256": "03f7e97ea4fa962919885500acc0b3bfc97c361c9262546311f3028acc8bbae8"
+    },
+    {
+      "path": "interfaces/streamlit_dispatcher/tests/test_campaign_redirect.py",
+      "bytes": 2069,
+      "sha256": "d6b8e80d4e9cf9d407e146ba3d0fdc1cdc20c2a0834ec7dd374b5be7acf85b6d"
+    },
+    {
+      "path": "verification_after_stop60/VERIFICATION.md",
+      "bytes": 2535,
+      "sha256": "57e10431f9596fbabcf2c4e287e3cb494d679d12f71ff96aca87fcc2eeb1d419"
+    },
+    {
+      "path": "verification_after_stop60/delivery.xml",
+      "bytes": 3535,
+      "sha256": "606320c725033ad1598c2b8921482dfb4f838a92f86113c504f1cb2d20c29087"
+    },
+    {
+      "path": "verification_after_stop60/export_core.xml",
+      "bytes": 13327,
+      "sha256": "0035255c7b7d50233cdd46b938de81781cf035e4182d756d567e556efbbc41fd"
+    },
+    {
+      "path": "verification_after_stop60/export_report.xml",
+      "bytes": 2653,
+      "sha256": "d56c08a613cee2501f44a096a35884bdeb231badfd9d76e3f775b00a80e3c055"
+    },
+    {
+      "path": "verification_after_stop60/export_ui.xml",
+      "bytes": 3227,
+      "sha256": "a994bc5e61615f9489ec655a90fd7c6456ed88bd95fcbe18e17efa59ef4f0c98"
+    },
+    {
+      "path": "verification_after_stop60/export_ui_before.xml",
+      "bytes": 13179,
+      "sha256": "fe1fa2d8e10d419e8530dfa8122b35b9a552fe3380444640b775f3cdb1d9fda8"
+    },
+    {
+      "path": "verification_after_stop60/partial/final_junit.xml",
+      "bytes": 1656,
+      "sha256": "28170381bc8d27bbdbb3edea1ec81d5c227f3ce90b1a6a1854382d0379565692"
+    },
+    {
+      "path": "verification_after_stop60/partial/final_pytest.log",
+      "bytes": 103,
+      "sha256": "d4836429ce3042d53c876c506ba2a3aa1e86167fce4dac589850604d517f6334"
+    },
+    {
+      "path": "verification_after_stop60/partial/final_pytest.utf16.log",
+      "bytes": 204,
+      "sha256": "3a3c7edbae9c2a3633c06c458c7380aa90a3f63e490af43b36d9472a564655a3"
+    },
+    {
+      "path": "verification_after_stop60/partial/summary.json",
+      "bytes": 714,
+      "sha256": "11b6dd77db092f803e81487462fca74cfc08320051c9a51cb50beb6555aa38fb"
+    },
+    {
+      "path": "verification_after_stop60/report.xml",
+      "bytes": 5790,
+      "sha256": "435d5d65c1b6752be413dd391b501de70d40f6c9dc019732bf0884e7e398debe"
+    },
+    {
+      "path": "verification_after_stop60/stop60/final_junit.xml",
+      "bytes": 896,
+      "sha256": "9041029deb6ed79cb00d06ab76eabfbf77bf4174d4373223dbeb7f8359b712dd"
+    },
+    {
+      "path": "verification_after_stop60/stop60/final_pytest.log",
+      "bytes": 102,
+      "sha256": "87c3be8babefec64f1c673e2e1b429f78a01ae5582b1324ec608615543467ce3"
+    },
+    {
+      "path": "verification_after_stop60/stop60/final_pytest.utf16.log",
+      "bytes": 202,
+      "sha256": "8409177644608894a75c45f592874ff9fe04dbaf4dcb8cf9aa3a7c11eafbb948"
+    },
+    {
+      "path": "verification_after_stop60/stop60/summary.json",
+      "bytes": 479,
+      "sha256": "640994f100263cfe3fec20d561ffef9beefff52f49e1e4ec67824a597b572e00"
+    },
+    {
+      "path": "verification_after_stop60/ui_redirect.xml",
+      "bytes": 1433,
+      "sha256": "7df5cc298a202f88d794fd3a4d043349ea617e7cc24179ccc6e434689654fa01"
+    }
+  ]
+}

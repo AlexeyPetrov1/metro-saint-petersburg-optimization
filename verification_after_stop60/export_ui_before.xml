@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="19" time="38.866" timestamp="2026-10-09T23:21:41.886611+03:00" hostname="petrov"><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_queue_and_train_load_are_separate_and_conserved" time="0.002" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_no_future_forecasts_or_decisions" time="0.001" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_approaching_are_not_platform_queue" time="0.001" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_read_only_and_observation_boundary" time="0.001" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_script_payload_does_not_close_script" time="0.003" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_real_saved_arm_matches_checkpoint" time="1.388" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_partial_arm_uses_checkpoint_and_does_not_invent_future" time="0.949" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_checkpoint_geometry_matches_recorded_movement" time="0.331" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_all_control_snapshots_match_saved_counts" time="3.805" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_adapter" name="test_upstream_assets_are_preserved" time="0.006" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_app" name="test_forecast_and_arm_switch" time="0.300"><failure message="assert not ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])&#10; +  where ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception">def test_forecast_and_arm_switch():
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+&gt;       assert not app.exception
+E       assert not ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])
+E        +  where ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+interfaces\streamlit_dispatcher\tests\test_app.py:10: AssertionError</failure></testcase><testcase classname="interfaces.streamlit_dispatcher.tests.test_app" name="test_missing_campaign_is_reported" time="0.159"><failure message="assert not ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])&#10; +  where ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001DD4E08BE60&gt;
+
+    def test_missing_campaign_is_reported(monkeypatch):
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", "nonexistent_ui_test_campaign")
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+&gt;       assert not app.exception
+E       assert not ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])
+E        +  where ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+interfaces\streamlit_dispatcher\tests\test_app.py:21: AssertionError</failure></testcase><testcase classname="interfaces.streamlit_dispatcher.tests.test_browser" name="test_player_clock_forecast_queue_and_train_load" time="3.711" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_browser" name="test_streamlit_pages" time="16.294" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_browser" name="test_full_day_replay_at_evening_and_closure" time="7.126" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_pending_arm_is_progress_not_application_error" time="0.163"><failure message="assert not ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])&#10; +  where ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-530/test_pending_arm_is_progress_n0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001DD449E21E0&gt;
+replay = &lt;interfaces.streamlit_dispatcher.adapter.Replay object at 0x000001DD4D09D550&gt;
+
+    def test_pending_arm_is_progress_not_application_error(tmp_path, monkeypatch, replay):
+        arm_files(tmp_path, replay)
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", str(tmp_path))
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+&gt;       assert not app.exception
+E       assert not ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])
+E        +  where ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+interfaces\streamlit_dispatcher\tests\test_campaign_progress.py:48: AssertionError</failure></testcase><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_refresh_reads_new_checkpoint_and_completed_day" time="0.153"><failure message="assert not ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])&#10; +  where ElementList(_list=[Exception(message=&quot;No module named 'interfaces.streamlit_dispatcher.campaign'&quot;, stack_trace=['File ...spatcher\\app.py&quot;, line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-530/test_refresh_reads_new_checkpo0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001DD436AAFF0&gt;
+replay = &lt;interfaces.streamlit_dispatcher.adapter.Replay object at 0x000001DD436ABD70&gt;
+
+    def test_refresh_reads_new_checkpoint_and_completed_day(tmp_path, monkeypatch, replay):
+        arm = arm_files(tmp_path, replay, second=1000)
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", str(tmp_path))
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+&gt;       assert not app.exception
+E       assert not ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])])
+E        +  where ElementList(_list=[Exception(message="No module named 'interfaces.streamlit_dispatcher.campaign'", stack_trace=['File ...spatcher\\app.py", line 17, in &lt;module&gt;\n    from interfaces.streamlit_dispatcher.campaign import resolve_campaign'])]) = AppTest(\n    _script_path='C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export\\interfac...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).exception
+
+interfaces\streamlit_dispatcher\tests\test_campaign_progress.py:57: AssertionError</failure></testcase><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_saved_full_day_counts_and_empty_forecasts" time="3.438" /><testcase classname="interfaces.streamlit_dispatcher.tests.test_campaign_progress" name="test_progress_cache_does_not_retain_five_passenger_ledgers" time="0.156"><failure message="IndexError: list index out of range">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-530/test_progress_cache_does_not_r0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001DD4185A000&gt;
+replay = &lt;interfaces.streamlit_dispatcher.adapter.Replay object at 0x000001DD4D09C3B0&gt;
+
+    def test_progress_cache_does_not_retain_five_passenger_ledgers(tmp_path, monkeypatch, replay):
+        created = []
+        original = Replay.from_arm
+    
+        def load(cls, path):
+            saved = original(path)
+            created.append(weakref.ref(saved))
+            return saved
+    
+        monkeypatch.setattr(Replay, "from_arm", classmethod(load))
+        monkeypatch.setenv("METRO_CAMPAIGN_DIR", str(tmp_path))
+        arm_files(tmp_path, replay, second=1000)
+        app = AppTest.from_file(str(APP), default_timeout=30).run()
+        for second in [1800, 2700, 3600, 4500]:
+            arm_files(tmp_path, replay, second=second)
+&gt;           app.button[0].click().run()
+            ^^^^^^^^^^^^^
+
+interfaces\streamlit_dispatcher\tests\test_campaign_progress.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WidgetList(), idx = 0
+
+    def __getitem__(self, idx: int | slice) -&gt; El_co | ElementList[El_co]:
+        if isinstance(idx, slice):
+            return ElementList(self._list[idx])
+&gt;       return self._list[idx]
+               ^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+..\..\..\..\interfaces\streamlit_dispatcher\.venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:353: IndexError</failure></testcase></testsuite></testsuites>

@@ -115,3 +115,60 @@ def test_status_report_ignores_incident_result_and_preserves_pending_arm(tmp_pat
     status = report.write_status_report(tmp_path, tmp_path/"status")
     assert status["completed_arms"] == ["reference"]
     assert status["unfinished_arms"] == ["balanced"]
+
+
+def test_partial_60_includes_the_last_control_at_2100():
+    contract = {"arm": "BALANCED", "stage": "partial_60", "control_start_second": 900,
+                "cohort_end_second": 54000, "stop_after_steps": 60}
+    assert report.expected_control_times(contract) == list(range(900, 54001, 900))
+
+
+def test_partial_campaign_is_completed_without_claiming_a_full_day(tmp_path, comparison_dependencies, monkeypatch):
+    for name in ("reference", "balanced"):
+        folder = saved_arm(tmp_path, name)
+        contract = {"arm": name.upper(), "stage": "partial_60", "full_day": False}
+        (folder/"contract.json").write_text(json.dumps(contract), encoding="utf-8")
+        (folder/"result.json").write_text(json.dumps({"contract": contract}), encoding="utf-8")
+    monkeypatch.setattr(report, "make_comparison", lambda *a, **k: {"full_day": False, "stage": "partial_60"})
+    status = report.compile_comparison(tmp_path)["campaign_status"]
+    assert status["full_day_status"] == "completed_partial"
+    assert status["full_day_completed"] is False
+
+
+def test_partial_accounting_conserves_unclosed_passengers_without_claiming_completion():
+    state = {"entered": 10, "completed": 6, "queued": 1, "approaching": 1, "onboard_count": 2}
+    summary = report.passenger_observation(state, [{"count": 10}], partial=True)
+    assert summary["accounting_passed"] is True
+    assert summary["journeys_complete"] is False and summary["censored"] is True
+    state["completed"] = 7
+    assert report.passenger_observation(state, [{"count": 10}], partial=True)["accounting_passed"] is False
+
+
+def test_partial_scope_uses_contract_clock_and_marks_censoring():
+    contract = {"stage": "partial_60", "period_start": "2026-09-30T06:00:00+03:00",
+                "cohort_end_second": 54000, "observation_end_second": 54000}
+    text = report.observation_scope({"stage": "partial_60", "contracts": {"reference": contract}})
+    assert "06:00–21:00" in text and "цензур" in text
+    assert "10:30" not in text
+
+
+def test_partial_render_uses_observed_ledger_and_has_no_annual_estimate(tmp_path):
+    from test_metro51_report import results, audits
+    source = results()
+    for record in source.values():
+        record["contract"].update(stage="partial_60", full_day=False, stop_after_steps=60,
+                                  period_start="2026-09-30T06:00:00+03:00",
+                                  cohort_end_second=54000, observation_end_second=54000)
+        record["metrics"]["actual_per_train"] = record["metrics"]["per_train"]
+        record["metrics"]["per_train"] = [dict(row, km=400) for row in record["metrics"]["per_train"]]
+    comparison = report.make_comparison(source, audits(admitted=False), paired_inputs_passed=True)
+    comparison["campaign_status"] = {"full_day_status": "completed_partial"}
+    assert comparison["economics"]["balanced"]["observed_window"]["candidate_km"] == 6460
+    assert "annual" not in comparison["economics"]["balanced"]
+    manifest = report.render_reports(comparison, tmp_path, create_pdf=False)
+    assert manifest["annual_scenario_emitted"] is False
+    assert manifest["side_columns"] == list(report.SIDE_NAMES)
+    for name in ("report.md", "dispatcher.html"):
+        text = (tmp_path/name).read_text(encoding="utf-8")
+        assert "06:00–21:00" in text and "10:30" not in text
+        assert "цензур" in text
