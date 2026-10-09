@@ -1,0 +1,9 @@
+{
+  "source_hashes_unchanged": true,
+  "passenger_balance_passed": true,
+  "independent_final_audit_checkpoint_validated": true,
+  "mature_cohort_complete_both": true,
+  "observation_end_second": 72000,
+  "model_calls": 0,
+  "passenger_replays": 0
+}

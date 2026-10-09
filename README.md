@@ -114,3 +114,9 @@ python -m venv interfaces/streamlit_dispatcher/.venv
 Исторический `campaign.py` в тестовых данных привязан к корню экспортированной копии,
 чтобы тесты не импортировали модули из старого рабочего каталога. Изменение отражено в манифесте.
 Лицензии сторонних источников не заменены собственной лицензией проекта.
+
+## Completed-day research (2026-10-10)
+
+[Eight-page research PDF](data/processed/metro52_research_20261010/report.pdf) | [Analysis and tables](data/processed/metro52_research_20261010/report.md) | [Research archive](data/processed/metro52_research_20261010/research.zip).
+
+The matched completed-day simulation saved 688.1 train-km. Central maintenance-resource savings are RUB 77,889 without SR/KR and RUB 113,416 with SR/KR (2.52% / 2.56%). This is not demonstrated cash savings or operational approval: both arms fail five local boarding cohorts; P99 waiting rises from 148 to 211 seconds; the final decision fell back to KEEP after an evaluation error; incident validation remains incomplete. The report includes uncertainty, annual scenario limits, per-train CSV, passenger distributions, forecast calibration, and next experiments.
