@@ -460,11 +460,19 @@ def make_comparison(results, audits, *, paired_inputs_passed, annual_days=250, m
                 results_summary={k: dict(elapsed_seconds=v.get('elapsed_seconds'), decisions=v.get('decisions', [])) for k, v in results.items()})
 
 
+def recorded_arm_folders(root):
+    """Find declared runs; keep broken real arms visible, exclude aggregate results."""
+    return {p.name: p for p in sorted(Path(root).iterdir()) if p.is_dir() and (
+        (p/'contract.json').is_file() or (p/'result.json').is_file() and (
+            p.name in ('reference', 'old', 'ensemble_old', 'balanced') or (p/'common_scenario.json.gz').is_file()))}
+
+
 def compile_comparison(root, *, annual_days=250):
     from metro51_service import compare_waiting_budget
 
     root = Path(root)
-    folders = {p.parent.name: p.parent for p in sorted(root.glob('*/result.json'))}
+    arms = recorded_arm_folders(root)
+    folders = {name: folder for name, folder in arms.items() if (folder/'result.json').is_file()}
     if 'reference' not in folders:
         raise FileNotFoundError('finished reference/result.json required')
     results, audits, contexts = {}, {}, {}
@@ -487,7 +495,7 @@ def compile_comparison(root, *, annual_days=250):
         whole = next(w for w in waiting['windows'] if w['name'] == 'whole_period')['candidate']
         audit['metrics'].update(mean_wait_seconds=whole['mean_wait_seconds'], p95_wait_seconds=whole['p95_wait_seconds'],
                                 wait_scope='all selected platform-arrival cohorts with later followup; independent paired audit')
-    all_contracts = [read(path) for path in sorted(root.glob('*/contract.json'))]
+    all_contracts = [read(folder/'contract.json') for folder in arms.values() if (folder/'contract.json').is_file()]
     model_contract = next((c.get('model_contract') for c in all_contracts if (c.get('model_contract') or {}).get('components')), None)
     proof = root/'model_verification/evidence.json'
     model_evidence = verify_model_evidence(model_contract['input_dir'],
@@ -497,7 +505,7 @@ def compile_comparison(root, *, annual_days=250):
     comparison['source_root'] = str(root.resolve())
     comparison['explanation_summary'], comparison['explanations'] = collect_explanations(root)
     comparison['post_execution_forecasts'] = collect_post_execution_forecasts(root)
-    expected = [p.parent.name for p in sorted(root.glob('*/contract.json'))]
+    expected = [name for name, folder in arms.items() if (folder/'contract.json').is_file()]
     complete = bool(expected) and set(expected) <= set(results)
     pilot_passed = complete and audits.get('balanced', {}).get('passed') is True and model_evidence.get('passed') is True
     full_status = ('completed' if comparison['full_day'] and complete else 'not_run_pending_pilot' if not complete else
@@ -1011,8 +1019,9 @@ def write_status_report(root, output, *, incidents=(), create_pdf=False):
     """Summarize saved evidence only, without a simulation or engine audit."""
     root, output = Path(root), Path(output)
     output.mkdir(parents=True, exist_ok=True)
-    results = {p.parent.name: read(p) for p in root.glob('*/result.json')}
-    contracts = {p.parent.name: read(p) for p in root.glob('*/contract.json')}
+    arms = recorded_arm_folders(root)
+    results = {name: read(folder/'result.json') for name, folder in arms.items() if (folder/'result.json').is_file()}
+    contracts = {name: read(folder/'contract.json') for name, folder in arms.items() if (folder/'contract.json').is_file()}
     pending = sorted(set(contracts)-set(results))
     summary, explanations = collect_explanations(root)
     example = next((e for e in explanations if e['source'] == 'yandexgpt' and e['arm'] == 'balanced' and e['decision_id'] == '6300'),

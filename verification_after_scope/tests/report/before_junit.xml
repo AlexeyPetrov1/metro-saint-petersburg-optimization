@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="9" time="1.384" timestamp="2026-10-09T22:52:09.641488+03:00" hostname="petrov"><testcase classname="tests.test_metro52_report_readiness" name="test_full_day_schedule_uses_declared_control_start" time="0.001" /><testcase classname="tests.test_metro52_report_readiness" name="test_fallback_prefix_requires_saved_same_history[evaluation_error]" time="0.932" /><testcase classname="tests.test_metro52_report_readiness" name="test_fallback_prefix_requires_saved_same_history[evaluation_timeout]" time="0.003" /><testcase classname="tests.test_metro52_report_readiness" name="test_verified_decision_cannot_omit_prefix" time="0.002" /><testcase classname="tests.test_metro52_report_readiness" name="test_comparison_uses_two_declared_arms_and_ignores_incident_aggregate[True]" time="0.011"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-493/test_comparison_uses_two_decla0')
+comparison_dependencies = ['balanced'], balanced_complete = True
+
+    @pytest.mark.parametrize("balanced_complete", [True, False])
+    def test_comparison_uses_two_declared_arms_and_ignores_incident_aggregate(tmp_path, comparison_dependencies, balanced_complete):
+        saved_arm(tmp_path, "reference")
+        saved_arm(tmp_path, "balanced", completed=balanced_complete)
+        incidents = tmp_path/"incidents"
+        incidents.mkdir()
+        (incidents/"result.json").write_text("unrelated aggregate, not an arm", encoding="utf-8")
+&gt;       result = report.compile_comparison(tmp_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_metro52_report_readiness.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+metro51_report.py:472: in compile_comparison
+    results[arm] = read(folder/'result.json')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+metro51_report.py:43: in read
+    return json.loads(gzip.decompress(data) if path.suffix == '.gz' else data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x000001B5EF5CA300&gt;
+s = 'unrelated aggregate, not an arm', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:356: JSONDecodeError</failure></testcase><testcase classname="tests.test_metro52_report_readiness" name="test_comparison_uses_two_declared_arms_and_ignores_incident_aggregate[False]" time="0.005"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-493/test_comparison_uses_two_decla1')
+comparison_dependencies = [], balanced_complete = False
+
+    @pytest.mark.parametrize("balanced_complete", [True, False])
+    def test_comparison_uses_two_declared_arms_and_ignores_incident_aggregate(tmp_path, comparison_dependencies, balanced_complete):
+        saved_arm(tmp_path, "reference")
+        saved_arm(tmp_path, "balanced", completed=balanced_complete)
+        incidents = tmp_path/"incidents"
+        incidents.mkdir()
+        (incidents/"result.json").write_text("unrelated aggregate, not an arm", encoding="utf-8")
+&gt;       result = report.compile_comparison(tmp_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_metro52_report_readiness.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+metro51_report.py:472: in compile_comparison
+    results[arm] = read(folder/'result.json')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+metro51_report.py:43: in read
+    return json.loads(gzip.decompress(data) if path.suffix == '.gz' else data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x000001B5EF5CA300&gt;
+s = 'unrelated aggregate, not an arm', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:356: JSONDecodeError</failure></testcase><testcase classname="tests.test_metro52_report_readiness" name="test_comparison_does_not_hide_missing_real_arm_contract[balanced]" time="0.005" /><testcase classname="tests.test_metro52_report_readiness" name="test_comparison_does_not_hide_missing_real_arm_contract[custom_arm]" time="0.004" /><testcase classname="tests.test_metro52_report_readiness" name="test_status_report_ignores_incident_result_and_preserves_pending_arm" time="0.005"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">tmp_path = WindowsPath('C:/Users/lesha/AppData/Local/Temp/pytest-of-lesha/pytest-493/test_status_report_ignores_inc0')
+
+    def test_status_report_ignores_incident_result_and_preserves_pending_arm(tmp_path):
+        saved_arm(tmp_path, "reference")
+        saved_arm(tmp_path, "balanced", completed=False)
+        incidents = tmp_path/"incidents"
+        incidents.mkdir()
+        (incidents/"result.json").write_text("not an arm", encoding="utf-8")
+&gt;       status = report.write_status_report(tmp_path, tmp_path/"status")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_metro52_report_readiness.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+metro51_report.py:1014: in write_status_report
+    results = {p.parent.name: read(p) for p in root.glob('*/result.json')}
+                              ^^^^^^^
+metro51_report.py:43: in read
+    return json.loads(gzip.decompress(data) if path.suffix == '.gz' else data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x000001B5EF5CA300&gt;, s = 'not an arm'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+C:\apps\miniconda3\envs\ml\Lib\json\decoder.py:356: JSONDecodeError</failure></testcase></testsuite></testsuites>

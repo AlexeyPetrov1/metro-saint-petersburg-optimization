@@ -1,0 +1,25 @@
+{
+  "export_path": "C:\\Users\\lesha\\HackathonSPB\\data\\processed\\metro52_publish_20261009\\export",
+  "tests": 2080,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 349.436,
+  "exit_code": 0,
+  "warnings_count": 2,
+  "warnings": [
+    "FutureWarning on object dtype fillna in exported metro_quality.py:98, two tests"
+  ],
+  "copy_modules_at_collection": 312,
+  "copy_modules_at_sessionfinish": 334,
+  "original_project_imports_at_collection": {},
+  "original_project_imports_at_sessionfinish": {},
+  "PYTHONPATH": null,
+  "manifest_files_checked": 1302,
+  "manifest_files_total": 1302,
+  "changed_manifest_files": [],
+  "missing_manifest_files": [],
+  "export_git_status": "",
+  "export_git_clean": true,
+  "all_passed_and_copy_only": true
+}

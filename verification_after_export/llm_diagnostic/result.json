@@ -1,0 +1,86 @@
+{
+  "generate_calls": 1,
+  "original_error": "invalid_response",
+  "packet_path": "data\\processed\\metro52_full_day_20261009\\balanced\\explanations\\facts_03600.json",
+  "validation_error": "invalid_evidence_ids",
+  "provider_error": null,
+  "raw_generated_text_saved": false,
+  "credentials_or_headers_saved": false,
+  "schema_checks": {
+    "missing_fields": [],
+    "unexpected_field_hashes": [],
+    "context_equal": {
+      "run_id": true,
+      "decision_id": true,
+      "context_hash": true
+    },
+    "sections": {
+      "action": {
+        "count": 1,
+        "non_string_count": 0,
+        "duplicate_count": 0,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": [],
+        "includes_immutable_action": true
+      },
+      "prediction": {
+        "count": 2,
+        "non_string_count": 0,
+        "duplicate_count": 0,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": []
+      },
+      "rationale": {
+        "count": 3,
+        "non_string_count": 0,
+        "duplicate_count": 1,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": []
+      },
+      "effects": {
+        "count": 1,
+        "non_string_count": 0,
+        "duplicate_count": 0,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": []
+      },
+      "risks": {
+        "count": 1,
+        "non_string_count": 0,
+        "duplicate_count": 0,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": []
+      },
+      "revisit": {
+        "count": 1,
+        "non_string_count": 0,
+        "duplicate_count": 0,
+        "unknown_id_count": 0,
+        "unknown_id_hashes": [],
+        "unsupported_kind": []
+      }
+    },
+    "missing_sections": [],
+    "unexpected_section_hashes": []
+  },
+  "status": "reproduced",
+  "provider_request_count": 1,
+  "usage": {
+    "prompt_tokens": 26600,
+    "completion_tokens": 158,
+    "total_tokens": 26758
+  },
+  "elapsed_seconds": 6.813000000001921,
+  "source_sha256": {
+    "metro51_explanations.py": "b657559369392a13aed46a6a356b84b8839b01c18205104cccf5649a5e3b787c",
+    "metro51_run.py": "50c6c96d65dfe50721a25343d2815e8d85c0ee12f883f73504b9d192c4b9903f",
+    "data\\processed\\metro52_full_day_20261009\\balanced\\explanations\\facts_03600.json": "03c2f0434e07e966acad7661cee43065b71527833f7adb6ba9852ec3808e3e5d",
+    "data\\processed\\metro52_full_day_20261009\\balanced\\explanations\\explanation_03600.json": "8aa49407d849e31257140ee03320ce4d9a264fca9152272180b3ff75a67d3c12"
+  },
+  "sources_unchanged": true
+}

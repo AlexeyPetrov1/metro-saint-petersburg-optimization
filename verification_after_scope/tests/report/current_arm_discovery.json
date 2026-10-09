@@ -1,0 +1,13 @@
+{
+  "source_root": "data\\processed\\metro52_full_day_20261009",
+  "expected_arms": [
+    "balanced",
+    "reference"
+  ],
+  "completed_arms": [
+    "reference"
+  ],
+  "ignored_aggregate_results": [],
+  "engine_audit_performed": false,
+  "api_requests": 0
+}

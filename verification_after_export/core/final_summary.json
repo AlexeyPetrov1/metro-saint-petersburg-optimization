@@ -1,0 +1,74 @@
+{
+  "full_suite": {
+    "tests": 2073,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 374.888
+  },
+  "supplemental_readiness": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.753
+  },
+  "collected_unique_test_count": 2080,
+  "covered_unique_test_count": 2080,
+  "all_current_collected_tests_covered": true,
+  "missing_test_ids": [],
+  "extra_test_ids": [],
+  "full_suite_warnings_count": 2,
+  "warnings": [
+    "FutureWarning: object dtype downcast on fillna in metro_quality.py:98, two tests"
+  ],
+  "source_changes": [
+    "requirements.txt",
+    "scripts/metro52_campaign.py",
+    "tests/test_metro52_campaign.py"
+  ],
+  "authorized_source_changes": [
+    "requirements.txt",
+    "scripts/metro52_campaign.py",
+    "tests/test_metro52_campaign.py"
+  ],
+  "unexpected_changed_sources": [],
+  "removed_sources": [],
+  "added_sources": [
+    "scripts/metro52_package.py",
+    "tests/test_metro52_package.py"
+  ],
+  "packages_preserved": true,
+  "runtime_python_executable": "C:\\Users\\lesha\\HackathonSPB\\.venv\\Scripts\\python.exe",
+  "runtime_versions": {
+    "pandas": "2.3.3",
+    "numpy": "2.4.6",
+    "pytest": "9.1.1",
+    "torch": "2.12.0+cpu",
+    "lightgbm": "4.6.0",
+    "ortools": "9.15.6755",
+    "openai": "2.54.0"
+  },
+  "changes_by_test_agent": [],
+  "scope": "root tests/; Streamlit and vendor tested separately",
+  "initial_suite": {
+    "tests": 2066,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 573.639
+  },
+  "log_encoding": "UTF-8; original PowerShell UTF-16 logs preserved with .utf16.log suffix",
+  "late_packaging_suite": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.178
+  },
+  "post_packaging_hashes": {
+    "scripts/metro52_package.py": "3230739f8696a3683f0f6ec05f1f9d54cc2335fa7ff1b573c02c11f9d50791ab",
+    "tests/test_metro52_package.py": "3cfb4c0758ea23bf93cd66a3dbf180b43551b8e4779419eaffc22e074b62fec7"
+  },
+  "latest_coverage_at": "2026-10-09T19:37:31.751773+00:00"
+}

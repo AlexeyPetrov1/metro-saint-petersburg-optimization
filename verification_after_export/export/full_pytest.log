@@ -1,0 +1,63 @@
+........................................................................ [  3%]
+........................................................................ [  6%]
+........................................................................ [ 10%]
+........................................................................ [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 20%]
+........................................................................ [ 24%]
+........................................................................ [ 27%]
+........................................................................ [ 31%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 41%]
+........................................................................ [ 45%]
+........................................................................ [ 48%]
+........................................................................ [ 51%]
+........................................................................ [ 55%]
+........................................................................ [ 58%]
+........................................................................ [ 62%]
+........................................................................ [ 65%]
+........................................................................ [ 69%]
+........................................................................ [ 72%]
+........................................................................ [ 76%]
+........................................................................ [ 79%]
+........................................................................ [ 83%]
+........................................................................ [ 86%]
+........................................................................ [ 90%]
+........................................................................ [ 93%]
+........................................................................ [ 96%]
+................................................................         [100%]
+============================== warnings summary ===============================
+tests/test_metro_quality.py::test_missing_hour_and_incomplete_quarters_stay_unknown
+tests/test_metro_quality.py::test_service_date_correction_is_explicit_and_cannot_apply_twice
+  C:\Users\lesha\HackathonSPB\data\processed\metro52_publish_20261009\export\metro_quality.py:98: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+    comparable = result.quarter_complete.fillna(False) & result.hourly_complete.fillna(False)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================ slowest 25 durations =============================
+34.48s call     tests/test_goal43_campaign.py::test_campaign_compares_four_families_then_validates_frozen_plan
+24.13s call     tests/test_metro_ml.py::test_actual_frozen_bundle_is_causal_and_hourly_refresh_has_no_third_hour
+18.76s call     tests/test_metro_ml.py::test_actual_frozen_weights_reject_unknown_line_and_show_observation_cutoff
+17.94s setup    tests/test_metro51_ensemble.py::test_bundle_complete_quarter_refresh_and_future_mutation_invariance
+17.60s call     tests/test_metro_ml.py::test_future_late_vestibule_schedules_are_public_and_missing_weather_stays_nan
+16.61s call     tests/test_metro_ml.py::test_loader_uses_hourly_history_only_where_observed_quarters_are_absent
+12.32s call     tests/test_line1.py::test_s1_real_groups_whole_run_equals_warmup_and_three_main_windows
+9.07s call     tests/test_metro44_planner.py::test_dense_reference_is_checked_for_the_whole_service_day
+7.00s call     tests/test_goal43_extend.py::test_stop_resume_creates_missing_summary_from_saved_first_decision
+6.80s call     tests/test_metro44_linked_gap_repair.py::test_compiled_future_leg_hold_preserves_a_real_started_movement
+5.87s call     tests/test_metro_daily.py::test_whole_day_projection_preserves_all_headway_windows
+5.73s setup    tests/test_metro44_planner_bridge.py::test_bridge_preserves_source_past_and_started_arrivals
+5.63s call     tests/test_metro45_phase.py::test_future_phase_never_rewrites_past_or_current_movement
+5.51s call     tests/test_metro44_bridge_reserves.py::test_complete_small_transition_preserves_physics_and_source
+5.11s call     tests/test_metro44_planner_terminal.py::test_zero_time_reserve_return_cannot_be_reinvented_by_terminal_adapter
+5.05s setup    tests/test_metro48_gru.py::test_uploaded_contract_has_original_embedding_order_and_training_cutoff
+4.49s call     tests/test_metro44_chain_repair.py::test_valid_known_plan_is_not_rewritten_and_all_physics_are_checked
+4.38s call     tests/test_metro44_cp_chain_repair_probe.py::test_saved_cp_conflict_is_reproduced_with_same_past_and_nearby_starts
+4.22s call     tests/test_metro44_linked_gap_repair.py::test_unchanged_valid_chain_checks_prefix_current_minimum_capacity_and_closure
+3.48s call     tests/test_metro51_ensemble.py::test_bundle_complete_quarter_refresh_and_future_mutation_invariance
+3.44s setup    tests/test_metro46_mandatory_peak.py::test_identity_producer_preserves_all_source_obligations
+3.35s setup    tests/test_metro45_phase.py::test_future_phase_never_rewrites_past_or_current_movement
+3.35s call     tests/test_metro_ml_compare.py::test_peak_fleet_initial_movement_is_inside_peak
+3.20s call     tests/test_metro48_daily_reference.py::test_direct_calendar_preserves_initial_and_bounds_approach_holds
+3.14s setup    tests/test_metro44_planner_terminal.py::test_coupled_compiler_preserves_source_prefix_current_moves_and_physical_tracks
+2080 passed, 2 warnings in 350.79s (0:05:50)

@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "initial_export_commit": "41f9070",
+  "publication_relative_root": "verification_after_export",
+  "created_at": "2026-10-09T19:57:03.117420+00:00",
+  "files": [
+    {
+      "path": "core/current_collect.log",
+      "bytes": 196732,
+      "sha256": "8d6427af4601292d7eefe0a949168b406f8d969c186226d1fae88235de17854b"
+    },
+    {
+      "path": "core/final_junit.xml",
+      "bytes": 275176,
+      "sha256": "d72061fed704558189920076db41becb81f69ec7c8bb55578633de9b1bebdf83"
+    },
+    {
+      "path": "core/final_packaging_junit.xml",
+      "bytes": 963,
+      "sha256": "93f163e1ec0b13ed5517341c33be0c96a5e510ddec662a4b9e90088966f7ba92"
+    },
+    {
+      "path": "core/final_readiness_junit.xml",
+      "bytes": 1887,
+      "sha256": "dbc2ce165681bf540e6b483e1f45d139f0997af2dd0fffd05d7d5b850bf64989"
+    },
+    {
+      "path": "core/final_summary.json",
+      "bytes": 2111,
+      "sha256": "23de1558bc0a130dfbaa07d47564388f822955b4c90ab55562d8ec9b7ff2f6ee"
+    },
+    {
+      "path": "export/full_junit.xml",
+      "bytes": 276027,
+      "sha256": "f17eb678ebc1154dc720be569da12507d9cf1001b76005ffc56741e778e6f653"
+    },
+    {
+      "path": "export/full_pytest.log",
+      "bytes": 6200,
+      "sha256": "edcbfef830c75f14bc5ad6f06dd836ef24d23d01aaba8edf21b17d18be5cb39b"
+    },
+    {
+      "path": "export/import_provenance_collection.json",
+      "bytes": 45250,
+      "sha256": "587c37c710a2f1f2a572ae529ff4e20582e0b26aaf94c89e61b70f003428f804"
+    },
+    {
+      "path": "export/import_provenance_sessionfinish.json",
+      "bytes": 48495,
+      "sha256": "329a0921ef1b9676a8ced85f981ae955748781c50134d4ec4f66cf68bf8b55a3"
+    },
+    {
+      "path": "export/summary.json",
+      "bytes": 784,
+      "sha256": "a8bd0a14878695017677b156f16493d4d635b8b845b1bde0109684a530bf01d2"
+    },
+    {
+      "path": "llm_diagnostic/README.md",
+      "bytes": 2567,
+      "sha256": "259dcaa462f8b4656866477011adc90013a6d778eb18568bb83fc610dec48eb2"
+    },
+    {
+      "path": "llm_diagnostic/result.json",
+      "bytes": 2723,
+      "sha256": "70a2ce2f36f690c91ddc550f45767fdfdbc854efe9efc2e0e907da08f3951d19"
+    },
+    {
+      "path": "llm_diagnostic/tests.log",
+      "bytes": 100,
+      "sha256": "d0410c27c5b3de7c7c98c2203c78b71fb1412abf7dbdef94d8e3247972201d46"
+    },
+    {
+      "path": "llm_diagnostic/tests.xml",
+      "bytes": 564,
+      "sha256": "fc057152a7b32d15042328458ea5b922e4c5dc4026061648d13cf137dd74e986"
+    },
+    {
+      "path": "model/runtime_smoke.json",
+      "bytes": 4454,
+      "sha256": "d4e69678879b3453365d0b97e8f82b7076634a5f156f39e2e98f64a0c4216100"
+    },
+    {
+      "path": "ui/legacy_full_day_replay.json",
+      "bytes": 306,
+      "sha256": "13bb9afe67dfe2f911d991a9eb5a5b4509e69f2536ed5bbdccdb68397627cbaf"
+    },
+    {
+      "path": "ui/legacy_probe.xml",
+      "bytes": 792,
+      "sha256": "772b153ee829ba210b574a75a95a46273fe57e30d0e2d9930747fc2a8a820296"
+    },
+    {
+      "path": "ui/tests_final.log",
+      "bytes": 102,
+      "sha256": "2ef23884d3fab60eeece8c99da08609b307d20a206f35e74b428cddd0aec197e"
+    },
+    {
+      "path": "ui/tests_final.xml",
+      "bytes": 2910,
+      "sha256": "2da4ead39efb23cf67c152b00ce99440fcea109573a26643c660032b76088c13"
+    },
+    {
+      "path": "vendor/portable_final_evidence.json",
+      "bytes": 12440,
+      "sha256": "38945a2361866c677b4ecee367262dac573d5ce054633d55ea494362e3b84675"
+    },
+    {
+      "path": "vendor/portable_final_junit.xml",
+      "bytes": 64005,
+      "sha256": "23aee6630604257a488d9921592feebed9d7146e83f981e864eb524ac456fc8a"
+    },
+    {
+      "path": "vendor/portable_final_stdout.log",
+      "bytes": 2839,
+      "sha256": "436d6aab312210ed57d73fa669e0e642fdae01fd920570be480fc694a259fed1"
+    },
+    {
+      "path": "VERIFICATION_AFTER_EXPORT.md",
+      "bytes": 6658,
+      "sha256": "8b28cf263c3efb260d5e089e6541b04e207eff48b97c53c3b1f143c3dd8eced9"
+    }
+  ],
+  "total_bytes": 954085,
+  "secret_findings": [],
+  "initial_EXPORT_MANIFEST_modified": false,
+  "freeform_generated_llm_text_included": false,
+  "http_headers_or_credentials_included": false,
+  "runtime_modified": false
+}
